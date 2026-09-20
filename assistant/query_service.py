@@ -5,7 +5,7 @@ from pathlib import Path
 import math
 import sqlite3
 import time
-from points import POINTS
+from points import unit_of
 from .contracts import DEVICES, QueryError, check_device, check_limit, time_range, utc_text
 from .observations import latest_metric
 
@@ -62,7 +62,7 @@ class QueryService:
                     state, reason = 'unavailable', '当前证据未能核实；保留最后记录'
                 elif status['is_stale']: state, reason = 'stale', '最后有效记录已过期'
                 else: state, reason = 'usable', '记录在时效范围内；不代表设备健康'
-                reading.update(unit=POINTS[metric].unit, confidence={'state':state,'reason':reason})
+                reading.update(unit=unit_of(metric), confidence={'state':state,'reason':reason})
                 metrics[metric] = reading
             return {'device':dict(device),'checked_at':utc_text(checked),'metrics':metrics,
                     'alarms':metrics['temperature']['alarm'],

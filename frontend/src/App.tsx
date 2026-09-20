@@ -7,9 +7,20 @@ import { AlarmPanel } from './AlarmPanel'
 import { AssistantPanel } from './AssistantPanel'
 import { OperatingPanel, RunningHistory } from './OperatingPanel'
 import { CurrentPanel } from './CurrentPanel'
+import { ReplayFaultPanel, ReplayMetricsPanel } from './ReplayPanel'
 import { MotorDiagram } from './MotorDiagram'
 import { TemperatureChart } from './TemperatureChart'
 import { useDashboard } from './useDashboard'
+
+const METRIC_OPTIONS: Record<Metric, string> = {
+  temperature: '温度（℃）', air_temperature: '空气温度（℃）', current: '电流（A）',
+  speed: '转速（rpm）', torque: '扭矩（Nm）', tool_wear: '刀具磨损（min）', running_state: '运行状态记录',
+}
+const DEVICE_METRICS: Record<string, Metric[]> = {
+  'motor-a': ['temperature', 'current', 'speed', 'running_state'],
+  'motor-b': ['temperature'],
+  'motor-c': ['temperature', 'air_temperature', 'speed', 'torque', 'tool_wear', 'running_state'],
+}
 
 export default function App() {
   const [deviceId, setDeviceId] = useState('motor-a')
@@ -17,6 +28,8 @@ export default function App() {
   const [devices, setDevices] = useState<Snapshot['device'][]>([])
   useEffect(() => { if (snapshot?.devices) setDevices(snapshot.devices) }, [snapshot?.devices])
   const isOpcua = deviceId === 'motor-b'
+  const isReplay = deviceId === 'motor-c'
+  const deviceMetrics = (devices.find(item => item.id === deviceId)?.metrics as Metric[] | undefined) ?? DEVICE_METRICS[deviceId] ?? DEVICE_METRICS['motor-a']
   const [metric, setMetric] = useState<Metric>('temperature')
   const [now, setNow] = useState(Date.now())
   useEffect(() => { const timer = setInterval(() => setNow(Date.now()), 1000); return () => clearInterval(timer) }, [])
@@ -35,10 +48,15 @@ export default function App() {
     message: '有效温度只接收质量 Good、源时间足够新且严格递增的测量。请结合下方通信、质量和源时间证据查看。',
     action: '缺源、过期、重复和倒退不会补成新样本；已激活告警保留。',
     tone: snapshot.opcua?.eligible && !sourceExpired && !runtimeStale ? '' : 'warn',
+  } : isReplay && snapshot && !unverified ? {
+    title: '历史数据集回放，非实时采集',
+    message: '本设备逐行回放 UCI AI4I 2020 预测性维护合成数据集（CC BY 4.0）；时间为回放时刻，不是原始采集时间。',
+    action: '曲线波动与故障标注来自数据集自身；回放停止后数据会如实显示“已过期”。',
+    tone: '',
   } : notices[kind]
   const history = metric === 'temperature' ? snapshot?.history : snapshot?.[metric]?.history
-  const chartLabel = { temperature: '温度', current: '电流', speed: '转速', running_state: '运行状态' }[metric]
-  const chartUnit = { temperature: '℃', current: 'A', speed: 'rpm', running_state: '枚举' }[metric]
+  const chartLabel = { temperature: '温度', air_temperature: '空气温度', current: '电流', speed: '转速', torque: '扭矩', tool_wear: '刀具磨损', running_state: '运行状态' }[metric]
+  const chartUnit = { temperature: '℃', air_temperature: '℃', current: 'A', speed: 'rpm', torque: 'Nm', tool_wear: 'min', running_state: '枚举' }[metric]
   return <main className="shell">
     <header className="masthead">
       <div className="workspace-title"><span className="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M3 17h4l3-10 4 13 3-8h4" /></svg></span><div><h1>设备观测工作台</h1><p>多协议电机观测终端</p></div></div>
@@ -49,8 +67,8 @@ export default function App() {
       <div className="console-main">
 
     <div className="metric-selector device-selector"><label htmlFor="device-selector">观测设备</label><select id="device-selector" value={deviceId} onChange={event => { setDeviceId(event.target.value); setMetric('temperature') }}>
-      {devices.length ? devices.map(device => <option key={device.id} value={device.id}>{device.name} · {device.protocol === 'opcua' ? 'OPC UA' : 'Modbus TCP'}</option>) : <option value="motor-a">模拟电机 A</option>}
-    </select><span>{isOpcua ? `温度单测点 · ${snapshot?.opcua?.runtime?.mode === 'subscribe' ? '订阅通知' : snapshot?.opcua?.runtime?.mode === 'read' ? '主动周期读取' : '采集方式未报告'}` : '温度、电流、转速、运行状态'}</span></div>
+      {devices.length ? devices.map(device => <option key={device.id} value={device.id}>{device.name} · {device.protocol === 'opcua' ? 'OPC UA' : device.protocol === 'replay' ? '数据回放' : 'Modbus TCP'}</option>) : <option value="motor-a">模拟电机 A</option>}
+    </select><span>{isOpcua ? `温度单测点 · ${snapshot?.opcua?.runtime?.mode === 'subscribe' ? '订阅通知' : snapshot?.opcua?.runtime?.mode === 'read' ? '主动周期读取' : '采集方式未报告'}` : isReplay ? 'AI4I 2020 合成数据集 · 历史回放 · 非实时' : '温度、电流、转速、运行状态'}</span></div>
 
     <details className="usage" id="usage">
       <summary><span>使用说明</span><span className="summary-hint">从哪里看起，数据不更新时怎么办</span></summary>
@@ -71,15 +89,15 @@ export default function App() {
     </section>
 
     <section className="instrument" aria-label="最新温度与采集状态">
-      <div className="instrument-heading"><div><h2>{snapshot?.device.name || (isOpcua ? '模拟电机 B' : '模拟电机 A')}</h2><span>{snapshot?.device.protocol === 'modbus_tcp' ? 'Modbus TCP' : snapshot?.device.protocol || '协议信息待加载'}</span></div><span className="poll-label">{phase === 'loading' ? '正在查询新记录…' : '自动查询，约每2秒一次'}</span></div>
-      <div className="instrument-body">
+      <div className="instrument-heading"><div><h2>{snapshot?.device.name || (isOpcua ? '模拟电机 B' : isReplay ? 'AI4I 2020 数控机床（历史回放）' : '模拟电机 A')}</h2><span>{snapshot?.device.protocol === 'modbus_tcp' ? 'Modbus TCP' : snapshot?.device.protocol === 'replay' ? '数据回放 · AI4I 2020' : snapshot?.device.protocol || '协议信息待加载'}</span></div><span className="poll-label">{phase === 'loading' ? '正在查询新记录…' : '自动查询，约每2秒一次'}</span></div>
+      <div className={`instrument-body${isReplay ? ' replay-two' : ''}`}>
         <article className="reading">
           <h3>最后有效温度</h3>
           <div className="temperature"><span className="number" data-testid="temperature">{sample ? sample.value.toFixed(1) : '—'}</span><span className="unit">{sample?.unit || '℃'}</span></div>
-          <p className="value-note">{unverified ? (sample ? '保留的历史记录，当前状态未核实' : '暂未取得读数，当前状态未核实') : sample ? (isOpcua ? '来自最近一次通过质量和源时间校验的测量' : '来自最近一次成功采集') : firstLoad ? '读取完成后显示实际数值' : '等待第一次成功采集'}</p>
-          <div className="sample-time"><span>{isOpcua ? '有效测量接收时间（本地）' : '原采集时间（本地）'}</span><time data-testid="sample-time" dateTime={sample?.collected_at}>{localTime(sample?.collected_at)}</time></div>
+          <p className="value-note">{unverified ? (sample ? '保留的历史记录，当前状态未核实' : '暂未取得读数，当前状态未核实') : sample ? (isOpcua ? '来自最近一次通过质量和源时间校验的测量' : isReplay ? '数据集工艺温度列（K→℃精确换算），时间为回放时刻' : '来自最近一次成功采集') : firstLoad ? '读取完成后显示实际数值' : '等待第一次成功采集'}</p>
+          <div className="sample-time"><span>{isOpcua ? '有效测量接收时间（本地）' : isReplay ? '该行回放时间（本地）' : '原采集时间（本地）'}</span><time data-testid="sample-time" dateTime={sample?.collected_at}>{localTime(sample?.collected_at)}</time></div>
         </article>
-        <MotorDiagram />
+        {!isReplay && <MotorDiagram />}
         <article className="observation">
           <h3>这条数据有多新？ {unverified && snapshot && <span className="snapshot-label">历史快照</span>}</h3>
           <dl>
@@ -92,16 +110,16 @@ export default function App() {
       </div>
     </section>
 
-    {isOpcua ? <OpcuaPanel evidence={snapshot?.opcua} unverified={unverified} sourceExpired={sourceExpired} runtimeExpired={runtimeStale} /> : <CurrentPanel current={snapshot?.current} unverified={unverified} />}
+    {isOpcua ? <OpcuaPanel evidence={snapshot?.opcua} unverified={unverified} sourceExpired={sourceExpired} runtimeExpired={runtimeStale} /> : isReplay ? <ReplayMetricsPanel torque={snapshot?.torque} toolWear={snapshot?.tool_wear} airTemperature={snapshot?.air_temperature} unverified={unverified} /> : <CurrentPanel current={snapshot?.current} unverified={unverified} />}
 
-    {!isOpcua && <div className="operating-grid"><OperatingPanel metric="speed" reading={snapshot?.speed} unverified={unverified} /><OperatingPanel metric="running_state" reading={snapshot?.running_state} unverified={unverified} /></div>}
+    {!isOpcua && <div className="operating-grid"><OperatingPanel metric="speed" reading={snapshot?.speed} unverified={unverified} replay={isReplay} /><OperatingPanel metric="running_state" reading={snapshot?.running_state} unverified={unverified} replay={isReplay} /></div>}
 
-    <AlarmPanel alarm={snapshot?.alarm} unverified={alarmUnverified(snapshot, unverified || runtimeStale, performance.now())} />
+    {isReplay ? <ReplayFaultPanel replay={snapshot?.replay} unverified={unverified} /> : <AlarmPanel alarm={snapshot?.alarm} unverified={alarmUnverified(snapshot, unverified || runtimeStale, performance.now())} />}
 
     <section className="chart-panel">
       <div className="chart-heading"><div><h2>最近10分钟{chartLabel}{metric === 'running_state' ? '记录' : '趋势'}</h2><p>{metric === 'running_state' ? '按实际采集记录展示，不推断样本之间的状态。' : `横轴是本地时间，纵轴是${chartLabel}。`}{unverified ? (history ? '当前显示最后获取的历史快照。' : '暂未取得历史查询结果。') : '只绘制实际采集的记录。'}</p></div><span className="legend">{chartLabel} / {chartUnit}</span></div>
-      <div className="metric-selector"><label htmlFor="history-metric">历史指标</label><select id="history-metric" value={metric} onChange={event => setMetric(event.target.value as Metric)}><option value="temperature">温度（℃）</option>{!isOpcua && <><option value="current">电流（A）</option><option value="speed">转速（rpm）</option><option value="running_state">运行状态记录</option></>}</select><span>一次只显示一个指标，单位不混用</span></div>
-      {history && history.points.length > 0 ? metric === 'running_state' ? <RunningHistory history={history} /> : <TemperatureChart history={history} metric={metric} /> : <div className="empty-chart"><strong>{firstLoad ? '正在读取历史记录' : unverified ? '暂时无法获取历史记录' : metric !== 'temperature' && !snapshot?.[metric] ? `当前接口未提供${chartLabel}` : `这个时间窗口还没有${chartLabel}样本`}</strong><p>{firstLoad ? '请稍候，记录返回后会自动显示。' : unverified ? '先检查后端查询服务；查询失败不代表数据库里没有数据。' : '检查采集器是否正在运行；第一次采集成功后，曲线会自动出现。'}</p></div>}
+      <div className="metric-selector"><label htmlFor="history-metric">历史指标</label><select id="history-metric" value={metric} onChange={event => setMetric(event.target.value as Metric)}>{deviceMetrics.map(item => <option key={item} value={item}>{METRIC_OPTIONS[item]}</option>)}</select><span>一次只显示一个指标，单位不混用</span></div>
+      {history && history.points.length > 0 ? metric === 'running_state' ? <RunningHistory history={history} replay={isReplay} /> : <TemperatureChart history={history} metric={metric} /> : <div className="empty-chart"><strong>{firstLoad ? '正在读取历史记录' : unverified ? '暂时无法获取历史记录' : metric !== 'temperature' && !snapshot?.[metric] ? `当前接口未提供${chartLabel}` : `这个时间窗口还没有${chartLabel}样本`}</strong><p>{firstLoad ? '请稍候，记录返回后会自动显示。' : unverified ? '先检查后端查询服务；查询失败不代表数据库里没有数据。' : isReplay ? '回放器运行后曲线会自动出现；每个回放行是一条真实数据集记录。' : '检查采集器是否正在运行；第一次采集成功后，曲线会自动出现。'}</p></div>}
       <div className="chart-note"><span data-testid="sample-count">{history?.points.length ?? 0} 个真实样本</span><span>{metric === 'running_state' ? '只显示实际记录，不推断中间状态' : '采集缺口断开显示，不补零'}</span>{history && history.points.length >= history.limit && <strong className="warning">已达到1000条上限，窗口后段可能被截断</strong>}</div>
     </section>
 

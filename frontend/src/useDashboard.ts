@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { Snapshot, Status, Measurement, AlarmSnapshot, MetricSnapshot, OpcuaStatus } from './model'
+import type { Metric, Snapshot, Status, Measurement, AlarmSnapshot, MetricSnapshot, OpcuaStatus } from './model'
 import { startPolling } from './poll'
 
 async function get<T>(path: string, signal: AbortSignal): Promise<T> {
@@ -16,14 +16,14 @@ export async function loadSnapshot(signal: AbortSignal, deviceId = 'motor-a'): P
   const device = list.devices.find(item => item.id === deviceId)
   if (!device) throw new Error(`设备列表中未找到 ${deviceId}`)
   const statusRequestedAt = performance.now()
-  const latest = await get<{ measurement: Measurement | null; status: Status; alarm?: AlarmSnapshot; opcua?: OpcuaStatus | null }>(`/api/devices/${device.id}/latest`, signal)
+  const latest = await get<{ measurement: Measurement | null; status: Status; alarm?: AlarmSnapshot; opcua?: OpcuaStatus | null; replay?: Snapshot['replay'] }>(`/api/devices/${device.id}/latest`, signal)
   // 使用服务端检查时间定义窗口，避免浏览器和后端时钟不同导致漏掉最新样本。
   const to = latest.status.checked_at
   const from = new Date(Date.parse(to) - 10 * 60_000).toISOString()
   const query = new URLSearchParams({ metric: 'temperature', from, to, limit: '1000' })
   const history = await get<Snapshot['history']>(`/api/devices/${device.id}/history?${query}`, signal)
-  async function extraMetric(metric: 'current' | 'speed' | 'running_state'): Promise<MetricSnapshot | undefined> {
-    if (!device!.metrics?.includes(metric)) return undefined
+  // 附加指标按设备白名单动态获取；温度已由上方单独查询。
+  async function extraMetric(metric: Metric): Promise<MetricSnapshot> {
     const requestedAt = performance.now()
     const result = await get<{ metric: string; measurement: Measurement | null; status: Status }>(`/api/devices/${device!.id}/latest?metric=${metric}`, signal)
     if (result.metric !== metric) throw new Error(`${metric}接口返回了不匹配的指标`)
@@ -33,10 +33,10 @@ export async function loadSnapshot(signal: AbortSignal, deviceId = 'motor-a'): P
     const metricHistory = await get<Snapshot['history']>(`/api/devices/${device!.id}/history?${params}`, signal)
     return { ...result, history: metricHistory, statusRequestedAt: requestedAt }
   }
-  const [current, speed, running_state] = await Promise.all([
-    extraMetric('current'), extraMetric('speed'), extraMetric('running_state'),
-  ])
-  return { device, devices: list.devices, ...latest, history, statusRequestedAt, current, speed, running_state }
+  const metrics = (device.metrics ?? ['temperature']).filter(metric => metric !== 'temperature') as Metric[]
+  const extras: Partial<Record<Metric, MetricSnapshot>> = {}
+  await Promise.all(metrics.map(async metric => { extras[metric] = await extraMetric(metric) }))
+  return { device, devices: list.devices, ...latest, history, statusRequestedAt, ...extras }
 }
 
 export function useDashboard(deviceId = 'motor-a') {

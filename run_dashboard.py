@@ -39,6 +39,8 @@ def main():
     parser.add_argument('--speed-raw', type=int, default=POINTS['speed'].default_raw, help='转速原始值，默认1450 rpm')
     parser.add_argument('--running-state-raw', type=int, default=POINTS['running_state'].default_raw, help='运行状态原始值，默认1；0停止、1运行，其他uint16用于故障注入')
     parser.add_argument('--db', default='data/dashboard-demo.sqlite3', help='相对路径以项目根目录为准；保留并追加已有历史')
+    parser.add_argument('--with-replay', action='store_true', help='同时启动 AI4I 2020 数据集回放器（motor-c，合成数据，历史回放）')
+    parser.add_argument('--replay-interval', type=float, default=1.0, help='回放器每行间隔秒，默认1.0；需配合 --with-replay')
     args = parser.parse_args()
     children = []
     try:
@@ -47,6 +49,8 @@ def main():
             raise RuntimeError('--raw 必须为 0～65535。')
         if not 0 <= args.current_raw <= 65535:
             raise RuntimeError('--current-raw 必须为0～65535。')
+        if not 0.05 <= args.replay_interval <= 60:
+            raise RuntimeError('--replay-interval 必须在0.05～60秒之间。')
         for name in ('speed_raw', 'running_state_raw'):
             if not 0 <= getattr(args, name) <= 65535:
                 raise RuntimeError(f'--{name.replace("_", "-")} 必须为0～65535。')
@@ -98,11 +102,14 @@ def main():
                 launch('采集器', py + ['collect_temperature.py', '--port', str(args.modbus_port), '--db', str(db)])
                 launch('后端API', py + ['serve_api.py', '--port', str(args.api_port), '--db', str(db)])
                 wait_ready(args.api_port, '/api/devices/motor-a/latest')
+                if args.with_replay:
+                    launch('数据回放器', py + ['replay_ai4i.py', '--db', str(db), '--interval', str(args.replay_interval)])
                 env = dict(os.environ, API_PROXY_TARGET=f'http://127.0.0.1:{args.api_port}')
                 launch('前端', [npm, 'run', 'dev', '--', '--port', str(args.web_port)], ROOT / 'frontend', env)
                 wait_ready(args.web_port, '/')
                 wait_ready(args.web_port, '/api/devices/motor-a/latest')
-                print(f'\n看板已就绪：http://127.0.0.1:{args.web_port}\n保持此终端运行；Ctrl+C 停止本次四个服务，已存历史保留。\n温度当前固定；要改为72.8℃，停止后用 --raw 728 重新启动。', flush=True)
+                print(f'\n看板已就绪：http://127.0.0.1:{args.web_port}\n保持此终端运行；Ctrl+C 停止本次{len(children)}个服务，已存历史保留。\n温度当前固定；要改为72.8℃，停止后用 --raw 728 重新启动。'
+                      + ('\nmotor-c 为 AI4I 2020 合成数据集历史回放（时间=回放时刻，故障标注来自数据集）。' if args.with_replay else ''), flush=True)
                 while True:
                     check_children()
                     time.sleep(.5)

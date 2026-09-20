@@ -5,6 +5,9 @@ from points import POINTS
 DEVICES = {
     'motor-a': {'id':'motor-a','name':'模拟电机 A','protocol':'modbus_tcp','metrics':tuple(POINTS)},
     'motor-b': {'id':'motor-b','name':'模拟电机 B','protocol':'opcua','metrics':('temperature',)},
+    # 合成数据集历史回放；指标与单位见 docs/datasets/ai4i-2020/README.md。
+    'motor-c': {'id':'motor-c','name':'AI4I 2020 数控机床（历史回放）','protocol':'replay',
+                'metrics':('temperature','air_temperature','speed','torque','tool_wear','running_state')},
 }
 
 class QueryError(Exception):

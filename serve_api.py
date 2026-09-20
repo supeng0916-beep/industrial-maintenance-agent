@@ -31,7 +31,7 @@ def main():
         parser.error("--port 必须在1024～65535之间")
     if not math.isfinite(args.stale_after_seconds) or args.stale_after_seconds <= 0:
         parser.error("--stale-after-seconds 必须是大于0的有限秒数")
-    assistant_service = build_assistant_service()
+    assistant_service = build_assistant_service(db_path=args.db)
     if assistant_service is not None:
         print("助手服务已启用（模型见 ASSISTANT_MODEL）；日志只含脱敏配置。")
     uvicorn.run(create_app(args.db, args.stale_after_seconds,

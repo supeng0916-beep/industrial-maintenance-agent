@@ -1,10 +1,13 @@
 import { localTime, type MetricSnapshot, type Snapshot } from './model'
+import { replayRunningLabel } from './ReplayPanel'
 
 export function runningLabel(value: number) {
   return value === 0 ? '停止' : value === 1 ? '运行' : `无法识别（原始值 ${value}）`
 }
 
-export function OperatingPanel({ metric, reading, unverified }: { metric: 'speed' | 'running_state'; reading?: MetricSnapshot; unverified: boolean }) {
+export function OperatingPanel({ metric, reading, unverified, replay = false }: {
+  metric: 'speed' | 'running_state'; reading?: MetricSnapshot; unverified: boolean; replay?: boolean
+}) {
   const title = metric === 'speed' ? '转速' : '运行状态'
   const sample = reading?.measurement
   const status = reading?.status
@@ -21,15 +24,15 @@ export function OperatingPanel({ metric, reading, unverified }: { metric: 'speed
   else if (metric === 'running_state' && sample.value !== 0 && sample.value !== 1) label = '当前未知：运行状态无法识别'
   return <section className="operating-panel" aria-label={`${title}观测`}>
     <h2>最后有效{title}</h2>
-    <p className="operating-value"><strong data-testid={`${metric}-value`}>{sample ? metric === 'speed' ? sample.value.toFixed(0) : runningLabel(sample.value) : '—'}</strong>{metric === 'speed' && <span> rpm</span>}</p>
+    <p className="operating-value"><strong data-testid={`${metric}-value`}>{sample ? metric === 'speed' ? sample.value.toFixed(0) : replay ? replayRunningLabel(sample.value) : runningLabel(sample.value) : '—'}</strong>{metric === 'speed' && <span> rpm</span>}</p>
     <p data-testid={`${metric}-status`} className="operating-status">{label}</p>
-    <p>原采集时间：<time data-testid={`${metric}-time`} dateTime={sample?.collected_at}>{localTime(sample?.collected_at)}</time></p>
+    <p>{replay ? '该行回放时间' : '原采集时间'}：<time data-testid={`${metric}-time`} dateTime={sample?.collected_at}>{localTime(sample?.collected_at)}</time></p>
     {status?.last_attempt_status === 'failure' && status.last_failure_message && <p className="failure-evidence" data-testid={`${metric}-failure`}>{unverified ? '历史失败证据' : '最近失败证据'}：{status.last_failure_message}</p>}
-    <p className="scope-note">{metric === 'speed' ? '0 rpm是有效零转速，未知时不补零。' : '0＝停止，1＝运行；断线不等于停止。'} 本测点仅观测。</p>
+    <p className="scope-note">{metric === 'speed' ? '0 rpm是有效零转速，未知时不补零。' : replay ? '1＝正常运转，0＝数据集标注故障（Machine failure 列）。' : '0＝停止，1＝运行；断线不等于停止。'} 本测点仅观测。</p>
   </section>
 }
 
-export function RunningHistory({ history }: { history: Snapshot['history'] }) {
+export function RunningHistory({ history, replay = false }: { history: Snapshot['history']; replay?: boolean }) {
   // 窗口仍最多1000点；用有界滚动列表保留全部实际记录，不把重复采样冒充状态变化。
-  return <div className="running-history" tabIndex={0} role="region" aria-label="运行状态历史记录"><table><thead><tr><th>原采集时间（本地）</th><th>状态</th><th>原始值</th></tr></thead><tbody>{[...history.points].reverse().map(point => <tr key={point.id}><td><time dateTime={point.collected_at}>{localTime(point.collected_at)}</time></td><td>{runningLabel(point.value)}</td><td>{point.value}</td></tr>)}</tbody></table></div>
+  return <div className="running-history" tabIndex={0} role="region" aria-label="运行状态历史记录"><table><thead><tr><th>{replay ? '该行回放时间（本地）' : '原采集时间（本地）'}</th><th>状态</th><th>原始值</th></tr></thead><tbody>{[...history.points].reverse().map(point => <tr key={point.id}><td><time dateTime={point.collected_at}>{localTime(point.collected_at)}</time></td><td>{replay ? replayRunningLabel(point.value) : runningLabel(point.value)}</td><td>{point.value}</td></tr>)}</tbody></table></div>
 }

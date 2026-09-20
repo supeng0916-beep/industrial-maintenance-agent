@@ -36,7 +36,15 @@ uv run --locked python serve_api.py --port 8010 &   # 读取.env装配助手
 API_PROXY_TARGET=http://127.0.0.1:8010 npm --prefix frontend run dev -- --port 5175
 ```
 
-（或设 `ASSISTANT_MODEL` 环境变量后运行 `run_dashboard.py` 亦可；助手面板在告警面板下方。）
+（或设 `ASSISTANT_MODEL` 环境变量后运行 `run_dashboard.py` 亦可；助手面板在右侧"值班终端"侧栏。）
+
+### 1.1 数据集回放（motor-c，真实公开数据）
+
+```bash
+uv run --locked python run_dashboard.py --with-replay --replay-interval 0.5
+```
+
+额外启动 AI4I 2020 回放器（motor-c）：逐行回放 UCI 合成数据集（CC BY 4.0，10000行，SHA256 固定校验），提供温度/空气温度/转速/扭矩/刀具磨损/运行状态六指标与数据集标注故障史。**诚实边界**：时间为回放时刻非原始采集时间；数据为合成数据，页面与助手都会标注；回放停止后如实显示"已过期"。单独运行：`uv run --locked python replay_ai4i.py --db data/dashboard-demo.sqlite3 --interval 0.5 --from-row 0`。数据集登记：`docs/datasets/ai4i-2020/README.md`。
 
 ## 2. 组件职责与启动顺序
 
@@ -45,10 +53,11 @@ API_PROXY_TARGET=http://127.0.0.1:8010 npm --prefix frontend run dev -- --port 5
 | Modbus模拟器 | `uv run --locked python simulator.py` | 15030 | 电机A四测点仿真（温度可调） |
 | 采集器 | `uv run --locked python collect_temperature.py` | - | 1秒轮询写入SQLite |
 | OPC UA（电机B） | `opcua_simulator.py` + `collect_opcua.py --mode read\|subscribe`（二选一） | 4840 | 温度单测点；read/subscribe互斥 |
-| API | `uv run --locked python serve_api.py --port 8010` | 8010 | 只读查询+助手chat |
+| 数据回放器（电机C） | `uv run --locked python replay_ai4i.py`（或 run_dashboard --with-replay） | - | AI4I 2020 合成数据集历史回放 |
+| API | `uv run --locked python serve_api.py --port 8010` | 8010 | 只读查询+助手chat（助手与 --db 同库） |
 | 前端 | `npm --prefix frontend run dev -- --port 5175` | 5175 | 看板+助手面板 |
 
-启动顺序：模拟器→采集器→API→前端（`run_dashboard.py` 自动处理）。OPC UA同一设备 read/subscribe 二选一，勿同时跑。
+启动顺序：模拟器→采集器→API→（可选回放器）→前端（`run_dashboard.py` 自动处理）。OPC UA同一设备 read/subscribe 二选一，勿同时跑。
 
 ## 3. 助手与知识库
 

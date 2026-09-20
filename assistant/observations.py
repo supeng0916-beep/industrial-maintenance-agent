@@ -2,8 +2,28 @@
 from alarms import read_alarms
 from opcua_storage import read_opcua_status
 from opcua_runtime import read_runtime
+from replay_ai4i import DATASET_INFO, DEVICE_ID as REPLAY_DEVICE, FAULT_EVENT_TYPE
 from storage import METRIC, latest_observations, query_history
 from .contracts import utc_text, parse_time
+
+REPLAY_NOTE = ('合成数据集历史回放：时间为回放时刻，非原始采集时间；'
+               '故障标注来自数据集自身，本系统不做再判定。')
+
+
+def read_replay_status(conn, limit=5):
+    """回放设备的来源声明与最近故障标注；事件按 occurred_at 倒序有界读取。"""
+    faults = conn.execute(
+        """SELECT occurred_at, message FROM collection_events
+           WHERE device_id = ? AND event_type = ?
+           ORDER BY occurred_at DESC, id DESC LIMIT ?""",
+        (REPLAY_DEVICE, FAULT_EVENT_TYPE, limit)).fetchall()
+    total = conn.execute(
+        """SELECT count(*) FROM collection_events
+           WHERE device_id = ? AND event_type = ?""",
+        (REPLAY_DEVICE, FAULT_EVENT_TYPE)).fetchone()[0]
+    return {'mode': 'historical_replay', 'dataset': DATASET_INFO,
+            'note': REPLAY_NOTE, 'faults': [dict(row) for row in faults],
+            'faults_total': total}
 
 def observation_status(sample, failure, now, stale_after_seconds):
     success_at = parse_time(sample["collected_at"]) if sample else None
@@ -62,6 +82,10 @@ def latest_metric(conn, device_id, metric, checked, stale_after_seconds):
         if opcua is not None:
             opcua.update(eligible=False, reason='stored_quality_rejected')
     alarm = read_alarms(conn, device_id, METRIC, sample, status) if metric == METRIC else None
+    replay = read_replay_status(conn) if device_id == REPLAY_DEVICE else None
     return {"device_id": device_id, "metric": metric, "measurement": sample,
-        "status": status, "alarm": alarm, **({"latest_stored_record": rejected} if rejected else {}), **({"opcua": opcua} if opcua is not None else {})}
+        "status": status, "alarm": alarm,
+        **({"latest_stored_record": rejected} if rejected else {}),
+        **({"opcua": opcua} if opcua is not None else {}),
+        **({"replay": replay} if replay is not None else {})}
 

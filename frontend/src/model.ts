@@ -2,7 +2,7 @@ export interface Measurement {
   id: number; device_id: string; metric: string; value: number; unit: string
   collected_at: string; source_time: string | null; quality: string; protocol: string
 }
-export type Metric = 'temperature' | 'current' | 'speed' | 'running_state'
+export type Metric = 'temperature' | 'air_temperature' | 'current' | 'speed' | 'torque' | 'tool_wear' | 'running_state'
 export interface MetricSnapshot {
   measurement: Measurement | null; status: Status; statusRequestedAt?: number; history?: Snapshot['history']
 }
@@ -28,12 +28,22 @@ export interface OpcuaStatus {
   eligible: boolean; reason: string
   diagnostic: { value_json: string; status_code: number; status_name: string; source_time: string | null; server_time: string | null; received_at: string; accepted: boolean; variant_type: string; reason?: string; decision_at?: string | null } | null
 }
+export interface ReplayFault { occurred_at: string; message: string }
+export interface ReplayStatus {
+  mode: 'historical_replay'
+  dataset: { name: string; author: string; source: string; license: string; synthetic: boolean; sha256: string; rows_total: number }
+  note: string
+  faults: ReplayFault[]
+  faults_total: number
+}
 export interface Snapshot {
   devices?: Snapshot['device'][]
   opcua?: OpcuaStatus | null
+  replay?: ReplayStatus | null
   statusRequestedAt?: number
   device: { id: string; name: string; protocol: string; metrics?: string[] }
   current?: MetricSnapshot; speed?: MetricSnapshot; running_state?: MetricSnapshot
+  air_temperature?: MetricSnapshot; torque?: MetricSnapshot; tool_wear?: MetricSnapshot
   measurement: Measurement | null; status: Status; alarm?: AlarmSnapshot
   history: { from: string; to: string; limit: number; points: Measurement[] }
 }
