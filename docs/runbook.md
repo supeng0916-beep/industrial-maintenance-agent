@@ -75,6 +75,7 @@ uv run --locked python run_dashboard.py --with-replay --replay-interval 0.5
 | 前端助手"无法连接后端" | `curl -s http://127.0.0.1:8010/api/devices` | 后端未起或代理目标不符；检查API_PROXY_TARGET |
 | 看板无数据 | `ls data/`、采集器终端日志 | 采集器与API须共用同一数据库；首次采集需数秒 |
 | 端口占用 | `lsof -i :8010 -i :5175 -i :15030` | 换端口参数（--port/--api-port/--web-port）；**不要杀未知进程** |
+| GitHub 每次推送都出现 Vercel 失败检查 | Vercel 控制台项目列表（是否同名项目带 -xxxx 后缀） | 同一仓库被重复导入成两个 Vercel 项目；删除配置错误的多余项目，保留 Root Directory=frontend 的那个；历史提交上的旧红叉不会消失，新推送起即干净 |
 | 索引校验失败 | 比对 `docs/verification/m4-real-rag/final-integrity.json` 哈希 | 索引目录被改动时按M4.2流程重建到新目录，勿覆盖 |
 | 数据库路径不符 | 启动日志中的db路径 | 显式传 `--db`；演示库与学习库隔离 |
 | 历史查询丢首点 | 采集器写入须微秒精度ISO（现版本已如此） | `storage.history_between` 依赖统一文本比较；勿用无微秒格式手工插数据 |
