@@ -1,8 +1,14 @@
 # 工业设备智能运维：双协议监控与只读智能助手
 
-Modbus电机A四测点、OPC UA电机B温度、SQLite存储、持续超温告警、多设备看板，以及**实验性维护助手**（LangChain单Agent编排四只读工具：设备状态/历史/告警/DOE文档检索；DeepSeek云API或本地Ollama可切换；证据引用、预算与超时、注入隔离、拒答语义齐备）。数据来自本地教学仿真，不代表工业实测或生产可靠性；文档问答为实验性，候选须人工核对。
+Modbus电机A四测点、OPC UA电机B温度、**AI4I 2020真实公开数据集历史回放（motor-c，UCI，CC BY 4.0）**、SQLite存储、持续超温告警、多设备看板，以及**实验性维护助手**（LangChain单Agent编排四只读工具：设备状态/历史/告警/DOE文档检索；DeepSeek云API或本地Ollama可切换；证据引用、预算与超时、注入隔离、拒答语义齐备）。电机A/B数据来自本地教学仿真，电机C为合成数据集回放（时间=回放时刻，故障标注来自数据集自身），均不代表工业实测或生产可靠性；文档问答为实验性，候选须人工核对。
 
-**快速开始与故障排查见[运行手册](docs/runbook.md)**（含助手 `.env` 配置：`ASSISTANT_MODEL/BASE_URL/API_KEY`，密钥永不入库）。**项目路线与全部实施记录见[项目计划v0.2](docs/project-plan-v0.2.md)文末**；助手端到端验收见 `docs/verification/m4-assistant-v1/`（24场景×36次真实运行，阻断项0违规）。
+## 页面预览（暗色控制室HMI）
+
+| 模拟电机A（Modbus仿真） | AI4I 2020 数控机床（历史回放） |
+| --- | --- |
+| ![模拟电机A看板：65.3℃固定仿真值、温度回差告警、右侧值班终端](docs/screenshots/dashboard-motor-a.png) | ![回放设备看板：数据集真实波动值、扭矩/刀具磨损/空气温度卡片、数据集标注故障史](docs/screenshots/dashboard-motor-c-replay.png) |
+
+**快速开始与故障排查见[运行手册](docs/runbook.md)**（含助手 `.env` 配置：`ASSISTANT_MODEL/BASE_URL/API_KEY`，密钥永不入库；回放启动：`run_dashboard.py --with-replay`）。**项目路线与全部实施记录见[项目计划v0.2](docs/project-plan-v0.2.md)文末**；助手端到端验收见 `docs/verification/m4-assistant-v1/`（24场景×36次真实运行，阻断项0违规）。
 
 本README保留各阶段的历史命令和验收快照，下方早期“单点/双点”等描述属于对应阶段；当前采集器为四测点版本。双协议和订阅的独立启动见[订阅验收说明](docs/verification/opcua-subscription/验收说明.md)。另保留[独立OPC UA入门实验](experiments/opcua/README.md)与[跨寄存器编码实验](experiments/register_encoding/README.md)。功能自动验证和学习者独立掌握分别验收。
 
