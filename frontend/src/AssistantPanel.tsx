@@ -86,32 +86,26 @@ export function AssistantPanel({ phase, reply, error }: {
 
   return <section className="assistant-panel" aria-label="维护助手问答">
     <div className="assistant-heading">
-      <h2>维护助手（实验性）</h2>
-      <p>回答基于只读工具证据与本地维护资料；文档候选需人工核对，不构成诊断结论。</p>
+      <h2>值班终端</h2>
+      <p>实验性 · 只读取证 · 候选须核对</p>
     </div>
-    <div className="assistant-input">
-      <label htmlFor="assistant-question">问点什么</label>
-      <textarea id="assistant-question" rows={2} maxLength={4000} value={draft}
-        placeholder="例如：motor-a 现在温度多少？资料里 20hp 变频器 12.5% 负载的效率是多少？"
-        onChange={event => setDraft(event.target.value)} />
-      <button type="button" onClick={submit} disabled={disabled}>{state === 'loading' || busy ? '正在查询…' : '提问'}</button>
-    </div>
-    {state === 'idle' && <p className="assistant-hint">回答会附上证据与限制说明。</p>}
-    {(state === 'loading' || busy) && <p className="assistant-loading" data-testid="assistant-loading">正在查询工具与资料，最长约60秒…</p>}
-    {state === 'failed' && failure && <div className="assistant-error" data-testid="assistant-error" role="alert">
-      <strong>本次提问未能完成</strong><ErrorNotice error={failure} />
-    </div>}
-    {state === 'done' && result && <div className="assistant-result" data-testid="assistant-result">
-      <div className="assistant-status-row">
-        <span className={`badge assistant-status ${result.status}`}>{assistantStatusLabel(result.status)}</span>
-        <span className="assistant-checked">查询时刻：<time dateTime={result.checked_at}>{localTime(result.checked_at)}</time></span>
-        {lastDevice && <span className="assistant-device">涉及设备：{lastDevice}</span>}
-      </div>
-      <p className="assistant-answer">{result.answer}</p>
-      <p className="assistant-status-hint">{STATUS_HINT[result.status]}</p>
-      {result.evidence.length === 0
-        ? <p className="assistant-no-evidence">本次回答未附带工具证据</p>
-        : <details className="assistant-evidence" open>
+    <div className="assistant-body">
+      {state === 'idle' && <p className="assistant-hint">问点什么，回答会附上证据与限制说明。</p>}
+      {(state === 'loading' || busy) && <p className="assistant-loading" data-testid="assistant-loading">正在查询工具与资料，最长约60秒…</p>}
+      {state === 'failed' && failure && <div className="assistant-error" data-testid="assistant-error" role="alert">
+        <strong>本次提问未能完成</strong><ErrorNotice error={failure} />
+      </div>}
+      {state === 'done' && result && <div className="assistant-result" data-testid="assistant-result">
+        <div className="assistant-status-row">
+          <span className={`badge assistant-status ${result.status}`}>{assistantStatusLabel(result.status)}</span>
+          <span className="assistant-checked">查询时刻：<time dateTime={result.checked_at}>{localTime(result.checked_at)}</time></span>
+          {lastDevice && <span className="assistant-device">{lastDevice}</span>}
+        </div>
+        <p className="assistant-answer">{result.answer}</p>
+        <p className="assistant-status-hint">{STATUS_HINT[result.status]}</p>
+        {result.evidence.length === 0
+          ? <p className="assistant-no-evidence">本次回答未附带工具证据</p>
+          : <details className="assistant-evidence" open>
           <summary>证据与引用（{result.evidence.length} 条）</summary>
           <ol className="assistant-evidence-list">
             {result.evidence.map(entry => <li key={entry.evidence_id}>
@@ -119,7 +113,7 @@ export function AssistantPanel({ phase, reply, error }: {
               {entry.candidates ? entry.candidates.map(candidate => <div key={candidate.evidence_id} className="assistant-candidate">
                 <div className="candidate-meta">
                   <span>{candidate.document_id}{candidate.source_pages.length ? ` 第${candidate.source_pages.join('/')}页` : ''}</span>
-                  {candidate.version ? <span>版本 {candidate.version}</span> : null}
+                  {candidate.version ? <span>{candidate.version}</span> : null}
                   <span className="candidate-applicability">{candidate.product_model ? `型号 ${candidate.product_model}` : '适用性未核实'}</span>
                   {(() => { const url = safeUrl(candidate.source_url); return url ? <a href={url} target="_blank" rel="noreferrer noopener">来源文件</a> : null })()}
                 </div>
@@ -128,9 +122,17 @@ export function AssistantPanel({ phase, reply, error }: {
             </li>)}
           </ol>
         </details>}
-      {result.limitations.length > 0 && <ul className="assistant-limitations">
-        {result.limitations.map((item, index) => <li key={index}>{item}</li>)}
-      </ul>}
-    </div>}
+        {result.limitations.length > 0 && <ul className="assistant-limitations">
+          {result.limitations.map((item, index) => <li key={index}>{item}</li>)}
+        </ul>}
+      </div>}
+    </div>
+    <div className="assistant-input">
+      <label htmlFor="assistant-question">问点什么</label>
+      <textarea id="assistant-question" rows={2} maxLength={4000} value={draft}
+        placeholder="例如：motor-a 现在温度多少？"
+        onChange={event => setDraft(event.target.value)} />
+      <button type="button" onClick={submit} disabled={disabled}>{state === 'loading' || busy ? '正在查询…' : '发送'}</button>
+    </div>
   </section>
 }

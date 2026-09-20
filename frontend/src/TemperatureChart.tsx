@@ -26,15 +26,15 @@ export function TemperatureChart({ history, metric = 'temperature' }: { history:
       grid: { top: 28, bottom: 32, left: 48, right: 16 },
       tooltip: { trigger: 'axis', confine: true, valueFormatter: (value: unknown) => value == null ? '缺口' : `${value} ${unit}` },
       xAxis: { type: 'time', min: Date.parse(history.from), max: Date.parse(history.to), splitNumber: 4,
-        axisLine: { lineStyle: { color: '#cedce8' } }, axisTick: { show: false },
-        axisLabel: { color: '#60788b', fontSize: 12, hideOverlap: true, formatter: '{HH}:{mm}' } },
+        axisLine: { lineStyle: { color: '#464b47' } }, axisTick: { show: false },
+        axisLabel: { color: '#a9aca0', fontSize: 12, hideOverlap: true, formatter: '{HH}:{mm}' } },
       yAxis: { type: 'value', min, max, name: unit, splitNumber: 4,
-        nameTextStyle: { color: '#60788b', padding: [0, 18, 0, 0] },
-        axisLabel: { color: '#60788b', fontSize: 12, formatter: (value: number) => value.toFixed(metric === 'speed' ? 0 : metric === 'current' ? 2 : 1) },
-        splitLine: { lineStyle: { color: '#e4ecf3', type: 'dashed' } } },
+        nameTextStyle: { color: '#a9aca0', padding: [0, 18, 0, 0] },
+        axisLabel: { color: '#a9aca0', fontSize: 12, formatter: (value: number) => value.toFixed(metric === 'speed' ? 0 : metric === 'current' ? 2 : 1) },
+        splitLine: { lineStyle: { color: '#3a3f3c', type: 'dashed' } } },
       series: [{ name: label, type: 'line', data: buildSeries(history.points), connectNulls: false,
-        smooth: false, showSymbol: true, symbolSize: 4, lineStyle: { width: 2, color: '#356489' },
-        itemStyle: { color: '#356489' } }],
+        smooth: false, showSymbol: true, symbolSize: 4, lineStyle: { width: 2, color: '#ffb000' },
+        itemStyle: { color: '#ffb000' } }],
     }, true)
   }, [history, metric, label, unit])
   return <div className="chart" ref={element} role="img" aria-label={`最近十分钟${label}曲线，${history.points.length}个真实样本，缺口不连线`} />

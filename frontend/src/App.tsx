@@ -41,9 +41,12 @@ export default function App() {
   const chartUnit = { temperature: '℃', current: 'A', speed: 'rpm', running_state: '枚举' }[metric]
   return <main className="shell">
     <header className="masthead">
-      <div className="workspace-title"><span className="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M3 17h4l3-10 4 13 3-8h4" /></svg></span><div><h1>设备观测工作台</h1><p>多协议电机观测看板</p></div></div>
+      <div className="workspace-title"><span className="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M3 17h4l3-10 4 13 3-8h4" /></svg></span><div><h1>设备观测工作台</h1><p>多协议电机观测终端</p></div></div>
       <span className="tag">本地仿真 / 只读</span>
     </header>
+
+    <div className="console">
+      <div className="console-main">
 
     <div className="metric-selector device-selector"><label htmlFor="device-selector">观测设备</label><select id="device-selector" value={deviceId} onChange={event => { setDeviceId(event.target.value); setMetric('temperature') }}>
       {devices.length ? devices.map(device => <option key={device.id} value={device.id}>{device.name} · {device.protocol === 'opcua' ? 'OPC UA' : 'Modbus TCP'}</option>) : <option value="motor-a">模拟电机 A</option>}
@@ -95,8 +98,6 @@ export default function App() {
 
     <AlarmPanel alarm={snapshot?.alarm} unverified={alarmUnverified(snapshot, unverified || runtimeStale, performance.now())} />
 
-    <AssistantPanel phase="idle" />
-
     <section className="chart-panel">
       <div className="chart-heading"><div><h2>最近10分钟{chartLabel}{metric === 'running_state' ? '记录' : '趋势'}</h2><p>{metric === 'running_state' ? '按实际采集记录展示，不推断样本之间的状态。' : `横轴是本地时间，纵轴是${chartLabel}。`}{unverified ? (history ? '当前显示最后获取的历史快照。' : '暂未取得历史查询结果。') : '只绘制实际采集的记录。'}</p></div><span className="legend">{chartLabel} / {chartUnit}</span></div>
       <div className="metric-selector"><label htmlFor="history-metric">历史指标</label><select id="history-metric" value={metric} onChange={event => setMetric(event.target.value as Metric)}><option value="temperature">温度（℃）</option>{!isOpcua && <><option value="current">电流（A）</option><option value="speed">转速（rpm）</option><option value="running_state">运行状态记录</option></>}</select><span>一次只显示一个指标，单位不混用</span></div>
@@ -112,6 +113,12 @@ export default function App() {
         {error && <p className="error-detail">接口返回信息：{error}</p>}
       </div>
     </details>
+      </div>{/* /console-main */}
+
+      <aside className="operator-terminal" aria-label="值班终端">
+        <AssistantPanel phase="idle" />
+      </aside>
+    </div>{/* /console */}
     <footer className="page-footer"><span>设备状态以采集记录为依据，不作健康判断</span><span>前端最后获取成功：<time data-testid="fetched-at">{localTime(fetchedAt)}</time></span></footer>
   </main>
 }
