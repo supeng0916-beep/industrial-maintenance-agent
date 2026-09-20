@@ -1,0 +1,101 @@
+{
+ "ok": true,
+ "check": "d3-document-tool-real-query-trace",
+ "executed_at": "2026-09-18T10:01:53.631647+00:00",
+ "query": "按典型PWM变频器效率表，20hp驱动器在12.5%负载时效率是多少？",
+ "query_echoed_by_tool": "按典型PWM变频器效率表，20hp驱动器在12.5%负载时效率是多少？",
+ "limitations": [
+  "候选不证明适用性或可回答性",
+  "距离不作为置信度返回；适用型号未核实前，候选不代表适用于当前设备"
+ ],
+ "index_path": "docs/verification/m4-real-rag/doe-e5-final",
+ "index_chunks_sha256": "daaacb8de8fccddfa4298ddb6096861cf1f12fd12f4291bc0961efa405175a6a",
+ "index_files_unchanged": true,
+ "trace": [
+  {
+   "evidence_id": "doc-1",
+   "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+   "document_id": "doe-motor-ts11",
+   "source_pages": [
+    "2"
+   ],
+   "chunk_source_pages": [
+    "2"
+   ],
+   "source_path": "doe-motor-ts11.md",
+   "corpus_file_exists": true,
+   "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+   "product_model": null,
+   "original_text_sha256": "c2fb9285c15f09d87e90d0b6fc142dc280ab0c60a876bd816112ab63a8b2d813",
+   "original_text_head": "```text\n                       Efficiency (%)\n Variable\n  Drive        Load, Percent of Drive Rated Power Output\nhp Rati"
+  },
+  {
+   "evidence_id": "doc-2",
+   "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+   "document_id": "doe-motor-ts12",
+   "source_pages": [
+    "2"
+   ],
+   "chunk_source_pages": [
+    "2"
+   ],
+   "source_path": "doe-motor-ts12.md",
+   "corpus_file_exists": true,
+   "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+   "product_model": null,
+   "original_text_sha256": "f3364cd57a3b2a6dc535850a344fd981d95b22efc34c8fe7cf93e52016206685",
+   "original_text_head": "```text\n          % of            Motor   VFD    Weighted\n% of Rated      Load, Shaft\n        Operating       Efficiency"
+  },
+  {
+   "evidence_id": "doc-3",
+   "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+   "document_id": "doe-motor-ts12",
+   "source_pages": [
+    "2"
+   ],
+   "chunk_source_pages": [
+    "2"
+   ],
+   "source_path": "doe-motor-ts12.md",
+   "corpus_file_exists": true,
+   "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+   "product_model": null,
+   "original_text_sha256": "cf3b4fa81e31e19dfa8865608cdb4e5f7066781f87c58217adca4abd9a809753",
+   "original_text_head": "Note that the input power (in kW) is equal to 0.746 kW/hp times the shaft horsepower divided by the product of the motor"
+  },
+  {
+   "evidence_id": "doc-4",
+   "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+   "document_id": "doe-motor-ts07",
+   "source_pages": [
+    "1"
+   ],
+   "chunk_source_pages": [
+    "1"
+   ],
+   "source_path": "doe-motor-ts07.md",
+   "corpus_file_exists": true,
+   "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+   "product_model": null,
+   "original_text_sha256": "eede4fe4b29e55ea3cef5ece077b75d483e76010a9c28a9deb0c8dacc7377fc2",
+   "original_text_head": "```text\n                         Motor Efficiency, %\n  Motor Load\n                         Voltage Unbalance\n    % Full\n"
+  },
+  {
+   "evidence_id": "doc-5",
+   "chunk_id": "doe-motor-ts11:fe00714c0fe126cf8ba2",
+   "document_id": "doe-motor-ts11",
+   "source_pages": [
+    "1"
+   ],
+   "chunk_source_pages": [
+    "1"
+   ],
+   "source_path": "doe-motor-ts11.md",
+   "corpus_file_exists": true,
+   "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+   "product_model": null,
+   "original_text_sha256": "5cf4929d4c8840b5c80075afd2886c813c80be29f23fb5d10b37871f87e50f0e",
+   "original_text_head": "\n# Adjustable Speed Drive Part-Load Efficiency\n\n## Page 1\n\nAdjustable Speed Drive Part-Load Efficiency\n\nAn adjustable sp"
+  }
+ ]
+}

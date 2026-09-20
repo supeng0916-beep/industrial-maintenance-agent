@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>2026-09-18 学习总结：查询语言单变量对照实验</title>
+<style>
+  body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;max-width:880px;margin:24px auto;padding:0 16px;color:#1c2733;line-height:1.65;}
+  h1{font-size:22px;border-bottom:2px solid #2b6cb0;padding-bottom:6px;}
+  h2{font-size:17px;margin-top:28px;color:#2b6cb0;}
+  .box{border:1px solid #cbd5e0;border-radius:8px;padding:10px 14px;margin:8px 0;background:#f7fafc;}
+  .fixed{border-left:5px solid #718096;}
+  .var{border-left:5px solid #dd6b20;}
+  .row{display:flex;gap:12px;flex-wrap:wrap;}
+  .row>div{flex:1;min-width:260px;}
+  table{border-collapse:collapse;width:100%;margin:10px 0;font-size:14px;}
+  th,td{border:1px solid #cbd5e0;padding:6px 10px;text-align:center;}
+  th{background:#edf2f7;}
+  .up{color:#276749;font-weight:600;}
+  .down{color:#9b2c2c;font-weight:600;}
+  .bar{height:14px;border-radius:7px;background:#4299e1;display:inline-block;vertical-align:middle;}
+  .bar.base{background:#a0aec0;}
+  code,pre{background:#edf2f7;border-radius:4px;font-size:13px;}
+  pre{padding:10px;overflow-x:auto;}
+  .note{font-size:13px;color:#4a5568;}
+  .quiz{border:2px dashed #dd6b20;border-radius:8px;padding:12px 16px;background:#fffaf0;}
+</style>
+</head>
+<body>
+<h1>2026-09-18｜接手日：把 3 题语言探针升级为 24 题单变量对照实验</h1>
+<p class="note">来源：交接包、既有验收文档、本轮实际开发验证。今天没有与用户的真实问答；文末考题待作答。上午三题探针由前一个接手任务完成，此处只引用其报告文件。</p>
+
+<h2>实验设计：固定一切，只改查询语言</h2>
+<div class="row">
+  <div class="box fixed"><b>固定项（全部冻结）</b>
+    <ul style="margin:6px 0 0;padding-left:18px;">
+      <li>E5 最终索引（113 块，只读）</li>
+      <li>模型 multilingual-e5-small（本地缓存）</li>
+      <li>切块、计分口径 score_evidence、top_k=10</li>
+      <li>44 题原题集（字节哈希校验）</li>
+    </ul>
+  </div>
+  <div class="box var"><b>唯一变量</b>
+    <ul style="margin:6px 0 0;padding-left:18px;">
+      <li>中文原题 → 等义英文改写</li>
+      <li>29 题（24 有答案 + 5 证据不足）</li>
+      <li>查询前冻结，sha256 记录</li>
+      <li>R17/R29/R34 复用探针措辞</li>
+      <li>偏差如实披露：改写者读过失败记录，非盲</li>
+    </ul>
+  </div>
+</div>
+
+<h2>结果（dev 24 道有答案题，真实运行）</h2>
+<table>
+  <tr><th>指标</th><th>中文原题</th><th>英文改写</th><th></th></tr>
+  <tr><td>Hit@5</td><td>15/24（62.5%）</td><td class="up">20/24（83.3%）</td>
+      <td><span class="bar base" style="width:150px"></span> → <span class="bar" style="width:200px"></span></td></tr>
+  <tr><td>Hit@10</td><td>19/24（79.2%）</td><td class="up">23/24（95.8%）</td>
+      <td><span class="bar base" style="width:190px"></span> → <span class="bar" style="width:230px"></span></td></tr>
+</table>
+<ul>
+  <li><b>基线复现</b>：24 道原查询 top10 与冻结评测文件逐题一致 → 环境无漂移，两列可比。</li>
+  <li><b>D2 门槛 pass</b>（@5&gt;15 且 @10≥19）。门槛通过 ≠ 生产可用，只代表方向值得继续。</li>
+  <li>5 道证据不足题命中为 null，<b>不进分母</b>。</li>
+  <li class="down">唯一退步题 R02：中文第 5 → 英文跌出前 10（"power range" vs 原文 "between 10 and 500 hp"，等义但词汇贴近度下降；无数值/单位/否定变化，不构成阻断项）。</li>
+</ul>
+
+<h2>关键代码（experiments/rag_query_language.py）</h2>
+<pre># 复用既有计分器，避免两套口径
+entry['first_anchor_rank'] = next((c['rank'] for c in candidates
+                                   if score_evidence(case, [c])[0]), None)
+# 证据不足题永不进正例分母
+answerable = [r for r in records if r['answerable']]
+summary[f'{label}_hit_at_{k}'] = sum(1 for r in answerable if r[label][f'hit_at_{k}'])</pre>
+
+<h2>检索失败四分法（L1，全部用本库真实例子）</h2>
+<table>
+  <tr><th>类型</th><th>本库例子</th></tr>
+  <tr><td>缺文档</td><td>N03：问 ABB M3BP 160 润滑，库里只有 DOE 通用指南</td></tr>
+  <tr><td>缺片段</td><td>本轮未出现：34 题标注证据都已在索引中</td></tr>
+  <tr><td>排位低</td><td>R34 目标表在第 8；R17 换英文才进第 10</td></tr>
+  <tr><td>标注不完整</td><td>R03：正确文档进了候选，但预标 anchor 没出现——anchor ≠ 全部等价证据</td></tr>
+</table>
+
+<h2>考题（待作答，答对进入 D2 / L2 收尾）</h2>
+<div class="quiz">
+  R02 这种"英文改写反而跌出前 10"的退步：如果 D2 选择上线查询改写，有一条<b>零成本</b>的检索层保护，
+  能让 R02 不退步、同时保留 R08/R22/R34 的大幅改善。是什么措施？<br>
+  <span class="note">提示：两个查询各自的 top10 里各有什么？search_index 一次只返回一个查询的候选。</span>
+</div>
+
+<h2>验证证据</h2>
+<ul>
+  <li>报告与结果：<code>docs/verification/m4-rag-improvement-v1/report.md</code>、<code>results.json</code></li>
+  <li>冻结改写：<code>docs/evaluation/query-language-dev-v1.json</code>（sha256 1c4742…ba28b）</li>
+  <li>脚本防护测试 7 项通过：<code>tests/test_rag_query_language.py</code></li>
+  <li>索引未改动：实验后 chunks_sha256 与 final-integrity.json 一致</li>
+</ul>
+<p class="note">本页可离线打开；无外部资源。配套 Markdown：docs/learning/2026-09-18.md</p>
+</body>
+</html>

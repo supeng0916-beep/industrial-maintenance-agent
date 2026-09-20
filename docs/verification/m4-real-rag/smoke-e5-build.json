@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "index": "docs/verification/m4-real-rag/smoke-e5",
+  "config": {
+    "schema": "maintenance-rag-v1",
+    "model_signature": {
+      "model": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "pooling": "attention_mask_mean",
+      "query_prefix": "query: ",
+      "passage_prefix": "passage: ",
+      "dimension": 384,
+      "normalize": "l2",
+      "max_length": 512,
+      "special_tokens": true,
+      "dtype": "float32",
+      "device": "cpu",
+      "libraries": {
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "safetensors": "0.8.0"
+      }
+    },
+    "model_signature_sha256": "16aeaf6a5e09729fcd8a18afe934419741a22ca2de6b274392467344de0ba591",
+    "chunks_sha256": "8398d1b928fba38b63e488137f8ccaa5eff588c870feff4b38f44a57d8e0c3eb",
+    "chunk_count": 33,
+    "document_count": 5,
+    "distance": "cosine",
+    "chromadb_version": "1.5.5",
+    "corpus": {
+      "manifest": "/Users/yuanqi/项目/工业设备智能运维agent/docs/knowledge/manifest.json",
+      "manifest_sha256": "c3a03bb2dff7ff93bb4dde14bbd2ac1e0beee2d356c4ef91710981a15522b72c",
+      "documents": [
+        {
+          "document_id": "device-points",
+          "source_path": "device-points.md",
+          "sha256": "c3392e0a0f75a61458e3d8703ff1525713c38b6a536182ac6ca3500e310c04db",
+          "body_characters": 821,
+          "covered_characters": 821,
+          "complete": true
+        },
+        {
+          "document_id": "temperature-alarms",
+          "source_path": "temperature-alarms.md",
+          "sha256": "6dd36a54c8a700b87344da8f6b9a67be5f3bb0de8024b3bff0bbbe2acddd3681",
+          "body_characters": 724,
+          "covered_characters": 724,
+          "complete": true
+        },
+        {
+          "document_id": "opcua-evidence",
+          "source_path": "opcua-evidence.md",
+          "sha256": "d92ccf93f0d86324b307a4935ebdb231983aa1e3f646dc25d9602d7fc0484c00",
+          "body_characters": 889,
+          "covered_characters": 889,
+          "complete": true
+        },
+        {
+          "document_id": "readonly-queries",
+          "source_path": "readonly-queries.md",
+          "sha256": "7654c0cd5e0eaca6ba9c33cb655435838d16051ab25b137d12427e3a2114aa95",
+          "body_characters": 884,
+          "covered_characters": 884,
+          "complete": true
+        },
+        {
+          "document_id": "evidence-boundaries",
+          "source_path": "evidence-boundaries.md",
+          "sha256": "09cd038831a29d50c46de36541b69582a2b5a4c5f217aa733a0ff49365fdfa0e",
+          "body_characters": 637,
+          "covered_characters": 637,
+          "complete": true
+        }
+      ],
+      "chunk_strategy": "rag-page-heading-sentence-v2",
+      "max_token_count": 259,
+      "over_soft_target": 0,
+      "physical_pages": 0,
+      "source_pages_note": "Count from document metadata; inspect source registration for duplicates."
+    },
+    "build_seconds": 0.8678372499998659,
+    "limitations": [
+      "Candidates are evidence to inspect, not diagnosis or proof of applicability."
+    ]
+  }
+}

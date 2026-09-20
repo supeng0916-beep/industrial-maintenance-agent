@@ -1,0 +1,70 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+      Table 1. Adjustable Speed Drive Part-Load Efficiency*                         
+                                                                 Resources          
+                              Efficiency (%)                                        
+       Variable                                                                     
+                                                          National Electrical Manufacturers
+        Drive        Load, Percent of Drive Rated Power Output                      
+                                                          Association (NEMA)—Visit www.
+       hp Rating                                                                    
+                1.6  12.5  25    42    50    75   100     nema.org for information on
+                                                          motor standards, application
+         5      35    80   88    91    92    94   95                                
+                                                          guides, and technical papers.
+         10     41    83   90    93    94    95   96                                
+         20     47    86   93    94    95    96   97      U.S. Department of Energy (DOE)—
+                                                          For more information on motor
+         30     50    88   93    95    95    96   97                                
+                                                          and motor-driven system   
+         50     46    86   92    95    95    96   97                                
+                                                          efficiency and to download the
+         60     51    87   92    95    95    96   97      MotorMaster+ software tool, visit
+                                                          the Advanced Manufacturing
+         75     47    86   93    95    96    97   97                                
+                                                          Office (AMO) website at   
+        100     55    89   94    95    96    97   97                                
+                                                          manufacturing.energy.gov. 
+        200     61    81   95    96    96    97   97                                
+     *These efficiency values may be considered representative of “typical” PWM VFD performance. There
+     is no widely accepted test protocol that allows for efficiency comparisons between different drive
+     models or brands. In addition, there are many ways to set up a VFD that can affect the operating
+     efficiency. Source: Saftronics, Inc.                                           
+     VFD efficiency decreases with decreasing motor load. The decline in efficiency is
+     more pronounced with drives of smaller horsepower ratings. As shown in the following
+     example, this reduction in efficiency is not as detrimental as it first seems. 
+     Example                                                                        
+     Consider a VFD coupled to a motor that requires 16.4 kilowatts (kW) to deliver 20 shaft
+     hp to an exhaust fan when operated at its full rated speed. At half its rated operating
+     speed, the fan delivers 50% of its rated airflow but requires only 1/8 full-load power.
+     Even with a reduced motor efficiency of 77.8% and drive efficiency of 86%, with adjust-
+     able speed operation the power required by the fan and the VFD is only 2.8 kW. For this
+     example, input power requirements are reduced by 82.9%.                        
+     kW 50% = 0.746 kW/hp x (20 hp x (1/2)3 / (0.778 x 0.86) = 2.8 kW               
+     Remember that the system efficiency is the product of the VFD efficiency, the motor
+     efficiency at its load point, and the driven equipment efficiency (ηsystem = η x
+                                               VFD                                  
+     η  x η  ). Efficiencies for integral horsepower NEMA Design A and B motors     
+      Motor Equipment                                                               
+     at full and part load can readily be obtained from the U.S. Department of Energy’s
+     MotorMaster+ 4.0 software tool. Efficiencies for driven equipment must be extracted
+     from the appropriate pump or fan performance curves.                           
+     Additional Information                                                         
+     For additional information regarding adjustable speed drive applications, refer to
+     Motor Systems Tip Sheet #14, When Should Inverter-Duty Motors be Specified and 
+     Motor Systems Tip Sheet #15, Minimize Adverse Motor and Adjustable Speed Drive 
+     Interactions at: www.eere.energy.gov/manufacturing/tech_deployment/motors.html.
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3730 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

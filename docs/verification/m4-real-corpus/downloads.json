@@ -1,0 +1,92 @@
+[
+  {
+    "tip": 1,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/whentopurchase_nema_motor_systemts1.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-01.pdf",
+    "sha256": "af4b552b4603a30efec4c72a3af23d53af48e130a0322a338bfa14385e2f4a91"
+  },
+  {
+    "tip": 2,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/estimate_motor_efficiency_motor_systemts2.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-02.pdf",
+    "sha256": "ae69737fc301d2dce437c98b803c857b70a48134be886b884d09d2122e5a4533"
+  },
+  {
+    "tip": 3,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/extend_motor_operlife_motor_systemts3.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-03.pdf",
+    "sha256": "ce0dfe769c0be9b511bb9f5f6ceeead1e8f6e56c1bdf40e0752756394fdc6ed4"
+  },
+  {
+    "tip": 4,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/importance_motor_shaft_motor_systemts4.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-04.pdf",
+    "sha256": "9edf460a75652b000c3f53d8ac5fa13735168be967dc44862c6cb0bde169635b"
+  },
+  {
+    "tip": 5,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/replace_vbelts_motor_systemts5.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-05.pdf",
+    "sha256": "bd8b09a5d1be8e83dbdd70a5a29235536d91cab47f3dba67068955bd6b3bae59"
+  },
+  {
+    "tip": 6,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/avoid_nuisance_motorsys_ts6.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-06.pdf",
+    "sha256": "03f9eeef5f3b1446134636c8f6be601d651706fe1e8bc33f50fbdc50496b56bb"
+  },
+  {
+    "tip": 7,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/eliminate_voltage_unbalanced_motor_systemts7.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-07.pdf",
+    "sha256": "e39afc0a4f4a5e6e7d57baf219abd23eebce7a0b21f240337d0d6e70c232530a"
+  },
+  {
+    "tip": 8,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-08.pdf",
+    "sha256": "9119468e2237aae542d8d2fe2905c1de6fd0788fe42af59609792f6995b8f448"
+  },
+  {
+    "tip": 9,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet9.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-09.pdf",
+    "sha256": "c295cb8aa4b27ff6612c01577aafb4a5370cb4eee67d01c586ad1dfe2e9a7900"
+  },
+  {
+    "tip": 10,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet10.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-10.pdf",
+    "sha256": "c25530d8daf61b12e91af44dc100931aaf55deab1e3d986489d6fa7127e18d47"
+  },
+  {
+    "tip": 11,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-11.pdf",
+    "sha256": "2614ca8b880e4f8962b45e9a832e0800e73db3300cbe892111d6b6aa9d7c3c0d"
+  },
+  {
+    "tip": 12,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-12.pdf",
+    "sha256": "4ea1d416b8823d44318b5c740516588b7e7e310760155e01f6ed3db427604fc2"
+  },
+  {
+    "tip": 13,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet13.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-13.pdf",
+    "sha256": "90ad807f98599a3298fbc55dc19f3734fd653ca47c231e8e4d9e584a7a886a92"
+  },
+  {
+    "tip": 14,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet14.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-14.pdf",
+    "sha256": "46029534abfbb5be5da1d54fecbd737c41bedd611d5e99dd09f1cd51faa51b58"
+  },
+  {
+    "tip": 15,
+    "url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet15.pdf",
+    "raw": "docs/verification/m4-real-corpus/raw/doe-motor-tip-15.pdf",
+    "sha256": "d76af015ec57e5ef868834103297534a8d64a77418a0995de248d7af3e7a5285"
+  }
+]

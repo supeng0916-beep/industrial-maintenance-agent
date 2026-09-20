@@ -1,0 +1,174 @@
+{
+  "ok": true,
+  "index": "docs/verification/m4-real-rag/doe-bge-final",
+  "config": {
+    "schema": "maintenance-rag-v1",
+    "model_signature": {
+      "model": "BAAI/bge-small-zh-v1.5",
+      "revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "pooling": "cls",
+      "query_prefix": "为这个句子生成表示以用于检索相关文章：",
+      "passage_prefix": "",
+      "dimension": 512,
+      "normalize": "l2",
+      "max_length": 512,
+      "special_tokens": true,
+      "dtype": "float32",
+      "device": "cpu",
+      "libraries": {
+        "torch": "2.10.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "safetensors": "0.8.0"
+      }
+    },
+    "model_signature_sha256": "f71f78c457a72dce2aec5974f2136dc4be3cf94fc08c9bec854cc49d3b55e772",
+    "chunks_sha256": "09ca43f9d7a61a51381ef5d539d68de43f23d916da831b932137c188413c3643",
+    "chunk_count": 131,
+    "document_count": 15,
+    "distance": "cosine",
+    "chromadb_version": "1.5.5",
+    "storage_files": [
+      "chroma/45070113-c354-4654-a0da-4d9ae6e3afba/data_level0.bin",
+      "chroma/45070113-c354-4654-a0da-4d9ae6e3afba/header.bin",
+      "chroma/45070113-c354-4654-a0da-4d9ae6e3afba/length.bin",
+      "chroma/45070113-c354-4654-a0da-4d9ae6e3afba/link_lists.bin",
+      "chroma/chroma.sqlite3"
+    ],
+    "corpus": {
+      "manifest": "/Users/yuanqi/项目/工业设备智能运维agent/docs/knowledge-real/manifest.json",
+      "manifest_sha256": "2a1da80dca7f618e0b39c19ed77417bc4dc45f1f5655083d10bdbef9b02e15a3",
+      "documents": [
+        {
+          "document_id": "doe-motor-ts01",
+          "source_path": "doe-motor-ts01.md",
+          "sha256": "5fb412f15617c4819199c56405718e076626ed71267e5d7e3e65174e2ac8e82a",
+          "body_characters": 5892,
+          "covered_characters": 5892,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts02",
+          "source_path": "doe-motor-ts02.md",
+          "sha256": "1a04900ea4f37b4d58af400050ea2cad35771346c686fce920d452cdc21aab02",
+          "body_characters": 6590,
+          "covered_characters": 6590,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts03",
+          "source_path": "doe-motor-ts03.md",
+          "sha256": "7ee17ef5de984a12448a77ccdcfa60b9b6255b8087e1c12aa6e51b23f5259024",
+          "body_characters": 6887,
+          "covered_characters": 6887,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts04",
+          "source_path": "doe-motor-ts04.md",
+          "sha256": "22f9d213c16d826f0e1b02586d3e0b9ccf6ce6f8f4de55642e141b7814789bdb",
+          "body_characters": 5669,
+          "covered_characters": 5669,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts05",
+          "source_path": "doe-motor-ts05.md",
+          "sha256": "f6f0b4810c96f727586182857099cdc7fe607b300c506f14d4004e4db36a5014",
+          "body_characters": 6106,
+          "covered_characters": 6106,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts06",
+          "source_path": "doe-motor-ts06.md",
+          "sha256": "7e168bcd98aa05bb8aedd58f4154f7549df8475425f4713435fcdec54db44a2f",
+          "body_characters": 5630,
+          "covered_characters": 5630,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts07",
+          "source_path": "doe-motor-ts07.md",
+          "sha256": "f881fee1b6455c394af08f8dd43a3b847f6ee3da321d2f192d88578c5618d033",
+          "body_characters": 5704,
+          "covered_characters": 5704,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts08",
+          "source_path": "doe-motor-ts08.md",
+          "sha256": "5902333a0eb753d40e4e2c2c01c8c3f24d94a00d2687516ec8d624ea8856e519",
+          "body_characters": 5366,
+          "covered_characters": 5366,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts09",
+          "source_path": "doe-motor-ts09.md",
+          "sha256": "d8944e085fc5a36eeeed31c348cf103831b20981ad1f2a8623508e33fa9679c8",
+          "body_characters": 7356,
+          "covered_characters": 7356,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts10",
+          "source_path": "doe-motor-ts10.md",
+          "sha256": "41bbd84b7b851fb5f1ef3592c79ed267e1b51ebdb072ffc6e18c83aaae4b4da6",
+          "body_characters": 7694,
+          "covered_characters": 7694,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts11",
+          "source_path": "doe-motor-ts11.md",
+          "sha256": "8721d227589d8e61fca4410febca5655872e2487dce1456691b85913a507c398",
+          "body_characters": 7185,
+          "covered_characters": 7185,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts12",
+          "source_path": "doe-motor-ts12.md",
+          "sha256": "f018f42ff87f0419683e74c1006c81975bcc62d1558afab2895fe3233c730033",
+          "body_characters": 7397,
+          "covered_characters": 7397,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts13",
+          "source_path": "doe-motor-ts13.md",
+          "sha256": "a9f3585e348841b9498cabcb51d8b3a3c404df650b9d63964cd646bbfbf9ba74",
+          "body_characters": 6831,
+          "covered_characters": 6831,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts14",
+          "source_path": "doe-motor-ts14.md",
+          "sha256": "d22eec2a8d10270c353f239bd2670d73b42b0b5d3eacb161413a8037decc93a2",
+          "body_characters": 7402,
+          "covered_characters": 7402,
+          "complete": true
+        },
+        {
+          "document_id": "doe-motor-ts15",
+          "source_path": "doe-motor-ts15.md",
+          "sha256": "f95e1f2aed3356ab86dd2a64f3dd3954a00a724fd9f004bc56084f76a7398d05",
+          "body_characters": 6843,
+          "covered_characters": 6843,
+          "complete": true
+        }
+      ],
+      "chunk_strategy": "rag-page-heading-sentence-v4",
+      "max_token_count": 508,
+      "over_soft_target": 68,
+      "physical_pages": 30,
+      "source_pages_note": "Count from document metadata; inspect source registration for duplicates."
+    },
+    "build_seconds": 2.8711242091376334,
+    "limitations": [
+      "Candidates are evidence to inspect, not diagnosis or proof of applicability."
+    ]
+  }
+}

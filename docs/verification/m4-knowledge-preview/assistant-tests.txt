@@ -1,0 +1,28 @@
+test_actual_schema_errors_propagate_instead_of_becoming_empty (test_assistant_ranges.RangeTests.test_actual_schema_errors_propagate_instead_of_becoming_empty) ... ok
+test_alarms_overlap_closed_interval_counts_and_full_evidence (test_assistant_ranges.RangeTests.test_alarms_overlap_closed_interval_counts_and_full_evidence) ... ok
+test_closed_endpoints_device_metric_quality_isolation (test_assistant_ranges.RangeTests.test_closed_endpoints_device_metric_quality_isolation) ... ok
+test_empty_has_null_statistics (test_assistant_ranges.RangeTests.test_empty_has_null_statistics) ... ok
+test_enum_counts_full_range_and_preserves_unknown_state (test_assistant_ranges.RangeTests.test_enum_counts_full_range_and_preserves_unknown_state) ... ok
+test_legacy_alarm_evidence_stays_legacy (test_assistant_ranges.RangeTests.test_legacy_alarm_evidence_stays_legacy) ... ok
+test_missing_alarm_table_is_unavailable_without_migration (test_assistant_ranges.RangeTests.test_missing_alarm_table_is_unavailable_without_migration) ... ok
+test_statistics_include_extremes_beyond_truncated_points (test_assistant_ranges.RangeTests.test_statistics_include_extremes_beyond_truncated_points) ... ok
+test_actual_sql_progress_timeout_and_connection_closed (test_assistant_snapshot.SnapshotTests.test_actual_sql_progress_timeout_and_connection_closed) ... ok
+test_history_count_and_details_share_snapshot_during_writer_commit (test_assistant_snapshot.SnapshotTests.test_history_count_and_details_share_snapshot_during_writer_commit) ... ok
+test_lock_wait_is_bounded_and_not_empty (test_assistant_snapshot.SnapshotTests.test_lock_wait_is_bounded_and_not_empty) ... ok
+test_readonly_connection_rejects_write_and_budget_covers_multiple_queries (test_assistant_snapshot.SnapshotTests.test_readonly_connection_rejects_write_and_budget_covers_multiple_queries) ... ok
+test_status_all_metrics_share_snapshot_during_writer_commit (test_assistant_snapshot.SnapshotTests.test_status_all_metrics_share_snapshot_during_writer_commit) ... ok
+test_b_source_age_quality_runtime_do_not_infect_a (test_assistant_tools.ToolTests.test_b_source_age_quality_runtime_do_not_infect_a) ... ok
+test_empty_and_legacy_reads_never_migrate (test_assistant_tools.ToolTests.test_empty_and_legacy_reads_never_migrate) ... ok
+test_invalid_nonfinite_database_value_is_structured_error (test_assistant_tools.ToolTests.test_invalid_nonfinite_database_value_is_structured_error) ... ok
+test_invalid_stored_source_time_returns_json_error (test_assistant_tools.ToolTests.test_invalid_stored_source_time_returns_json_error) ... ok
+test_latest_bad_stored_row_keeps_good_value_but_marks_unknown (test_assistant_tools.ToolTests.test_latest_bad_stored_row_keeps_good_value_but_marks_unknown) ... ok
+test_missing_database_is_not_created (test_assistant_tools.ToolTests.test_missing_database_is_not_created) ... ok
+test_real_cli_returns_json_and_exit_status (test_assistant_tools.ToolTests.test_real_cli_returns_json_and_exit_status) ... ok
+test_status_all_points_reuses_http_facts (test_assistant_tools.ToolTests.test_status_all_points_reuses_http_facts) ... ok
+test_tool_history_empty_json_and_timezone_boundary (test_assistant_tools.ToolTests.test_tool_history_empty_json_and_timezone_boundary) ... ok
+test_unknown_and_invalid_inputs_are_errors_not_empty (test_assistant_tools.ToolTests.test_unknown_and_invalid_inputs_are_errors_not_empty) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.524s
+
+OK

@@ -1,0 +1,162 @@
+test_boundaries_continuous_high_restart_recovery_and_retrigger (test_alarms.AlarmTests.test_boundaries_continuous_high_restart_recovery_and_retrigger) ... ok
+test_failure_stale_and_unassessed_sample_never_clear_active (test_alarms.AlarmTests.test_failure_stale_and_unassessed_sample_never_clear_active) ... ok
+test_invalid_temperature_or_missing_rule_cannot_commit (test_alarms.AlarmTests.test_invalid_temperature_or_missing_rule_cannot_commit) ... ok
+test_legacy_database_unknown_and_no_get_migration_or_replay (test_alarms.AlarmTests.test_legacy_database_unknown_and_no_get_migration_or_replay) ... ok
+test_parallel_collectors_create_one_active_alarm (test_alarms.AlarmTests.test_parallel_collectors_create_one_active_alarm) ... ok
+test_readonly_latest_consistency_history_limit_and_invalid_device (test_alarms.AlarmTests.test_readonly_latest_consistency_history_limit_and_invalid_device) ... ok
+test_recovery_write_failure_rolls_back_measurement_and_state (test_alarms.AlarmTests.test_recovery_write_failure_rolls_back_measurement_and_state) ... ok
+test_bad_device_metric_dates_range_and_limit_have_consistent_errors (test_api.ApiTests.test_bad_device_metric_dates_range_and_limit_have_consistent_errors) ... ok
+test_exact_stale_boundary_and_last_success_stays_historical (test_api.ApiTests.test_exact_stale_boundary_and_last_success_stays_historical) ... ok
+test_failure_then_recovery_compares_record_times_not_insert_order (test_api.ApiTests.test_failure_then_recovery_compares_record_times_not_insert_order) ... ok
+test_history_utc_range_limit_order_and_empty_result (test_api.ApiTests.test_history_utc_range_limit_order_and_empty_result) ... ok
+test_missing_database_recovers_without_restart_and_empty_data (test_api.ApiTests.test_missing_database_recovers_without_restart_and_empty_data) ... 只读数据库查询失败: unable to open database file
+ok
+test_readonly_concurrent_requests_and_locked_database (test_api.ApiTests.test_readonly_concurrent_requests_and_locked_database) ... 只读数据库查询失败: database is locked
+ok
+test_live_http_missing_database_recovery_and_readonly_concurrency (test_api_http.RealHttpTests.test_live_http_missing_database_recovery_and_readonly_concurrency) ... 
+HTTP验收启动： /Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python serve_api.py --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/tmp5yhs_wgr/http.sqlite3 --port 63615
+缺库： 503 {'error': {'code': 'database_unavailable', 'message': '数据库不可读：文件尚未创建、表未就绪、被锁或损坏；请检查采集器及服务日志'}}
+建库后无需重启： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': None, 'status': {'has_data': False, 'last_attempt_status': 'unknown', 'last_attempt_at': None, 'last_success_at': None, 'last_failure_type': None, 'last_failure_message': None, 'last_failure_at': None, 'data_age_seconds': None, 'is_stale': None, 'checked_at': '2026-09-17T07:12:42.600235+00:00', 'stale_after_seconds': 5}, 'alarm': {'enabled': False, 'current': 'not_enabled', 'active': None, 'history': [], 'total': 0, 'limit': 20, 'evaluated_measurement_id': None, 'pending': None, 'rule': {'trigger_above': 80.0, 'recover_below': 78.0, 'unit': '℃', 'teaching_only': True}}}
+旧值仍保留原时间，已过期： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': {'id': 1, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 65.3, 'unit': '℃', 'collected_at': '2026-09-17T07:12:32.600690+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}, 'status': {'has_data': True, 'last_attempt_status': 'success', 'last_attempt_at': '2026-09-17T07:12:32.600690+00:00', 'last_success_at': '2026-09-17T07:12:32.600690+00:00', 'last_failure_type': None, 'last_failure_message': None, 'last_failure_at': None, 'data_age_seconds': 10.001319, 'is_stale': True, 'checked_at': '2026-09-17T07:12:42.602009+00:00', 'stale_after_seconds': 5}, 'alarm': {'enabled': False, 'current': 'not_enabled', 'active': None, 'history': [], 'total': 0, 'limit': 20, 'evaluated_measurement_id': None, 'pending': None, 'rule': {'trigger_above': 80.0, 'recover_below': 78.0, 'unit': '℃', 'teaching_only': True}}}
+最近失败： 200 {'has_data': True, 'last_attempt_status': 'failure', 'last_attempt_at': '2026-09-17T07:12:42.602448+00:00', 'last_success_at': '2026-09-17T07:12:32.600690+00:00', 'last_failure_type': 'communication_error', 'last_failure_message': 'HTTP验收注入通信失败事件', 'last_failure_at': '2026-09-17T07:12:42.602448+00:00', 'data_age_seconds': 10.002588, 'is_stale': True, 'checked_at': '2026-09-17T07:12:42.603278+00:00', 'stale_after_seconds': 5}
+后来成功覆盖最近尝试结论： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': {'id': 2, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 72.8, 'unit': '℃', 'collected_at': '2026-09-17T07:12:42.603648+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}, 'status': {'has_data': True, 'last_attempt_status': 'success', 'last_attempt_at': '2026-09-17T07:12:42.603648+00:00', 'last_success_at': '2026-09-17T07:12:42.603648+00:00', 'last_failure_type': 'communication_error', 'last_failure_message': 'HTTP验收注入通信失败事件', 'last_failure_at': '2026-09-17T07:12:42.602448+00:00', 'data_age_seconds': 0.00078, 'is_stale': False, 'checked_at': '2026-09-17T07:12:42.604428+00:00', 'stale_after_seconds': 5}, 'alarm': {'enabled': False, 'current': 'not_enabled', 'active': None, 'history': [], 'total': 0, 'limit': 20, 'evaluated_measurement_id': None, 'pending': None, 'rule': {'trigger_above': 80.0, 'recover_below': 78.0, 'unit': '℃', 'teaching_only': True}}}
+并发12次HTTP读取：全部200，数据库文件逐字节不变
+限量历史： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'from': '2026-09-17T07:12:32.600690+00:00', 'to': '2026-09-17T07:13:42.600690+00:00', 'limit': 1, 'order': 'collected_at ASC, id ASC', 'points': [{'id': 1, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 65.3, 'unit': '℃', 'collected_at': '2026-09-17T07:12:32.600690+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}]}
+/api/devices/unknown/latest 404 {'error': {'code': 'device_not_found', 'message': '未知设备'}}
+/api/devices/motor-a/history?limit=1001 422 {'error': {'code': 'invalid_parameters', 'message': '参数缺失或不符合约束：query.from, query.to, query.limit'}}
+独占锁： 503 {'error': {'code': 'database_unavailable', 'message': '数据库不可读：文件尚未创建、表未就绪、被锁或损坏；请检查采集器及服务日志'}}
+服务日志：
+INFO:     Started server process [84856]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:63615 (Press CTRL+C to quit)
+只读数据库查询失败: unable to open database file
+INFO:     127.0.0.1:63620 - "GET /api/devices HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:63621 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63622 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63623 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63624 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63625 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63626 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63627 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63628 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63629 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63631 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63630 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63632 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63633 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63635 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63634 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63636 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63637 - "GET /api/devices/motor-a/history?from=2026-09-17T07%3A12%3A32.600690%2B00%3A00&to=2026-09-17T07%3A13%3A42.600690%2B00%3A00&limit=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "GET /api/devices/unknown/latest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63639 - "GET /api/devices/motor-a/history?limit=1001 HTTP/1.1" 422 Unprocessable Entity
+只读数据库查询失败: database is locked
+INFO:     127.0.0.1:63640 - "GET /api/devices HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:63650 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84856]
+
+ok
+test_database_errors_and_query_bounds (test_collection.CollectionTests.test_database_errors_and_query_bounds) ... ok
+test_failed_attempts_are_counted_and_never_make_measurements (test_collection.CollectionTests.test_failed_attempts_are_counted_and_never_make_measurements) ... ok
+test_finite_samples_have_utc_metadata_and_survive_restart (test_collection.CollectionTests.test_finite_samples_have_utc_metadata_and_survive_restart) ... ok
+test_insert_failure_and_lock_timeout_stop_without_fake_success (test_collection.CollectionTests.test_insert_failure_and_lock_timeout_stop_without_fake_success) ... ok
+test_running_collector_records_failures_then_recovers_to_728 (test_collection.CollectionTests.test_running_collector_records_failures_then_recovers_to_728) ... ok
+test_actual_batch_address_zero_and_scaling (test_current.BatchProtocolTests.test_actual_batch_address_zero_and_scaling) ... ok
+test_real_legacy_one_register_cli_works_batch_collector_fails_whole_round (test_current.BatchProtocolTests.test_real_legacy_one_register_cli_works_batch_collector_fails_whole_round) ... ok
+test_short_or_exception_response_never_returns_partial_values (test_current.BatchProtocolTests.test_short_or_exception_response_never_returns_partial_values) ... ok
+test_failure_both_metrics_reset_pending_and_recovery (test_current.CurrentStorageTests.test_failure_both_metrics_reset_pending_and_recovery) ... ok
+test_old_temperature_database_readonly_current_empty (test_current.CurrentStorageTests.test_old_temperature_database_readonly_current_empty) ... ok
+test_pending_reset_failure_rolls_back_both_events (test_current.CurrentStorageTests.test_pending_reset_failure_rolls_back_both_events) ... ok
+test_same_round_timestamp_metric_isolation_and_old_temperature_default (test_current.CurrentStorageTests.test_same_round_timestamp_metric_isolation_and_old_temperature_default) ... ok
+test_second_failure_event_rolls_back_first_and_pending_reset (test_current.CurrentStorageTests.test_second_failure_event_rolls_back_first_and_pending_reset) ... ok
+test_second_insert_rolls_back_temperature_alarm_and_pending (test_current.CurrentStorageTests.test_second_insert_rolls_back_temperature_alarm_and_pending) ... ok
+test_occupied_port_is_reported_without_stopping_owner (test_dashboard_launcher.LauncherTests.test_occupied_port_is_reported_without_stopping_owner) ... ok
+test_real_stack_serves_measurement_and_shutdown_frees_ports (test_dashboard_launcher.LauncherTests.test_real_stack_serves_measurement_and_shutdown_frees_ports) ... ok
+test_configured_speed_and_stopped_state (test_four_points.FourProtocolTests.test_configured_speed_and_stopped_state) ... ok
+test_invalid_enum_protocol_succeeds_but_collector_saves_only_failures (test_four_points.FourProtocolTests.test_invalid_enum_protocol_succeeds_but_collector_saves_only_failures) ... 2026-09-17T07:12:50.239033+00:00 第1次 数据校验失败：127.0.0.1:63757：running_state raw=2，允许值=(0, 1)；本轮四点均不保存
+采集结束：尝试=1 成功=0 失败=1
+2026-09-17T07:12:50.304546+00:00 第1次 数据校验失败：127.0.0.1:63762：running_state raw=7，允许值=(0, 1)；本轮四点均不保存
+采集结束：尝试=1 成功=0 失败=1
+ok
+test_fourth_insert_rolls_back_whole_round_and_alarm (test_four_points.FourStorageTests.test_fourth_insert_rolls_back_whole_round_and_alarm) ... ok
+test_new_point_history_and_independent_freshness (test_four_points.FourStorageTests.test_new_point_history_and_independent_freshness) ... ok
+test_no_samples_validation_failure_is_visible (test_four_points.FourStorageTests.test_no_samples_validation_failure_is_visible) ... ok
+test_old_two_point_database_does_not_invent_new_point_timestamps (test_four_points.FourStorageTests.test_old_two_point_database_does_not_invent_new_point_timestamps) ... ok
+test_storage_rejects_invalid_enum_before_any_write (test_four_points.FourStorageTests.test_storage_rejects_invalid_enum_before_any_write) ... ok
+test_validation_failure_clears_pending_and_later_success_recovers (test_four_points.FourStorageTests.test_validation_failure_clears_pending_and_later_success_recovers) ... ok
+test_validation_failure_resets_pending_retains_old_samples_and_active_alarm (test_four_points.FourStorageTests.test_validation_failure_resets_pending_retains_old_samples_and_active_alarm) ... ok
+test_validation_fourth_event_failure_rolls_back_events_and_pending (test_four_points.FourStorageTests.test_validation_fourth_event_failure_rolls_back_events_and_pending) ... ok
+test_configured_728 (test_modbus.ModbusAcceptanceTests.test_configured_728) ... ok
+test_default_653_at_protocol_address_zero (test_modbus.ModbusAcceptanceTests.test_default_653_at_protocol_address_zero) ... ok
+test_stopped_simulator_has_no_sample_and_nonzero_exit (test_modbus.ModbusAcceptanceTests.test_stopped_simulator_has_no_sample_and_nonzero_exit) ... ok
+test_nonfinite_temperature_is_rejected_before_connect (test_opcua.OpcuaLabTests.test_nonfinite_temperature_is_rejected_before_connect) ... ok
+test_uri_resolution_double_and_actual_subscription (test_opcua.OpcuaLabTests.test_uri_resolution_double_and_actual_subscription) ... {"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:63810/opcua-lab/", "namespace_uri": "urn:industrial-maintenance:opcua-lab", "NodeId": "ns=3;s=MotorA.Temperature", "initial_value": 65.3}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 65.3, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": "2026-09-17T07:12:52.056154+00:00", "ServerTimestamp": "2026-09-17T07:12:52.056158+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+{"event": "subscribed", "NodeId": "ns=3;s=MotorA.Temperature", "monitored_items": 1, "requested_publishing_ms": 250, "requested_sampling_ms": 100, "requested_queue_size": 10, "trigger": "StatusValue"}
+{"event": "notification", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 65.3, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": "2026-09-17T07:12:52.056154+00:00", "ServerTimestamp": "2026-09-17T07:12:52.056158+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）", "ReceivedAt": "2026-09-17T07:12:52.914702+00:00"}
+{"event": "local_lab_write", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double"}
+{"event": "notification", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-17T07:12:53.255351+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）", "ReceivedAt": "2026-09-17T07:12:53.411398+00:00"}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-17T07:12:53.255351+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+{"event": "local_lab_write", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double"}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-17T07:12:53.830810+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+同值写入后1.2秒：新增数据变化通知0；主动读取仍成功。
+{"event": "local_lab_write", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 73.0, "DataType": "Double"}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 73.0, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-17T07:12:55.392028+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+{"event": "notification", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 73.0, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-17T07:12:55.392028+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）", "ReceivedAt": "2026-09-17T07:12:55.410555+00:00"}
+{"event": "subscription_deleted"}
+OPC UA stderr: Requested session timeout to be 3600000ms, got 600000ms instead
+
+ok
+test_dual_collectors_same_database_alarm_sessions (test_opcua_collectors.DualCollectorTests.test_dual_collectors_same_database_alarm_sessions) ... ok
+test_invalid_metric_error_describes_device_capabilities (test_opcua_invalid_arrays.InvalidArrayTests.test_invalid_metric_error_describes_device_capabilities) ... ok
+test_nonfinite_arrays_are_diagnosed_and_reset_pending_but_preserve_active (test_opcua_invalid_arrays.InvalidArrayTests.test_nonfinite_arrays_are_diagnosed_and_reset_pending_but_preserve_active) ... ok
+test_readonly_legacy_and_recheck_source_age (test_opcua_pipeline.ApiBTests.test_readonly_legacy_and_recheck_source_age) ... ok
+test_latest_bad_and_communication_failure_not_hidden_by_previous_good (test_opcua_pipeline.ApiQualityTests.test_latest_bad_and_communication_failure_not_hidden_by_previous_good) ... ok
+test_device_sessions_are_independent (test_opcua_pipeline.PipelineTests.test_device_sessions_are_independent) ... ok
+test_gate_pending_active_and_watermark_restart (test_opcua_pipeline.PipelineTests.test_gate_pending_active_and_watermark_restart) ... ok
+test_missing_invalid_and_failure_clear_pending (test_opcua_pipeline.PipelineTests.test_missing_invalid_and_failure_clear_pending) ... ok
+test_transaction_failure_rolls_back (test_opcua_pipeline.PipelineTests.test_transaction_failure_rolls_back) ... ok
+test_device_sessions_are_independent (test_opcua_pipeline.RecoveryTests.test_device_sessions_are_independent) ... ok
+test_every_rejection_clears_pending_without_resetting_other_device (test_opcua_pipeline.RecoveryTests.test_every_rejection_clears_pending_without_resetting_other_device) ... ok
+test_future_does_not_poison_watermark_and_failure_recovers (test_opcua_pipeline.RecoveryTests.test_future_does_not_poison_watermark_and_failure_recovers) ... ok
+test_gate_pending_active_and_watermark_restart (test_opcua_pipeline.RecoveryTests.test_gate_pending_active_and_watermark_restart) ... ok
+test_missing_invalid_and_failure_clear_pending (test_opcua_pipeline.RecoveryTests.test_missing_invalid_and_failure_clear_pending) ... ok
+test_rejection_event_failure_rolls_back_diagnostic_and_pending (test_opcua_pipeline.RecoveryTests.test_rejection_event_failure_rolls_back_diagnostic_and_pending) ... ok
+test_transaction_failure_rolls_back (test_opcua_pipeline.RecoveryTests.test_transaction_failure_rolls_back) ... ok
+test_communication_failure_then_real_read_recovers (test_opcua_pipeline.WireRecoveryTests.test_communication_failure_then_real_read_recovers) ... 2026-09-17T07:13:03.008592+00:00 第1次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 64216)
+采集结束：尝试=1 成功=0 失败=1
+Executing <Task pending name='Task-371' coro=<WireRecoveryTests.test_communication_failure_then_real_read_recovers() running at /Users/yuanqi/项目/工业设备智能运维agent/tests/test_opcua_pipeline.py:191> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.342 seconds
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:13:03.482431+00:00 第1次 accepted value=65.3 source=2026-09-17T07:13:03.430998+00:00
+采集结束：尝试=1 成功=1 失败=0
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:13:03.487820+00:00 第1次 uncertain value=65.3 source=2026-09-17T07:13:03.482622+00:00
+采集结束：尝试=1 成功=0 失败=1
+ok
+test_real_namespace_and_bad_value_preserved (test_opcua_pipeline.WireTests.test_real_namespace_and_bad_value_preserved) ... Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+ok
+test_duration_boundary_not_sample_count (test_sustained_alarms.SustainedAlarmTests.test_duration_boundary_not_sample_count) ... ok
+test_interval_incompatibility_rejected_before_schema_changes (test_sustained_alarms.SustainedAlarmTests.test_interval_incompatibility_rejected_before_schema_changes) ... ok
+test_monotonic_not_wall_clock_and_pending_api_expiry (test_sustained_alarms.SustainedAlarmTests.test_monotonic_not_wall_clock_and_pending_api_expiry) ... ok
+test_obsolete_collector_failure_cannot_clear_new_session_pending (test_sustained_alarms.SustainedAlarmTests.test_obsolete_collector_failure_cannot_clear_new_session_pending) ... ok
+test_obsolete_session_cannot_commit_or_join_new_pending (test_sustained_alarms.SustainedAlarmTests.test_obsolete_session_cannot_commit_or_join_new_pending) ... ok
+test_old_immediate_schema_readonly_then_writer_migration_preserves_evidence (test_sustained_alarms.SustainedAlarmTests.test_old_immediate_schema_readonly_then_writer_migration_preserves_evidence) ... ok
+test_pending_and_measurement_rollback_and_failure_reset_rollback (test_sustained_alarms.SustainedAlarmTests.test_pending_and_measurement_rollback_and_failure_reset_rollback) ... ok
+test_reset_at_80_failure_and_gap_without_failure_event (test_sustained_alarms.SustainedAlarmTests.test_reset_at_80_failure_and_gap_without_failure_event) ... ok
+test_restart_clears_pending_but_preserves_active (test_sustained_alarms.SustainedAlarmTests.test_restart_clears_pending_but_preserves_active) ... ok
+
+----------------------------------------------------------------------
+Ran 72 tests in 26.001s
+
+OK

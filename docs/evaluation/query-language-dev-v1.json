@@ -1,0 +1,220 @@
+{
+ "bias_disclosure": "The rewriter (taking-over agent) had read the handoff documents, the final failure records (which map failed questions to target documents/pages), the integration review, and the R17/R29/R34 probe report before writing these rewrites. This is a diagnostic reframe with known selection bias, not a blind translation; any positive result must be confirmed on an independently authored check set (D2) before it can support a default-change decision.",
+ "created": "2026-09-18",
+ "experiment": "query-language-dev-v1",
+ "items": [
+  {
+   "candidate_query": "What is the temperature of motor-b right now?",
+   "case_id": "N01",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "motor-b现在温度是多少？",
+   "review_notes": "保留设备标识 motor-b 与“现在”的实时数据语义；本类题对文档库应无答案。"
+  },
+  {
+   "candidate_query": "My motor reports fault code E104: what exactly does that fault code mean?",
+   "case_id": "N02",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "我这台电机报E104，具体故障含义是什么？",
+   "review_notes": "保留E104故障码原样，不替换为其他码。"
+  },
+  {
+   "candidate_query": "For the ABB M3BP 160, what is the specified bearing grease brand and how many grams of grease should be added each time?",
+   "case_id": "N03",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "ABB M3BP 160的轴承指定润滑脂牌号和每次加脂克数是多少？",
+   "review_notes": "保留具体型号 ABB M3BP 160 与“牌号/每次克数”两问；不改写为通用润滑问题。"
+  },
+  {
+   "candidate_query": "A certain Siemens motor has run for 500 hours: must it be relubricated now?",
+   "case_id": "N04",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "西门子某台电机运行了500小时，现在必须补油了吗？",
+   "review_notes": "保留西门子品牌、500小时与“必须…吗”的必要性疑问。"
+  },
+  {
+   "candidate_query": "What was the highest temperature of motor-a between 12:00 and 13:00 yesterday?",
+   "case_id": "N05",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "motor-a昨天12点到13点的最高温度是多少？",
+   "review_notes": "保留设备标识 motor-a、昨天12点到13点时间窗口与最高温度语义。"
+  },
+  {
+   "candidate_query": "In which purchasing or repair situations is it worthwhile to evaluate using a higher-efficiency motor?",
+   "case_id": "R01",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "哪些采购或维修时机会适合评估采用高效率电机？",
+   "review_notes": "保留“采购或维修时机”两类场景与“评估采用”语义；高效率电机译为 higher-efficiency motor，未添加具体功率数值。"
+  },
+  {
+   "candidate_query": "According to this DOE guide, which power range and how many annual operating hours of old motors should be surveyed first?",
+   "case_id": "R02",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "这份DOE指南建议优先清查什么功率范围、年运行多久的旧电机？",
+   "review_notes": "保留DOE指南限定、功率范围与年运行时长两问维度及“优先清查”语义；功率范围译为 power range，不预设hp单位。"
+  },
+  {
+   "candidate_query": "Besides lubrication, which possible overheating conditions does the material suggest checking when a motor keeps getting hotter?",
+   "case_id": "R05",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "电机越来越烫，除润滑外，资料还提示排查哪些可能导致过热的条件？",
+   "review_notes": "保留“除润滑外”的排除结构与“可能导致”的不确定性措辞。"
+  },
+  {
+   "candidate_query": "Does a bearing's L10 life mean that every bearing is certain to fail once it reaches that number of hours?",
+   "case_id": "R06",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "轴承的L10寿命是不是指每个轴承到这个小时数必然坏？",
+   "review_notes": "保留L10术语与“每个…必然坏”的全称强断言语义，未弱化为may。"
+  },
+  {
+   "candidate_query": "If a flexible coupling is used, does that remove the need for shaft alignment?",
+   "case_id": "R07",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "用了柔性联轴器，是不是就不用做轴对中了？",
+   "review_notes": "保留“是不是就不用”的否定疑问结构；柔性联轴器采用标准术语 flexible coupling。"
+  },
+  {
+   "candidate_query": "After aligning the equipment cold, why is a realignment check still needed once its temperature stabilizes?",
+   "case_id": "R08",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "为什么冷态对中后，设备温度稳定了还要复核？",
+   "review_notes": "保留冷态、温度稳定、复核三要素及先后顺序。"
+  },
+  {
+   "candidate_query": "Is a V-belt better the tighter it is tensioned?",
+   "case_id": "R09",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "三角皮带拉得越紧越好吗？",
+   "review_notes": "三角皮带采用标准术语 V-belt；保留“越…越…”比较结构。"
+  },
+  {
+   "candidate_query": "Synchronous belts are more efficient, so why are they not a suitable swap for every shock-load application?",
+   "case_id": "R10",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "同步带效率较高，为什么并非所有冲击负载都适合换成它？",
+   "review_notes": "保留“效率较高”让步前提与“并非所有冲击负载”的部分否定。"
+  },
+  {
+   "candidate_query": "With three-phase voltages of 462, 463 and 455 volts, what value does the document's voltage imbalance calculation example give?",
+   "case_id": "R13",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "三相电压为462、463和455伏，这份资料的电压不平衡计算示例是多少？",
+   "review_notes": "逐值保留462/463/455与单位伏特；保留“计算示例”语义，不预设结果数值。"
+  },
+  {
+   "candidate_query": "When the voltage imbalance is small, why can the current imbalance still be large?",
+   "case_id": "R14",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "电压不平衡不大，为什么电流不平衡仍可能很大？",
+   "review_notes": "保留小/大对比与“仍可能”的情态限定。"
+  },
+  {
+   "candidate_query": "Why can a slightly lower voltage make a motor harder to start and take longer to accelerate?",
+   "case_id": "R17",
+   "method": "reused verbatim from frozen probe report docs/verification/m4-real-rag/2026-09-18-e5-query-language-probe.md",
+   "original_query": "电压低一点为什么可能启动更困难、加速时间变长？",
+   "review_notes": "复用探针原文，避免对同一题引入新的措辞变量。"
+  },
+  {
+   "candidate_query": "Will a motor nameplated 208-230/460 V running at 208 V necessarily run as cool as it would at 230 V?",
+   "case_id": "R18",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "写着208-230/460V的电机在208V运行，是否一定与230V时一样凉？",
+   "review_notes": "保留铭牌电压组合208-230/460V、208V与230V对比及“是否一定”的强疑问。"
+  },
+  {
+   "candidate_query": "If the starting current is several times the full-load current, does that prove one start uses more energy than letting the motor run another minute?",
+   "case_id": "R19",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "开机电流是满载的几倍，就说明启动一次比多转一分钟更费电吗？",
+   "review_notes": "保留“几倍/满载电流/多转一分钟”与“就说明…吗”的反问结构；几倍译为 several times 不引入具体倍数。"
+  },
+  {
+   "candidate_query": "When starting and stopping frequently to save energy, why is it still necessary to check the allowed number of starts and the interval between two consecutive starts?",
+   "case_id": "R20",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "为了省电频繁启停时，为什么还要看允许启动次数和两次启动间隔？",
+   "review_notes": "保留省电动机、允许启动次数与两次启动间隔两个约束对象。"
+  },
+  {
+   "candidate_query": "For a centrifugal fan or a pump with no static head, why does the document say that a 20% speed reduction reduces power by about half?",
+   "case_id": "R21",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "离心风机或无静扬程泵转速降低20%，文档为什么说功率约能降一半？",
+   "review_notes": "保留20%、无静扬程前提与“约一半”的近似语义，不改为精确值。"
+  },
+  {
+   "candidate_query": "For a constant-torque load such as a conveyor belt, does power necessarily vary with the cube of speed as well?",
+   "case_id": "R22",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "输送机这种恒转矩负载，功率也一定随转速三次方变化吗？",
+   "review_notes": "保留恒转矩、输送机实例、“三次方”与“一定”的强疑问。"
+  },
+  {
+   "candidate_query": "When a drive outputs PWM, why does the cable length between the motor and the drive matter?",
+   "case_id": "R27",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "变频器输出PWM时，电机到驱动器的电缆长短为何重要？",
+   "review_notes": "保留PWM、电缆长短与“为何重要”的因果疑问。"
+  },
+  {
+   "candidate_query": "When a standard motor runs at low speed on a PWM drive, what problems can arise besides voltage spikes?",
+   "case_id": "R28",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "普通电机配PWM驱动低速运行，除了电压尖峰还可能遇到什么问题？",
+   "review_notes": "保留普通电机、低速运行、PWM与“除了电压尖峰”的排除结构。"
+  },
+  {
+   "candidate_query": "When a variable-frequency drive causes bearing currents, what design measures does the guide list to mitigate them?",
+   "case_id": "R29",
+   "method": "reused verbatim from frozen probe report docs/verification/m4-real-rag/2026-09-18-e5-query-language-probe.md",
+   "original_query": "变频驱动造成轴承电流时，资料列出了哪些设计上的缓解办法？",
+   "review_notes": "复用探针原文。"
+  },
+  {
+   "candidate_query": "If the drive cannot be mounted close to the motor, which devices for suppressing voltage overshoot can be consulted?",
+   "case_id": "R30",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "驱动器不能靠近电机安装时，可以查哪些抑制电压过冲的设备？",
+   "review_notes": "保留“不能靠近安装”的否定前提与“抑制电压过冲的设备”对象；不添加具体设备名称。"
+  },
+  {
+   "candidate_query": "According to the guide's typical PWM drive efficiency table, what is the approximate efficiency of a 20 hp drive at 12.5% of its rated output load?",
+   "case_id": "R31",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "按该指南典型PWM变频器效率表，20hp驱动器输出负载为额定值12.5%时，效率约为多少？",
+   "review_notes": "保留20hp、12.5%额定负载与“典型/约”限定词。"
+  },
+  {
+   "candidate_query": "In the shaft alignment table, what is the acceptable parallel offset for a 1800 RPM direct-coupled drive with a short flexible coupling, and what are the units?",
+   "case_id": "R32",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "轴对中表中，1800RPM直联轴、短柔性联轴器的可接受平行偏移是多少，单位是什么？",
+   "review_notes": "保留1800RPM、直联、短柔性联轴器、平行偏移各条件并保留单位提问。"
+  },
+  {
+   "candidate_query": "In the voltage imbalance example table, what is the motor efficiency at 50% of full load with 2.5% voltage imbalance?",
+   "case_id": "R33",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original_query": "电压不平衡示例表里，50%满载、2.5%电压不平衡时，电机效率是多少？",
+   "review_notes": "保留50%满载、2.5%不平衡与示例表格条件。"
+  },
+  {
+   "candidate_query": "In the example table for replacing old motors, what is the annual energy saving for the 100 hp row? Can it be used directly as the energy saving for our factory?",
+   "case_id": "R34",
+   "method": "reused verbatim from frozen probe report docs/verification/m4-real-rag/2026-09-18-e5-query-language-probe.md",
+   "original_query": "按旧电机替换示例表，100hp一行的年节电量是多少？能直接当我们工厂的节电量吗？",
+   "review_notes": "复用探针原文。"
+  }
+ ],
+ "purpose": "D1 single-variable experiment: equivalent English rewrite of every dev-set query (24 answerable + 5 dev unanswerable) to test whether query language explains part of the Chinese-question retrieval failures on the English DOE corpus. Frozen before any experiment query.",
+ "rewrite_rules": [
+  "Equivalence only: rewrite from the question text alone.",
+  "Preserve device ids, model numbers, numeric values, units, negation, necessity/approximation qualifiers, and time conditions.",
+  "Never add answers, document ids, page numbers, section hints, or measures not present in the question.",
+  "R17/R29/R34 reuse the frozen probe wording to avoid adding wording variance on already-probed cases.",
+  "This file is frozen: any later wording change requires a new version file; do not edit after querying."
+ ],
+ "source_cases": "docs/evaluation/real-rag-v0.1.json",
+ "source_cases_sha256": "de7004d03d8857024a2f8b4c67c709166a12961f9ec7a2213ec56754465c7a3d"
+}

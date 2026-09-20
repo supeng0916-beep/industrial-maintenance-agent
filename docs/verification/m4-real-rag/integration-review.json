@@ -1,0 +1,64 @@
+{
+  "e5": {
+    "documents": 15,
+    "chunks": 113,
+    "source_coverage": "100% exact source text",
+    "max_tokens": 512,
+    "evaluation_cases": 44,
+    "frozen_hashes_match": true,
+    "score_recalculation": "passed",
+    "page_checks": "passed",
+    "ts11_local_condition_leak": "absent",
+    "summaries": {
+      "dev": {
+        "cases": 29,
+        "answerable": 24,
+        "unanswerable": 5,
+        "hit_at_5": 0.625,
+        "all_annotated_evidence_at_5": 0.625,
+        "hit_at_10": 0.7916666666666666,
+        "all_annotated_evidence_at_10": 0.7916666666666666
+      },
+      "holdout": {
+        "cases": 15,
+        "answerable": 10,
+        "unanswerable": 5,
+        "hit_at_5": 0.3,
+        "all_annotated_evidence_at_5": 0.3,
+        "hit_at_10": 0.5,
+        "all_annotated_evidence_at_10": 0.5
+      }
+    }
+  },
+  "bge": {
+    "documents": 15,
+    "chunks": 131,
+    "source_coverage": "100% exact source text",
+    "max_tokens": 508,
+    "evaluation_cases": 44,
+    "frozen_hashes_match": true,
+    "score_recalculation": "passed",
+    "page_checks": "passed",
+    "ts11_local_condition_leak": "absent",
+    "summaries": {
+      "dev": {
+        "cases": 29,
+        "answerable": 24,
+        "unanswerable": 5,
+        "hit_at_5": 0.16666666666666666,
+        "all_annotated_evidence_at_5": 0.16666666666666666,
+        "hit_at_10": 0.2916666666666667,
+        "all_annotated_evidence_at_10": 0.2916666666666667
+      },
+      "holdout": {
+        "cases": 15,
+        "answerable": 10,
+        "unanswerable": 5,
+        "hit_at_5": 0.2,
+        "all_annotated_evidence_at_5": 0.2,
+        "hit_at_10": 0.3,
+        "all_annotated_evidence_at_10": 0.3
+      }
+    }
+  }
+}

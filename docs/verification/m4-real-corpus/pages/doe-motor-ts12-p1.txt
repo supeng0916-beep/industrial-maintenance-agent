@@ -1,0 +1,67 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #12
+                                                                                    
+                                                                                    
+     Is It Cost-Effective to Replace                                                
+                                                             Suggested Actions      
+     Old Eddy-Current    Drives?                                                    
+                                                          ■■ Contact your drive supplier to
+     Electronic pulse-width-modulated (PWM) variable frequency drives (VFD) may be cost- obtain drive efficiency
+     effective replacements for aging or high-maintenance eddy-current drives that are used with information as a function of
+     variable torque loads, such as centrifugal fans or pumps. However, a VFD may not be a
+                                                            motor operating speed or drive
+     suitable replacement for high-torque, repetitive-slip applications, such as a punch press or a
+                                                            power output. Use this  
+     crusher. Eddy-current drives can produce more torque at low speed than an induction motor
+     and VFD. When switching to a VFD for a constant torque load, the motor and the drive may information to determine
+     require being oversized by a factor of 150% to 200%.   potential energy savings through
+                                                            use of a PWM VFD versus an
+     The eddy-current drive or clutch is a slip device consisting of two rotating elements that
+                                                            eddy-current drive.     
+     are coupled by a magnetic field. The slip and rotor speed are determined by the magnetic
+     field strength. An alternating current (AC) motor drives a constant-speed rotating drum that
+                                                          ■■ When VFD part-load     
+     surrounds a cylinder (rotor), which is coupled to an output shaft. Torque is transmitted from
+     the outer rotating drum to the rotor with an adjustable magnetic field. The losses from a slip- performance values are not
+     based VFD are approximately equal to the amount of slip, or difference between synchronous readily available, use the values
+     speed and operating speed, divided by the synchronous speed. The drive efficiency at each given in Motor Systems Tip Sheet
+     operating point is equal to 100% minus the percent losses. Table 1 indicates the efficiency
+                                                            #11, Adjustable Speed Drive
+     range of a magnetically coupled eddy-current drive when matched to a centrifugal load.
+                                                            Part-Load Efficiency.   
+     Table 1. Efficiency Versus Speed for an Eddy-Current-Coupled Centrifugal Load1 
+                                                          ■■ Use the U.S. Department of
+     Drive Speed, % of Full-Load        Eddy-Current Drive  Energy’s (DOE) MotorMaster+
+                           Load %                                                   
+           Speed                          Efficiency, %                             
+                                                            4.0 software tool to obtain
+            100             100           94.3 to 99.3      efficiencies for integral
+            90              72.9          85.9 to 90.4      horsepower National Electrical
+            80              51.2           76.1 to 80.1     Manufacturers Association
+            70              34.3          66.9 to 70.5      (NEMA) Design A and B motors
+            60              21.6          56.9 to 59.8      at full- and part-load speeds.
+            50              12.5          47.7 to 50.2                              
+            40              6.4           39.7 to 41.7                              
+            30              2.7           28.6 to 29.9                              
+     1 Source: Coyote Electronics Inc. “Payback®” Magnetic-Coupled. Variable Speed Drive Literature.
+     Energy Savings Example                                                         
+     An eddy-current drive on a standard efficiency motor-driven 50-hp boiler forced-draft fan has
+     reached the end of its useful operating life; the proposed replacement is a PWM VFD. The fan
+     operates for 8,000 hours per year while delivering 90% of rated flow for 20% of the time, 80%
+     flow for 50% of the time, and 70% of rated flow for the remaining operating hours. Energy
+     savings are achieved because of the improved efficiency of the PWM drive over the eddy-
+     current drive. The annual energy consumption of the existing system or eddy-current baseline
+     is calculated in Table 2.                                                      
+     As the eddy-current drive efficiency drops rapidly at loads below 70%, energy savings are
+     extremely sensitive to the load profile and duty cycle. Table 3 provides the calculations for
+     the weighted input power for the system, if the existing eddy-current drive is replaced with a
+     VFD. The potential annual energy savings are:                                  
+     (26.05 – 21.99) kW x 8,000 hrs/year = 32,480 kWh/year.                         
+     At an electrical rate of $0.08/kWh, the value of these savings is:             
+     32,480 kWh x $0.08/kWh = $2,600/year.                                          

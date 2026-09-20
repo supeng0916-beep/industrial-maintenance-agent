@@ -1,0 +1,385 @@
+{
+  "ok": true,
+  "query": "电机系统节能有哪些适用限制？",
+  "top_k": 5,
+  "model_signature": {
+    "model": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "pooling": "attention_mask_mean",
+    "query_prefix": "query: ",
+    "passage_prefix": "passage: ",
+    "dimension": 384,
+    "normalize": "l2",
+    "max_length": 512,
+    "special_tokens": true,
+    "dtype": "float32",
+    "device": "cpu",
+    "libraries": {
+      "torch": "2.10.0",
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2",
+      "safetensors": "0.8.0"
+    }
+  },
+  "distance_semantics": "cosine distance = 1 - cosine similarity; smaller is closer, not confidence or answerability",
+  "candidates": [
+    {
+      "chunk_id": "doe-motor-ts08:4345f5794f0c6ab71608",
+      "content_sha256": "e237296927929755c86402967340efaca6f7ff26349b0b1d7e5ba8e08b34a888",
+      "context_source_pages": [],
+      "context_sources": [
+        {
+          "field": "title",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "Eliminate Excessive In-Plant Distribution System Voltage Drops"
+        },
+        {
+          "field": "applicability",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards."
+        }
+      ],
+      "context_text": "Repeated source context:\nEliminate Excessive In-Plant Distribution System Voltage Drops\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "document_id": "doe-motor-ts08",
+      "document_sha256": "5902333a0eb753d40e4e2c2c01c8c3f24d94a00d2687516ec8d624ea8856e519",
+      "embedding_text": "passage: Repeated source context:\nEliminate Excessive In-Plant Distribution System Voltage Drops\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nSource text:\nAssuming a utility energy charge of $0.08 per kilowatt-hour (kWh) with a demand charge of $8.00 per kilowatt (kW) per month, potential savings are valued at:\n\n",
+      "metadata": {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+        "device_ids": [],
+        "document_id": "doe-motor-ts08",
+        "language": "en",
+        "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+        "product_model": null,
+        "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+        "reviewed_on": "2026-09-18",
+        "source_document_id": "DOE/GO-102012-3732",
+        "source_pages": [
+          "1",
+          "2"
+        ],
+        "source_sha256": "9119468e2237aae542d8d2fe2905c1de6fd0788fe42af59609792f6995b8f448",
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf",
+        "sources": [
+          "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf"
+        ],
+        "teaching_only": false,
+        "title": "Eliminate Excessive In-Plant Distribution System Voltage Drops",
+        "version": "November 2012"
+      },
+      "original_text": "Assuming a utility energy charge of $0.08 per kilowatt-hour (kWh) with a demand charge of $8.00 per kilowatt (kW) per month, potential savings are valued at:\n\n",
+      "over_soft_target": false,
+      "section": "Page 2",
+      "source_end": 6073,
+      "source_line_end": 77,
+      "source_line_start": 76,
+      "source_pages": [
+        "2"
+      ],
+      "source_path": "doe-motor-ts08.md",
+      "source_start": 5914,
+      "strategy": "rag-page-heading-sentence-v2",
+      "token_count": 119,
+      "version": "November 2012",
+      "rank": 1,
+      "distance": 0.186174213886261,
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf"
+    },
+    {
+      "chunk_id": "doe-motor-ts01:23b1ef6ea6ea457124ce",
+      "content_sha256": "b927c2d0dec1b6f11b1ddcefe81109f4fa0a3840d0b1c261c911e7419014b6d6",
+      "context_source_pages": [
+        "1"
+      ],
+      "context_sources": [
+        {
+          "field": "title",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "When to Purchase Premium Efficiency Motors"
+        },
+        {
+          "kind": "source_context",
+          "source_pages": [
+            "1"
+          ],
+          "text": "In August 2001, the National Electrical Manufacturers Association (NEMA) introduced a premium energy-efficiency motor standard. Under this program, a motor may be marketed as a premium efficiency motor only if it meets or exceeds a set of NEMA minimum full-load efficiency levels."
+        },
+        {
+          "field": "applicability",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards."
+        }
+      ],
+      "context_text": "Repeated source context:\nWhen to Purchase Premium Efficiency Motors\nIn August 2001, the National Electrical Manufacturers Association (NEMA) introduced a premium energy-efficiency motor standard. Under this program, a motor may be marketed as a premium efficiency motor only if it meets or exceeds a set of NEMA minimum full-load efficiency levels.\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "document_id": "doe-motor-ts01",
+      "document_sha256": "5fb412f15617c4819199c56405718e076626ed71267e5d7e3e65174e2ac8e82a",
+      "embedding_text": "passage: Repeated source context:\nWhen to Purchase Premium Efficiency Motors\nIn August 2001, the National Electrical Manufacturers Association (NEMA) introduced a premium energy-efficiency motor standard. Under this program, a motor may be marketed as a premium efficiency motor only if it meets or exceeds a set of NEMA minimum full-load efficiency levels.\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nSource text:\nThe premium efficiency motor standards apply to NEMA Design A and B, three-phase, low-voltage induction motors rated between 1-and 500-horsepower (hp) and 250- to 500-hp, medium-voltage motors designed for service at 5,000 volts or less. Covered products include foot-mounted motors with speeds of 1,200, 1,800, and 3,600 revolutions per minute (RPM) with open drip-proof, explosion-proof, or totally enclosed fan-cooled (TEFC) enclosures. The standard also covers severe-duty, wash down, International Electrotechnical Commission (IEC) metric frame motors, and brake motors.\n\nUnder the Energy Independence and Security Act of 2007 (EISA), the mandatory mini- mum nominal full-load efficiency for general-purpose motors rated below 1,000 volts with a power rating up to 200 hp was raised to the premium level. The premium efficiency requirement applies to motors purchased alone, imported into the United States, or purchased as a component of another piece of equipment.\n\nTable 1. Annual Savings for Premium versus Old Standard Efficiency Motors\n\n",
+      "metadata": {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+        "device_ids": [],
+        "document_id": "doe-motor-ts01",
+        "language": "en",
+        "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+        "product_model": null,
+        "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+        "reviewed_on": "2026-09-18",
+        "source_document_id": "DOE/GO-102012-3743",
+        "source_pages": [
+          "1",
+          "2"
+        ],
+        "source_sha256": "af4b552b4603a30efec4c72a3af23d53af48e130a0322a338bfa14385e2f4a91",
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/whentopurchase_nema_motor_systemts1.pdf",
+        "sources": [
+          "https://www.energy.gov/sites/prod/files/2014/04/f15/whentopurchase_nema_motor_systemts1.pdf"
+        ],
+        "teaching_only": false,
+        "title": "When to Purchase Premium Efficiency Motors",
+        "version": "November 2012"
+      },
+      "original_text": "The premium efficiency motor standards apply to NEMA Design A and B, three-phase, low-voltage induction motors rated between 1-and 500-horsepower (hp) and 250- to 500-hp, medium-voltage motors designed for service at 5,000 volts or less. Covered products include foot-mounted motors with speeds of 1,200, 1,800, and 3,600 revolutions per minute (RPM) with open drip-proof, explosion-proof, or totally enclosed fan-cooled (TEFC) enclosures. The standard also covers severe-duty, wash down, International Electrotechnical Commission (IEC) metric frame motors, and brake motors.\n\nUnder the Energy Independence and Security Act of 2007 (EISA), the mandatory mini- mum nominal full-load efficiency for general-purpose motors rated below 1,000 volts with a power rating up to 200 hp was raised to the premium level. The premium efficiency requirement applies to motors purchased alone, imported into the United States, or purchased as a component of another piece of equipment.\n\nTable 1. Annual Savings for Premium versus Old Standard Efficiency Motors\n\n",
+      "over_soft_target": true,
+      "section": "Page 1",
+      "source_end": 2905,
+      "source_line_end": 36,
+      "source_line_start": 31,
+      "source_pages": [
+        "1"
+      ],
+      "source_path": "doe-motor-ts01.md",
+      "source_start": 1857,
+      "strategy": "rag-page-heading-sentence-v2",
+      "token_count": 399,
+      "version": "November 2012",
+      "rank": 2,
+      "distance": 0.18921655416488647,
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/whentopurchase_nema_motor_systemts1.pdf"
+    },
+    {
+      "chunk_id": "doe-motor-ts08:12c15bedbd192ee9556b",
+      "content_sha256": "080ffc62dabe262035bd77c97b49eb428bdf8590266272cfdf6c657c13ae9ab2",
+      "context_source_pages": [
+        "2"
+      ],
+      "context_sources": [
+        {
+          "field": "title",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "Eliminate Excessive In-Plant Distribution System Voltage Drops"
+        },
+        {
+          "kind": "source_context",
+          "source_pages": [
+            "2"
+          ],
+          "text": "Resources / sidebar"
+        },
+        {
+          "kind": "source_context",
+          "source_pages": [
+            "2"
+          ],
+          "text": "Assuming a utility energy charge of $0.08 per kilowatt-hour (kWh) with a demand charge of $8.00 per kilowatt (kW) per month, potential savings are valued at:"
+        },
+        {
+          "field": "applicability",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards."
+        }
+      ],
+      "context_text": "Repeated source context:\nEliminate Excessive In-Plant Distribution System Voltage Drops\nResources / sidebar\nAssuming a utility energy charge of $0.08 per kilowatt-hour (kWh) with a demand charge of $8.00 per kilowatt (kW) per month, potential savings are valued at:\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "document_id": "doe-motor-ts08",
+      "document_sha256": "5902333a0eb753d40e4e2c2c01c8c3f24d94a00d2687516ec8d624ea8856e519",
+      "embedding_text": "passage: Repeated source context:\nEliminate Excessive In-Plant Distribution System Voltage Drops\nResources / sidebar\nAssuming a utility energy charge of $0.08 per kilowatt-hour (kWh) with a demand charge of $8.00 per kilowatt (kW) per month, potential savings are valued at:\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nSource text:\n### Resources / sidebar\n\nResources\n\nU.S. Department of Energy (DOE)— For more information on motor and motor-driven system efficiency and to download the MotorMaster+ software tool, visit the Advanced Manufacturing Office (AMO) website at manufacturing.energy.gov.\n",
+      "metadata": {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+        "device_ids": [],
+        "document_id": "doe-motor-ts08",
+        "language": "en",
+        "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+        "product_model": null,
+        "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+        "reviewed_on": "2026-09-18",
+        "source_document_id": "DOE/GO-102012-3732",
+        "source_pages": [
+          "1",
+          "2"
+        ],
+        "source_sha256": "9119468e2237aae542d8d2fe2905c1de6fd0788fe42af59609792f6995b8f448",
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf",
+        "sources": [
+          "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf"
+        ],
+        "teaching_only": false,
+        "title": "Eliminate Excessive In-Plant Distribution System Voltage Drops",
+        "version": "November 2012"
+      },
+      "original_text": "### Resources / sidebar\n\nResources\n\nU.S. Department of Energy (DOE)— For more information on motor and motor-driven system efficiency and to download the MotorMaster+ software tool, visit the Advanced Manufacturing Office (AMO) website at manufacturing.energy.gov.\n",
+      "over_soft_target": false,
+      "section": "Resources / sidebar",
+      "source_end": 6491,
+      "source_line_end": 84,
+      "source_line_start": 80,
+      "source_pages": [
+        "2"
+      ],
+      "source_path": "doe-motor-ts08.md",
+      "source_start": 6226,
+      "strategy": "rag-page-heading-sentence-v2",
+      "token_count": 186,
+      "version": "November 2012",
+      "rank": 3,
+      "distance": 0.19094759225845337,
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf"
+    },
+    {
+      "chunk_id": "doe-motor-ts03:f866248cb4911d7529ec",
+      "content_sha256": "1d63ee0e61cc63e7b3a02a488bb2b16ee5d81c9521aa327b828cd9239bbe7830",
+      "context_source_pages": [],
+      "context_sources": [
+        {
+          "field": "title",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "Extend the Operating Life of Your Motor"
+        },
+        {
+          "field": "applicability",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards."
+        }
+      ],
+      "context_text": "Repeated source context:\nExtend the Operating Life of Your Motor\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "document_id": "doe-motor-ts03",
+      "document_sha256": "7ee17ef5de984a12448a77ccdcfa60b9b6255b8087e1c12aa6e51b23f5259024",
+      "embedding_text": "passage: Repeated source context:\nExtend the Operating Life of Your Motor\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nSource text:\nEven with excellent selection and care, motors may suffer short lifetimes in unavoidably severe environments. In some industries, motors are exposed to contaminants that are severely corrosive, abrasive, and/or electrically conductive. In such cases, motor life can be extended by purchasing special motors, such as those conforming to the Institute of Electrical and Electronics Engineers (IEEE) 841 specifications, or other severe-duty or corrosion-resistant models. Alternatively, stock motors can be modified by a competent service center.\n\nThe operating environment, conditions of use (or misuse), and quality of preventive maintenance will determine how quickly motor parts degrade. Higher temperatures shorten motor life. For every 10°C rise in operating temperature, the insulation life is reduced by half. This can mislead one to think that purchasing new motors with higher insulation temperature ratings will significantly increase motor life. This is not always true, because new motors designed with higher insulation thermal ratings may actually operate at higher internal temperatures (as permitted by the higher thermal rating). Increasing the thermal rating during rewinding, for example, from Class B (130°C) to Class H (180°C), does increase the winding life.\n\nThe best safeguard against thermal damage is to mitigate conditions that contribute to overheating. These include dirt, under and overvoltage, voltage unbalance, harmonics, high ambient temperature, poor ventilation, and overload operation (even within the service factor).\n\n",
+      "metadata": {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+        "device_ids": [],
+        "document_id": "doe-motor-ts03",
+        "language": "en",
+        "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+        "product_model": null,
+        "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+        "reviewed_on": "2026-09-18",
+        "source_document_id": "DOE/GO-102012-3735",
+        "source_pages": [
+          "1",
+          "2"
+        ],
+        "source_sha256": "ce0dfe769c0be9b511bb9f5f6ceeead1e8f6e56c1bdf40e0752756394fdc6ed4",
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/extend_motor_operlife_motor_systemts3.pdf",
+        "sources": [
+          "https://www.energy.gov/sites/prod/files/2014/04/f15/extend_motor_operlife_motor_systemts3.pdf"
+        ],
+        "teaching_only": false,
+        "title": "Extend the Operating Life of Your Motor",
+        "version": "November 2012"
+      },
+      "original_text": "Even with excellent selection and care, motors may suffer short lifetimes in unavoidably severe environments. In some industries, motors are exposed to contaminants that are severely corrosive, abrasive, and/or electrically conductive. In such cases, motor life can be extended by purchasing special motors, such as those conforming to the Institute of Electrical and Electronics Engineers (IEEE) 841 specifications, or other severe-duty or corrosion-resistant models. Alternatively, stock motors can be modified by a competent service center.\n\nThe operating environment, conditions of use (or misuse), and quality of preventive maintenance will determine how quickly motor parts degrade. Higher temperatures shorten motor life. For every 10°C rise in operating temperature, the insulation life is reduced by half. This can mislead one to think that purchasing new motors with higher insulation temperature ratings will significantly increase motor life. This is not always true, because new motors designed with higher insulation thermal ratings may actually operate at higher internal temperatures (as permitted by the higher thermal rating). Increasing the thermal rating during rewinding, for example, from Class B (130°C) to Class H (180°C), does increase the winding life.\n\nThe best safeguard against thermal damage is to mitigate conditions that contribute to overheating. These include dirt, under and overvoltage, voltage unbalance, harmonics, high ambient temperature, poor ventilation, and overload operation (even within the service factor).\n\n",
+      "over_soft_target": true,
+      "section": "Page 1",
+      "source_end": 4620,
+      "source_line_end": 40,
+      "source_line_start": 35,
+      "source_pages": [
+        "1"
+      ],
+      "source_path": "doe-motor-ts03.md",
+      "source_start": 3065,
+      "strategy": "rag-page-heading-sentence-v2",
+      "token_count": 416,
+      "version": "November 2012",
+      "rank": 4,
+      "distance": 0.19148290157318115,
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/extend_motor_operlife_motor_systemts3.pdf"
+    },
+    {
+      "chunk_id": "doe-motor-ts08:02746d5955ca3d75b0b2",
+      "content_sha256": "f63d51cb1922b743013b9d115d69e9fe29b17fc80025474d679dba0bedf71220",
+      "context_source_pages": [
+        "1"
+      ],
+      "context_sources": [
+        {
+          "field": "title",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "Eliminate Excessive In-Plant Distribution System Voltage Drops"
+        },
+        {
+          "kind": "source_context",
+          "source_pages": [
+            "1"
+          ],
+          "text": "Suggested actions / sidebar"
+        },
+        {
+          "field": "applicability",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards."
+        }
+      ],
+      "context_text": "Repeated source context:\nEliminate Excessive In-Plant Distribution System Voltage Drops\nSuggested actions / sidebar\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "document_id": "doe-motor-ts08",
+      "document_sha256": "5902333a0eb753d40e4e2c2c01c8c3f24d94a00d2687516ec8d624ea8856e519",
+      "embedding_text": "passage: Repeated source context:\nEliminate Excessive In-Plant Distribution System Voltage Drops\nSuggested actions / sidebar\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nSource text:\n### Suggested actions / sidebar\n\nSuggested Actions\n\n",
+      "metadata": {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+        "device_ids": [],
+        "document_id": "doe-motor-ts08",
+        "language": "en",
+        "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+        "product_model": null,
+        "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+        "reviewed_on": "2026-09-18",
+        "source_document_id": "DOE/GO-102012-3732",
+        "source_pages": [
+          "1",
+          "2"
+        ],
+        "source_sha256": "9119468e2237aae542d8d2fe2905c1de6fd0788fe42af59609792f6995b8f448",
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf",
+        "sources": [
+          "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf"
+        ],
+        "teaching_only": false,
+        "title": "Eliminate Excessive In-Plant Distribution System Voltage Drops",
+        "version": "November 2012"
+      },
+      "original_text": "### Suggested actions / sidebar\n\nSuggested Actions\n\n",
+      "over_soft_target": false,
+      "section": "Suggested actions / sidebar",
+      "source_end": 4307,
+      "source_line_end": 52,
+      "source_line_start": 49,
+      "source_pages": [
+        "1"
+      ],
+      "source_path": "doe-motor-ts08.md",
+      "source_start": 4255,
+      "strategy": "rag-page-heading-sentence-v2",
+      "token_count": 92,
+      "version": "November 2012",
+      "rank": 5,
+      "distance": 0.19392633438110352,
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf"
+    }
+  ],
+  "limitations": [
+    "Candidates do not establish diagnosis, correctness, or answerability.",
+    "Empty device_ids or unknown product_model does not mean universally applicable."
+  ]
+}

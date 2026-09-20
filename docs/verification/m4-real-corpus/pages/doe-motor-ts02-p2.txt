@@ -1,0 +1,63 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+     Motor losses fall into several categories that can be measured in various ways:
+                                                                                    
+      • Stator winding resistance (I2R) losses                   Resources          
+      • Rotor conductor bar and end ring resistance (I2R) losses                    
+                                                          U.S. Department of Energy (DOE)—
+      • Stator and rotor core losses                      For additional information on
+      • Friction and windage losses (including bearing losses, wind resistance, and cooling motor and motor-driven system
+       fan load)                                          efficiency measures, to obtain
+      • Stray load losses (miscellaneous other losses).   DOE’s MotorMaster+ software, or
+                                                          to learn more about training, visit
+     The most direct and credible methods of measuring these losses involve considerable
+                                                          the Advanced Manufacturing
+     labor, equipment, and the availability of electrical power. Power readings must be taken
+                                                          Office (AMO) website at   
+     with the motor running under load, then uncoupled and running unloaded. Winding
+     resistance must be measured and temperature corrections must be performed. manufacturing.energy.gov.
+     Simpler but less accurate motor efficiency estimation techniques are available. They
+     require fewer field measurements and don’t involve uncoupling the motor from the load.
+     These techniques include:                                                      
+      • Loss accounting methods. Such methods determine losses using either special 
+       dedicated “lab-in-a-box” devices or very accurate conventional instruments,  
+       including power meters, thermometers, and micro-ohmmeters. These methods     
+       have the potential of being accurate within ±1% to ±3% if carefully applied. The
+       necessary instruments are costly, and the process is very time and labor intensive.
+       Power meters must be accurate at very low power factors that occur when motors
+       operate unloaded.                                                            
+      • Slip method. The slip method has largely been discredited as a viable technique for
+       estimating motor efficiency. This method computes shaft output power as the rated
+       horsepower multiplied by the ratio of measured slip to the slip expected when the
+       motor is fully loaded. Operating slip is the difference between synchronous and shaft
+       speed, with the full-load slip equal to the difference between the synchronous speed
+       and the full-load speed stamped on the motor nameplate.                      
+      • MotorMaster+ 4.0. This software tool, developed by the U.S. Department of   
+       Energy’s (DOE) Advanced Manufacturing Office (AMO), incorporates several     
+       methods for determining motor load. These involve the use of motor nameplate 
+       data in conjunction with field measurements of input power, voltage, current,
+       and/or operating speed. MotorMaster+ 4.0 automatically selects the best of four
+       available load and efficiency estimation methods based on the data entered. Once the
+       percent load is known, the software tool obtains efficiency values from embedded
+       default part-load efficiency tables. Default efficiency tables are available for motors
+       of different enclosure types (open drip-proof and TEFC), horsepower ratings, 
+       synchronous speeds, and efficiency classes.                                  
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3734 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

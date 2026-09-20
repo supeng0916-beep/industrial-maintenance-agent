@@ -1,0 +1,296 @@
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 61331 --value 77.9
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:61331/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 61331 --value 85 --source-mode frozen
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:61331/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 61331 --value 70 --quality bad
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:61331/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 61331 --value 85
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:61331/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/.local/node-current/bin/node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 61333
+
+  VITE v8.3.0  ready in 134 ms
+
+  ➜  Local:   http://127.0.0.1:61333/
+3:40:51 PM [vite] http proxy error: /api/devices
+Error: connect ECONNREFUSED 127.0.0.1:61332
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1938:16)
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python serve_api.py --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/opcua-subscription-KpUgpf/test.sqlite3 --port 61332
+INFO:     Started server process [88771]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:61332 (Press CTRL+C to quit)
+INFO:     127.0.0.1:61405 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61407 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61409 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A30%3A12.852Z&to=2026-09-17T07%3A40%3A12.852991%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61413 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61415 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61414 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61421 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A30%3A12.861Z&to=2026-09-17T07%3A40%3A12.861611%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61419 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A30%3A12.861Z&to=2026-09-17T07%3A40%3A12.861099%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61420 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A30%3A12.861Z&to=2026-09-17T07%3A40%3A12.861235%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61424 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61426 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61428 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A12.938Z&to=2026-09-17T07%3A40%3A12.938090%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61446 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61448 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61450 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A14.954Z&to=2026-09-17T07%3A40%3A14.954402%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61466 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61468 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61470 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A16.971Z&to=2026-09-17T07%3A40%3A16.971645%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61471 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61471 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61497 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61499 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61501 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A18.988Z&to=2026-09-17T07%3A40%3A18.988660%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61471 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61471 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61526 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61528 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61530 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A21.002Z&to=2026-09-17T07%3A40%3A21.002545%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61552 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61556 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61558 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A23.020Z&to=2026-09-17T07%3A40%3A23.020217%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61579 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61581 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61583 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A25.039Z&to=2026-09-17T07%3A40%3A25.039186%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61584 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61600 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61602 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61604 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A27.056Z&to=2026-09-17T07%3A40%3A27.056710%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61631 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61635 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A29.076Z&to=2026-09-17T07%3A40%3A29.076717%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61653 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61655 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61657 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A31.095Z&to=2026-09-17T07%3A40%3A31.095680%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61659 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61675 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61677 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61679 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A33.115Z&to=2026-09-17T07%3A40%3A33.115426%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61697 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61699 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61701 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A35.131Z&to=2026-09-17T07%3A40%3A35.131040%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61723 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61725 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61727 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A37.151Z&to=2026-09-17T07%3A40%3A37.151243%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61744 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61746 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61748 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A39.170Z&to=2026-09-17T07%3A40%3A39.170045%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61766 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61768 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61770 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A41.188Z&to=2026-09-17T07%3A40%3A41.188591%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61771 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61771 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61791 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61793 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61795 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A43.211Z&to=2026-09-17T07%3A40%3A43.211830%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61822 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61824 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61826 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A45.232Z&to=2026-09-17T07%3A40%3A45.232328%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61845 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61847 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61849 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A47.256Z&to=2026-09-17T07%3A40%3A47.256231%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61865 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61867 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61869 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A30%3A49.278Z&to=2026-09-17T07%3A40%3A49.278716%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61871 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [88771]
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python collect_opcua.py --mode subscribe --port 61331 --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/opcua-subscription-KpUgpf/test.sqlite3
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:40:11.554231+00:00 订阅通知1 accepted value=85.0 generation=1
+2026-09-17T07:40:11.803313+00:00 订阅通知2 accepted value=85.0 generation=1
+2026-09-17T07:40:12.303292+00:00 订阅通知3 accepted value=85.0 generation=1
+2026-09-17T07:40:12.802553+00:00 订阅通知4 accepted value=85.0 generation=1
+2026-09-17T07:40:13.303422+00:00 订阅通知5 accepted value=85.0 generation=1
+2026-09-17T07:40:13.803674+00:00 订阅通知6 accepted value=85.0 generation=1
+2026-09-17T07:40:14.303656+00:00 订阅通知7 accepted value=85.0 generation=1
+2026-09-17T07:40:14.803532+00:00 订阅通知8 accepted value=85.0 generation=1
+2026-09-17T07:40:15.303326+00:00 订阅通知9 accepted value=85.0 generation=1
+2026-09-17T07:40:15.803528+00:00 订阅通知10 accepted value=85.0 generation=1
+2026-09-17T07:40:16.303661+00:00 订阅通知11 accepted value=85.0 generation=1
+2026-09-17T07:40:16.803213+00:00 订阅通知12 accepted value=85.0 generation=1
+Publish iteration crashed; retrying in 1s
+Traceback (most recent call last):
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 439, in _publish_loop
+    response = await self.publish(pending_acks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 424, in publish
+    data = await self._send_request(request, timeout=0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 95, in _send_request
+    return await self._client._send_request(request, timeout, message_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_client.py", line 590, in _send_request
+    return await self.protocol.send_request(request, timeout, message_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_client.py", line 220, in send_request
+    raise ConnectionError("Connection is closed") from None
+ConnectionError: Connection is closed
+订阅中断，准备重连：connection_lost:transport lost
+close_session was called but connection is closed
+close_secure_channel was called but connection is closed
+订阅中断，准备重连：[Errno 61] Connect call failed ('127.0.0.1', 61331)
+close_secure_channel was called but connection is closed
+订阅中断，准备重连：[Errno 61] Connect call failed ('127.0.0.1', 61331)
+close_secure_channel was called but connection is closed
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:40:24.135500+00:00 订阅通知13 accepted value=85.0 generation=4
+2026-09-17T07:40:24.385747+00:00 订阅通知14 accepted value=85.0 generation=4
+2026-09-17T07:40:24.885008+00:00 订阅通知15 accepted value=85.0 generation=4
+2026-09-17T07:40:25.385877+00:00 订阅通知16 accepted value=85.0 generation=4
+2026-09-17T07:40:25.885837+00:00 订阅通知17 accepted value=85.0 generation=4
+2026-09-17T07:40:26.385709+00:00 订阅通知18 accepted value=85.0 generation=4
+Publish iteration crashed; retrying in 1s
+Traceback (most recent call last):
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 439, in _publish_loop
+    response = await self.publish(pending_acks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 424, in publish
+    data = await self._send_request(request, timeout=0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 95, in _send_request
+    return await self._client._send_request(request, timeout, message_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_client.py", line 590, in _send_request
+    return await self.protocol.send_request(request, timeout, message_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_client.py", line 220, in send_request
+    raise ConnectionError("Connection is closed") from None
+ConnectionError: Connection is closed
+订阅中断，准备重连：connection_lost:transport lost
+close_session was called but connection is closed
+close_secure_channel was called but connection is closed
+订阅中断，准备重连：[Errno 61] Connect call failed ('127.0.0.1', 61331)
+close_secure_channel was called but connection is closed
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:40:29.705989+00:00 订阅通知19 bad value=null generation=6
+2026-09-17T07:40:29.955797+00:00 订阅通知20 bad value=null generation=6
+2026-09-17T07:40:30.455891+00:00 订阅通知21 bad value=null generation=6
+2026-09-17T07:40:30.955739+00:00 订阅通知22 bad value=null generation=6
+2026-09-17T07:40:31.455579+00:00 订阅通知23 bad value=null generation=6
+2026-09-17T07:40:31.955757+00:00 订阅通知24 bad value=null generation=6
+2026-09-17T07:40:32.455812+00:00 订阅通知25 bad value=null generation=6
+2026-09-17T07:40:32.955775+00:00 订阅通知26 bad value=null generation=6
+2026-09-17T07:40:33.455496+00:00 订阅通知27 bad value=null generation=6
+2026-09-17T07:40:33.956061+00:00 订阅通知28 bad value=null generation=6
+2026-09-17T07:40:34.455609+00:00 订阅通知29 bad value=null generation=6
+Publish iteration crashed; retrying in 1s
+Traceback (most recent call last):
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 439, in _publish_loop
+    response = await self.publish(pending_acks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 424, in publish
+    data = await self._send_request(request, timeout=0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 95, in _send_request
+    return await self._client._send_request(request, timeout, message_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_client.py", line 590, in _send_request
+    return await self.protocol.send_request(request, timeout, message_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_client.py", line 220, in send_request
+    raise ConnectionError("Connection is closed") from None
+ConnectionError: Connection is closed
+订阅中断，准备重连：connection_lost:transport lost
+close_session was called but connection is closed
+close_secure_channel was called but connection is closed
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:40:38.974677+00:00 订阅通知30 accepted value=85.0 generation=7
+Publish iteration crashed; retrying in 1s
+Traceback (most recent call last):
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 439, in _publish_loop
+    response = await self.publish(pending_acks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 424, in publish
+    data = await self._send_request(request, timeout=0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 95, in _send_request
+    return await self._client._send_request(request, timeout, message_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_client.py", line 590, in _send_request
+    return await self.protocol.send_request(request, timeout, message_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_client.py", line 220, in send_request
+    raise ConnectionError("Connection is closed") from None
+ConnectionError: Connection is closed
+订阅中断，准备重连：connection_lost:transport lost
+close_session was called but connection is closed
+close_secure_channel was called but connection is closed
+订阅中断，准备重连：[Errno 61] Connect call failed ('127.0.0.1', 61331)
+close_secure_channel was called but connection is closed
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:40:45.738248+00:00 订阅通知31 accepted value=77.9 generation=9
+2026-09-17T07:40:45.988296+00:00 订阅通知32 accepted value=77.9 generation=9
+2026-09-17T07:40:46.488160+00:00 订阅通知33 accepted value=77.9 generation=9
+2026-09-17T07:40:46.988414+00:00 订阅通知34 accepted value=77.9 generation=9
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 61331 --value 85 --extra-namespace
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:61331/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=3;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python collect_temperature.py --port 61330 --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/opcua-subscription-KpUgpf/test.sqlite3
+2026-09-17T07:40:10.576150+00:00 第1次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:11.576795+00:00 第2次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:12.579288+00:00 第3次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:13.579674+00:00 第4次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:14.584592+00:00 第5次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:15.589577+00:00 第6次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:16.591749+00:00 第7次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:17.596732+00:00 第8次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:18.599624+00:00 第9次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:19.602304+00:00 第10次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:20.607428+00:00 第11次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:21.609768+00:00 第12次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:22.614613+00:00 第13次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:23.619438+00:00 第14次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:24.624142+00:00 第15次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:25.629167+00:00 第16次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:26.629750+00:00 第17次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:27.630928+00:00 第18次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:28.636636+00:00 第19次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:29.639873+00:00 第20次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:30.641488+00:00 第21次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:31.644714+00:00 第22次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:32.645576+00:00 第23次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:33.650296+00:00 第24次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:34.650516+00:00 第25次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:35.652981+00:00 第26次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:36.655952+00:00 第27次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:37.658706+00:00 第28次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:38.660174+00:00 第29次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:39.663997+00:00 第30次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:40.668073+00:00 第31次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:41.672474+00:00 第32次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:42.677247+00:00 第33次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:43.679922+00:00 第34次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:44.680832+00:00 第35次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:45.682434+00:00 第36次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:46.687776+00:00 第37次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:47.688682+00:00 第38次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:48.691567+00:00 第39次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:49.695248+00:00 第40次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:50.696350+00:00 第41次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:40:51.698989+00:00 第42次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+采集已停止，已提交的历史保留。
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python simulator.py --port 61330 --raw 653
+启动模拟器：127.0.0.1:61330，设备 ID=1，保持寄存器协议地址=0，温度原始值=653，地址1电流原始值=123，地址2转速原始值=1450，地址3运行状态原始值=1；按 Ctrl+C 停止。

@@ -1,0 +1,63 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+     Voltage unbalance is probably the leading power quality problem that results in Resources
+     motor overheating and premature motor failure. If unbalanced voltages are detected, a
+                                                          National Electrical Manufacturers
+     thorough investigation should be undertaken to determine the cause. Energy and cost
+                                                          Association (NEMA)—Visit  
+     savings occur when corrective actions are taken.                               
+                                                          www.nema.org for additional
+     Voltage Unbalance Energy Savings Example             information on voltage imbalance.
+     Assume that the 100-hp motor tested as shown in Table 1 was fully loaded and operated for
+                                                          U.S. Department of Energy 
+     8,000 hours per year (hrs/yr), with an unbalanced voltage of 2.5%. With energy priced at
+                                                          (DOE)— For more information on
+     $0.08/kilowatt-hour (kWh), the annual energy and cost savings after corrective actions are
+                                                          motor and motor-driven system
+     taken are:                                                                     
+                                                          efficiency and to download the
+     Annual Energy Savings = 100 hp x 0.746 kW/hp x 8,000 hrs/yr x (100/93 – 100/94.4)
+                                                          MotorMaster+ software tool, visit
+                    = 9,517 kWh                                                     
+                                                          the Advanced Manufacturing
+     Annual Cost Savings = 9,517 kWh x $0.08/kWh = $760   Office (AMO) website at   
+                                                          manufacturing.energy.gov. 
+     Overall savings may be much larger because an unbalanced supply voltage may power
+     numerous motors and other electrical equipment.                                
+     Further Considerations                                                         
+     Voltage unbalance causes extremely high current unbalance. The magnitude of current
+     unbalance may be 6 to 10 times as large as the voltage unbalance. For the 100-hp motor
+     in the preceding example, line currents (at full load with 2.5% voltage unbalance) were
+     unbalanced by 27.7%.                                                           
+     A motor will run hotter when operating on a power supply with voltage unbalance.
+     The additional temperature increase is estimated with the following equation1: 
+     Total Temperature Rise = Balanced Temperature Rise x (1 + 2 x (% Voltage Unbalance)2/100)
+     For example, a motor with an 80°C temperature rise caused by resistance would  
+     experience a temperature increase of 6.4°C when operated under conditions of 2%
+     voltage unbalance. Winding insulation life is reduced by one-half for each 10°C increase
+     in operating temperature.2                                                     
+     References                                                                     
+     1Reliance Electric, “Power Supply” September, 1998.                            
+     2“Stopping a Costly Leak: The Effects of Unbalanced Voltage on the Life and Efficiency of
+     Three-Phase Electric Motors.” Energy Matters. U.S. Department of Energy. Winter 2005.
+     Additional References                                                          
+     Information in this tip sheet is extracted from NEMA Standards Publication MG-1-2011,
+     Motors and Generators, which is available for purchase from www.nema.org.      
+                                                                                    
+                                                                                    
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-10201D2-O3E73/G3 O• -N10o2v0em12b-xexrx 2x0 •1 2August 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

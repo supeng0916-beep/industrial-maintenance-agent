@@ -1,0 +1,93 @@
+{
+ "ok": true,
+ "output": "/Users/yuanqi/项目/工业设备智能运维agent/docs/verification/m4-rag-improvement-v2/run-2026-09-18a/results.json",
+ "sets": {
+  "old_dev": {
+   "summary": {
+    "cases": 29,
+    "answerable": 24,
+    "unanswerable": 5,
+    "hit_at_5": 15,
+    "missed_at_5": [
+     "R08",
+     "R10",
+     "R17",
+     "R20",
+     "R21",
+     "R22",
+     "R29",
+     "R30",
+     "R34"
+    ],
+    "hit_at_10": 19,
+    "missed_at_10": [
+     "R17",
+     "R20",
+     "R21",
+     "R29",
+     "R30"
+    ]
+   },
+   "baseline_status": "reproduced"
+  },
+  "old_holdout": {
+   "summary": {
+    "cases": 15,
+    "answerable": 10,
+    "unanswerable": 5,
+    "hit_at_5": 3,
+    "missed_at_5": [
+     "R03",
+     "R04",
+     "R11",
+     "R15",
+     "R16",
+     "R23",
+     "R24"
+    ],
+    "hit_at_10": 5,
+    "missed_at_10": [
+     "R03",
+     "R15",
+     "R16",
+     "R23",
+     "R24"
+    ]
+   },
+   "baseline_status": "reproduced"
+  },
+  "check_set": {
+   "summary": {
+    "cases": 20,
+    "answerable": 14,
+    "unanswerable": 6,
+    "hit_at_5": 10,
+    "missed_at_5": [
+     "C03",
+     "C04",
+     "C07",
+     "C13"
+    ],
+    "hit_at_10": 13,
+    "missed_at_10": [
+     "C07"
+    ]
+   },
+   "baseline_status": "first_measurement_no_threshold"
+  }
+ },
+ "merge_diagnostic": {
+  "included": true,
+  "method": "rrf(k=60) on frozen D1 top10 lists",
+  "counts": {
+   "answerable": 24,
+   "original_hit_at_5": 15,
+   "original_hit_at_10": 19,
+   "rewritten_hit_at_5": 20,
+   "rewritten_hit_at_10": 23,
+   "merged_hit_at_5": 18,
+   "merged_hit_at_10": 22
+  },
+  "reproduction_status": "reproduced"
+ }
+}

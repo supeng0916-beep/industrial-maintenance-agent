@@ -1,0 +1,77 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #9
+                                                                                    
+                                                                                    
+     Improve   Motor  Operation                                                     
+                                                             Suggested Actions      
+     at Off-Design   Voltages                                                       
+                                                          ■■ If voltage does not vary more
+     Motors are designed to operate within ± 10% of their nameplate rated voltages. When than 3% to 5% but is constantly
+     motors operate at conditions of over and undervoltage, motor efficiency and other
+                                                            too high or too low, change to a
+     performance parameters are degraded.                                           
+                                                            different main service  
+     There are certain standard utilization voltages for motors. These correspond to (but are transformer tap setting. Adjust
+     about 4% lower than) standard service voltages. The voltage difference is established to
+                                                            branch or secondary transformer
+     allow for a reasonable line voltage drop between the transformer secondary and the point
+                                                            tap settings as necessary.
+     of use, as shown in Table 1.                                                   
+     Motors sometimes come in multivoltage ratings. The different voltages are accom- ■■ If daily voltage variation occurs
+     modated by making different connections in the motor terminal box. For 1:2 ratios like at the service entrance, an “auto-
+     230/460, the connections change coil groups from parallel to series. For 1:1.73 ratios tap-changer” transformer is
+     like 2,300/4,000, the connections change coil groups from delta (for the lower voltage)
+                                                            recommended.            
+     to wye (for the higher voltage). There is no difference in performance at the different
+     voltage ratings because the different connection compensates to put the same total ■■ If voltage is constant at the
+     current through each winding turn. Tri-voltage motors (e.g., 208-230/460 volt [V]), are
+                                                            service entrance but varies
+     designed to produce rated torque at each voltage, but will slip more and operate hotter at
+                                                            within the facility due to load
+     208 V than at 230 or 460 V. Additionally, some 230/460-V motors are marked “Usable
+                                                            variations and distance from the
+     on 208 Volts.” Note that the motor nameplate efficiency is measured at rated voltage and
+                                                            transformer, replace existing
+     may be reduced when operating at a reduced voltage.                            
+                                                            conductors with larger ones or
+      Table 1. Standard Motor Operating Voltages (Volts)    add parallel conductors as
+                                                            allowed by the National Electrical
+       Service Voltage 208 240  480   600  2,400 4,160      Code (NEC).             
+      Utilization Voltage 200 230 460 575  2,300 4,000    ■■ For single motors attached to
+                                                            conventional motor starters,
+     What Happens to Motor Performance                      reduce voltage drops by 
+                                                            installing power factor correction
+     When Voltage Varies?                                                           
+                                                            capacitors at the points of use.
+     With reduced voltage, torque capability is reduced over the whole accelerating range
+     from initial start to full-load speed. This reduces a motor’s ability to produce sufficient ■■ When using a motor with an
+     starting torque and increases acceleration times. Full-load speed is only a fraction of
+                                                            electronic adjustable speed
+     a percent lower than normal, but torque is reduced by the square of the voltage ratio
+                                                            drive, the drive can compensate
+     (operating voltage/nameplate voltage). A reduction in breakdown torque means the
+                                                            for voltage discrepancies as long
+     motor has less ability to drive through a brief torque overload without stalling. Low
+     voltage caused by high system impedance is exacerbated during starting and acceleration as the input voltage is within the
+     when the current is four to eight times the nameplate full-load value. operating range of the drive.
+     As shown in Table 2, this power factor improves with undervoltage. This might be seen ■■ Have your service center rewind
+     as a benefit, except the reduction in reactive current is more than nullified by the increase
+                                                            motors for the actual utilization
+     in the total current necessary to deliver the real power at reduced voltage. Higher cur-
+                                                            voltage and evaluate the design
+     rents lead to increased resistance due to winding heating and power losses (I2R), reduced
+                                                            for other ways to improve
+     motor efficiency, and possible overheating at rated load conditions.           
+                                                            reliability and efficiency.
+     Slip also varies as the square of the voltage ratio. Slip is the difference between a
+     motor’s actual speed and synchronous speed. Synchronous speed is always 7,200  
+     revolutions per minute (RPM) divided by the pole count, for example, 3,600 RPM (two
+     poles), 1,800 RPM (four poles), 1,200 RPM (six poles), 900 RPM (eight poles), etc. The
+     actual synchronous speed always is the lowest possible synchronous speed above the
+     nameplate full-load speed. For example, the synchronous speed for a 1,750 RPM motor

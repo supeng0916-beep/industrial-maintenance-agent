@@ -1,0 +1,63 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+     Bearing failures account for nearly two-thirds of all motor failures.1 If not detected
+     in time, the failing bearing can cause overheating and damage insulation, or can fail
+                                                                 Resources          
+     drastically and do irreparable mechanical damage to the motor. Vibration trending and
+     thermal scanning can be used to detect bearing problems and allow intervention before National Electrical Manufacturers
+     such damage occurs.                                  Association (NEMA)—For    
+     A bearing L is defined by International Organization for Standardization (ISO) and information on NEMA Premium™
+            10                                                                      
+     American Bearing Manufacturers Association (ABMA) standards as the life that 90% standards, visit www.nema.org.
+     of a sufficiently large group of apparently identical bearings can be expected to reach
+     or exceed. The median or average life, sometimes called mean time between failure, Electrical Apparatus Service
+     is about five times the calculated basic rating life.2 With bearings often implicated Association (EASA)—Provides
+     in motor failures, the L rating of a bearing may be cause for concern. For fixed guidelines on motor repair/rewind
+                  10h                                                               
+     operating conditions, a longer L rating implies a longer bearing life. The bearing practices at www.easa.com.
+                       10h                                                          
+     service life under actual operating conditions is affected by excessive lubricant use,
+     incorrect lubrication interval, contaminated lubricant, use of an incorrect lubricant, Motor Decisions Matter—Download
+     excessive vibration, misaligned couplings, or excessive belt tension. Power quality a motor management planning kit
+     problems and electronic adjustable speed drive–induced bearing currents also may at www.motorsmatter.org that
+     result in premature bearing failure (see Motor Systems Tip Sheet #15, Minimize 
+                                                          contains advice on building your
+     Adverse Motor and Adjustable Speed Drive Interactions).                        
+                                                          in-plant motor inventory, decision
+     Ensure that motors are not exposed to loading or operating conditions in excess of rules, critical planning tips, and
+     limitations defined in manufacturer specifications and National Electrical Manufacturers motor replacement.
+     Association (NEMA) standard MG1. This NEMA standard defines limits for ambient 
+     temperature, voltage variation, voltage unbalance, and frequency of starts. U.S. Department of Energy (DOE)—
+                                                          For more information on motor
+     References                                                                     
+                                                          and motor-driven system efficiency
+     1Bonnett, Austin H. and Chuck Yung. “A Construction, Performance and Reliability and to download the MotorMaster+
+     Comparison for Pre-EPAct, EPAct and Premium-Efficient Motors.” Institute of software tool, visit the Advanced
+     Electrical and Electronics Engineers Paper No. PCIC-2006-7.                    
+                                                          Manufacturing Office (AMO)
+     2Snyder, Daniel R. Snyder. “The Meaning of Bearing Life” Machine Design, website at
+     April 12, 2012.                                      manufacturing.energy.gov. 
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3735 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

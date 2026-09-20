@@ -1,0 +1,15 @@
+{
+  "origin": "/Users/yuanqi/.codex/skills/thread-learning-log",
+  "unchanged_copy": true,
+  "files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "93f8b237171bb5026ea8030f75b6dd2159f8caaf5806c2b551b2108949c3d5a9"
+    },
+    {
+      "path": "scripts/append_learning_log.py",
+      "sha256": "042338178866f1677c831f3daf056bbb24dd40c820d118cd2ac2c47ac7647f0f"
+    }
+  ],
+  "includes_personal_log": false
+}

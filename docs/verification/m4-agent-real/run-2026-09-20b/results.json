@@ -1,0 +1,859 @@
+{
+ "acceptance": "agent-real-four-calls",
+ "executed_at": "2026-09-20T02:37:17.812776+00:00",
+ "fixture": {
+  "db": "fixture.sqlite3（本目录内自建）",
+  "device": "motor-a",
+  "fixture_clock_note": "数据新鲜度按真实系统时钟判定，末点为2026-09-19T11:00Z",
+  "metric": "temperature",
+  "points": [
+   {
+    "collected_at": "2026-09-19T10:00:00.000000+00:00",
+    "value": 61.0
+   },
+   {
+    "collected_at": "2026-09-19T10:10:00.000000+00:00",
+    "value": 61.5
+   },
+   {
+    "collected_at": "2026-09-19T10:20:00.000000+00:00",
+    "value": 62.0
+   },
+   {
+    "collected_at": "2026-09-19T10:30:00.000000+00:00",
+    "value": 62.5
+   },
+   {
+    "collected_at": "2026-09-19T10:40:00.000000+00:00",
+    "value": 63.0
+   },
+   {
+    "collected_at": "2026-09-19T10:50:00.000000+00:00",
+    "value": 63.5
+   },
+   {
+    "collected_at": "2026-09-19T11:00:00.000000+00:00",
+    "value": 64.0
+   }
+  ]
+ },
+ "index_path": "/Users/yuanqi/项目/工业设备智能运维agent/docs/verification/m4-real-rag/doe-e5-final",
+ "limitations": [
+  "真实模型输出有随机性：单次运行不构成一般可靠性结论。",
+  "本验收证明流程控制与真实工具调用，语义正确性在D9按场景集人工核查。"
+ ],
+ "model": "qwen2.5:7b",
+ "ok": true,
+ "provider": "local ollama",
+ "records": [
+  {
+   "answer": "在线",
+   "note": "预热：模型加载不记入任何场景成绩",
+   "scenario": "warmup"
+  },
+  {
+   "elapsed_seconds": 12.38,
+   "question": "motor-a现在的温度是多少？数据新鲜吗？",
+   "result": {
+    "answer": "motor-a当前的温度是64.0℃。不过请注意，这个数值是最后记录的值，并不是连续实时的物理状态。可用性并不等于健康状况。最新数据是在2026年9月19日11:00采集的，距今已有超过56114秒（约15.6小时），因此数据可能已经过时。",
+    "calls": [
+     {
+      "args_digest": "cf0beed2170b",
+      "elapsed_seconds": 0.0017,
+      "name": "get_device_status",
+      "outcome": "ok"
+     }
+    ],
+    "checked_at": "2026-09-20T02:35:10.962982+00:00",
+    "citations": [],
+    "evidence": [
+     {
+      "data": {
+       "alarms": {
+        "active": null,
+        "current": "not_enabled",
+        "enabled": false,
+        "evaluated_measurement_id": null,
+        "history": [],
+        "limit": 20,
+        "pending": null,
+        "rule": {
+         "recover_below": 78.0,
+         "teaching_only": true,
+         "trigger_above": 80.0,
+         "unit": "℃"
+        },
+        "total": 0
+       },
+       "checked_at": "2026-09-20T02:35:14.516079+00:00",
+       "device": {
+        "id": "motor-a",
+        "metrics": [
+         "temperature",
+         "current",
+         "speed",
+         "running_state"
+        ],
+        "name": "模拟电机 A",
+        "protocol": "modbus_tcp"
+       },
+       "limitations": [
+        "数值为最后记录，不是连续实时物理状态；可用不等于健康。"
+       ],
+       "metrics": {
+        "current": {
+         "alarm": null,
+         "confidence": {
+          "reason": "尚无有效测量记录",
+          "state": "no_data"
+         },
+         "device_id": "motor-a",
+         "measurement": null,
+         "metric": "current",
+         "status": {
+          "checked_at": "2026-09-20T02:35:14.516079+00:00",
+          "data_age_seconds": null,
+          "has_data": false,
+          "is_stale": null,
+          "last_attempt_at": null,
+          "last_attempt_status": "unknown",
+          "last_failure_at": null,
+          "last_failure_message": null,
+          "last_failure_type": null,
+          "last_success_at": null,
+          "stale_after_seconds": 5
+         },
+         "unit": "A"
+        },
+        "running_state": {
+         "alarm": null,
+         "confidence": {
+          "reason": "尚无有效测量记录",
+          "state": "no_data"
+         },
+         "device_id": "motor-a",
+         "measurement": null,
+         "metric": "running_state",
+         "status": {
+          "checked_at": "2026-09-20T02:35:14.516079+00:00",
+          "data_age_seconds": null,
+          "has_data": false,
+          "is_stale": null,
+          "last_attempt_at": null,
+          "last_attempt_status": "unknown",
+          "last_failure_at": null,
+          "last_failure_message": null,
+          "last_failure_type": null,
+          "last_success_at": null,
+          "stale_after_seconds": 5
+         },
+         "unit": ""
+        },
+        "speed": {
+         "alarm": null,
+         "confidence": {
+          "reason": "尚无有效测量记录",
+          "state": "no_data"
+         },
+         "device_id": "motor-a",
+         "measurement": null,
+         "metric": "speed",
+         "status": {
+          "checked_at": "2026-09-20T02:35:14.516079+00:00",
+          "data_age_seconds": null,
+          "has_data": false,
+          "is_stale": null,
+          "last_attempt_at": null,
+          "last_attempt_status": "unknown",
+          "last_failure_at": null,
+          "last_failure_message": null,
+          "last_failure_type": null,
+          "last_success_at": null,
+          "stale_after_seconds": 5
+         },
+         "unit": "rpm"
+        },
+        "temperature": {
+         "alarm": {
+          "active": null,
+          "current": "not_enabled",
+          "enabled": false,
+          "evaluated_measurement_id": null,
+          "history": [],
+          "limit": 20,
+          "pending": null,
+          "rule": {
+           "recover_below": 78.0,
+           "teaching_only": true,
+           "trigger_above": 80.0,
+           "unit": "℃"
+          },
+          "total": 0
+         },
+         "confidence": {
+          "reason": "最后有效记录已过期",
+          "state": "stale"
+         },
+         "device_id": "motor-a",
+         "measurement": {
+          "collected_at": "2026-09-19T11:00:00.000000+00:00",
+          "device_id": "motor-a",
+          "id": 7,
+          "metric": "temperature",
+          "protocol": "modbus_tcp",
+          "quality": "good",
+          "source_time": null,
+          "unit": "℃",
+          "value": 64.0
+         },
+         "metric": "temperature",
+         "status": {
+          "checked_at": "2026-09-20T02:35:14.516079+00:00",
+          "data_age_seconds": 56114.516079,
+          "has_data": true,
+          "is_stale": true,
+          "last_attempt_at": "2026-09-19T11:00:00.000000+00:00",
+          "last_attempt_status": "success",
+          "last_failure_at": null,
+          "last_failure_message": null,
+          "last_failure_type": null,
+          "last_success_at": "2026-09-19T11:00:00.000000+00:00",
+          "stale_after_seconds": 5
+         },
+         "unit": "℃"
+        }
+       }
+      },
+      "evidence_id": "ev-1",
+      "tool": "get_device_status"
+     }
+    ],
+    "limitations": [],
+    "status": "answered"
+   },
+   "scenario": "status",
+   "verdict": {
+    "expected_tools_hit": true,
+    "no_unexpected_tools": true,
+    "tools_called_ok": [
+     "get_device_status"
+    ]
+   }
+  },
+  {
+   "elapsed_seconds": 17.8,
+   "question": "motor-a在2026-09-19T10:00:00+00:00到2026-09-19T11:00:00+00:00的平均温度是多少？",
+   "result": {
+    "answer": "motor-a在2026-09-19T10:00:00+00:00到2026-09-19T11:00:00+00:00的温度测量值如下：\n\n- 61.0℃\n- 61.5℃\n- 62.0℃\n- 62.5℃\n- 63.0℃\n- 63.5℃\n- 64.0℃\n\n统计数据显示，这段时间内的平均温度为62.5℃。",
+    "calls": [
+     {
+      "args_digest": "1d6636f2486a",
+      "elapsed_seconds": 0.0013,
+      "name": "query_metric_history",
+      "outcome": "ok"
+     }
+    ],
+    "checked_at": "2026-09-20T02:35:23.347604+00:00",
+    "citations": [],
+    "evidence": [
+     {
+      "data": {
+       "checked_at": "2026-09-20T02:35:30.443340+00:00",
+       "device_id": "motor-a",
+       "end": "2026-09-19T11:00:00.000000+00:00",
+       "interval": "closed",
+       "limit": 100,
+       "limitations": [
+        "统计只覆盖查询范围内已记录且quality=good的有效样本；最小值和最大值不是设备实际物理极值。",
+        "首末观测时间不证明整个区间连续采集；未观测时段的数值和缺口完整率未知。",
+        "未按固定采样频率推算丢样数量或完整率；订阅通知不保证等间隔。"
+       ],
+       "metric": "temperature",
+       "points": [
+        {
+         "collected_at": "2026-09-19T10:00:00.000000+00:00",
+         "device_id": "motor-a",
+         "id": 1,
+         "metric": "temperature",
+         "protocol": "modbus_tcp",
+         "quality": "good",
+         "source_time": null,
+         "unit": "℃",
+         "value": 61.0
+        },
+        {
+         "collected_at": "2026-09-19T10:10:00.000000+00:00",
+         "device_id": "motor-a",
+         "id": 2,
+         "metric": "temperature",
+         "protocol": "modbus_tcp",
+         "quality": "good",
+         "source_time": null,
+         "unit": "℃",
+         "value": 61.5
+        },
+        {
+         "collected_at": "2026-09-19T10:20:00.000000+00:00",
+         "device_id": "motor-a",
+         "id": 3,
+         "metric": "temperature",
+         "protocol": "modbus_tcp",
+         "quality": "good",
+         "source_time": null,
+         "unit": "℃",
+         "value": 62.0
+        },
+        {
+         "collected_at": "2026-09-19T10:30:00.000000+00:00",
+         "device_id": "motor-a",
+         "id": 4,
+         "metric": "temperature",
+         "protocol": "modbus_tcp",
+         "quality": "good",
+         "source_time": null,
+         "unit": "℃",
+         "value": 62.5
+        },
+        {
+         "collected_at": "2026-09-19T10:40:00.000000+00:00",
+         "device_id": "motor-a",
+         "id": 5,
+         "metric": "temperature",
+         "protocol": "modbus_tcp",
+         "quality": "good",
+         "source_time": null,
+         "unit": "℃",
+         "value": 63.0
+        },
+        {
+         "collected_at": "2026-09-19T10:50:00.000000+00:00",
+         "device_id": "motor-a",
+         "id": 6,
+         "metric": "temperature",
+         "protocol": "modbus_tcp",
+         "quality": "good",
+         "source_time": null,
+         "unit": "℃",
+         "value": 63.5
+        },
+        {
+         "collected_at": "2026-09-19T11:00:00.000000+00:00",
+         "device_id": "motor-a",
+         "id": 7,
+         "metric": "temperature",
+         "protocol": "modbus_tcp",
+         "quality": "good",
+         "source_time": null,
+         "unit": "℃",
+         "value": 64.0
+        }
+       ],
+       "returned_count": 7,
+       "start": "2026-09-19T10:00:00.000000+00:00",
+       "statistics": {
+        "count": 7,
+        "first_collected_at": "2026-09-19T10:00:00.000000+00:00",
+        "kind": "numeric",
+        "last_collected_at": "2026-09-19T11:00:00.000000+00:00",
+        "max": 64.0,
+        "min": 61.0
+       },
+       "time_basis": "collected_at",
+       "truncated": false,
+       "unit": "℃"
+      },
+      "evidence_id": "ev-1",
+      "tool": "query_metric_history"
+     }
+    ],
+    "limitations": [],
+    "status": "answered"
+   },
+   "scenario": "history",
+   "verdict": {
+    "expected_tools_hit": true,
+    "no_unexpected_tools": true,
+    "tools_called_ok": [
+     "query_metric_history"
+    ]
+   }
+  },
+  {
+   "elapsed_seconds": 44.29,
+   "question": "按资料，20hp变频器输出为额定12.5%时的典型效率是多少？",
+   "result": {
+    "answer": "根据提供的文档内容，我们可以提炼出几个关键点来回答您的问题：\n\n1. **电机能效标准**：\n   - 根据 NEMA 标准，NEMA Design B 电机在 201 到 500 马力 (hp) 的功率等级下，满载效率必须达到或超过 NEMA 能效电机标准（见 NEMA MG 1-2011 表 12-11）。这一规定自 2010 年 12 月起生效。\n   - 电机能效是衡量电机性能的一个重要指标，通常在满载或接近满载时效率最高。但某些电机在特定负载条件下可能表现出不同的效率特征（例如，文中的实验室测试表明，某电机在 75% 负载时效率最高）。\n\n2. **负载条件下的能效**：\n   - 电机的效率会受到负载的影响。例如，满载时的效率会高于轻载时。\n   - 在不同负载水平下，电机的效率存在差异。例如，75% 负载时效率为 95.2%，50% 负载时效率为 96.1%。\n\n3. **节能效益**：\n   - 安装高效电机可以带来显著的节能效益。例如，通过将一台 75 马力的标准效率电机更换为高效电机，每年可以节省约 13,373 千瓦时 (kWh)，相当于每年节省 1,070 美元。\n   - 高效电机的购买成本可能在电机总安装和运行成本中占比不到 2%，而能源和维护成本则占大部分（98%）。\n\n4. **可变转矩负载**：\n   - 对于可变转矩负载，如离心风扇或泵，当负载发生变化时，电机的效率可以显著提高。例如，降低设备的旋转速度或流体流动 20% 可以将输入功率需求降低约 50%。\n\n5. **变频驱动器（VFD）的局限性**：\n   - 变频驱动器（VFD）虽然能够提高能效和控制能力，但并非所有工业应用都适用。使用 VFD 可能会导致谐波的产生、电压尖峰、电机轴承故障、不必要的跳闸以及电机和 VFD 之间的距离限制等问题。\n\n总结，电机能效标准在不同负载条件下会有所变化，安装高效电机可以显著节省能源和成本。而 VFD 的使用虽然可以提高能效，但也存在一些局限性需要考虑。",
+    "calls": [
+     {
+      "args_digest": "521c2acf65ee",
+      "elapsed_seconds": 0.5545,
+      "name": "search_maintenance_docs",
+      "outcome": "ok"
+     }
+    ],
+    "checked_at": "2026-09-20T02:35:41.149479+00:00",
+    "citations": [],
+    "evidence": [
+     {
+      "candidates": [
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+        "context_text": "Repeated source context:\nIs it Cost-Effective to Replace Old Eddy-Current Drives?\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts12",
+        "evidence_id": "doc-1",
+        "original_text": "Note that the input power (in kW) is equal to 0.746 kW/hp times the shaft horsepower divided by the product of the motor and drive efficiency values. The weighted input power value is the input power times the load duty cycle percentage divided by 100. In Table 3, when the VFD is installed, the fan power requirements decrease.\n\nTable 3. Average Power Requirements for a Centrifugal Fan with VFD Speed Control\n\n",
+        "product_model": null,
+        "section": "Page 2",
+        "source_pages": [
+         "2"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+        "context_text": "Repeated source context:\nIs it Cost-Effective to Replace Old Eddy-Current Drives?\nTable 3. Average Power Requirements for a Centrifugal Fan with VFD Speed Control\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nNote that the input power (in kW) is equal to 0.746 kW/hp times the shaft horsepower divided by the product of the motor and drive efficiency values. The weighted input power value is the input power times the load duty cycle percentage divided by 100. In Table 3, when the VFD is installed, the fan power requirements decrease.\n\n",
+        "document_id": "doe-motor-ts12",
+        "evidence_id": "doc-2",
+        "original_text": "```text\n          % of            Motor   VFD    Weighted\n% of Rated      Load, Shaft\n        Operating       Efficiency, Efficiency, Input Power\nFan Speed         hp\n          Time             %       %       kW\n  90      20      36.45   91.6     96     6.18\n  80      50      25.6    90.9     95     11.05\n  70      30      17.2    86.6     93     4.76\n                                  Total:  21.99\n```\n\n",
+        "product_model": null,
+        "section": "Page 2",
+        "source_pages": [
+         "2"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts11:c5cecd791ecc71df503b",
+        "context_text": "Repeated source context:\nAdjustable Speed Drive Part-Load Efficiency\nSuggested actions / sidebar\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts11",
+        "evidence_id": "doc-3",
+        "original_text": "### Suggested actions / sidebar\n\nSuggested Actions\n\n• Contact your supplier to obtain information about drive efficiency as a function of motor operating speed or drive power output.\n\n• When VFD part-load performance values are not readily available, use the values given in Table 1. Use this information to accurately determine the energy savings due to the use of VFD versus throttle or damper flow control.\n\n• Drive Performance Variable and constant torque loads are expressed in terms of the shaft horsepower supplied by the motor. A motor “load” is the brake or shaft power requirement imposed upon the motor by the driven equipment divided by the motor’s full horsepower rating. The load on the ASD is the actual power supplied by the device (shaft horsepower divided by the motor efficiency at its load point) divided by the drive rated output power. Drive distributors or manufacturers can provide efficiency values for ASDs as a function of operating speed or load for both variable and constant torque loads.\n\n",
+        "product_model": null,
+        "section": "Suggested actions / sidebar",
+        "source_pages": [
+         "1"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+        "context_text": "Repeated source context:\nAdjustable Speed Drive Part-Load Efficiency\nTable 1. Adjustable Speed Drive Part-Load Efficiency*\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts11",
+        "evidence_id": "doc-4",
+        "original_text": "```text\n                       Efficiency (%)\n Variable\n  Drive        Load, Percent of Drive Rated Power Output\nhp Rating\n          1.6  12.5  25    42    50   75    100\n   5      35   80    88    91    92   94    95\n   10     41    83   90    93    94   95    96\n   20     47    86   93    94    95   96    97\n   30     50    88   93    95    95   96    97\n   50     46    86   92    95    95   96    97\n\n  60      51    87   92    95    95   96    97\n   75     47    86   93    95    96   97    97\n  100     55    89   94    95    96   97    97\n\n  200     61    81   95    96    96   97    97\n```\n\n*These efficiency values may be considered representative of “typical” PWM VFD performance. There is no widely accepted test protocol that allows for efficiency comparisons between different drive models or brands. In addition, there are many ways to set up a VFD that can affect the operating efficiency. Source: Saftronics, Inc.\n\n",
+        "product_model": null,
+        "section": "Page 2",
+        "source_pages": [
+         "2"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+        "context_text": "Repeated source context:\nEliminate Voltage Unbalance\nTable 1. Example Motor Efficiency* Under Conditions of Voltage Unbalance\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nThe efficiency of an 1,800 revolutions per minute (RPM), 100-horsepower (hp) motor is given as a function of voltage unbalance and motor load in Table 1 below. The general trend of efficiency reduction with increased voltage unbalance is observed for motors at all load conditions.\n\n",
+        "document_id": "doe-motor-ts07",
+        "evidence_id": "doc-5",
+        "original_text": "```text\n                         Motor Efficiency, %\n  Motor Load\n                         Voltage Unbalance\n    % Full\n                Nominal       1%         2.5%\n     100         94.4        94.4        93.0\n\n     75          95.2        95.1        93.9\n\n     50          96.1        95.5        94.1\n```\n\nSource: Washington State University Energy Program\n\n*Results vary depending on motor design, speed, full-load efficiency, and hp rating. Typically, electric motors have peak efficiency near 75% load, but this particular motor tested in the lab showed otherwise.\n\n",
+        "product_model": null,
+        "section": "Page 1",
+        "source_pages": [
+         "1"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/eliminate_voltage_unbalanced_motor_systemts7.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts01:74642260e359d35ecd3c",
+        "context_text": "Repeated source context:\nWhen to Purchase Premium Efficiency Motors\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts01",
+        "evidence_id": "doc-6",
+        "original_text": "## Page 2\n\nEISA also requires that NEMA Design B motors with power ratings between 201 and 500 hp “shall have a full-load efficiency that meets or exceeds the NEMA Energy Efficient motor standards” (see Table 12-11 of NEMA MG 1-2011). The EISA motor efficiency mandate took effect in December 2010.\n\nPremium efficiency motors are particularly cost effective when annual operation exceeds 2,000 hours, utility rates are high, motor repair costs are a significant fraction of the price of a replacement motor, or electric utility motor rebates or other conservation incentives are available. Annual energy savings are dependent upon operating profile, duty cycle, and efficiency gain. Table 1 gives examples of annual savings due to installing premium efficiency motors instead of continuing to operate old standard efficiency motors.\n\nExample An old, 75-hp standard efficiency, boiler forced-draft fan motor is to be replaced with a premium efficiency motor. The existing motor operates at an average load of 75% for 8,000 hrs/year with efficiency (η ) of 92%. Determine the annual energy savings if the std replacement premium efficiency motor has an efficiency (η ) of 95.5% and electricity is PE priced at $0.08/kWh.\n\nEnergy Savings = hp x % load/100 x 0.746 kW/hp x hrs/year x (100/η – 100/η ) std PE = 75 x 0.75 x 0.746 x 8,000 x (100/92 – 100/95.5) = 13,373 kWh/year\n\nCost Savings = 13,373 kWh/year x $0.08/kWh = $1,070/year\n\nOver a 10-year operating period for a 75-hp motor, the purchase price might represent just 2% of the total motor installation and operating costs. Energy and maintenance costs account for the remaining 98%. Even a small improvement in motor operating efficiency can produce significant energy and cost savings, and provide a rapid return on investment.\n\n",
+        "product_model": null,
+        "section": "Page 2",
+        "source_pages": [
+         "2"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/whentopurchase_nema_motor_systemts1.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts11:fe00714c0fe126cf8ba2",
+        "context_text": "Repeated source context:\nAdjustable Speed Drive Part-Load Efficiency\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts11",
+        "evidence_id": "doc-7",
+        "original_text": "\n# Adjustable Speed Drive Part-Load Efficiency\n\n## Page 1\n\nAdjustable Speed Drive Part-Load Efficiency\n\nAn adjustable speed drive (ASD) is a device that controls the rotational speed of motor-driven equipment. Variable frequency drives (VFDs), the most common type of ASD, are solid-state electronic motor controllers that efficiently meet varying process requirements by adjusting the frequency and voltage of power supplied to an alternating current (AC) motor to enable it to operate over a wide speed range. External sensors monitor flow, liquid levels, or pressure and then transmit a signal to a controller that adjusts the frequency and speed of the motor to match process requirements.\n\nVariable Torque Loads Pulse-width-modulated (PWM) VFDs are most often used in variable torque applications in the 1 to 1,000 horsepower (hp) motor size range. For centrifugal fans or pumps with no static lift, the fan or affinity laws state that the fluid or airflow provided varies directly with the pump or fan rotational speed. The input power requirement varies as the cube or third power of the speed ratio, as shown in Figure 1. Small decreases in equipment rotating speed or fluid flow yield significant reductions in energy use. For example, reducing rotating equipment speed (flow) by 20% can reduce input power requirements by approximately 50%.\n\nhp_2 = hp_1 x (RPM_2/RPM_1)^3 = hp_1 x (Flow_2/Flow_1)^3\n\nWhere:\n\n",
+        "product_model": null,
+        "section": "Page 1",
+        "source_pages": [
+         "1"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts13:a8567b28e7230c4b18cf",
+        "context_text": "Repeated source context:\nMagnetically Coupled Adjustable Speed Motor Drives\nVariable Frequency Drives The electronic pulse-width-modulated variable frequency drive (VFD) is the most com- mon type of ASD and is the state-of-the-art speed control. Because of energy efficiency and control capabilities, VFD and motor combinations have replaced constant speed motors in virtually every type of industrial plant. Although VFDs have been available for many years, they are not suited for all applications. Many industrial plants use medium voltage (> 600 to 6,600 volts [V]) to supply power to motors rated as low as 150 hp. Semiconductors for medium voltage motor applications are particularly expensive. Depending on the situation, other factors that can discourage the use of VFDs include:\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts13",
+        "evidence_id": "doc-8",
+        "original_text": "• Creation of harmonics, which requires installation of line reactors or harmonic filters\n\n• Voltage spikes that can lead to early motor failure\n\n• Motor bearing failures caused by induced shaft currents that flow to ground through the bearing’s rolling elements\n\n• Nuisance tripping\n\n• Limitations on the distance between the motor and VFD.\n\n",
+        "product_model": null,
+        "section": "Page 1",
+        "source_pages": [
+         "1"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet13.pdf",
+        "version": "November 2012"
+       }
+      ],
+      "evidence_id": "ev-1",
+      "tool": "search_maintenance_docs"
+     }
+    ],
+    "limitations": [],
+    "status": "answered"
+   },
+   "scenario": "document",
+   "verdict": {
+    "expected_tools_hit": true,
+    "no_unexpected_tools": true,
+    "tools_called_ok": [
+     "search_maintenance_docs"
+    ]
+   }
+  },
+  {
+   "elapsed_seconds": 52.37,
+   "question": "先看motor-a现在的状态，再用资料说明三角皮带拉得过紧有哪些坏处。",
+   "result": {
+    "answer": "根据提供的信息，以下是关于电动机及其系统的建议和说明：\n\n1. **电动机和电动机驱动系统效率**：\n   - 定速电动机效率的改进可减少不必要的能量损失。例如，将80%效率的电动机升级到90%效率的电动机，每年的能耗可以节省527,000 kWh，相当于节省1,290美元。\n   - 使用更高效的电动机（例如95% vs 98%效率）可以显著减少能耗和成本。\n   \n2. **V带与同步带**：\n   - 同步带具有更高的效率（98% vs 95%），寿命更长，运行更安静，可在潮湿和油性环境中工作，但可能更适合低冲击负载的应用。\n   - V带在高负载下可能会有更高的能量损失。\n   - 可以使用凹槽带（如切口带）或同步带，它们在设计和操作条件方面的要求与标准V带相同。\n\n3. **电动机轴对齐**：\n   - 电动机轴对齐对于高速运行尤为重要。推荐的对齐公差见下表：\n   \n   | 电机转速（RPM） | 良好 | 可接受 | 良好 | 可接受 |\n   |----------------|------|--------|------|--------|\n   | 900            | 3.0  | 6.0    | 1.2  | 2.0    |\n   | 1,200          | 2.5  | 4.0    | 0.9  | 1.5    |\n   | 1,800          | 2.0  | 3.0    | 0.6  | 1.0    |\n   | 3,600          | 1.0  | 1.5    | 0.3  | 0.5    |\n   \n4. **建议操作**：\n   - 在新安装的设备运行3到6个月后检查对齐变化。\n   - 每年检查所有关键生产设备的对齐情况。\n   - 监控振动以识别对齐问题，如基础下沉、螺栓紧固不足或输出轴故障。\n   - 使用预测性维护技术来区分轴承磨损、对齐问题或电引起的振动。\n\n5. **资源**：\n   - 可以访问美国能源部的先进制造办公室网站（[manufacturing.energy.gov](http://manufacturing.energy.gov)）获取更多有关电动机和电动机驱动系统效率的信息和工具。\n\n这些信息提供了关于电动机和电动机驱动系统效率改进、V带与同步带的选择、电动机轴对齐建议以及相关资源的详细说明。",
+    "calls": [
+     {
+      "args_digest": "cf0beed2170b",
+      "elapsed_seconds": 0.0013,
+      "name": "get_device_status",
+      "outcome": "ok"
+     },
+     {
+      "args_digest": "0b039fc890fe",
+      "elapsed_seconds": 0.0479,
+      "name": "search_maintenance_docs",
+      "outcome": "ok"
+     }
+    ],
+    "checked_at": "2026-09-20T02:36:25.441676+00:00",
+    "citations": [],
+    "evidence": [
+     {
+      "data": {
+       "alarms": {
+        "active": null,
+        "current": "not_enabled",
+        "enabled": false,
+        "evaluated_measurement_id": null,
+        "history": [],
+        "limit": 20,
+        "pending": null,
+        "rule": {
+         "recover_below": 78.0,
+         "teaching_only": true,
+         "trigger_above": 80.0,
+         "unit": "℃"
+        },
+        "total": 0
+       },
+       "checked_at": "2026-09-20T02:36:29.325890+00:00",
+       "device": {
+        "id": "motor-a",
+        "metrics": [
+         "temperature",
+         "current",
+         "speed",
+         "running_state"
+        ],
+        "name": "模拟电机 A",
+        "protocol": "modbus_tcp"
+       },
+       "limitations": [
+        "数值为最后记录，不是连续实时物理状态；可用不等于健康。"
+       ],
+       "metrics": {
+        "current": {
+         "alarm": null,
+         "confidence": {
+          "reason": "尚无有效测量记录",
+          "state": "no_data"
+         },
+         "device_id": "motor-a",
+         "measurement": null,
+         "metric": "current",
+         "status": {
+          "checked_at": "2026-09-20T02:36:29.325890+00:00",
+          "data_age_seconds": null,
+          "has_data": false,
+          "is_stale": null,
+          "last_attempt_at": null,
+          "last_attempt_status": "unknown",
+          "last_failure_at": null,
+          "last_failure_message": null,
+          "last_failure_type": null,
+          "last_success_at": null,
+          "stale_after_seconds": 5
+         },
+         "unit": "A"
+        },
+        "running_state": {
+         "alarm": null,
+         "confidence": {
+          "reason": "尚无有效测量记录",
+          "state": "no_data"
+         },
+         "device_id": "motor-a",
+         "measurement": null,
+         "metric": "running_state",
+         "status": {
+          "checked_at": "2026-09-20T02:36:29.325890+00:00",
+          "data_age_seconds": null,
+          "has_data": false,
+          "is_stale": null,
+          "last_attempt_at": null,
+          "last_attempt_status": "unknown",
+          "last_failure_at": null,
+          "last_failure_message": null,
+          "last_failure_type": null,
+          "last_success_at": null,
+          "stale_after_seconds": 5
+         },
+         "unit": ""
+        },
+        "speed": {
+         "alarm": null,
+         "confidence": {
+          "reason": "尚无有效测量记录",
+          "state": "no_data"
+         },
+         "device_id": "motor-a",
+         "measurement": null,
+         "metric": "speed",
+         "status": {
+          "checked_at": "2026-09-20T02:36:29.325890+00:00",
+          "data_age_seconds": null,
+          "has_data": false,
+          "is_stale": null,
+          "last_attempt_at": null,
+          "last_attempt_status": "unknown",
+          "last_failure_at": null,
+          "last_failure_message": null,
+          "last_failure_type": null,
+          "last_success_at": null,
+          "stale_after_seconds": 5
+         },
+         "unit": "rpm"
+        },
+        "temperature": {
+         "alarm": {
+          "active": null,
+          "current": "not_enabled",
+          "enabled": false,
+          "evaluated_measurement_id": null,
+          "history": [],
+          "limit": 20,
+          "pending": null,
+          "rule": {
+           "recover_below": 78.0,
+           "teaching_only": true,
+           "trigger_above": 80.0,
+           "unit": "℃"
+          },
+          "total": 0
+         },
+         "confidence": {
+          "reason": "最后有效记录已过期",
+          "state": "stale"
+         },
+         "device_id": "motor-a",
+         "measurement": {
+          "collected_at": "2026-09-19T11:00:00.000000+00:00",
+          "device_id": "motor-a",
+          "id": 7,
+          "metric": "temperature",
+          "protocol": "modbus_tcp",
+          "quality": "good",
+          "source_time": null,
+          "unit": "℃",
+          "value": 64.0
+         },
+         "metric": "temperature",
+         "status": {
+          "checked_at": "2026-09-20T02:36:29.325890+00:00",
+          "data_age_seconds": 56189.32589,
+          "has_data": true,
+          "is_stale": true,
+          "last_attempt_at": "2026-09-19T11:00:00.000000+00:00",
+          "last_attempt_status": "success",
+          "last_failure_at": null,
+          "last_failure_message": null,
+          "last_failure_type": null,
+          "last_success_at": "2026-09-19T11:00:00.000000+00:00",
+          "stale_after_seconds": 5
+         },
+         "unit": "℃"
+        }
+       }
+      },
+      "evidence_id": "ev-1",
+      "tool": "get_device_status"
+     },
+     {
+      "candidates": [
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts05:dd04242deb660f33e7e0",
+        "context_text": "Repeated source context:\nReplace V-Belts with Notched or Synchronous Belt Drives\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts05",
+        "evidence_id": "doc-1",
+        "original_text": "\n# Replace V-Belts with Notched or Synchronous Belt Drives\n\n## Page 1\n\nReplace V-Belts with Notched or Synchronous Belt Drives\n\nApproximately one-third of the electric motors in the industrial and commercial sectors use belt drives.1 Belt drives provide flexibility in the positioning of the motor relative to the load. Pulleys (sheaves) of varying diameters allow the speed of the driven equipment to be increased or decreased relative to the motor speed. A properly designed belt power-transmission system offers high efficiency and low noise, requires no lubrication, and presents low maintenance requirements. However, certain types of belts are more efficient than others, offering potential energy cost savings.\n\nThe majority of belt drives use V-belts, which use a trapezoidal cross section to create a wedging action on the pulleys to increase friction and improve the belt’s power transfer capability. Joined or multiple belts are specified for heavy loads. V-belt drives can have a peak efficiency of 95% or more at the time of installation. Efficiency is dependent on pulley size, pulley wear, V-belt alignment, transmitted torque, under or oversizing belts for load requirements. Efficiency can deteriorate by as much as 5% over time if slippage occurs because the belt is not periodically retensioned.\n\nThe most important operational and maintenance issue in a V-belt drive is its tension. If belts are too loose, they tend to vibrate, wear rapidly, and waste energy through slippage. If belts are overtightened, they will show excessive wear. An increased belt load may shorten bearing life through excessive lateral loading and could possibly result in shaft failure. The proper tension of a V-belt is the lowest tension at which the belt will not slip at peak-load conditions. ",
+        "product_model": null,
+        "section": "Page 1",
+        "source_pages": [
+         "1"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/replace_vbelts_motor_systemts5.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts05:3a06de67bd0fa242ff92",
+        "context_text": "Repeated source context:\nReplace V-Belts with Notched or Synchronous Belt Drives\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts05",
+        "evidence_id": "doc-2",
+        "original_text": "## Page 2\n\nA notched belt, left, runs cooler and has a higher efficiency than a standard V-belt. A synchronous belt, right, can maintain high efficiency over a wide load range and requires minimal maintenance. Images courtesy of ©Gates Corporation\n\nFurther Considerations For centrifugal fans and pumps, which exhibit a strong relationship between operating speed and power, synchronous belt sprockets must be selected that take into account the absence of belt slippage. Fluid flow, pressure, and operating costs could actually increase if slippage is reduced and a centrifugal load is driven at a slightly higher operating speed.\n\nCost effectiveness improves when notched or synchronous belts are installed at the end of V-belt life or when a belt change out is scheduled. When completing a belt retrofit/ efficiency upgrade, a properly designed synchronous belt drive should match the required rotating equipment speed and not rely on a speed that is calculated based on existing sheave diameters. Application engineers also need to understand application requirements and determine the pulley center-to-center distance, operating equipment speed, speed ratio, shaft sizes, and transmitted horsepower.\n\nSynchronous belts are the most efficient choice. However, notched belts may be a better choice when vibration damping is needed or shock loads cause abrupt torque changes that could shear a synchronous belt’s teeth. Noise from synchronous belts might be objectionable in some applications.\n\nReferences 1Mleziva, Brian, Greenheck Fan Corporation, “Ensuring Proper Fan-Belt Tension,” HPAC Engineering, July 2011.\n\n2Gates Rubber Company, “Synchronous Belt Drives Restore Energy Savings,” December 1997.\n\n",
+        "product_model": null,
+        "section": "Page 2",
+        "source_pages": [
+         "2"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/replace_vbelts_motor_systemts5.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts05:2a2e6760346e312d5a72",
+        "context_text": "Repeated source context:\nReplace V-Belts with Notched or Synchronous Belt Drives\nSuggested actions / sidebar\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts05",
+        "evidence_id": "doc-3",
+        "original_text": "### Suggested actions / sidebar\n\nSuggested Actions\n\n• Conduct a survey of belt-driven equipment. Gather application and operating-hour data. Then determine the cost effectiveness of replacing existing V-belts with notched belts or synchronous belts and sprockets.\n\n• Consider synchronous belts for all new installations; the price premium is minimal due to the avoidance of conventional pulley costs.\n\n• Consider having a power transmission specialist determine the energy and cost savings potential from retrofitting all V-belt drives with synchronous belts. Synchronous belts rely on tooth grip instead of friction to efficiently transfer power and provide a constant speed ratio.\n\n• Install notched belts where the retrofit of a synchronous belt is not cost effective.\n\n",
+        "product_model": null,
+        "section": "Suggested actions / sidebar",
+        "source_pages": [
+         "1"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/replace_vbelts_motor_systemts5.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts05:dce391a99498413ce12f",
+        "context_text": "Repeated source context:\nReplace V-Belts with Notched or Synchronous Belt Drives\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts05",
+        "evidence_id": "doc-4",
+        "original_text": "After the break-in period, belt tension should be checked every 3 to 6 months.\n\nA notched belt has grooves or notches that run perpendicular to the belt’s length, which reduces the bending resistance of the belt. Notched belts can use the same pulleys as cross-section standard V-belts. They run cooler, last longer, and are about 2% more efficient than standard V-belts.\n\nSynchronous belts (also called cogged, timing, positive-drive, or high-torque drive belts) are toothed and require the installation of mating grooved sprockets. These belts operate with a consistent efficiency of 98% and maintain their efficiency over a wide load range.2 In contrast, V-belts have a sharp reduction in efficiency at high torque due to increased slippage. Synchronous belts require minimal maintenance and retensioning, operate in wet and oily environments, and run slip-free. However, synchronous belts are noisier than V-belts, less suited for use on shock-loaded applications, and transfer more vibration due to their stiffness.\n\nExample Energy Savings Calculations A continuously operating, 100-horsepower (hp), supply-air fan operates at an average motor load of 75% while consuming 527,000 kilowatt-hours (kWh) of electrical energy annually. What are the annual energy and dollar savings if a 95% efficient (η) V-belt is 1 replaced with a 98% efficient (η) synchronous belt? Electricity is priced at $0.08/kWh. 2\n\nEnergy Savings = Annual Energy Use x (1 – η/η ) 1 2 = 527,000 kWh/year x (1 – 95/98) = 16,130 kWh/year\n\nAnnual Cost Savings = 16,130 kWh x $0.08/kWh = $1,290\n\n",
+        "product_model": null,
+        "section": "Page 1",
+        "source_pages": [
+         "1"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/replace_vbelts_motor_systemts5.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts04:260bbd6c3d8644c23dd0",
+        "context_text": "Repeated source context:\nThe Importance of Motor Shaft Alignment\nTable 1. Shaft Alignment Tolerances for Direct-Coupled Shafts\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nAlignment Tolerances No industry standard on alignment exists. Proper shaft alignment is especially critical when the motor is operated at high speeds. Standard industry norms for alignment tolerances are cited in Table 1.\n\n",
+        "document_id": "doe-motor-ts04",
+        "evidence_id": "doc-5",
+        "original_text": "```text\n                               Angular Misalignment\n            Parallel Offset (mils)\n                                 (mils per inch)\n            Short Flex Couplings\nMotor Speed                     Spacer Couplings\n  (RPM)\n           Excellent Acceptable Excellent Acceptable\n  900       3.0       6.0       1.2       2.0\n  1,200     2.5       4.0       0.9       1.5\n  1,800     2.0       3.0       0.6       1.0\n\n  3,600      1.0      1.5       0.3       0.5\n```\n\nSource: Alan Luedeking, Ludeca, Inc. “Shaft versus Foot Alignment Tolerances: A Critique of the Various Approaches,” 2008.\n\n",
+        "product_model": null,
+        "section": "Page 2",
+        "source_pages": [
+         "2"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/importance_motor_shaft_motor_systemts4.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts04:becb4b70f7ed9945d92a",
+        "context_text": "Repeated source context:\nThe Importance of Motor Shaft Alignment\nSuggested actions / sidebar\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts04",
+        "evidence_id": "doc-6",
+        "original_text": "### Suggested actions / sidebar\n\nSuggested Actions\n\n• Check newly installed equipment for alignment changes due to foundation settling after 3 to 6 months of operation.\n\n• Check shaft alignment of all production-critical equipment annually.\n\n• Monitor for vibrations and for increasing vibration trends as an indication of misalignment. Misalignment might be caused by foundation settling, insufficient bolt tightening, or output shaft faults.\n\n• Apply predictive maintenance techniques, including vibration tests and frequency spectrum analysis, to distinguish between bearing wear, shaft misalignment, or electrically caused vibrations.\n\n",
+        "product_model": null,
+        "section": "Suggested actions / sidebar",
+        "source_pages": [
+         "1"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/importance_motor_shaft_motor_systemts4.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts05:13b67f0388d11d0edcf4",
+        "context_text": "Repeated source context:\nReplace V-Belts with Notched or Synchronous Belt Drives\nResources / sidebar\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts05",
+        "evidence_id": "doc-7",
+        "original_text": "### Resources / sidebar\n\nResources\n\nU.S. Department of Energy (DOE)— For more information on motor and motor-driven system efficiency and to download the MotorMaster+ software tool, visit the Advanced Manufacturing Office (AMO) website at manufacturing.energy.gov.\n",
+        "product_model": null,
+        "section": "Resources / sidebar",
+        "source_pages": [
+         "2"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/replace_vbelts_motor_systemts5.pdf",
+        "version": "November 2012"
+       },
+       {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "chunk_id": "doe-motor-ts04:4863f44b5c64ff94a12c",
+        "context_text": "Repeated source context:\nThe Importance of Motor Shaft Alignment\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "document_id": "doe-motor-ts04",
+        "evidence_id": "doc-8",
+        "original_text": "## Page 2\n\nHowever, it is a mistake to rely on coupling flexibility for excessive misalignment, because flexing of the coupling and of the shaft will exert forces on the motor and driven-equipment bearings. These forces may result in premature bearing, seal, or coupling failures, shaft breaking or cracking, and excessive radial and axial vibrations. Secondary effects include loosening of foundation bolts, and loose or broken coupling bolts. Operating life is shortened when shafts are misaligned.\n\nAlignment Tolerances No industry standard on alignment exists. Proper shaft alignment is especially critical when the motor is operated at high speeds. Standard industry norms for alignment tolerances are cited in Table 1.\n\nTable 1. Shaft Alignment Tolerances for Direct-Coupled Shafts\n\n",
+        "product_model": null,
+        "section": "Page 2",
+        "source_pages": [
+         "2"
+        ],
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/importance_motor_shaft_motor_systemts4.pdf",
+        "version": "November 2012"
+       }
+      ],
+      "evidence_id": "ev-2",
+      "tool": "search_maintenance_docs"
+     }
+    ],
+    "limitations": [],
+    "status": "answered"
+   },
+   "scenario": "composite",
+   "verdict": {
+    "expected_tools_hit": true,
+    "no_unexpected_tools": true,
+    "tools_called_ok": [
+     "get_device_status",
+     "search_maintenance_docs"
+    ]
+   }
+  }
+ ]
+}

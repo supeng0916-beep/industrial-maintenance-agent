@@ -1,0 +1,84 @@
+{
+  "ok": true,
+  "stage": "chunk_preview_not_indexed",
+  "strategy": "h2-atomic-v2-merge-title-preamble",
+  "soft_target": 300,
+  "hard_limit": 512,
+  "overlap_target": 40,
+  "overlap_applied": false,
+  "overlap_reason": "Whole sections retained; unsafe oversized sections fail explicitly.",
+  "tokenizer": {
+    "model_id": "BAAI/bge-small-zh-v1.5",
+    "revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "files": [
+      {
+        "name": "tokenizer.json",
+        "sha256": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26",
+        "bytes": 439125
+      },
+      {
+        "name": "tokenizer_config.json",
+        "sha256": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a",
+        "bytes": 367
+      }
+    ],
+    "library": "tokenizers",
+    "library_version": "0.22.2",
+    "model_max_length": 512,
+    "add_special_tokens": true,
+    "truncation": false,
+    "document_query_instruction": false
+  },
+  "documents": [
+    {
+      "document_id": "device-points",
+      "source_path": "device-points.md",
+      "sha256": "c3392e0a0f75a61458e3d8703ff1525713c38b6a536182ac6ca3500e310c04db",
+      "body_characters": 821,
+      "covered_characters": 821,
+      "complete": true
+    },
+    {
+      "document_id": "temperature-alarms",
+      "source_path": "temperature-alarms.md",
+      "sha256": "6dd36a54c8a700b87344da8f6b9a67be5f3bb0de8024b3bff0bbbe2acddd3681",
+      "body_characters": 724,
+      "covered_characters": 724,
+      "complete": true
+    },
+    {
+      "document_id": "opcua-evidence",
+      "source_path": "opcua-evidence.md",
+      "sha256": "d92ccf93f0d86324b307a4935ebdb231983aa1e3f646dc25d9602d7fc0484c00",
+      "body_characters": 889,
+      "covered_characters": 889,
+      "complete": true
+    },
+    {
+      "document_id": "readonly-queries",
+      "source_path": "readonly-queries.md",
+      "sha256": "7654c0cd5e0eaca6ba9c33cb655435838d16051ab25b137d12427e3a2114aa95",
+      "body_characters": 884,
+      "covered_characters": 884,
+      "complete": true
+    },
+    {
+      "document_id": "evidence-boundaries",
+      "source_path": "evidence-boundaries.md",
+      "sha256": "09cd038831a29d50c46de36541b69582a2b5a4c5f217aa733a0ff49365fdfa0e",
+      "body_characters": 637,
+      "covered_characters": 637,
+      "complete": true
+    }
+  ],
+  "document_count": 5,
+  "chunk_count": 20,
+  "max_token_count": 322,
+  "over_soft_target": [
+    "device-points:fa1c67ba5e6c4ce8d4ef",
+    "readonly-queries:19f8dfdc7a7f038a7a56"
+  ],
+  "coverage_complete": true,
+  "evaluation_imported": false,
+  "retrieval_evaluated": false
+}

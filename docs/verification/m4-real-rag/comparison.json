@@ -1,0 +1,550 @@
+{
+  "e5": {
+    "document_count": 15,
+    "physical_pages": 30,
+    "chunk_count": 113,
+    "max_tokens": 512,
+    "min_tokens": 86,
+    "mean_tokens": 285.3805309734513,
+    "over_300": 45,
+    "all_source_evidence_present": true,
+    "coverage": [
+      {
+        "document_id": "doe-motor-ts01",
+        "source_path": "doe-motor-ts01.md",
+        "sha256": "5fb412f15617c4819199c56405718e076626ed71267e5d7e3e65174e2ac8e82a",
+        "body_characters": 5892,
+        "covered_characters": 5892,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts02",
+        "source_path": "doe-motor-ts02.md",
+        "sha256": "1a04900ea4f37b4d58af400050ea2cad35771346c686fce920d452cdc21aab02",
+        "body_characters": 6590,
+        "covered_characters": 6590,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts03",
+        "source_path": "doe-motor-ts03.md",
+        "sha256": "7ee17ef5de984a12448a77ccdcfa60b9b6255b8087e1c12aa6e51b23f5259024",
+        "body_characters": 6887,
+        "covered_characters": 6887,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts04",
+        "source_path": "doe-motor-ts04.md",
+        "sha256": "22f9d213c16d826f0e1b02586d3e0b9ccf6ce6f8f4de55642e141b7814789bdb",
+        "body_characters": 5669,
+        "covered_characters": 5669,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts05",
+        "source_path": "doe-motor-ts05.md",
+        "sha256": "f6f0b4810c96f727586182857099cdc7fe607b300c506f14d4004e4db36a5014",
+        "body_characters": 6106,
+        "covered_characters": 6106,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts06",
+        "source_path": "doe-motor-ts06.md",
+        "sha256": "7e168bcd98aa05bb8aedd58f4154f7549df8475425f4713435fcdec54db44a2f",
+        "body_characters": 5630,
+        "covered_characters": 5630,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts07",
+        "source_path": "doe-motor-ts07.md",
+        "sha256": "f881fee1b6455c394af08f8dd43a3b847f6ee3da321d2f192d88578c5618d033",
+        "body_characters": 5704,
+        "covered_characters": 5704,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts08",
+        "source_path": "doe-motor-ts08.md",
+        "sha256": "5902333a0eb753d40e4e2c2c01c8c3f24d94a00d2687516ec8d624ea8856e519",
+        "body_characters": 5366,
+        "covered_characters": 5366,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts09",
+        "source_path": "doe-motor-ts09.md",
+        "sha256": "d8944e085fc5a36eeeed31c348cf103831b20981ad1f2a8623508e33fa9679c8",
+        "body_characters": 7356,
+        "covered_characters": 7356,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts10",
+        "source_path": "doe-motor-ts10.md",
+        "sha256": "41bbd84b7b851fb5f1ef3592c79ed267e1b51ebdb072ffc6e18c83aaae4b4da6",
+        "body_characters": 7694,
+        "covered_characters": 7694,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts11",
+        "source_path": "doe-motor-ts11.md",
+        "sha256": "8721d227589d8e61fca4410febca5655872e2487dce1456691b85913a507c398",
+        "body_characters": 7185,
+        "covered_characters": 7185,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts12",
+        "source_path": "doe-motor-ts12.md",
+        "sha256": "f018f42ff87f0419683e74c1006c81975bcc62d1558afab2895fe3233c730033",
+        "body_characters": 7397,
+        "covered_characters": 7397,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts13",
+        "source_path": "doe-motor-ts13.md",
+        "sha256": "a9f3585e348841b9498cabcb51d8b3a3c404df650b9d63964cd646bbfbf9ba74",
+        "body_characters": 6831,
+        "covered_characters": 6831,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts14",
+        "source_path": "doe-motor-ts14.md",
+        "sha256": "d22eec2a8d10270c353f239bd2670d73b42b0b5d3eacb161413a8037decc93a2",
+        "body_characters": 7402,
+        "covered_characters": 7402,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts15",
+        "source_path": "doe-motor-ts15.md",
+        "sha256": "f95e1f2aed3356ab86dd2a64f3dd3954a00a724fd9f004bc56084f76a7398d05",
+        "body_characters": 6843,
+        "covered_characters": 6843,
+        "complete": true
+      }
+    ],
+    "build_seconds": 6.09091741591692,
+    "summaries": {
+      "dev": {
+        "cases": 29,
+        "answerable": 24,
+        "unanswerable": 5,
+        "hit_at_5": 0.625,
+        "all_annotated_evidence_at_5": 0.625,
+        "hit_at_10": 0.7916666666666666,
+        "all_annotated_evidence_at_10": 0.7916666666666666
+      },
+      "holdout": {
+        "cases": 15,
+        "answerable": 10,
+        "unanswerable": 5,
+        "hit_at_5": 0.3,
+        "all_annotated_evidence_at_5": 0.3,
+        "hit_at_10": 0.5,
+        "all_annotated_evidence_at_10": 0.5
+      }
+    },
+    "failures_at_10": [
+      "R03",
+      "R15",
+      "R16",
+      "R17",
+      "R20",
+      "R21",
+      "R23",
+      "R24",
+      "R29",
+      "R30"
+    ],
+    "category_results": {
+      "applicability": {
+        "cases": 2,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "cause_explanation": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "condition": {
+        "cases": 2,
+        "hits_at_5": 0,
+        "hits_at_10": 1
+      },
+      "contrast": {
+        "cases": 2,
+        "hits_at_5": 1,
+        "hits_at_10": 2
+      },
+      "definition": {
+        "cases": 2,
+        "hits_at_5": 1,
+        "hits_at_10": 2
+      },
+      "direct": {
+        "cases": 1,
+        "hits_at_5": 1,
+        "hits_at_10": 1
+      },
+      "equipment": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "evidence_needed": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "identity": {
+        "cases": 2,
+        "hits_at_5": 2,
+        "hits_at_10": 2
+      },
+      "mechanism": {
+        "cases": 1,
+        "hits_at_5": 1,
+        "hits_at_10": 1
+      },
+      "method_limit": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 1
+      },
+      "misconception": {
+        "cases": 3,
+        "hits_at_5": 3,
+        "hits_at_10": 3
+      },
+      "mitigation": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "multi_factor": {
+        "cases": 1,
+        "hits_at_5": 1,
+        "hits_at_10": 1
+      },
+      "numeric": {
+        "cases": 1,
+        "hits_at_5": 1,
+        "hits_at_10": 1
+      },
+      "numeric_condition": {
+        "cases": 3,
+        "hits_at_5": 1,
+        "hits_at_10": 1
+      },
+      "paraphrase": {
+        "cases": 3,
+        "hits_at_5": 2,
+        "hits_at_10": 2
+      },
+      "relationship": {
+        "cases": 1,
+        "hits_at_5": 1,
+        "hits_at_10": 1
+      },
+      "table_condition": {
+        "cases": 4,
+        "hits_at_5": 3,
+        "hits_at_10": 4
+      },
+      "tradeoff": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 1
+      }
+    }
+  },
+  "bge": {
+    "document_count": 15,
+    "physical_pages": 30,
+    "chunk_count": 131,
+    "max_tokens": 508,
+    "min_tokens": 93,
+    "mean_tokens": 322.76335877862596,
+    "over_300": 68,
+    "all_source_evidence_present": true,
+    "coverage": [
+      {
+        "document_id": "doe-motor-ts01",
+        "source_path": "doe-motor-ts01.md",
+        "sha256": "5fb412f15617c4819199c56405718e076626ed71267e5d7e3e65174e2ac8e82a",
+        "body_characters": 5892,
+        "covered_characters": 5892,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts02",
+        "source_path": "doe-motor-ts02.md",
+        "sha256": "1a04900ea4f37b4d58af400050ea2cad35771346c686fce920d452cdc21aab02",
+        "body_characters": 6590,
+        "covered_characters": 6590,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts03",
+        "source_path": "doe-motor-ts03.md",
+        "sha256": "7ee17ef5de984a12448a77ccdcfa60b9b6255b8087e1c12aa6e51b23f5259024",
+        "body_characters": 6887,
+        "covered_characters": 6887,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts04",
+        "source_path": "doe-motor-ts04.md",
+        "sha256": "22f9d213c16d826f0e1b02586d3e0b9ccf6ce6f8f4de55642e141b7814789bdb",
+        "body_characters": 5669,
+        "covered_characters": 5669,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts05",
+        "source_path": "doe-motor-ts05.md",
+        "sha256": "f6f0b4810c96f727586182857099cdc7fe607b300c506f14d4004e4db36a5014",
+        "body_characters": 6106,
+        "covered_characters": 6106,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts06",
+        "source_path": "doe-motor-ts06.md",
+        "sha256": "7e168bcd98aa05bb8aedd58f4154f7549df8475425f4713435fcdec54db44a2f",
+        "body_characters": 5630,
+        "covered_characters": 5630,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts07",
+        "source_path": "doe-motor-ts07.md",
+        "sha256": "f881fee1b6455c394af08f8dd43a3b847f6ee3da321d2f192d88578c5618d033",
+        "body_characters": 5704,
+        "covered_characters": 5704,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts08",
+        "source_path": "doe-motor-ts08.md",
+        "sha256": "5902333a0eb753d40e4e2c2c01c8c3f24d94a00d2687516ec8d624ea8856e519",
+        "body_characters": 5366,
+        "covered_characters": 5366,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts09",
+        "source_path": "doe-motor-ts09.md",
+        "sha256": "d8944e085fc5a36eeeed31c348cf103831b20981ad1f2a8623508e33fa9679c8",
+        "body_characters": 7356,
+        "covered_characters": 7356,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts10",
+        "source_path": "doe-motor-ts10.md",
+        "sha256": "41bbd84b7b851fb5f1ef3592c79ed267e1b51ebdb072ffc6e18c83aaae4b4da6",
+        "body_characters": 7694,
+        "covered_characters": 7694,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts11",
+        "source_path": "doe-motor-ts11.md",
+        "sha256": "8721d227589d8e61fca4410febca5655872e2487dce1456691b85913a507c398",
+        "body_characters": 7185,
+        "covered_characters": 7185,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts12",
+        "source_path": "doe-motor-ts12.md",
+        "sha256": "f018f42ff87f0419683e74c1006c81975bcc62d1558afab2895fe3233c730033",
+        "body_characters": 7397,
+        "covered_characters": 7397,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts13",
+        "source_path": "doe-motor-ts13.md",
+        "sha256": "a9f3585e348841b9498cabcb51d8b3a3c404df650b9d63964cd646bbfbf9ba74",
+        "body_characters": 6831,
+        "covered_characters": 6831,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts14",
+        "source_path": "doe-motor-ts14.md",
+        "sha256": "d22eec2a8d10270c353f239bd2670d73b42b0b5d3eacb161413a8037decc93a2",
+        "body_characters": 7402,
+        "covered_characters": 7402,
+        "complete": true
+      },
+      {
+        "document_id": "doe-motor-ts15",
+        "source_path": "doe-motor-ts15.md",
+        "sha256": "f95e1f2aed3356ab86dd2a64f3dd3954a00a724fd9f004bc56084f76a7398d05",
+        "body_characters": 6843,
+        "covered_characters": 6843,
+        "complete": true
+      }
+    ],
+    "build_seconds": 2.8711242091376334,
+    "summaries": {
+      "dev": {
+        "cases": 29,
+        "answerable": 24,
+        "unanswerable": 5,
+        "hit_at_5": 0.16666666666666666,
+        "all_annotated_evidence_at_5": 0.16666666666666666,
+        "hit_at_10": 0.2916666666666667,
+        "all_annotated_evidence_at_10": 0.2916666666666667
+      },
+      "holdout": {
+        "cases": 15,
+        "answerable": 10,
+        "unanswerable": 5,
+        "hit_at_5": 0.2,
+        "all_annotated_evidence_at_5": 0.2,
+        "hit_at_10": 0.3,
+        "all_annotated_evidence_at_10": 0.3
+      }
+    },
+    "failures_at_10": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R10",
+      "R11",
+      "R14",
+      "R16",
+      "R17",
+      "R20",
+      "R22",
+      "R23",
+      "R25",
+      "R26",
+      "R27",
+      "R29",
+      "R30",
+      "R31",
+      "R32",
+      "R33",
+      "R34"
+    ],
+    "category_results": {
+      "applicability": {
+        "cases": 2,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "cause_explanation": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "condition": {
+        "cases": 2,
+        "hits_at_5": 0,
+        "hits_at_10": 1
+      },
+      "contrast": {
+        "cases": 2,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "definition": {
+        "cases": 2,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "direct": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "equipment": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "evidence_needed": {
+        "cases": 1,
+        "hits_at_5": 1,
+        "hits_at_10": 1
+      },
+      "identity": {
+        "cases": 2,
+        "hits_at_5": 1,
+        "hits_at_10": 2
+      },
+      "mechanism": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "method_limit": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "misconception": {
+        "cases": 3,
+        "hits_at_5": 2,
+        "hits_at_10": 2
+      },
+      "mitigation": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "multi_factor": {
+        "cases": 1,
+        "hits_at_5": 1,
+        "hits_at_10": 1
+      },
+      "numeric": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 1
+      },
+      "numeric_condition": {
+        "cases": 3,
+        "hits_at_5": 0,
+        "hits_at_10": 1
+      },
+      "paraphrase": {
+        "cases": 3,
+        "hits_at_5": 1,
+        "hits_at_10": 1
+      },
+      "relationship": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "table_condition": {
+        "cases": 4,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      },
+      "tradeoff": {
+        "cases": 1,
+        "hits_at_5": 0,
+        "hits_at_10": 0
+      }
+    }
+  }
+}

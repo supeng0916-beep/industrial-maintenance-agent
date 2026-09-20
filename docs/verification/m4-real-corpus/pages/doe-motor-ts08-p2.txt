@@ -1,0 +1,63 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+     Example                                                                        
+     Measurements at a motor control center (MCC) breaker indicate voltage drops of 8.1, Resources
+     5.9, and 10.6 volts on L, L, and L, respectively. The driven equipment is continuously
+                  1 2   3                                 U.S. Department of Energy (DOE)—
+     operated. Measured line currents are 199.7, 205.7, and 201.8 amps for L, L, and L.
+                                             1 2   3                                
+     Voltage drop measurements for circuits serving similar loads indicate that a voltage drop For more information on motor
+     of 2.5 volts should be obtainable. The potential annual energy and electrical demand and motor-driven system
+     savings from correcting the problem are shown in the table below. efficiency and to download the
+                                                          MotorMaster+ software tool, visit
+      Table 1. Excess Energy Consumption at an MCC Breaker the Advanced Manufacturing
+                                                          Office (AMO) website at   
+             Measured  Excess                   Excess    manufacturing.energy.gov. 
+                               Current, Excess                                      
+       Circuit Voltage Voltage                Energy Use,                           
+                               Amps   Power, kW                                     
+             Drop, Volts Drop, Volts           kWh/year                             
+        L       8.1     5.6     199.7   1.12     9,796                              
+         1                                                                          
+        L       5.9     3.4    205.7    0.7      6,126                              
+         2                                                                          
+        L      10.6     8.1     201.8   1.63    14,318                              
+         3                                                                          
+                               Totals:  3.45    30,240                              
+     Assuming a utility energy charge of $0.08 per kilowatt-hour (kWh) with a demand
+     charge of $8.00 per kilowatt (kW) per month, potential savings are valued at:  
+     Savings = 3.45 kW x $8.00/kW per month x 12 months per year + 30,240 kWh per year
+           x $0.08/kWh = $331 + $2,420 = $2,750 per year (for a single breaker).    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3732 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

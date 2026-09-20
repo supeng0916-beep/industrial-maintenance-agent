@@ -1,0 +1,7 @@
+临时库/var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/opcua-motor-b-r3aFYY/test.sqlite3；独立端口56463/56467/56468/56469
+A四点与B温度共库并发；B按URI解析变动的namespace index，85℃持续触发，B仅温度历史/告警。
+Bad低值：通信仍成功，真实线上值null仅作诊断；85℃有效温度保留，active未解除，当前未知。
+Uncertain及缺源均拒绝；缺源显示明确中文说明、source=null，接收时间独立；390px无横向溢出。
+过旧、未来、冻结重复源时间均不可用；没有用新接收时间伪装新测量。
+有效新源77.9℃解除B告警；A保持65.3℃；延迟响应期间快速切换不串设备快照。
+PASS Chrome 152.0.7977.76，无非预期JS/console错误；只验收M3主动读第一步。

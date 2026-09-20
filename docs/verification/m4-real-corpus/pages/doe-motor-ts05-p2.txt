@@ -1,0 +1,63 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                 Resources          
+                                                                                    
+                                                          U.S. Department of Energy (DOE)—
+                                                          For more information on motor
+                                                          and motor-driven system   
+                                                          efficiency and to download the
+                                                          MotorMaster+ software tool, visit
+                                                          the Advanced Manufacturing
+     A notched belt, left, runs cooler and has a higher efficiency than a standard V-belt. A synchronous belt, Office (AMO) website at
+     right, can maintain high efficiency over a wide load range and requires minimal maintenance. Images
+                                                          manufacturing.energy.gov. 
+     courtesy of ©Gates Corporation                                                 
+     Further Considerations                                                         
+     For centrifugal fans and pumps, which exhibit a strong relationship between operating
+     speed and power, synchronous belt sprockets must be selected that take into account
+     the absence of belt slippage. Fluid flow, pressure, and operating costs could actually
+     increase if slippage is reduced and a centrifugal load is driven at a slightly higher
+     operating speed.                                                               
+     Cost effectiveness improves when notched or synchronous belts are installed at the end
+     of V-belt life or when a belt change out is scheduled. When completing a belt retrofit/
+     efficiency upgrade, a properly designed synchronous belt drive should match the
+     required rotating equipment speed and not rely on a speed that is calculated based on
+     existing sheave diameters. Application engineers also need to understand application
+     requirements and determine the pulley center-to-center distance, operating equipment
+     speed, speed ratio, shaft sizes, and transmitted horsepower.                   
+     Synchronous belts are the most efficient choice. However, notched belts may be a better
+     choice when vibration damping is needed or shock loads cause abrupt torque changes
+     that could shear a synchronous belt’s teeth. Noise from synchronous belts might be
+     objectionable in some applications.                                            
+     References                                                                     
+     1Mleziva, Brian, Greenheck Fan Corporation, “Ensuring Proper Fan-Belt Tension,”
+     HPAC Engineering, July 2011.                                                   
+     2Gates Rubber Company, “Synchronous Belt Drives Restore Energy Savings,”       
+     December 1997.                                                                 
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3740 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

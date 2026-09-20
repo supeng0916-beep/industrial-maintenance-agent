@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "manifest_sha256": "2a1da80dca7f618e0b39c19ed77417bc4dc45f1f5655083d10bdbef9b02e15a3",
+  "cases_sha256": "de7004d03d8857024a2f8b4c67c709166a12961f9ec7a2213ec56754465c7a3d",
+  "records": [
+    {
+      "model": "e5",
+      "index": "docs/verification/m4-real-rag/doe-e5-final",
+      "chunk_count": 113,
+      "chunks_sha256": "daaacb8de8fccddfa4298ddb6096861cf1f12fd12f4291bc0961efa405175a6a",
+      "checks": "configuration/corpus/cases/count/storage files consistent"
+    },
+    {
+      "model": "bge",
+      "index": "docs/verification/m4-real-rag/doe-bge-final",
+      "chunk_count": 131,
+      "chunks_sha256": "09ca43f9d7a61a51381ef5d539d68de43f23d916da831b932137c188413c3643",
+      "checks": "configuration/corpus/cases/count/storage files consistent"
+    }
+  ]
+}

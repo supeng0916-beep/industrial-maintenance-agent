@@ -1,0 +1,63 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+     is 1,800, and the slip is 50 RPM. Running this motor at 10% overvoltage would increase
+     the power draw for centrifugal fans and circulating pumps by approximately 1.5%
+                                                                 Resources          
+     because their power requirement is sensitive to operating speed. Refer to Motor Systems
+     Tip Sheet #11, Adjustable Speed Drive Part-Load Efficiency, for additional information National Electrical Manufacturers
+     on the fan or affinity laws for centrifugal or variable torque loads. Association (NEMA)—Visit www.
+     Motor full-load efficiency is at a maximum between nominal voltage and about 10% nema.org for more information.
+     overvoltage. However, at reduced load the best efficiency point shifts considerably When making the decision to
+     toward lower voltages.                               start and stop a motor, refer to
+                                                          NEMA MG 10-2001, Energy   
+     Sometimes, low voltage only occurs at remote areas of a facility where high loads are
+     concentrated. In some cases, taps on power distribution transformers can be changed to Management Guide for Selection
+     adjust the delivered voltage to the desired utilization voltage. In new construction, or and Use of Fixed Frequency
+     where correction of severe voltage drop is necessary, it may be practical to run medium Medium AC Squirrel-Cage
+     voltage (> 600 to 6,600 V) distribution lines to the remote areas. Even though medium Polyphase Induction Motors. Also,
+     voltage in-plant distribution systems are subject to the same NEC maximum voltage
+                                                          refer to NEMA MG 1-2006, Motors
+     drop of 3%, these systems are usually held to well under 1%. The medium voltage
+                                                          and Generators Part 20.12.
+     can be transformed down near the points of use, or the equipment can be driven by
+     medium-voltage motors. Standard medium-voltage motors are available as small U.S. Department of Energy (DOE)—
+     as 100 horsepower.                                                             
+                                                          For more information on motor
+                                                          and motor-driven system   
+      Table 2. General Effect of Voltage Variations on Induction Motor Performance  
+                                                          efficiency and to download the
+      (for General-Purpose Standard Efficiency Motors)                              
+                                                          MotorMaster+ software tool, visit
+                                                          the Advanced Manufacturing
+                                    Voltage Variation                               
+           Motor Characteristic                           Office (AMO) website at   
+                              90% of Nameplate 110% of Nameplate manufacturing.energy.gov.
+      Starting and Maximum Running Torque –19% +21%                                 
+            Starting Current      –10%        +10%                                  
+            Full-Load Current   +5% to +10% –5% to –10%                             
+           Full-Load Efficiency –1% to –3%  +1% to +3%                              
+          Full-Load Power Factor +3% to +7% –2% to –7%                              
+              Percent Slip        +22%        –19%                                  
+     Source: Institute of Electrical and Electronics Enginners (IEEE) Standard 141-1993.
+     Additional Information                                                         
+     For more information on ways to improve motor efficiency by improving the voltage
+     supplied to the motor terminals, refer to Motor Systems Tip Sheet #7, Eliminate Voltage
+     Unbalance.                                                                     
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3736 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

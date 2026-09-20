@@ -1,0 +1,178 @@
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python simulator.py --port 63781 --raw 779 --current-raw 0 --speed-raw 0 --running-state-raw 0
+启动模拟器：127.0.0.1:63781，设备 ID=1，保持寄存器协议地址=0，温度原始值=779，地址1电流原始值=0，地址2转速原始值=0，地址3运行状态原始值=0；按 Ctrl+C 停止。
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python simulator.py --port 63781 --raw 810 --current-raw 123 --speed-raw 1450 --running-state-raw 1
+启动模拟器：127.0.0.1:63781，设备 ID=1，保持寄存器协议地址=0，温度原始值=810，地址1电流原始值=123，地址2转速原始值=1450，地址3运行状态原始值=1；按 Ctrl+C 停止。
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python simulator.py --port 63781 --raw 810 --current-raw 123 --speed-raw 1450 --running-state-raw 2
+启动模拟器：127.0.0.1:63781，设备 ID=1，保持寄存器协议地址=0，温度原始值=810，地址1电流原始值=123，地址2转速原始值=1450，地址3运行状态原始值=2；按 Ctrl+C 停止。
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python collect_temperature.py --port 63781 --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/four-points-w4Cp7o/test.sqlite3
+2026-09-17T07:12:53.130635+00:00 第1次 已保存：温度=81.0℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:12:54.131950+00:00 第2次 已保存：温度=81.0℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:12:55.133254+00:00 第3次 数据校验失败：127.0.0.1:63781：running_state raw=2，允许值=(0, 1)；本轮四点均不保存
+2026-09-17T07:12:56.136014+00:00 第4次 数据校验失败：127.0.0.1:63781：running_state raw=2，允许值=(0, 1)；本轮四点均不保存
+2026-09-17T07:12:57.136560+00:00 第5次 数据校验失败：127.0.0.1:63781：running_state raw=2，允许值=(0, 1)；本轮四点均不保存
+2026-09-17T07:12:58.142143+00:00 第6次 数据校验失败：127.0.0.1:63781：running_state raw=2，允许值=(0, 1)；本轮四点均不保存
+2026-09-17T07:12:59.142010+00:00 第7次 数据校验失败：127.0.0.1:63781：running_state raw=2，允许值=(0, 1)；本轮四点均不保存
+2026-09-17T07:13:00.147426+00:00 第8次 数据校验失败：127.0.0.1:63781：running_state raw=2，允许值=(0, 1)；本轮四点均不保存
+2026-09-17T07:13:01.151791+00:00 第9次 数据校验失败：127.0.0.1:63781：running_state raw=2，允许值=(0, 1)；本轮四点均不保存
+2026-09-17T07:13:02.154319+00:00 第10次 数据校验失败：127.0.0.1:63781：running_state raw=2，允许值=(0, 1)；本轮四点均不保存
+2026-09-17T07:13:03.158178+00:00 第11次 已保存：温度=81.0℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:13:04.161812+00:00 第12次 已保存：温度=81.0℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:13:05.166829+00:00 第13次 已保存：温度=81.0℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:13:06.171773+00:00 第14次 已保存：温度=81.0℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:13:07.176283+00:00 第15次 已保存：温度=81.0℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:13:08.181293+00:00 第16次 已保存：温度=81.0℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:13:09.185472+00:00 第17次 已保存：温度=81.0℃ 电流=1.23A 转速=1450rpm 运行状态=1
+Connection to (127.0.0.1, 63781) failed: [Errno 61] Connection refused
+2026-09-17T07:13:10.185707+00:00 第18次 通信失败：127.0.0.1:63781：无法连接，请检查模拟器是否启动、端口是否一致
+Repeating....
+2026-09-17T07:13:11.187896+00:00 第19次 通信失败：127.0.0.1:63781：无法连接，请检查模拟器是否启动、端口是否一致
+2026-09-17T07:13:12.192744+00:00 第20次 已保存：温度=77.9℃ 电流=0.00A 转速=0rpm 运行状态=0
+2026-09-17T07:13:13.196912+00:00 第21次 已保存：温度=77.9℃ 电流=0.00A 转速=0rpm 运行状态=0
+2026-09-17T07:13:14.202283+00:00 第22次 已保存：温度=77.9℃ 电流=0.00A 转速=0rpm 运行状态=0
+2026-09-17T07:13:15.205222+00:00 第23次 已保存：温度=77.9℃ 电流=0.00A 转速=0rpm 运行状态=0
+采集已停止，已提交的历史保留。
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python simulator.py --port 63781 --raw 810 --current-raw 123 --speed-raw 1450 --running-state-raw 1
+启动模拟器：127.0.0.1:63781，设备 ID=1，保持寄存器协议地址=0，温度原始值=810，地址1电流原始值=123，地址2转速原始值=1450，地址3运行状态原始值=1；按 Ctrl+C 停止。
+
+
+/Users/yuanqi/.local/node-current/bin/node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 63784
+
+  VITE v8.3.0  ready in 99 ms
+
+  ➜  Local:   http://127.0.0.1:63784/
+3:13:15 PM [vite] http proxy error: /api/devices
+Error: connect ECONNREFUSED 127.0.0.1:63782
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1938:16)
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python serve_api.py --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/four-points-w4Cp7o/test.sqlite3 --port 63782
+INFO:     Started server process [84977]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:63782 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63869 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63871 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63873 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A02%3A52.592Z&to=2026-09-17T07%3A12%3A52.592135%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63877 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63878 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63879 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63883 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A02%3A52.609Z&to=2026-09-17T07%3A12%3A52.609947%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63887 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A02%3A52.618Z&to=2026-09-17T07%3A12%3A52.618680%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63886 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A02%3A52.617Z&to=2026-09-17T07%3A12%3A52.617670%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63900 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63902 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63904 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63905 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A02%3A52.902Z&to=2026-09-17T07%3A12%3A52.902841%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63911 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63912 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63913 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A02%3A52.964Z&to=2026-09-17T07%3A12%3A52.964850%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63916 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63915 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63917 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63921 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A02%3A52.973Z&to=2026-09-17T07%3A12%3A52.973028%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63923 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A02%3A52.974Z&to=2026-09-17T07%3A12%3A52.974062%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63922 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A02%3A52.973Z&to=2026-09-17T07%3A12%3A52.973190%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63986 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63988 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63990 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A02%3A54.987Z&to=2026-09-17T07%3A12%3A54.987380%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63994 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63996 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63995 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64001 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A02%3A54.994Z&to=2026-09-17T07%3A12%3A54.994195%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64002 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A02%3A54.994Z&to=2026-09-17T07%3A12%3A54.994422%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63999 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A02%3A54.994Z&to=2026-09-17T07%3A12%3A54.994128%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64057 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64059 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64064 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A02%3A57.012Z&to=2026-09-17T07%3A12%3A57.012701%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64068 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64070 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64069 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64074 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A02%3A57.017Z&to=2026-09-17T07%3A12%3A57.017807%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64076 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A02%3A57.017Z&to=2026-09-17T07%3A12%3A57.017856%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64075 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A02%3A57.017Z&to=2026-09-17T07%3A12%3A57.017837%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64077 - "GET /api/devices/motor-a/alarms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64105 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64107 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64109 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A02%3A59.040Z&to=2026-09-17T07%3A12%3A59.040024%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64113 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64115 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64114 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64120 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A02%3A59.051Z&to=2026-09-17T07%3A12%3A59.051404%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64121 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A02%3A59.051Z&to=2026-09-17T07%3A12%3A59.051521%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64119 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A02%3A59.051Z&to=2026-09-17T07%3A12%3A59.051354%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64159 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64161 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64164 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A03%3A01.067Z&to=2026-09-17T07%3A13%3A01.067593%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64170 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64169 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64168 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64174 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A03%3A01.073Z&to=2026-09-17T07%3A13%3A01.073654%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64176 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A03%3A01.073Z&to=2026-09-17T07%3A13%3A01.073703%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64175 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A03%3A01.073Z&to=2026-09-17T07%3A13%3A01.073680%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64207 - "GET /api/devices/motor-a/alarms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64220 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64222 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64224 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A03%3A03.085Z&to=2026-09-17T07%3A13%3A03.085186%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64230 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64229 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64228 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64234 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A03%3A03.090Z&to=2026-09-17T07%3A13%3A03.090484%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64235 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A03%3A03.090Z&to=2026-09-17T07%3A13%3A03.090550%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64236 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A03%3A03.090Z&to=2026-09-17T07%3A13%3A03.090521%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64290 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64292 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64294 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A03%3A05.103Z&to=2026-09-17T07%3A13%3A05.103151%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64299 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64300 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64298 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64304 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A03%3A05.107Z&to=2026-09-17T07%3A13%3A05.107609%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64305 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A03%3A05.107Z&to=2026-09-17T07%3A13%3A05.107683%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64306 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A03%3A05.107Z&to=2026-09-17T07%3A13%3A05.107782%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64334 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64336 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64338 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A03%3A07.132Z&to=2026-09-17T07%3A13%3A07.132518%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64342 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64343 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64344 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64348 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A03%3A07.142Z&to=2026-09-17T07%3A13%3A07.142623%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64349 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A03%3A07.142Z&to=2026-09-17T07%3A13%3A07.142655%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64350 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A03%3A07.142Z&to=2026-09-17T07%3A13%3A07.142749%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64386 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64388 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64390 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A03%3A09.165Z&to=2026-09-17T07%3A13%3A09.165233%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64396 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64395 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64394 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64401 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A03%3A09.181Z&to=2026-09-17T07%3A13%3A09.181599%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64402 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A03%3A09.181Z&to=2026-09-17T07%3A13%3A09.181689%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64403 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A03%3A09.181Z&to=2026-09-17T07%3A13%3A09.181767%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64433 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64435 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64437 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A03%3A11.202Z&to=2026-09-17T07%3A13%3A11.202607%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64442 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64443 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64441 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64447 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A03%3A11.208Z&to=2026-09-17T07%3A13%3A11.208233%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64449 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A03%3A11.208Z&to=2026-09-17T07%3A13%3A11.208832%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64448 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A03%3A11.208Z&to=2026-09-17T07%3A13%3A11.208597%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64477 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64479 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64481 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A03%3A13.227Z&to=2026-09-17T07%3A13%3A13.227713%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64485 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64486 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64487 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64492 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A03%3A13.235Z&to=2026-09-17T07%3A13%3A13.235629%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64491 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A03%3A13.235Z&to=2026-09-17T07%3A13%3A13.235509%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64493 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A03%3A13.235Z&to=2026-09-17T07%3A13%3A13.235607%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84977]

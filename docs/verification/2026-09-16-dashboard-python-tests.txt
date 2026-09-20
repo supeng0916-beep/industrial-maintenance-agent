@@ -1,0 +1,86 @@
+
+HTTP验收启动： /Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python3 serve_api.py --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/tmpj_7fkz3i/http.sqlite3 --port 60487
+缺库： 503 {'error': {'code': 'database_unavailable', 'message': '数据库不可读：文件尚未创建、表未就绪、被锁或损坏；请检查采集器及服务日志'}}
+建库后无需重启： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': None, 'status': {'has_data': False, 'last_attempt_status': 'unknown', 'last_attempt_at': None, 'last_success_at': None, 'last_failure_at': None, 'data_age_seconds': None, 'is_stale': None, 'checked_at': '2026-09-16T08:32:41.062697+00:00', 'stale_after_seconds': 5}}
+旧值仍保留原时间，已过期： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': {'id': 1, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 65.3, 'unit': '℃', 'collected_at': '2026-09-16T08:32:31.062998+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}, 'status': {'has_data': True, 'last_attempt_status': 'success', 'last_attempt_at': '2026-09-16T08:32:31.062998+00:00', 'last_success_at': '2026-09-16T08:32:31.062998+00:00', 'last_failure_at': None, 'data_age_seconds': 10.001182, 'is_stale': True, 'checked_at': '2026-09-16T08:32:41.064180+00:00', 'stale_after_seconds': 5}}
+最近失败： 200 {'has_data': True, 'last_attempt_status': 'failure', 'last_attempt_at': '2026-09-16T08:32:41.064795+00:00', 'last_success_at': '2026-09-16T08:32:31.062998+00:00', 'last_failure_at': '2026-09-16T08:32:41.064795+00:00', 'data_age_seconds': 10.0027, 'is_stale': True, 'checked_at': '2026-09-16T08:32:41.065698+00:00', 'stale_after_seconds': 5}
+后来成功覆盖最近尝试结论： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': {'id': 2, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 72.8, 'unit': '℃', 'collected_at': '2026-09-16T08:32:41.066082+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}, 'status': {'has_data': True, 'last_attempt_status': 'success', 'last_attempt_at': '2026-09-16T08:32:41.066082+00:00', 'last_success_at': '2026-09-16T08:32:41.066082+00:00', 'last_failure_at': '2026-09-16T08:32:41.064795+00:00', 'data_age_seconds': 0.000795, 'is_stale': False, 'checked_at': '2026-09-16T08:32:41.066877+00:00', 'stale_after_seconds': 5}}
+并发12次HTTP读取：全部200，数据库文件逐字节不变
+限量历史： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'from': '2026-09-16T08:32:31.062998+00:00', 'to': '2026-09-16T08:33:41.062998+00:00', 'limit': 1, 'order': 'collected_at ASC, id ASC', 'points': [{'id': 1, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 65.3, 'unit': '℃', 'collected_at': '2026-09-16T08:32:31.062998+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}]}
+/api/devices/unknown/latest 404 {'error': {'code': 'device_not_found', 'message': '未知设备'}}
+/api/devices/motor-a/history?limit=1001 422 {'error': {'code': 'invalid_parameters', 'message': '参数缺失或不符合约束：query.from, query.to, query.limit'}}
+独占锁： 503 {'error': {'code': 'database_unavailable', 'message': '数据库不可读：文件尚未创建、表未就绪、被锁或损坏；请检查采集器及服务日志'}}
+服务日志：
+INFO:     Started server process [92167]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:60487 (Press CTRL+C to quit)
+只读数据库查询失败: unable to open database file
+INFO:     127.0.0.1:60491 - "GET /api/devices HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60492 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60493 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60494 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60495 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60496 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60497 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60498 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60499 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60501 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60502 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60500 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60503 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60504 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60505 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60506 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60507 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60508 - "GET /api/devices/motor-a/history?from=2026-09-16T08%3A32%3A31.062998%2B00%3A00&to=2026-09-16T08%3A33%3A41.062998%2B00%3A00&limit=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60509 - "GET /api/devices/unknown/latest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60510 - "GET /api/devices/motor-a/history?limit=1001 HTTP/1.1" 422 Unprocessable Entity
+只读数据库查询失败: database is locked
+INFO:     127.0.0.1:60511 - "GET /api/devices HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60512 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [92167]
+
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:60569/opcua-lab/", "namespace_uri": "urn:industrial-maintenance:opcua-lab", "NodeId": "ns=3;s=MotorA.Temperature", "initial_value": 65.3}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 65.3, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": "2026-09-16T08:32:48.692813+00:00", "ServerTimestamp": "2026-09-16T08:32:48.692817+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+{"event": "subscribed", "NodeId": "ns=3;s=MotorA.Temperature", "monitored_items": 1, "requested_publishing_ms": 250, "requested_sampling_ms": 100, "requested_queue_size": 10, "trigger": "StatusValue"}
+{"event": "notification", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 65.3, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": "2026-09-16T08:32:48.692813+00:00", "ServerTimestamp": "2026-09-16T08:32:48.692817+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）", "ReceivedAt": "2026-09-16T08:32:48.990735+00:00"}
+{"event": "local_lab_write", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double"}
+{"event": "notification", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-16T08:32:49.131219+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）", "ReceivedAt": "2026-09-16T08:32:49.241414+00:00"}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-16T08:32:49.131219+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+{"event": "local_lab_write", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double"}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-16T08:32:49.535107+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+同值写入后1.2秒：新增数据变化通知0；主动读取仍成功。
+{"event": "local_lab_write", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 73.0, "DataType": "Double"}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 73.0, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-16T08:32:51.077116+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+{"event": "notification", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 73.0, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-16T08:32:51.077116+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）", "ReceivedAt": "2026-09-16T08:32:51.239730+00:00"}
+{"event": "subscription_deleted"}
+OPC UA stderr: Requested session timeout to be 3600000ms, got 600000ms instead
+
+test_bad_device_metric_dates_range_and_limit_have_consistent_errors (test_api.ApiTests.test_bad_device_metric_dates_range_and_limit_have_consistent_errors) ... ok
+test_exact_stale_boundary_and_last_success_stays_historical (test_api.ApiTests.test_exact_stale_boundary_and_last_success_stays_historical) ... ok
+test_failure_then_recovery_compares_record_times_not_insert_order (test_api.ApiTests.test_failure_then_recovery_compares_record_times_not_insert_order) ... ok
+test_history_utc_range_limit_order_and_empty_result (test_api.ApiTests.test_history_utc_range_limit_order_and_empty_result) ... ok
+test_missing_database_recovers_without_restart_and_empty_data (test_api.ApiTests.test_missing_database_recovers_without_restart_and_empty_data) ... 只读数据库查询失败: unable to open database file
+ok
+test_readonly_concurrent_requests_and_locked_database (test_api.ApiTests.test_readonly_concurrent_requests_and_locked_database) ... 只读数据库查询失败: database is locked
+ok
+test_live_http_missing_database_recovery_and_readonly_concurrency (test_api_http.RealHttpTests.test_live_http_missing_database_recovery_and_readonly_concurrency) ... ok
+test_database_errors_and_query_bounds (test_collection.CollectionTests.test_database_errors_and_query_bounds) ... ok
+test_failed_attempts_are_counted_and_never_make_measurements (test_collection.CollectionTests.test_failed_attempts_are_counted_and_never_make_measurements) ... ok
+test_finite_samples_have_utc_metadata_and_survive_restart (test_collection.CollectionTests.test_finite_samples_have_utc_metadata_and_survive_restart) ... ok
+test_insert_failure_and_lock_timeout_stop_without_fake_success (test_collection.CollectionTests.test_insert_failure_and_lock_timeout_stop_without_fake_success) ... ok
+test_running_collector_records_failures_then_recovers_to_728 (test_collection.CollectionTests.test_running_collector_records_failures_then_recovers_to_728) ... ok
+test_configured_728 (test_modbus.ModbusAcceptanceTests.test_configured_728) ... ok
+test_default_653_at_protocol_address_zero (test_modbus.ModbusAcceptanceTests.test_default_653_at_protocol_address_zero) ... ok
+test_stopped_simulator_has_no_sample_and_nonzero_exit (test_modbus.ModbusAcceptanceTests.test_stopped_simulator_has_no_sample_and_nonzero_exit) ... ok
+test_nonfinite_temperature_is_rejected_before_connect (test_opcua.OpcuaLabTests.test_nonfinite_temperature_is_rejected_before_connect) ... ok
+test_uri_resolution_double_and_actual_subscription (test_opcua.OpcuaLabTests.test_uri_resolution_double_and_actual_subscription) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 13.141s
+
+OK

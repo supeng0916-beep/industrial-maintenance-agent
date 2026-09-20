@@ -1,0 +1,396 @@
+{
+  "ok": true,
+  "query": "按典型PWM变频器效率表，20hp驱动器在12.5%负载时效率是多少？",
+  "top_k": 5,
+  "model_signature": {
+    "model": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "pooling": "attention_mask_mean",
+    "query_prefix": "query: ",
+    "passage_prefix": "passage: ",
+    "dimension": 384,
+    "normalize": "l2",
+    "max_length": 512,
+    "special_tokens": true,
+    "dtype": "float32",
+    "device": "cpu",
+    "libraries": {
+      "torch": "2.10.0",
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2",
+      "safetensors": "0.8.0"
+    }
+  },
+  "distance_semantics": "cosine distance = 1 - cosine similarity; smaller is closer, not confidence or answerability",
+  "candidates": [
+    {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "content_sha256": "c2fb9285c15f09d87e90d0b6fc142dc280ab0c60a876bd816112ab63a8b2d813",
+      "context_source_pages": [
+        "2"
+      ],
+      "context_sources": [
+        {
+          "field": "title",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "Adjustable Speed Drive Part-Load Efficiency"
+        },
+        {
+          "kind": "source_context",
+          "source_pages": [
+            "2"
+          ],
+          "text": "Table 1. Adjustable Speed Drive Part-Load Efficiency*"
+        },
+        {
+          "field": "applicability",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards."
+        }
+      ],
+      "context_text": "Repeated source context:\nAdjustable Speed Drive Part-Load Efficiency\nTable 1. Adjustable Speed Drive Part-Load Efficiency*\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "document_id": "doe-motor-ts11",
+      "document_sha256": "8721d227589d8e61fca4410febca5655872e2487dce1456691b85913a507c398",
+      "embedding_text": "passage: Repeated source context:\nAdjustable Speed Drive Part-Load Efficiency\nTable 1. Adjustable Speed Drive Part-Load Efficiency*\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nSource text:\n```text\n                       Efficiency (%)\n Variable\n  Drive        Load, Percent of Drive Rated Power Output\nhp Rating\n          1.6  12.5  25    42    50   75    100\n   5      35   80    88    91    92   94    95\n   10     41    83   90    93    94   95    96\n   20     47    86   93    94    95   96    97\n   30     50    88   93    95    95   96    97\n   50     46    86   92    95    95   96    97\n\n  60      51    87   92    95    95   96    97\n   75     47    86   93    95    96   97    97\n  100     55    89   94    95    96   97    97\n\n  200     61    81   95    96    96   97    97\n```\n\n*These efficiency values may be considered representative of “typical” PWM VFD performance. There is no widely accepted test protocol that allows for efficiency comparisons between different drive models or brands. In addition, there are many ways to set up a VFD that can affect the operating efficiency. Source: Saftronics, Inc.\n\n",
+      "metadata": {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+        "device_ids": [],
+        "document_id": "doe-motor-ts11",
+        "language": "en",
+        "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+        "product_model": null,
+        "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+        "reviewed_on": "2026-09-18",
+        "source_document_id": "DOE/GO-102012-3730",
+        "source_pages": [
+          "1",
+          "2"
+        ],
+        "source_sha256": "2614ca8b880e4f8962b45e9a832e0800e73db3300cbe892111d6b6aa9d7c3c0d",
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf",
+        "sources": [
+          "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf"
+        ],
+        "teaching_only": false,
+        "title": "Adjustable Speed Drive Part-Load Efficiency",
+        "version": "November 2012"
+      },
+      "original_text": "```text\n                       Efficiency (%)\n Variable\n  Drive        Load, Percent of Drive Rated Power Output\nhp Rating\n          1.6  12.5  25    42    50   75    100\n   5      35   80    88    91    92   94    95\n   10     41    83   90    93    94   95    96\n   20     47    86   93    94    95   96    97\n   30     50    88   93    95    95   96    97\n   50     46    86   92    95    95   96    97\n\n  60      51    87   92    95    95   96    97\n   75     47    86   93    95    96   97    97\n  100     55    89   94    95    96   97    97\n\n  200     61    81   95    96    96   97    97\n```\n\n*These efficiency values may be considered representative of “typical” PWM VFD performance. There is no widely accepted test protocol that allows for efficiency comparisons between different drive models or brands. In addition, there are many ways to set up a VFD that can affect the operating efficiency. Source: Saftronics, Inc.\n\n",
+      "over_soft_target": false,
+      "section": "Page 2",
+      "source_end": 6236,
+      "source_line_end": 84,
+      "source_line_start": 64,
+      "source_pages": [
+        "2"
+      ],
+      "source_path": "doe-motor-ts11.md",
+      "source_start": 5303,
+      "strategy": "rag-page-heading-sentence-v4",
+      "token_count": 264,
+      "version": "November 2012",
+      "rank": 1,
+      "distance": 0.1501641869544983,
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf"
+    },
+    {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "content_sha256": "f3364cd57a3b2a6dc535850a344fd981d95b22efc34c8fe7cf93e52016206685",
+      "context_source_pages": [
+        "2"
+      ],
+      "context_sources": [
+        {
+          "field": "title",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "Is it Cost-Effective to Replace Old Eddy-Current Drives?"
+        },
+        {
+          "kind": "source_context",
+          "source_pages": [
+            "2"
+          ],
+          "text": "Table 3. Average Power Requirements for a Centrifugal Fan with VFD Speed Control"
+        },
+        {
+          "field": "applicability",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards."
+        },
+        {
+          "kind": "source_context",
+          "source_end": 6027,
+          "source_pages": [
+            "2"
+          ],
+          "source_start": 5697,
+          "text": "Note that the input power (in kW) is equal to 0.746 kW/hp times the shaft horsepower divided by the product of the motor and drive efficiency values. The weighted input power value is the input power times the load duty cycle percentage divided by 100. In Table 3, when the VFD is installed, the fan power requirements decrease.\n\n"
+        }
+      ],
+      "context_text": "Repeated source context:\nIs it Cost-Effective to Replace Old Eddy-Current Drives?\nTable 3. Average Power Requirements for a Centrifugal Fan with VFD Speed Control\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nNote that the input power (in kW) is equal to 0.746 kW/hp times the shaft horsepower divided by the product of the motor and drive efficiency values. The weighted input power value is the input power times the load duty cycle percentage divided by 100. In Table 3, when the VFD is installed, the fan power requirements decrease.\n\n",
+      "document_id": "doe-motor-ts12",
+      "document_sha256": "f018f42ff87f0419683e74c1006c81975bcc62d1558afab2895fe3233c730033",
+      "embedding_text": "passage: Repeated source context:\nIs it Cost-Effective to Replace Old Eddy-Current Drives?\nTable 3. Average Power Requirements for a Centrifugal Fan with VFD Speed Control\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nNote that the input power (in kW) is equal to 0.746 kW/hp times the shaft horsepower divided by the product of the motor and drive efficiency values. The weighted input power value is the input power times the load duty cycle percentage divided by 100. In Table 3, when the VFD is installed, the fan power requirements decrease.\n\n\nSource text:\n```text\n          % of            Motor   VFD    Weighted\n% of Rated      Load, Shaft\n        Operating       Efficiency, Efficiency, Input Power\nFan Speed         hp\n          Time             %       %       kW\n  90      20      36.45   91.6     96     6.18\n  80      50      25.6    90.9     95     11.05\n  70      30      17.2    86.6     93     4.76\n                                  Total:  21.99\n```\n\n",
+      "metadata": {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+        "device_ids": [],
+        "document_id": "doe-motor-ts12",
+        "language": "en",
+        "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+        "product_model": null,
+        "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+        "reviewed_on": "2026-09-18",
+        "source_document_id": "DOE/GO-102012-3737",
+        "source_pages": [
+          "1",
+          "2"
+        ],
+        "source_sha256": "4ea1d416b8823d44318b5c740516588b7e7e310760155e01f6ed3db427604fc2",
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf",
+        "sources": [
+          "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf"
+        ],
+        "teaching_only": false,
+        "title": "Is it Cost-Effective to Replace Old Eddy-Current Drives?",
+        "version": "November 2012"
+      },
+      "original_text": "```text\n          % of            Motor   VFD    Weighted\n% of Rated      Load, Shaft\n        Operating       Efficiency, Efficiency, Input Power\nFan Speed         hp\n          Time             %       %       kW\n  90      20      36.45   91.6     96     6.18\n  80      50      25.6    90.9     95     11.05\n  70      30      17.2    86.6     93     4.76\n                                  Total:  21.99\n```\n\n",
+      "over_soft_target": false,
+      "section": "Page 2",
+      "source_end": 6517,
+      "source_line_end": 102,
+      "source_line_start": 91,
+      "source_pages": [
+        "2"
+      ],
+      "source_path": "doe-motor-ts12.md",
+      "source_start": 6109,
+      "strategy": "rag-page-heading-sentence-v4",
+      "token_count": 247,
+      "version": "November 2012",
+      "rank": 2,
+      "distance": 0.16383808851242065,
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf"
+    },
+    {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "content_sha256": "cf3b4fa81e31e19dfa8865608cdb4e5f7066781f87c58217adca4abd9a809753",
+      "context_source_pages": [],
+      "context_sources": [
+        {
+          "field": "title",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "Is it Cost-Effective to Replace Old Eddy-Current Drives?"
+        },
+        {
+          "field": "applicability",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards."
+        }
+      ],
+      "context_text": "Repeated source context:\nIs it Cost-Effective to Replace Old Eddy-Current Drives?\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "document_id": "doe-motor-ts12",
+      "document_sha256": "f018f42ff87f0419683e74c1006c81975bcc62d1558afab2895fe3233c730033",
+      "embedding_text": "passage: Repeated source context:\nIs it Cost-Effective to Replace Old Eddy-Current Drives?\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nSource text:\nNote that the input power (in kW) is equal to 0.746 kW/hp times the shaft horsepower divided by the product of the motor and drive efficiency values. The weighted input power value is the input power times the load duty cycle percentage divided by 100. In Table 3, when the VFD is installed, the fan power requirements decrease.\n\nTable 3. Average Power Requirements for a Centrifugal Fan with VFD Speed Control\n\n",
+      "metadata": {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+        "device_ids": [],
+        "document_id": "doe-motor-ts12",
+        "language": "en",
+        "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+        "product_model": null,
+        "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+        "reviewed_on": "2026-09-18",
+        "source_document_id": "DOE/GO-102012-3737",
+        "source_pages": [
+          "1",
+          "2"
+        ],
+        "source_sha256": "4ea1d416b8823d44318b5c740516588b7e7e310760155e01f6ed3db427604fc2",
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf",
+        "sources": [
+          "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf"
+        ],
+        "teaching_only": false,
+        "title": "Is it Cost-Effective to Replace Old Eddy-Current Drives?",
+        "version": "November 2012"
+      },
+      "original_text": "Note that the input power (in kW) is equal to 0.746 kW/hp times the shaft horsepower divided by the product of the motor and drive efficiency values. The weighted input power value is the input power times the load duty cycle percentage divided by 100. In Table 3, when the VFD is installed, the fan power requirements decrease.\n\nTable 3. Average Power Requirements for a Centrifugal Fan with VFD Speed Control\n\n",
+      "over_soft_target": false,
+      "section": "Page 2",
+      "source_end": 6109,
+      "source_line_end": 90,
+      "source_line_start": 87,
+      "source_pages": [
+        "2"
+      ],
+      "source_path": "doe-motor-ts12.md",
+      "source_start": 5697,
+      "strategy": "rag-page-heading-sentence-v4",
+      "token_count": 173,
+      "version": "November 2012",
+      "rank": 3,
+      "distance": 0.16471236944198608,
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf"
+    },
+    {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "content_sha256": "eede4fe4b29e55ea3cef5ece077b75d483e76010a9c28a9deb0c8dacc7377fc2",
+      "context_source_pages": [
+        "1"
+      ],
+      "context_sources": [
+        {
+          "field": "title",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "Eliminate Voltage Unbalance"
+        },
+        {
+          "kind": "source_context",
+          "source_pages": [
+            "1"
+          ],
+          "text": "Table 1. Example Motor Efficiency* Under Conditions of Voltage Unbalance"
+        },
+        {
+          "field": "applicability",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards."
+        },
+        {
+          "kind": "source_context",
+          "source_end": 2958,
+          "source_pages": [
+            "1"
+          ],
+          "source_start": 2675,
+          "text": "The efficiency of an 1,800 revolutions per minute (RPM), 100-horsepower (hp) motor is given as a function of voltage unbalance and motor load in Table 1 below. The general trend of efficiency reduction with increased voltage unbalance is observed for motors at all load conditions.\n\n"
+        }
+      ],
+      "context_text": "Repeated source context:\nEliminate Voltage Unbalance\nTable 1. Example Motor Efficiency* Under Conditions of Voltage Unbalance\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nThe efficiency of an 1,800 revolutions per minute (RPM), 100-horsepower (hp) motor is given as a function of voltage unbalance and motor load in Table 1 below. The general trend of efficiency reduction with increased voltage unbalance is observed for motors at all load conditions.\n\n",
+      "document_id": "doe-motor-ts07",
+      "document_sha256": "f881fee1b6455c394af08f8dd43a3b847f6ee3da321d2f192d88578c5618d033",
+      "embedding_text": "passage: Repeated source context:\nEliminate Voltage Unbalance\nTable 1. Example Motor Efficiency* Under Conditions of Voltage Unbalance\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nThe efficiency of an 1,800 revolutions per minute (RPM), 100-horsepower (hp) motor is given as a function of voltage unbalance and motor load in Table 1 below. The general trend of efficiency reduction with increased voltage unbalance is observed for motors at all load conditions.\n\n\nSource text:\n```text\n                         Motor Efficiency, %\n  Motor Load\n                         Voltage Unbalance\n    % Full\n                Nominal       1%         2.5%\n     100         94.4        94.4        93.0\n\n     75          95.2        95.1        93.9\n\n     50          96.1        95.5        94.1\n```\n\nSource: Washington State University Energy Program\n\n*Results vary depending on motor design, speed, full-load efficiency, and hp rating. Typically, electric motors have peak efficiency near 75% load, but this particular motor tested in the lab showed otherwise.\n\n",
+      "metadata": {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+        "device_ids": [],
+        "document_id": "doe-motor-ts07",
+        "language": "en",
+        "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+        "product_model": null,
+        "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+        "reviewed_on": "2026-09-18",
+        "source_document_id": "DOE/GO-102012-3733",
+        "source_pages": [
+          "1",
+          "2"
+        ],
+        "source_sha256": "e39afc0a4f4a5e6e7d57baf219abd23eebce7a0b21f240337d0d6e70c232530a",
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/eliminate_voltage_unbalanced_motor_systemts7.pdf",
+        "sources": [
+          "https://www.energy.gov/sites/prod/files/2014/04/f15/eliminate_voltage_unbalanced_motor_systemts7.pdf"
+        ],
+        "teaching_only": false,
+        "title": "Eliminate Voltage Unbalance",
+        "version": "November 2012"
+      },
+      "original_text": "```text\n                         Motor Efficiency, %\n  Motor Load\n                         Voltage Unbalance\n    % Full\n                Nominal       1%         2.5%\n     100         94.4        94.4        93.0\n\n     75          95.2        95.1        93.9\n\n     50          96.1        95.5        94.1\n```\n\nSource: Washington State University Energy Program\n\n*Results vary depending on motor design, speed, full-load efficiency, and hp rating. Typically, electric motors have peak efficiency near 75% load, but this particular motor tested in the lab showed otherwise.\n\n",
+      "over_soft_target": false,
+      "section": "Page 1",
+      "source_end": 3606,
+      "source_line_end": 67,
+      "source_line_start": 51,
+      "source_pages": [
+        "1"
+      ],
+      "source_path": "doe-motor-ts07.md",
+      "source_start": 3032,
+      "strategy": "rag-page-heading-sentence-v4",
+      "token_count": 249,
+      "version": "November 2012",
+      "rank": 4,
+      "distance": 0.16610580682754517,
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/eliminate_voltage_unbalanced_motor_systemts7.pdf"
+    },
+    {
+      "chunk_id": "doe-motor-ts11:fe00714c0fe126cf8ba2",
+      "content_sha256": "5cf4929d4c8840b5c80075afd2886c813c80be29f23fb5d10b37871f87e50f0e",
+      "context_source_pages": [],
+      "context_sources": [
+        {
+          "field": "title",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "Adjustable Speed Drive Part-Load Efficiency"
+        },
+        {
+          "field": "applicability",
+          "kind": "metadata",
+          "source_pages": [],
+          "text": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards."
+        }
+      ],
+      "context_text": "Repeated source context:\nAdjustable Speed Drive Part-Load Efficiency\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "document_id": "doe-motor-ts11",
+      "document_sha256": "8721d227589d8e61fca4410febca5655872e2487dce1456691b85913a507c398",
+      "embedding_text": "passage: Repeated source context:\nAdjustable Speed Drive Part-Load Efficiency\nApplicability: General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.\nSource text:\n\n# Adjustable Speed Drive Part-Load Efficiency\n\n## Page 1\n\nAdjustable Speed Drive Part-Load Efficiency\n\nAn adjustable speed drive (ASD) is a device that controls the rotational speed of motor-driven equipment. Variable frequency drives (VFDs), the most common type of ASD, are solid-state electronic motor controllers that efficiently meet varying process requirements by adjusting the frequency and voltage of power supplied to an alternating current (AC) motor to enable it to operate over a wide speed range. External sensors monitor flow, liquid levels, or pressure and then transmit a signal to a controller that adjusts the frequency and speed of the motor to match process requirements.\n\nVariable Torque Loads Pulse-width-modulated (PWM) VFDs are most often used in variable torque applications in the 1 to 1,000 horsepower (hp) motor size range. For centrifugal fans or pumps with no static lift, the fan or affinity laws state that the fluid or airflow provided varies directly with the pump or fan rotational speed. The input power requirement varies as the cube or third power of the speed ratio, as shown in Figure 1. Small decreases in equipment rotating speed or fluid flow yield significant reductions in energy use. For example, reducing rotating equipment speed (flow) by 20% can reduce input power requirements by approximately 50%.\n\nhp_2 = hp_1 x (RPM_2/RPM_1)^3 = hp_1 x (Flow_2/Flow_1)^3\n\nWhere:\n\n",
+      "metadata": {
+        "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+        "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+        "device_ids": [],
+        "document_id": "doe-motor-ts11",
+        "language": "en",
+        "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+        "product_model": null,
+        "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+        "reviewed_on": "2026-09-18",
+        "source_document_id": "DOE/GO-102012-3730",
+        "source_pages": [
+          "1",
+          "2"
+        ],
+        "source_sha256": "2614ca8b880e4f8962b45e9a832e0800e73db3300cbe892111d6b6aa9d7c3c0d",
+        "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf",
+        "sources": [
+          "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf"
+        ],
+        "teaching_only": false,
+        "title": "Adjustable Speed Drive Part-Load Efficiency",
+        "version": "November 2012"
+      },
+      "original_text": "\n# Adjustable Speed Drive Part-Load Efficiency\n\n## Page 1\n\nAdjustable Speed Drive Part-Load Efficiency\n\nAn adjustable speed drive (ASD) is a device that controls the rotational speed of motor-driven equipment. Variable frequency drives (VFDs), the most common type of ASD, are solid-state electronic motor controllers that efficiently meet varying process requirements by adjusting the frequency and voltage of power supplied to an alternating current (AC) motor to enable it to operate over a wide speed range. External sensors monitor flow, liquid levels, or pressure and then transmit a signal to a controller that adjusts the frequency and speed of the motor to match process requirements.\n\nVariable Torque Loads Pulse-width-modulated (PWM) VFDs are most often used in variable torque applications in the 1 to 1,000 horsepower (hp) motor size range. For centrifugal fans or pumps with no static lift, the fan or affinity laws state that the fluid or airflow provided varies directly with the pump or fan rotational speed. The input power requirement varies as the cube or third power of the speed ratio, as shown in Figure 1. Small decreases in equipment rotating speed or fluid flow yield significant reductions in energy use. For example, reducing rotating equipment speed (flow) by 20% can reduce input power requirements by approximately 50%.\n\nhp_2 = hp_1 x (RPM_2/RPM_1)^3 = hp_1 x (Flow_2/Flow_1)^3\n\nWhere:\n\n",
+      "over_soft_target": true,
+      "section": "Page 1",
+      "source_end": 2526,
+      "source_line_end": 34,
+      "source_line_start": 20,
+      "source_pages": [
+        "1"
+      ],
+      "source_path": "doe-motor-ts11.md",
+      "source_start": 1108,
+      "strategy": "rag-page-heading-sentence-v4",
+      "token_count": 421,
+      "version": "November 2012",
+      "rank": 5,
+      "distance": 0.16681331396102905,
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf"
+    }
+  ],
+  "limitations": [
+    "Candidates do not establish diagnosis, correctness, or answerability.",
+    "Empty device_ids or unknown product_model does not mean universally applicable."
+  ]
+}

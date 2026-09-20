@@ -1,0 +1,26 @@
+[
+  {
+    "tool": "get_device_status",
+    "exit_code": 0,
+    "ok": true
+  },
+  {
+    "tool": "query_metric_history",
+    "exit_code": 0,
+    "statistics": {
+      "count": 1002,
+      "min": -10.0,
+      "max": 999.0,
+      "first_collected_at": "2026-09-17T00:00:00.000000+00:00",
+      "last_collected_at": "2026-09-17T00:16:41.000000+00:00",
+      "kind": "numeric"
+    },
+    "returned_count": 10,
+    "truncated": true
+  },
+  {
+    "tool": "list_alarms",
+    "exit_code": 0,
+    "ok": true
+  }
+]

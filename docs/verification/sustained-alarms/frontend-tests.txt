@@ -1,0 +1,13 @@
+
+> industrial-temperature-dashboard@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.1 /Users/yuanqi/项目/工业设备智能运维agent/frontend
+
+
+ Test Files  5 passed (5)
+      Tests  14 passed (14)
+   Start at  17:53:28
+   Duration  136ms (transform 55%, import 24%, tests 14%, worker 7%)
+

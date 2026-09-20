@@ -1,0 +1,38 @@
+{
+  "corpus_id": "industrial-maintenance-teaching",
+  "version": "0.1",
+  "reviewed_on": "2026-09-18",
+  "status": "documents_only_not_indexed",
+  "documents": [
+    {
+      "document_id": "device-points",
+      "path": "device-points.md",
+      "version": "0.1",
+      "sha256": "c3392e0a0f75a61458e3d8703ff1525713c38b6a536182ac6ca3500e310c04db"
+    },
+    {
+      "document_id": "temperature-alarms",
+      "path": "temperature-alarms.md",
+      "version": "0.1",
+      "sha256": "6dd36a54c8a700b87344da8f6b9a67be5f3bb0de8024b3bff0bbbe2acddd3681"
+    },
+    {
+      "document_id": "opcua-evidence",
+      "path": "opcua-evidence.md",
+      "version": "0.1",
+      "sha256": "d92ccf93f0d86324b307a4935ebdb231983aa1e3f646dc25d9602d7fc0484c00"
+    },
+    {
+      "document_id": "readonly-queries",
+      "path": "readonly-queries.md",
+      "version": "0.1",
+      "sha256": "7654c0cd5e0eaca6ba9c33cb655435838d16051ab25b137d12427e3a2114aa95"
+    },
+    {
+      "document_id": "evidence-boundaries",
+      "path": "evidence-boundaries.md",
+      "version": "0.1",
+      "sha256": "09cd038831a29d50c46de36541b69582a2b5a4c5f217aa733a0ff49365fdfa0e"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #6
+                                                                                    
+                                                                                    
+     Avoid  Nuisance   Tripping  with                                               
+                                                             Suggested Actions      
+     Premium   Efficiency  Motors                                                   
+                                                          ■■ Make sure power factor 
+     In most cases, upgrading to premium efficiency motors has no noticeable impact on correction capacitors are
+     the electrical system. However, in rare cases nuisance trips can occur during start-up.
+                                                            installed ahead of the starter.
+     Addressing this topic requires an understanding of starting current.           
+                                                          ■■ Refer to Section 430 of the
+     The National Electrical Manufacturers Association (NEMA) recognizes and describes
+     two components of starting current: instantaneous peak inrush and locked rotor current latest National Electrical Code
+     (LRC). Nuisance tripping primarily has been associated with the instantaneous peak (NEC) for guidance on increasing
+     inrush, which is a momentary current transient that occurs immediately (within half the instantaneous trip level of
+     an AC cycle) after contact closure. LRC is the root-mean-square (RMS) current that is your circuit protector. The code
+     established following the peak inrush; the current remains near the locked rotor value
+                                                            has been modified to allow
+     during acceleration until the motor approaches its operating speed. (Note: The terms
+                                                            adjustments to a greater allowable
+     inrush or starting current are often used to mean locked rotor current.)       
+                                                            trip setting when nuisance trips
+     Premium efficiency motors have slightly higher LRCs and locked rotor code letters than occur. Note that the code can be
+     lower efficiency motors of the same rating. However, most premium efficiency motors
+                                                            complicated and exceptions do
+     are NEMA Design B and are subject to the same maximum allowable LRC as their   
+                                                            exist. Don’t hesitate to contact a
+     standard efficiency counterparts. LRC for specific new motor models can be looked up
+                                                            licensed professional electrical
+     in the U.S. Department of Energy’s (DOE) Advanced Manufacturing Office’s (AMO) 
+                                                            engineer to resolve motor
+     MotorMaster+ 4.0 software tool or deciphered from the locked-rotor code letter on the
+     motor nameplate. This letter, usually just designated as “code,” is not the same as the protection problems.
+     motor design letter code. Locked rotor code expresses current in kilovolt-amperes (kVA)
+                                                          ■■ If adjusting the trip setting is not
+     per horsepower (hp), or kVA/hp. International Electrotechnical Commission (IEC)
+     or metric motors do not use NEMA-defined code letters. The NEMA code letters are sufficient, consider replacing the
+     defined as follows:                                    circuit protector with one that
+                                                            has a mechanical delay that
+                 Table 1. NEMA Locked-Rotor Code Letters    allows the motor to ride through
+                                                            half a cycle of current above the
+                                                            nominal setting.        
+                      Locked-Rotor Code, kVA/hp                                     
+                   A   0–3.15    G  5.6–6.3                                         
+                   B   3.15–3.55 H   6.3–7.1                                        
+                   C   3.55–4.0  I   7.1–8.0                                        
+                   D   4.0–4.5   J  8.0–9.0                                         
+                   E   4.5–5.0   K  9.0–10.0                                        
+                   F   5.0–5.6   L  10.0–11.2                                       
+     For example, the maximum LRC for a Code C, 460-volt, 100-hp motor is determined
+     as follows:                                                                    
+     LR Current = Motor Horsepower x (Maximum kVA/hp/Supply Voltage in kV) / √3     
+               = 100 hp x {(4.0 kVA/hp / 0.46 kV) / √3}                             
+               = 502 Amps                                                           

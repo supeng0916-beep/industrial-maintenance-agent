@@ -1,0 +1,62 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #8
+                                                                                    
+                                                                                    
+     Eliminate  Excessive  In-Plant                                                 
+                                                             Suggested Actions      
+     Distribution  System  Voltage   Drops                                          
+                                                          ■■ Conduct a voltage drop survey.
+     Studies indicate that in-plant electrical distribution system losses—due to voltage Voltage drop information can be
+     unbalance, over- and undervoltage, low power factor, undersized conductors, leakage to
+                                                            used to determine energy losses
+     ground, and poor connections—can account for less than 1% to more than 4% of total
+                                                            and excess energy consumption
+     plant electrical energy consumption.                                           
+                                                            due to loose and dirty  
+     In a study at three industrial facilities, average electrical distribution system losses
+                                                            connections. Voltage drop
+     accounted for 2% of plant annual energy use. Losses due to poor connections    
+                                                            measurements should be taken
+     represented one-third of these losses and accounted for 40% of the savings after
+     corrective actions were taken.                         at each phase. The voltage drop
+                                                            is simply the voltage difference
+     Inadequate conductor sizing will result in an excessive voltage drop accompanied by
+                                                            across the connection. The total
+     increased energy losses and reduced motor torque. The National Electrical Code (NEC)
+     calls for a 3% limit on voltage drop. Increased resistance due to undersized conductors energy loss in a three-phase
+     and poor connections converts electrical energy into heat and imposes additional loads component is determined by
+     on the plant distribution system.                                              
+                                                            summing the losses for each
+     Maintenance of connections is generally referred to as termination maintenance. phase. Limit the load on each
+     Termination maintenance is generally a cost-effective electrical distribution system circuit or install larger-than-
+     energy savings measure. Causes of poor connections include:                    
+                                                            code-minimum conductors if
+      • Loose or corroded cable terminals and bus bar connections the in-plant distribution system
+      • Poorly crimped connections to conductors            voltage drop still exceeds 3%,
+      • Loose, worn, or poorly adjusted contacts in motor controllers or circuit breakers following termination
+      • Loose, dirty, or corroded fuse clips on manual disconnect switches. maintenance.
+     Distribution system losses due to poor electrical contacts appear as hot spots caused
+     by increased resistance or electric power (I2R) losses. These hot spots may be detected
+     by infrared thermography or a voltage drop survey. Inexpensive hand-held infrared
+     thermometers can quickly and safely reveal hot spots.                          
+     Terminations should be regularly inspected. The cost of replacing fuse clips or cleaning
+     breaker fingers is low compared with the significant energy savings resulting from such
+     measures in addition to the secondary benefits, including less downtime during unsched-
+     uled equipment outages and improved safety due to reduced fire hazards.        
+     Conducting a Voltage Drop Survey                                               
+     A voltage drop survey can usually be done in-house with existing equipment such as a
+     handheld voltmeter. Voltage drop measurements should be taken from the input of each
+     panel to the panel output for each load. For a typical motor circuit, measure the voltage
+     drop from the bus bar to the load side of the motor starter. Compare the magnitude of
+     the voltage drop for each phase with the voltage drop for the other phases supplying
+     the load. A voltage drop difference of more than 15% indicates that testing should be
+     initiated to identify poor circuit connections. Even with good balance, an excessive
+     voltage drop indicates that component voltage drop testing should be initiated. Note that
+     motor efficiencies are determined at rated voltage with balanced phases. Undervoltage
+     operation can result in increased currents, reduced starting torque, and lower efficiency.

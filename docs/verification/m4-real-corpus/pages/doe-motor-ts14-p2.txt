@@ -1,0 +1,74 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+     by VFDs. Other designs are wound with adjacent coils that are separated to minimize voltage
+     potential. Improved insulation systems reduce degradation of motors that are subjected to
+                                                                 Resources          
+     transient voltage spikes. A greater thickness or buildup of premium varnish (through multiple
+     dips and bakes) minimizes the potential for internal voids, and a motor with a lower heat rise National Electrical Manufacturers
+     design has increased resistance to voltage stresses. Manufacturing quality also affects the
+                                                          Association (NEMA)—Visit www.
+     corona inception voltage (CIV), the point at which partial electrical discharges occur because
+                                                          nema.org for information on
+     of ionization of air around the conductor. CIV is a measure of the ability of a motor’s
+     windings to withstand voltage stresses.              motor standards, application
+                                                          guides, and technical papers.
+     NEMA MG 1-2011, Part 31, specifies that insulation systems for definite-purpose, low- Refer to the 2001 NEMA Standards
+     voltage (≤ 600 V) inverter-duty motors should be designed to withstand an upper limit of 3.1
+                                                          Publication Application Guide for
+     times the motor’s rated line-to-line voltage. This is equivalent to an upper limit of 1,426 peak
+                                                          AC Adjustable Speed Drives.
+     volts at the motor terminals for a motor rated at 460 V. Rise times must equal or exceed 0.1
+     microsecond. These motors can be used without additional filters or load reactors provided
+                                                          U.S. Department of Energy (DOE)—
+     that voltage overshoots do not exceed the upper limit at the motor terminals.  
+                                                          For more information on motor
+     Medium-voltage inverter-duty motors with a base rating that exceeds 600 V must be able to
+                                                          and motor-driven system   
+     withstand a peak voltage equal to 2.04 times the motor’s rated line-to-line voltage. Rise times
+                                                          efficiency and to download the
+     must equal or exceed 1 microsecond.                                            
+                                                          MotorMaster+ software tool, visit
+     Inverter-duty motors are also designed for wider constant-torque speed ranges than can be
+                                                          the Advanced Manufacturing
+     provided with a general-purpose motor. While a premium efficiency, totally enclosed fan-
+                                                          Office (AMO) website at   
+     cooled 10-hp motor may be capable of a 10:1 constant-torque speed range, an inverter-duty
+     motor is capable of providing full-rated torque at zero speed as well as operating well over its manufacturing.energy.gov.
+     base speed. Use of inverter-duty motors for variable torque loads is overkill as inverter-ready
+     general-purpose motors are well suited for VFD control with variable torque loads.
+     The insulation system on a 208/230-V motor is identical to that of a 460-V motor. Thus,
+     voltage spikes produced by inverters on 208- or 230-V systems are unlikely to cause
+     insulation damage at any cable length or drive carrier frequency.              
+     Larger inverter-duty motors often have a constant-speed auxiliary blower to provide adequate
+     cooling for motors operating at low speeds. Above the 500 frame size, inverter-duty motors
+     should have both bearings insulated and be equipped with a shaft grounding brush with a
+     ground strap from the motor to the drive case.                                 
+                     Motor Selection Guidelines                                     
+      NEMA MG 1-2011, Part 30, provides performance standards for general-purpose   
+      motors used with VFDs. When operated under usual service conditions, no       
+      significant reduction in service life should occur if the peak voltage at the motor
+      terminals is limited to 1,000 V and rise times equal and exceed 2 microseconds.
+      Contact the motor manufacturer for guidance on motor/drive compatibility when 
+      peak voltages are expected to exceed 1,000 V or rise times will be less than 2
+      microseconds. A definite-purpose, inverter-duty motor and/or harmonic suppression
+      filter, load reactor, or other voltage conditioning equipment may be required.
+      Specify inverter-duty motors when operating at extremely low speeds, particularly
+      when serving a constant torque load, or when operating over base speed.       
+      When an inverter-duty motor is required, ensure that it is designed and       
+      manufactured to meet the most current specifications defined by NEMA MG 1     
+      Section IV, “Performance Standards Applying to All Machines,” Part 31, “Definite-
+      Purpose Inverter-Fed Polyphase Motors.”                                       
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3744 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

@@ -1,0 +1,73 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #11
+                                                                                    
+                                                                                    
+     Adjustable  Speed   Drive                                                      
+                                                             Suggested Actions      
+     Part-Load   Efficiency                                                         
+                                                          ■■ Contact your supplier to
+     An adjustable speed drive (ASD) is a device that controls the rotational speed of obtain information about
+     motor-driven equipment. Variable frequency drives (VFDs), the most common type of
+                                                            drive efficiency as a function
+     ASD, are solid-state electronic motor controllers that efficiently meet varying process
+                                                            of motor operating speed or
+     requirements by adjusting the frequency and voltage of power supplied to an alternating
+                                                            drive power output.     
+     current (AC) motor to enable it to operate over a wide speed range. External sensors
+     monitor flow, liquid levels, or pressure and then transmit a signal to a controller that
+                                                          ■■ When VFD part-load     
+     adjusts the frequency and speed of the motor to match process requirements.    
+                                                            performance values are not
+     Variable Torque Loads                                  readily available, use the values
+                                                            given in Table 1. Use this
+     Pulse-width-modulated (PWM) VFDs are most often used in variable torque applications
+     in the 1 to 1,000 horsepower (hp) motor size range. For centrifugal fans or pumps with information to accurately
+     no static lift, the fan or affinity laws state that the fluid or airflow provided varies directly determine the energy savings
+     with the pump or fan rotational speed. The input power requirement varies as the cube due to the use of VFD versus
+     or third power of the speed ratio, as shown in Figure 1. Small decreases in equipment throttle or damper flow control.
+     rotating speed or fluid flow yield significant reductions in energy use. For example,
+     reducing rotating equipment speed (flow) by 20% can reduce input power requirements ■■ Drive Performance
+     by approximately 50%.                                  Variable and constant torque
+                                                            loads are expressed in terms of
+      hp = hp x (RPM /RPM)3 = hp x (Flow /Flow)3            the shaft horsepower supplied
+        2  1    2   1    1    2   1                                                 
+      Where:                                                by the motor. A motor “load” is
+      hp = driven-equipment shaft horsepower requirement at original operating speed the brake or shaft power
+        1                                                                           
+      hp = driven-equipment shaft horsepower requirement at reduced speed requirement imposed upon the
+        2                                                                           
+      RPM = original speed of driven equipment, in revolutions per minute (RPM)     
+         1                                                  motor by the driven equipment
+      RPM = reduced speed of driven equipment, in RPM                               
+         2                                                  divided by the motor’s full
+      Flow = original flow provided by centrifugal fan or pump                      
+         1                                                  horsepower rating. The load on
+      Flow = final flow provided by centrifugal fan or pump                         
+         2                                                  the ASD is the actual power
+     Figure 1. Power requirement for variable torque loads  supplied by the device (shaft
+                                                            horsepower divided by the
+     Constant Torque Loads                                  motor efficiency at its load
+                                                            point) divided by the drive rated
+     A constant torque load is one where the torque requirement is independent of speed.
+     Because horsepower requirements equal the product of required torque and speed, input output power. Drive distributors
+     power varies linearly with speed for constant torque applications. Examples of constant or manufacturers can provide
+     torque loads include cranes, hoists, conveyors, extruders, mixers, positive displacement efficiency values for ASDs as a
+     pumps, reciprocating air compressors, and rotary screw air compressors. function of operating speed or
+                                                            load for both variable and
+     Determining Energy Savings                                                     
+                                                            constant torque loads.  
+     To establish the energy savings that are possible when a VFD is applied to a variable or
+     constant torque load, you must determine the load duty cycle, or percentage of time that
+     the driven equipment operates at each system operating point. You must also know the
+     efficiency of the variable speed drive and the drive motor when the motor is operating
+     partially loaded and at a reduced speed to satisfy variable flow requirements. 
+     When considering PWM VFDs, you may use manufacturer’s data or Table 1 to obtain
+     efficiency values for drives of various ratings that supply power to motors connected
+     to either variable or constant torque loads. Note that motor efficiency is also reduced at
+     light loads and when the motor is supplied with a nonsinusoidal waveform.      

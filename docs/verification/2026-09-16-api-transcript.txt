@@ -1,0 +1,71 @@
+$ uv run --locked python -m unittest discover -s tests -v
+test_bad_device_metric_dates_range_and_limit_have_consistent_errors (test_api.ApiTests.test_bad_device_metric_dates_range_and_limit_have_consistent_errors) ... ok
+test_exact_stale_boundary_and_last_success_stays_historical (test_api.ApiTests.test_exact_stale_boundary_and_last_success_stays_historical) ... ok
+test_failure_then_recovery_compares_record_times_not_insert_order (test_api.ApiTests.test_failure_then_recovery_compares_record_times_not_insert_order) ... ok
+test_history_utc_range_limit_order_and_empty_result (test_api.ApiTests.test_history_utc_range_limit_order_and_empty_result) ... ok
+test_missing_database_recovers_without_restart_and_empty_data (test_api.ApiTests.test_missing_database_recovers_without_restart_and_empty_data) ... 只读数据库查询失败: unable to open database file
+ok
+test_readonly_concurrent_requests_and_locked_database (test_api.ApiTests.test_readonly_concurrent_requests_and_locked_database) ... 只读数据库查询失败: database is locked
+ok
+test_live_http_missing_database_recovery_and_readonly_concurrency (test_api_http.RealHttpTests.test_live_http_missing_database_recovery_and_readonly_concurrency) ... 
+HTTP验收启动： /Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python3 serve_api.py --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/tmphq14nds8/http.sqlite3 --port 57048
+缺库： 503 {'error': {'code': 'database_unavailable', 'message': '数据库不可读：文件尚未创建、表未就绪、被锁或损坏；请检查采集器及服务日志'}}
+建库后无需重启： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': None, 'status': {'has_data': False, 'last_attempt_status': 'unknown', 'last_attempt_at': None, 'last_success_at': None, 'last_failure_at': None, 'data_age_seconds': None, 'is_stale': None, 'checked_at': '2026-09-16T05:37:46.532261+00:00', 'stale_after_seconds': 5}}
+旧值仍保留原时间，已过期： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': {'id': 1, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 65.3, 'unit': '℃', 'collected_at': '2026-09-16T05:37:36.532633+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}, 'status': {'has_data': True, 'last_attempt_status': 'success', 'last_attempt_at': '2026-09-16T05:37:36.532633+00:00', 'last_success_at': '2026-09-16T05:37:36.532633+00:00', 'last_failure_at': None, 'data_age_seconds': 10.001339, 'is_stale': True, 'checked_at': '2026-09-16T05:37:46.533972+00:00', 'stale_after_seconds': 5}}
+最近失败： 200 {'has_data': True, 'last_attempt_status': 'failure', 'last_attempt_at': '2026-09-16T05:37:46.534449+00:00', 'last_success_at': '2026-09-16T05:37:36.532633+00:00', 'last_failure_at': '2026-09-16T05:37:46.534449+00:00', 'data_age_seconds': 10.002757, 'is_stale': True, 'checked_at': '2026-09-16T05:37:46.535390+00:00', 'stale_after_seconds': 5}
+后来成功覆盖最近尝试结论： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': {'id': 2, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 72.8, 'unit': '℃', 'collected_at': '2026-09-16T05:37:46.535762+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}, 'status': {'has_data': True, 'last_attempt_status': 'success', 'last_attempt_at': '2026-09-16T05:37:46.535762+00:00', 'last_success_at': '2026-09-16T05:37:46.535762+00:00', 'last_failure_at': '2026-09-16T05:37:46.534449+00:00', 'data_age_seconds': 0.00098, 'is_stale': False, 'checked_at': '2026-09-16T05:37:46.536742+00:00', 'stale_after_seconds': 5}}
+并发12次HTTP读取：全部200，数据库文件逐字节不变
+限量历史： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'from': '2026-09-16T05:37:36.532633+00:00', 'to': '2026-09-16T05:38:46.532633+00:00', 'limit': 1, 'order': 'collected_at ASC, id ASC', 'points': [{'id': 1, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 65.3, 'unit': '℃', 'collected_at': '2026-09-16T05:37:36.532633+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}]}
+/api/devices/unknown/latest 404 {'error': {'code': 'device_not_found', 'message': '未知设备'}}
+/api/devices/motor-a/history?limit=1001 422 {'error': {'code': 'invalid_parameters', 'message': '参数缺失或不符合约束：query.from, query.to, query.limit'}}
+独占锁： 503 {'error': {'code': 'database_unavailable', 'message': '数据库不可读：文件尚未创建、表未就绪、被锁或损坏；请检查采集器及服务日志'}}
+服务日志：
+INFO:     Started server process [59902]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:57048 (Press CTRL+C to quit)
+只读数据库查询失败: unable to open database file
+INFO:     127.0.0.1:57082 - "GET /api/devices HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:57083 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57084 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57085 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57086 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57087 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57088 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57090 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57089 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57091 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57093 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57092 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57094 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57095 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57097 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57098 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57099 - "GET /api/devices/motor-a/history?from=2026-09-16T05%3A37%3A36.532633%2B00%3A00&to=2026-09-16T05%3A38%3A46.532633%2B00%3A00&limit=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57100 - "GET /api/devices/unknown/latest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57101 - "GET /api/devices/motor-a/history?limit=1001 HTTP/1.1" 422 Unprocessable Entity
+只读数据库查询失败: database is locked
+INFO:     127.0.0.1:57102 - "GET /api/devices HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:57250 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [59902]
+
+ok
+test_database_errors_and_query_bounds (test_collection.CollectionTests.test_database_errors_and_query_bounds) ... ok
+test_failed_attempts_are_counted_and_never_make_measurements (test_collection.CollectionTests.test_failed_attempts_are_counted_and_never_make_measurements) ... ok
+test_finite_samples_have_utc_metadata_and_survive_restart (test_collection.CollectionTests.test_finite_samples_have_utc_metadata_and_survive_restart) ... ok
+test_insert_failure_and_lock_timeout_stop_without_fake_success (test_collection.CollectionTests.test_insert_failure_and_lock_timeout_stop_without_fake_success) ... ok
+test_running_collector_records_failures_then_recovers_to_728 (test_collection.CollectionTests.test_running_collector_records_failures_then_recovers_to_728) ... ok
+test_configured_728 (test_modbus.ModbusAcceptanceTests.test_configured_728) ... ok
+test_default_653_at_protocol_address_zero (test_modbus.ModbusAcceptanceTests.test_default_653_at_protocol_address_zero) ... ok
+test_stopped_simulator_has_no_sample_and_nonzero_exit (test_modbus.ModbusAcceptanceTests.test_stopped_simulator_has_no_sample_and_nonzero_exit) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 9.276s
+
+OK
+
+exit=0

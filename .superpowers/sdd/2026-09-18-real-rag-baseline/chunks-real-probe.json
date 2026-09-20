@@ -1,0 +1,500 @@
+[
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts01",
+    "sha256": "5fb412f15617c4819199c56405718e076626ed71267e5d7e3e65174e2ac8e82a",
+    "chunks": 5,
+    "max_tokens": 495,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "table_note_verified": true,
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts02",
+    "sha256": "1a04900ea4f37b4d58af400050ea2cad35771346c686fce920d452cdc21aab02",
+    "chunks": 9,
+    "max_tokens": 486,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts03",
+    "sha256": "7ee17ef5de984a12448a77ccdcfa60b9b6255b8087e1c12aa6e51b23f5259024",
+    "chunks": 6,
+    "max_tokens": 492,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts04",
+    "sha256": "22f9d213c16d826f0e1b02586d3e0b9ccf6ce6f8f4de55642e141b7814789bdb",
+    "chunks": 8,
+    "max_tokens": 297,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts05",
+    "sha256": "f6f0b4810c96f727586182857099cdc7fe607b300c506f14d4004e4db36a5014",
+    "chunks": 5,
+    "max_tokens": 507,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts06",
+    "sha256": "7e168bcd98aa05bb8aedd58f4154f7549df8475425f4713435fcdec54db44a2f",
+    "chunks": 7,
+    "max_tokens": 512,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts07",
+    "sha256": "f881fee1b6455c394af08f8dd43a3b847f6ee3da321d2f192d88578c5618d033",
+    "chunks": 8,
+    "max_tokens": 504,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "table_note_verified": true,
+    "strategy": "rag-page-heading-sentence-v4",
+    "table_introduction_verified": true
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts08",
+    "sha256": "5902333a0eb753d40e4e2c2c01c8c3f24d94a00d2687516ec8d624ea8856e519",
+    "chunks": 8,
+    "max_tokens": 412,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4",
+    "table_introduction_verified": true
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts09",
+    "sha256": "d8944e085fc5a36eeeed31c348cf103831b20981ad1f2a8623508e33fa9679c8",
+    "chunks": 8,
+    "max_tokens": 467,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts10",
+    "sha256": "41bbd84b7b851fb5f1ef3592c79ed267e1b51ebdb072ffc6e18c83aaae4b4da6",
+    "chunks": 8,
+    "max_tokens": 477,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts11",
+    "sha256": "8721d227589d8e61fca4410febca5655872e2487dce1456691b85913a507c398",
+    "chunks": 8,
+    "max_tokens": 479,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "table_note_verified": true,
+    "no_local_torque_scope_pollution": true,
+    "strategy": "rag-page-heading-sentence-v4",
+    "all_data_chunks_keep_numeric_header": true,
+    "all_data_chunks_keep_footnote": true,
+    "data_chunk_count": 1
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts12",
+    "sha256": "f018f42ff87f0419683e74c1006c81975bcc62d1558afab2895fe3233c730033",
+    "chunks": 12,
+    "max_tokens": 492,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts13",
+    "sha256": "a9f3585e348841b9498cabcb51d8b3a3c404df650b9d63964cd646bbfbf9ba74",
+    "chunks": 7,
+    "max_tokens": 507,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts14",
+    "sha256": "d22eec2a8d10270c353f239bd2670d73b42b0b5d3eacb161413a8037decc93a2",
+    "chunks": 7,
+    "max_tokens": 479,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "intfloat--multilingual-e5-small",
+    "document": "doe-motor-ts15",
+    "sha256": "f95e1f2aed3356ab86dd2a64f3dd3954a00a724fd9f004bc56084f76a7398d05",
+    "chunks": 7,
+    "max_tokens": 508,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts01",
+    "sha256": "5fb412f15617c4819199c56405718e076626ed71267e5d7e3e65174e2ac8e82a",
+    "chunks": 7,
+    "max_tokens": 485,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "table_note_verified": true,
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts02",
+    "sha256": "1a04900ea4f37b4d58af400050ea2cad35771346c686fce920d452cdc21aab02",
+    "chunks": 11,
+    "max_tokens": 485,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts03",
+    "sha256": "7ee17ef5de984a12448a77ccdcfa60b9b6255b8087e1c12aa6e51b23f5259024",
+    "chunks": 7,
+    "max_tokens": 500,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts04",
+    "sha256": "22f9d213c16d826f0e1b02586d3e0b9ccf6ce6f8f4de55642e141b7814789bdb",
+    "chunks": 8,
+    "max_tokens": 397,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts05",
+    "sha256": "f6f0b4810c96f727586182857099cdc7fe607b300c506f14d4004e4db36a5014",
+    "chunks": 7,
+    "max_tokens": 502,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts06",
+    "sha256": "7e168bcd98aa05bb8aedd58f4154f7549df8475425f4713435fcdec54db44a2f",
+    "chunks": 8,
+    "max_tokens": 475,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts07",
+    "sha256": "f881fee1b6455c394af08f8dd43a3b847f6ee3da321d2f192d88578c5618d033",
+    "chunks": 8,
+    "max_tokens": 496,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "table_note_verified": true,
+    "strategy": "rag-page-heading-sentence-v4",
+    "table_introduction_verified": true
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts08",
+    "sha256": "5902333a0eb753d40e4e2c2c01c8c3f24d94a00d2687516ec8d624ea8856e519",
+    "chunks": 9,
+    "max_tokens": 494,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4",
+    "table_introduction_verified": true
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts09",
+    "sha256": "d8944e085fc5a36eeeed31c348cf103831b20981ad1f2a8623508e33fa9679c8",
+    "chunks": 11,
+    "max_tokens": 506,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts10",
+    "sha256": "41bbd84b7b851fb5f1ef3592c79ed267e1b51ebdb072ffc6e18c83aaae4b4da6",
+    "chunks": 9,
+    "max_tokens": 492,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts11",
+    "sha256": "8721d227589d8e61fca4410febca5655872e2487dce1456691b85913a507c398",
+    "chunks": 10,
+    "max_tokens": 500,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "table_note_verified": true,
+    "no_local_torque_scope_pollution": true,
+    "strategy": "rag-page-heading-sentence-v4",
+    "all_data_chunks_keep_numeric_header": true,
+    "all_data_chunks_keep_footnote": true,
+    "data_chunk_count": 1
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts12",
+    "sha256": "f018f42ff87f0419683e74c1006c81975bcc62d1558afab2895fe3233c730033",
+    "chunks": 13,
+    "max_tokens": 495,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts13",
+    "sha256": "a9f3585e348841b9498cabcb51d8b3a3c404df650b9d63964cd646bbfbf9ba74",
+    "chunks": 8,
+    "max_tokens": 508,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts14",
+    "sha256": "d22eec2a8d10270c353f239bd2670d73b42b0b5d3eacb161413a8037decc93a2",
+    "chunks": 8,
+    "max_tokens": 498,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  },
+  {
+    "model": "BAAI--bge-small-zh-v1.5",
+    "document": "doe-motor-ts15",
+    "sha256": "f95e1f2aed3356ab86dd2a64f3dd3954a00a724fd9f004bc56084f76a7398d05",
+    "chunks": 7,
+    "max_tokens": 505,
+    "source_pages": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "strategy": "rag-page-heading-sentence-v4"
+  }
+]

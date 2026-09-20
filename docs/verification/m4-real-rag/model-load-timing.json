@@ -1,0 +1,51 @@
+{
+  "note": "Each model loaded in a fresh Python process from already downloaded local cache; single machine check, not dedicated latency benchmark. Includes imports/model load; no network download.",
+  "results": [
+    {
+      "model": "e5",
+      "offline_load_seconds": 1.6218387500848621,
+      "signature": {
+        "model": "intfloat/multilingual-e5-small",
+        "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+        "pooling": "attention_mask_mean",
+        "query_prefix": "query: ",
+        "passage_prefix": "passage: ",
+        "dimension": 384,
+        "normalize": "l2",
+        "max_length": 512,
+        "special_tokens": true,
+        "dtype": "float32",
+        "device": "cpu",
+        "libraries": {
+          "torch": "2.10.0",
+          "transformers": "4.57.6",
+          "tokenizers": "0.22.2",
+          "safetensors": "0.8.0"
+        }
+      }
+    },
+    {
+      "model": "bge",
+      "offline_load_seconds": 1.219424583017826,
+      "signature": {
+        "model": "BAAI/bge-small-zh-v1.5",
+        "revision": "7999e1d3359715c523056ef9478215996d62a620",
+        "pooling": "cls",
+        "query_prefix": "为这个句子生成表示以用于检索相关文章：",
+        "passage_prefix": "",
+        "dimension": 512,
+        "normalize": "l2",
+        "max_length": 512,
+        "special_tokens": true,
+        "dtype": "float32",
+        "device": "cpu",
+        "libraries": {
+          "torch": "2.10.0",
+          "transformers": "4.57.6",
+          "tokenizers": "0.22.2",
+          "safetensors": "0.8.0"
+        }
+      }
+    }
+  ]
+}

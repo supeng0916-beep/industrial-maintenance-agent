@@ -1,0 +1,63 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+     The NEMA table, from NEMA MG 1-2011 Motors and Generators, which is available  
+     for purchase from www.nema.org, actually continues all the way to letter V with current
+                                                                 Resources          
+     increasing about 12.3% for each letter increment. Only small and non-NEMA Design B
+     motors have codes beyond L.                          National Electrical Manufacturers
+                                                          Association (NEMA)—For    
+     The ratio of peak inrush to LRC tends to increase with higher efficiency motors due to
+     their lower power factor under locked rotor conditions. information on premium 
+                                                          efficiency motor standards, see
+     While NEMA Design B standards limit LRC, no standard limits the peak-inrush current.
+                                                          Motor Systems Tip Sheet #1
+     Fortunately, peak-inrush current usually is not a problem because it lasts only a few
+                                                          entitled When to Purchase 
+     milliseconds. However, it can be an issue when the motor controller uses instantaneous
+     magnetic-only circuit protectors that react in less than a single AC cycle. This is because Premium Efficiency Motors or visit
+     peak inrush can be as high as 2.8 times the RMS locked rotor current and may exceed www.nema.org.
+     the circuit protector current setting.                                         
+                                                          U.S. Department of Energy (DOE)—
+     A motor may trip on peak-inrush current and start successfully on the next attempt. The
+                                                          For more information on motor
+     exact peak-inrush current depends on the moment when contacts close in the AC voltage
+                                                          and motor-driven system   
+     cycle, and how close to simultaneously the three-phase contacts close.         
+                                                          efficiency and to download the
+     Nuisance trips are unlikely to occur in situations without instantaneous magnetic-only MotorMaster+ software tool, visit
+     circuit protectors when the replacement motor is a premium efficiency Design B motor the Advanced Manufacturing
+     of the same speed and horsepower as the original unit. Even if instantaneous magnetic-
+                                                          Office (AMO) website at   
+     only circuit protectors are present, nuisance trips may not happen. Nuisance trips should
+                                                          manufacturing.energy.gov. 
+     not be an issue with motors that are controlled with soft starters or adjustable speed
+     drives. Many motor manufacturers offer premium efficiency Design A motors that meet
+     Design B torque requirements but exceed Design B locked-rotor current limits. Some of
+     the most efficient motors are Design A, which do not have inrush current restrictions, so
+     do not limit choices to Design B unless LRC concerns exist.                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3731 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

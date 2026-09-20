@@ -1,0 +1,67 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+     Frequent stopping and starting, even within NEMA limits, does stress a motor due to
+     mechanical flexing of the coils and rotor overheating during acceleration, but there
+                                                                 Resources          
+     is no known relationship between number of motor starts and normal motor life  
+     expectancy. Each start is one factor in the life expectancy and reliability of the motor, National Electrical Manufacturers
+     and some reduction in life expectancy and reliability must be accepted when a motor is Association (NEMA)—Visit www.
+     continuously applied at the upper range of its starting duty.                  
+                                                          nema.org for more information.
+     Frequent starting imposes thermal stresses on the motor. Other factors also contribute to When making the decision to stop
+     temperature rise. When operating in the upper range of starting duty, take these steps to a motor, refer to NEMA MG 10-
+     ensure that you are well within tolerances on other sources of thermal stress: 2001 Energy Management Guide
+      • Keep the motor clean so airflow and heat transfer are not impeded for Selection and Use of Fixed
+                                                          Frequency Medium AC Squirrel-
+      • Allow sufficient rest time between starts for the heat buildup to dissipate (as given in
+       NEMA MG 10-2001, Revision 2007)                    Cage Polyphase Induction Motors.
+                                                          For large induction motors, refer
+      • Keep supply voltage nominal, avoiding voltage unbalance, undervoltage,      
+       and harmonics                                      to NEMA MG 1-2011 Motors and
+                                                          Generators Part 20.12.    
+      • Do not overload the motor                                                   
+      • De-rate any motor used in severe ambient environments, such as above 3,000 feet U.S. Department of Energy (DOE)—
+       altitude or above 40°C                                                       
+                                                          For more information on motor
+      • Consider continuous monitoring of motor operating conditions with and motor-driven system
+       ISA100-compliant wireless sensor networks.                                   
+                                                          efficiency and to download the
+     You may find that you can substantially increase the time your motors are shut down
+                                                          MotorMaster+ software tool, visit
+     without approaching the NEMA MG 10-2001, Revision 2007, starting duty limits. For
+                                                          the Advanced Manufacturing
+     frequent start-stop applications, special motor system designs or an adjustable speed
+                                                          Office (AMO) website at   
+     drive might be required, or a clutch/brake may be employed with a constant speed
+                                                          manufacturing.energy.gov. 
+     motor. In some applications, servo motors may be specified.                    
+     References                                                                     
+     1“Electrical Efficiency: Spec the Right Motor and Drive for Lifecycle Performance”,
+     John Malinowski, Baldor Electric Company, November, 2011.                      
+     Additional Information                                                         
+      • NEMA MG 1-2011. It provides a table on the maximum inertia load for starting
+       induction motors of various ratings. Motors driving loads that do not exceed these
+       inertia limits can be started twice in immediate succession when the motor is initially
+       at ambient temperature.                                                      
+      • NEMA MG 10-2001, Revision 2007. See Table 7, which provides the maximum     
+       number of allowable starts per hour for motors of various horsepower and synchro-
+       nous speed ratings. The table indicates how frequently motors can be started with a
+       rest period between starts and provides a minimum duration for that rest period.
+      • For information on wireless sensing technology uses, refer to the U.S. Department
+       of Energy’s (DOE) Ways of Using Wireless Technology to Help You Reduce Energy
+       Usage at Your Facility. and Nissan North America: How Sub-Metering Changed the
+       Way a Plant Does Business.                                                   
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3742 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

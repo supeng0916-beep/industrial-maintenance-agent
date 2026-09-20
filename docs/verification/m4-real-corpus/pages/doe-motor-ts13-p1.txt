@@ -1,0 +1,66 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #13
+                                                                                    
+                                                                                    
+     Magnetically   Coupled                                                         
+                                                             Suggested Actions      
+     Adjustable  Speed   Motor   Drives                                             
+                                                          ■■ Complete a survey to identify
+     Alternating current electric motors rotate at a nearly constant speed that is determined by constant speed motors in your
+     motor design and line frequency. Energy savings of 50% or more may be available when plant that drive centrifugal
+     fixed speed systems are modified to allow for variable load requirements of a centrifugal pumps with throttling valves or
+     fan or pump.1                                                                  
+                                                            recirculation (bypass) lines or
+     Loads that vary by 30% of full load over time offer good opportunities for cost-effective centrifugal fans equipped with
+     adjustable speed drive (ASD) retrofits. Market assessment studies indicate that in light inlet guide vanes and/or
+     and medium industries, 26% of motors exhibit fluctuating loads; 22% of these are in discharge dampers.
+     process industries and 35% are in other heavy industries. However, industrial ASD
+     installations remain relatively low. The majority of ASD-equipped industrial motor ■■ Determine the load profile for
+     systems are 20 horsepower (hp) or less—and often the ASD is installed to improve systems that are in use more
+     control over the production process versus energy savings.2 Thus potential energy and
+                                                            than 2,000 hours per year.
+     costs savings from ASD installations are significant.                          
+                                                          ■■ Determine the energy savings
+     Variable Frequency Drives                                                      
+                                                            and cost effectiveness of
+     The electronic pulse-width-modulated variable frequency drive (VFD) is the most com- installing a VFD or magnetically
+     mon type of ASD and is the state-of-the-art speed control. Because of energy efficiency coupled ASD motor controller.
+     and control capabilities, VFD and motor combinations have replaced constant speed
+     motors in virtually every type of industrial plant. Although VFDs have been available for ■■ Consider magnetically coupled
+     many years, they are not suited for all applications. Many industrial plants use medium ASDs for medium-voltage
+     voltage (> 600 to 6,600 volts [V]) to supply power to motors rated as low as 150 hp.
+                                                            motors, when sensitive  
+     Semiconductors for medium voltage motor applications are particularly expensive.
+                                                            equipment cannot tolerate
+     Depending on the situation, other factors that can discourage the use of VFDs include:
+                                                            harmonic currents or    
+      • Creation of harmonics, which requires installation of line reactors or harmonic filters
+                                                            maintenance requirements are
+      • Voltage spikes that can lead to early motor failure                         
+                                                            high because load vibrations are
+      • Motor bearing failures caused by induced shaft currents that flow to ground through
+                                                            transferred to motor bearings.
+       the bearing’s rolling elements                                               
+      • Nuisance tripping                                                           
+      • Limitations on the distance between the motor and VFD.                      
+     Magnetically Coupled ASDs                                                      
+     In contrast to a VFD, a magnetically coupled ASD does not alter the power supplied
+     to the motor. With a magnetically coupled ASD, the motor is generally brought up to
+     operating speed while unloaded. The motor continues to operate at the rated design
+     speed while the magnetic coupling controls the torque transferred and the speed of the
+     driven equipment. This works by varying the strength of the magnetic field between
+     the motor shaft and the load shaft. The strength of the magnetic field is controlled by
+     varying the width of an adjustable air gap or by varying the amount of current applied to
+     an electromagnet.                                                              
+     Because the load and motor shafts are not directly coupled, vibrations that occur on
+     the load side are isolated and not transmitted to the motor. For instance, a newsprint
+     products plant installed a magnetically coupled ASD for a 250-hp/2,300-V motor 
+     running a centrifugal pump with a bypass flow control valve. This resulted in annual
+     energy savings of 633,000 kilowatt-hours. Long-term maintenance costs decreased as
+     pump cavitation was eliminated and vibration was dramatically reduced.3        

@@ -1,0 +1,73 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #10
+                                                                                    
+                                                                                    
+     Turn Motors   Off When   Not  in Use                                           
+                                                             Suggested Actions      
+     Motors do not use energy when turned off. Reducing motor operating time by just 10%
+     usually saves more energy than replacing a standard efficiency motor with a premium ■■ Keep track of your motors
+     efficiency motor. In fact, given that more than 97%1 of the life cycle cost of purchasing through a motor system
+     and operating a motor in a typical installation is energy related, turning a motor off 10% management plan. Consider
+     of the time could reduce energy costs enough to purchase several new motors. times when motors can be shut
+                                                            down, including shift changes,
+     However, a belief persists that stopping and starting motors is harmful. Many users
+     believe that repeated motor starts will use more energy than constant operation, increase lunch breaks, or during process
+     utility demand charges, and shorten motor life. While these opinions are not completely interruptions.
+     without basis, they do need to be put into proper perspective.                 
+                                                          ■■ Energy saving opportunities
+     During starting, a motor accelerates and draws more power than when it is operating
+                                                            often exist when motors drive
+     steadily at full load. While a typical National Electrical Manufacturers Association
+                                                            loads in parallel, such as
+     (NEMA) Design B motor may draw from four to eight times the full-load current during
+                                                            compressors or pumps. Evaluate
+     starting, the power factor is low so the input power is not four to eight times the rated
+     load power. Starting usually takes less than 2 seconds and rarely exceeds 10 seconds, sequencing of these motors.
+     even for large, high-inertia loads. Just one minute of additional running time consumes
+                                                          ■■ Install automatic shutdown
+     far more energy than a motor starting event.                                   
+                                                            timers so motors will be turned
+     Another motor starting concern involves increased utility demand charges. Again, the
+                                                            off when they would otherwise
+     excess starting demand is small due to the short duration of the motor starting interval.
+                                                            be running idle or unloaded for
+     Peak monthly demand charges are generally based on a facility’s average energy use
+                                                            intervals longer than the rest
+     over a fixed or rolling average window of 15 to 60 minutes in duration. Only when start-
+                                                            intervals identified in NEMA
+     ing large or large groups of motors at once should the user be concerned with peak demand
+     charges. Check with your utility to determine how it assesses peak demand charges. MG 10-2001, Revision 2007.
+                                                          ■■ Shut down equipment that is
+     Starting Stresses                                                              
+                                                            energized but not in use for
+     Starting stresses a motor by:                                                  
+                                                            periods of time longer than
+      • Applying higher than rated full-load torque to the shaft during acceleration NEMA recommendations for
+      • Applying high magnetic forces to the rotor cage and winding end turns start-run-stop-rest cycles.
+      • Heating the stator winding and the rotor cage.                              
+                                                          ■■ Consider adjustable speed
+     Frequent torque shocks from starting could shorten shaft life through metal fatigue.
+                                                            drives, soft starters, wye-delta
+     However, most shaft failures are attributed to bearing failures, excessive belt tension,
+                                                            starting, or autotransformers to
+     misapplication, or creep during storage (large motors). Overheating the stator 
+                                                            reduce starting stresses on
+     winding and the rotor cage occurs if the hourly number of starts exceeds the NEMA
+     recommendations or the duration of rest time between starts is less than the NEMA equipment that requires frequent
+     allowable value. Heat from exceeding these limits can degrade winding insulation and starting and stopping.
+     cause thermal stressing of the rotor cage, leading to cracks and failed end-ring connections.
+     Repeated Motor Starts and Stops                                                
+     While it is true that starting stresses a motor, motors are designed to be started. For
+     example, motors in applications such as lift pumps or irrigation wells start and stop quite
+     frequently, while obtaining service lives of 15 years or more. As long as the frequency
+     of starts given in NEMA MG 10-2001, Revision 2007, is not exceeded, motor lifetime is
+     not significantly affected.                                                    
+     NEMA provides standards for starting duty which consider inertia of the load—an
+     important factor in starting stress. NEMA also provides guidance relating to start-run-
+     stop-rest cycles that are often employed in energy management programs.        

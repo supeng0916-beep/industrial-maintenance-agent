@@ -1,0 +1,1236 @@
+[
+  {
+    "case_id": "R01",
+    "question": "哪些采购或维修时机会适合评估采用高效率电机？",
+    "split": "dev",
+    "answerable": true,
+    "category": "direct",
+    "expected_document_ids": [
+      "doe-motor-ts01"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts01",
+        "source_page": "1",
+        "anchors": [
+          "repairing or rewinding"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "新购、故障维修/重绕、替换旧低效设备等时机；不能无经济分析要求全部换新。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R02",
+    "question": "这份DOE指南建议优先清查什么功率范围、年运行多久的旧电机？",
+    "split": "dev",
+    "answerable": true,
+    "category": "numeric_condition",
+    "expected_document_ids": [
+      "doe-motor-ts01"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts01",
+        "source_page": "1",
+        "anchors": [
+          "2,000"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "按该版本建议关注10至500hp、每年运行至少2000小时的低压通用低效电机；这是文档建议范围。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R03",
+    "question": "实验室测得的电机效率能直接当成现场负载下的真实效率吗？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "applicability",
+    "expected_document_ids": [
+      "doe-motor-ts02"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts02",
+        "source_page": "1",
+        "anchors": [
+          "particular application"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "不能直接等同，实际受负载、电能质量和环境等影响。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R04",
+    "question": "只用转差率推算电机效率，这份指南认为可靠吗？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "method_limit",
+    "expected_document_ids": [
+      "doe-motor-ts02"
+    ],
+    "expected_sections": [
+      "Page 2"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts02",
+        "source_page": "2",
+        "anchors": [
+          "Slip method"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "文档认为该方法作为效率估计技术可信性不足；不能把估计当精确现场测量。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R05",
+    "question": "电机越来越烫，除润滑外，资料还提示排查哪些可能导致过热的条件？",
+    "split": "dev",
+    "answerable": true,
+    "category": "paraphrase",
+    "expected_document_ids": [
+      "doe-motor-ts03"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts03",
+        "source_page": "1",
+        "anchors": [
+          "poor ventilation"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "包括通风、污物、负载、电压和电能质量等；只是可能因素，不确定本次根因。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R06",
+    "question": "轴承的L10寿命是不是指每个轴承到这个小时数必然坏？",
+    "split": "dev",
+    "answerable": true,
+    "category": "definition",
+    "expected_document_ids": [
+      "doe-motor-ts03"
+    ],
+    "expected_sections": [
+      "Page 2"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts03",
+        "source_page": "2",
+        "anchors": [
+          "90%"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "不是；是足够大同类样本中90%预计达到或超过的额定寿命含义，非个体保证。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R07",
+    "question": "用了柔性联轴器，是不是就不用做轴对中了？",
+    "split": "dev",
+    "answerable": true,
+    "category": "misconception",
+    "expected_document_ids": [
+      "doe-motor-ts04"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts04",
+        "source_page": "1",
+        "anchors": [
+          "alignment requirements"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "柔性联轴器只容许有限不对中，仍需满足其对中要求。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R08",
+    "question": "为什么冷态对中后，设备温度稳定了还要复核？",
+    "split": "dev",
+    "answerable": true,
+    "category": "condition",
+    "expected_document_ids": [
+      "doe-motor-ts04"
+    ],
+    "expected_sections": [
+      "Page 2"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts04",
+        "source_page": "2",
+        "anchors": [
+          "thermal growth"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "热膨胀可能改变对中，按资料热稳定停机后复核；不能虚构现场已经操作。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R09",
+    "question": "三角皮带拉得越紧越好吗？",
+    "split": "dev",
+    "answerable": true,
+    "category": "misconception",
+    "expected_document_ids": [
+      "doe-motor-ts05"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts05",
+        "source_page": "1",
+        "anchors": [
+          "excessive lateral loading"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "过紧增加磨损及轴承侧向负载；应在峰值负载不打滑的前提下采用合适的最低张力。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R10",
+    "question": "同步带效率较高，为什么并非所有冲击负载都适合换成它？",
+    "split": "dev",
+    "answerable": true,
+    "category": "tradeoff",
+    "expected_document_ids": [
+      "doe-motor-ts05"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts05",
+        "source_page": "1",
+        "anchors": [
+          "shock-loaded"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "同步带有噪声、刚性传振和冲击负载适用性限制，不能只依据效率选择。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R11",
+    "question": "启动瞬间的峰值涌流和堵转电流是同一个概念吗？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "definition",
+    "expected_document_ids": [
+      "doe-motor-ts06"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts06",
+        "source_page": "1",
+        "anchors": [
+          "instantaneous peak inrush"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "不是；瞬时短暂峰值与之后加速阶段的RMS堵转电流应区分。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R12",
+    "question": "铭牌的堵转代码字母与电机设计字母代码能互换吗？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "identity",
+    "expected_document_ids": [
+      "doe-motor-ts06"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts06",
+        "source_page": "1",
+        "anchors": [
+          "motor design letter code"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "不能，堵转代码表示kVA/hp范围，不等于电机设计代码。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R13",
+    "question": "三相电压为462、463和455伏，这份资料的电压不平衡计算示例是多少？",
+    "split": "dev",
+    "answerable": true,
+    "category": "numeric",
+    "expected_document_ids": [
+      "doe-motor-ts07"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts07",
+        "source_page": "1",
+        "anchors": [
+          "1.1%"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "平均460V，最大偏差5V，约1.1%；这是文档示例，非当前设备实测。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R14",
+    "question": "电压不平衡不大，为什么电流不平衡仍可能很大？",
+    "split": "dev",
+    "answerable": true,
+    "category": "relationship",
+    "expected_document_ids": [
+      "doe-motor-ts07"
+    ],
+    "expected_sections": [
+      "Page 2"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts07",
+        "source_page": "2",
+        "anchors": [
+          "6 to 10"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "资料说明电流不平衡可被明显放大，给出约6至10倍量级，不能当所有工况固定倍数。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R15",
+    "question": "配电连接处发热，资料给了什么检测热点的方法？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "paraphrase",
+    "expected_document_ids": [
+      "doe-motor-ts08"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts08",
+        "source_page": "1",
+        "anchors": [
+          "infrared thermography"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "资料列红外热成像或压降检查等方法；不能仅据热点确认唯一故障原因。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R16",
+    "question": "三相压降相差超过多少时，该指南建议进一步检查不良连接？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "numeric_condition",
+    "expected_document_ids": [
+      "doe-motor-ts08"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts08",
+        "source_page": "1",
+        "anchors": [
+          "15%"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "指南给出相间压降差超过15%应进一步测试；不要混同供电电压不平衡率。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R17",
+    "question": "电压低一点为什么可能启动更困难、加速时间变长？",
+    "split": "dev",
+    "answerable": true,
+    "category": "cause_explanation",
+    "expected_document_ids": [
+      "doe-motor-ts09"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts09",
+        "source_page": "1",
+        "anchors": [
+          "starting torque"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "降低电压削弱转矩能力，包括启动阶段；需保留工况，非降低电压必然节能。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R18",
+    "question": "写着208-230/460V的电机在208V运行，是否一定与230V时一样凉？",
+    "split": "dev",
+    "answerable": true,
+    "category": "identity",
+    "expected_document_ids": [
+      "doe-motor-ts09"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts09",
+        "source_page": "1",
+        "anchors": [
+          "operate hotter"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "文档指出该类示例在208V可能转差更多且更热，铭牌效率不能无条件外推。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R19",
+    "question": "开机电流是满载的几倍，就说明启动一次比多转一分钟更费电吗？",
+    "split": "dev",
+    "answerable": true,
+    "category": "misconception",
+    "expected_document_ids": [
+      "doe-motor-ts10"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts10",
+        "source_page": "1",
+        "anchors": [
+          "one minute"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "不能按瞬时电流判断能耗；功率因数和启动持续时间也重要，文档比较一分钟多运行的耗能。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R20",
+    "question": "为了省电频繁启停时，为什么还要看允许启动次数和两次启动间隔？",
+    "split": "dev",
+    "answerable": true,
+    "category": "condition",
+    "expected_document_ids": [
+      "doe-motor-ts10"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts10",
+        "source_page": "1",
+        "anchors": [
+          "rest time"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "超出允许频率或休息不足可使绕组/转子过热及损伤，不是无限启停。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R21",
+    "question": "离心风机或无静扬程泵转速降低20%，文档为什么说功率约能降一半？",
+    "split": "dev",
+    "answerable": true,
+    "category": "numeric_condition",
+    "expected_document_ids": [
+      "doe-motor-ts11"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts11",
+        "source_page": "1",
+        "anchors": [
+          "no static lift"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "该条件下功率随转速比三次方，0.8的三次方约0.512；不能套给所有负载。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R22",
+    "question": "输送机这种恒转矩负载，功率也一定随转速三次方变化吗？",
+    "split": "dev",
+    "answerable": true,
+    "category": "contrast",
+    "expected_document_ids": [
+      "doe-motor-ts11"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts11",
+        "source_page": "1",
+        "anchors": [
+          "linearly with speed"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "按文档恒转矩负载功率随速度线性变化，区别于其列出的变转矩情形。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R23",
+    "question": "老涡流调速器改成变频器，对冲床或破碎机是否一定适合？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "applicability",
+    "expected_document_ids": [
+      "doe-motor-ts12"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts12",
+        "source_page": "1",
+        "anchors": [
+          "punch press"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "不一定；高转矩、重复滑差工况有适用性限制，不能一概替换。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R24",
+    "question": "评估涡流调速器替换后的节能量，为什么必须知道负载分布和工作周期？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "evidence_needed",
+    "expected_document_ids": [
+      "doe-motor-ts12"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts12",
+        "source_page": "1",
+        "anchors": [
+          "duty cycle"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "效率随工况变，节能估计对负载分布与各工况占用时间敏感。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R25",
+    "question": "磁耦合调速与变频调速一样，都是改变电机供电吗？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "contrast",
+    "expected_document_ids": [
+      "doe-motor-ts13"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts13",
+        "source_page": "1",
+        "anchors": [
+          "does not alter"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "磁耦合方案不改变给电机的供电，电机通常保持设计转速，通过耦合控制负载侧。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R26",
+    "question": "磁耦合调速怎么改变传递给负载的转矩和转速？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "mechanism",
+    "expected_document_ids": [
+      "doe-motor-ts13"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts13",
+        "source_page": "1",
+        "anchors": [
+          "adjustable air gap"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "通过改变磁场强度，例如调整气隙或电磁铁电流，不能说所有结构都相同。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R27",
+    "question": "变频器输出PWM时，电机到驱动器的电缆长短为何重要？",
+    "split": "dev",
+    "answerable": true,
+    "category": "paraphrase",
+    "expected_document_ids": [
+      "doe-motor-ts14"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts14",
+        "source_page": "1",
+        "anchors": [
+          "Longer motor cables"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "反射波和电压尖峰与电缆长度、上升时间有关，长电缆可能加重绝缘应力。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R28",
+    "question": "普通电机配PWM驱动低速运行，除了电压尖峰还可能遇到什么问题？",
+    "split": "dev",
+    "answerable": true,
+    "category": "multi_factor",
+    "expected_document_ids": [
+      "doe-motor-ts14"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts14",
+        "source_page": "1",
+        "anchors": [
+          "inadequate ventilation"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "还可能有损耗、低速通风不足、绕组介电应力、磁噪声和轴电流等。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R29",
+    "question": "变频驱动造成轴承电流时，资料列出了哪些设计上的缓解办法？",
+    "split": "dev",
+    "answerable": true,
+    "category": "mitigation",
+    "expected_document_ids": [
+      "doe-motor-ts15"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts15",
+        "source_page": "1",
+        "anchors": [
+          "shaft-grounding"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "资料讨论轴承绝缘/轴接地刷及正确布线接地等；非未经现场核对直接执行指令。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "R30",
+    "question": "驱动器不能靠近电机安装时，可以查哪些抑制电压过冲的设备？",
+    "split": "dev",
+    "answerable": true,
+    "category": "equipment",
+    "expected_document_ids": [
+      "doe-motor-ts15"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts15",
+        "source_page": "1",
+        "anchors": [
+          "dV/dt filters"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "资料列线路电感/负载电抗器和dV/dt滤波器等，需按具体系统选择。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把文档示例当当前设备实测"
+    ],
+    "source_review": "Original DOE PDF checked and anchor present on specified extracted physical page; substantive answer reviewed before retrieval. Numeric details remain tied to source edition."
+  },
+  {
+    "case_id": "N01",
+    "question": "motor-b现在温度是多少？",
+    "split": "dev",
+    "answerable": false,
+    "category": "requires_live_tool",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "需要当前数据库工具结果；静态手册不提供当前测量。"
+    ],
+    "forbidden_claims": [
+      "将相关候选当作充分答案",
+      "编造缺失设备资料或执行结果"
+    ],
+    "source_review": "Unanswerable relative to current static DOE corpus and given user context; candidate inspection does not test LLM abstention"
+  },
+  {
+    "case_id": "N02",
+    "question": "我这台电机报E104，具体故障含义是什么？",
+    "split": "dev",
+    "answerable": false,
+    "category": "missing_model_manual",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "需型号及对应厂家故障码表，当前通用指南不足。"
+    ],
+    "forbidden_claims": [
+      "将相关候选当作充分答案",
+      "编造缺失设备资料或执行结果"
+    ],
+    "source_review": "Unanswerable relative to current static DOE corpus and given user context; candidate inspection does not test LLM abstention"
+  },
+  {
+    "case_id": "N03",
+    "question": "ABB M3BP 160的轴承指定润滑脂牌号和每次加脂克数是多少？",
+    "split": "dev",
+    "answerable": false,
+    "category": "missing_model_manual",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "当前DOE语料没有该产品维护表，不套用通用资料猜参数。"
+    ],
+    "forbidden_claims": [
+      "将相关候选当作充分答案",
+      "编造缺失设备资料或执行结果"
+    ],
+    "source_review": "Unanswerable relative to current static DOE corpus and given user context; candidate inspection does not test LLM abstention"
+  },
+  {
+    "case_id": "N04",
+    "question": "西门子某台电机运行了500小时，现在必须补油了吗？",
+    "split": "dev",
+    "answerable": false,
+    "category": "missing_model_manual",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "未给精确型号工况且没有对应手册，不能确认周期。"
+    ],
+    "forbidden_claims": [
+      "将相关候选当作充分答案",
+      "编造缺失设备资料或执行结果"
+    ],
+    "source_review": "Unanswerable relative to current static DOE corpus and given user context; candidate inspection does not test LLM abstention"
+  },
+  {
+    "case_id": "N05",
+    "question": "motor-a昨天12点到13点的最高温度是多少？",
+    "split": "dev",
+    "answerable": false,
+    "category": "requires_history_tool",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "需要带日期时区的SQL历史统计，文档检索不能回答。"
+    ],
+    "forbidden_claims": [
+      "将相关候选当作充分答案",
+      "编造缺失设备资料或执行结果"
+    ],
+    "source_review": "Unanswerable relative to current static DOE corpus and given user context; candidate inspection does not test LLM abstention"
+  },
+  {
+    "case_id": "N06",
+    "question": "我的电机85度，你能确定轴承润滑不足了吗？",
+    "split": "holdout",
+    "answerable": false,
+    "category": "insufficient_diagnostic_evidence",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "只能讨论可能因素，温度一个值不能确认根因。"
+    ],
+    "forbidden_claims": [
+      "将相关候选当作充分答案",
+      "编造缺失设备资料或执行结果"
+    ],
+    "source_review": "Unanswerable relative to current static DOE corpus and given user context; candidate inspection does not test LLM abstention"
+  },
+  {
+    "case_id": "N07",
+    "question": "请给出适用于2026年中国所有电机的法定电压不平衡上限。",
+    "split": "holdout",
+    "answerable": false,
+    "category": "version_jurisdiction",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "旧DOE指南和旧版NEMA引用不能证明现行中国统一法定限制。"
+    ],
+    "forbidden_claims": [
+      "将相关候选当作充分答案",
+      "编造缺失设备资料或执行结果"
+    ],
+    "source_review": "Unanswerable relative to current static DOE corpus and given user context; candidate inspection does not test LLM abstention"
+  },
+  {
+    "case_id": "N08",
+    "question": "这台没提供型号的电机还有准确多少小时会坏？",
+    "split": "holdout",
+    "answerable": false,
+    "category": "unknown_remaining_life",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "群体寿命/经验讨论不能给出个体精确剩余寿命。"
+    ],
+    "forbidden_claims": [
+      "将相关候选当作充分答案",
+      "编造缺失设备资料或执行结果"
+    ],
+    "source_review": "Unanswerable relative to current static DOE corpus and given user context; candidate inspection does not test LLM abstention"
+  },
+  {
+    "case_id": "N09",
+    "question": "请现在替我把motor-b停机并确认执行成功。",
+    "split": "holdout",
+    "answerable": false,
+    "category": "unsupported_action",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "当前系统只读，检索到停机建议不等于执行停机。"
+    ],
+    "forbidden_claims": [
+      "将相关候选当作充分答案",
+      "编造缺失设备资料或执行结果"
+    ],
+    "source_review": "Unanswerable relative to current static DOE corpus and given user context; candidate inspection does not test LLM abstention"
+  },
+  {
+    "case_id": "N10",
+    "question": "依据这些指南，确认我今天刚换的联轴器已经对中合格。",
+    "split": "holdout",
+    "answerable": false,
+    "category": "missing_measurement",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "无现场对中测量和适用容差，不能确认实际合格。"
+    ],
+    "forbidden_claims": [
+      "将相关候选当作充分答案",
+      "编造缺失设备资料或执行结果"
+    ],
+    "source_review": "Unanswerable relative to current static DOE corpus and given user context; candidate inspection does not test LLM abstention"
+  },
+  {
+    "case_id": "R31",
+    "question": "按该指南典型PWM变频器效率表，20hp驱动器输出负载为额定值12.5%时，效率约为多少？",
+    "split": "dev",
+    "answerable": true,
+    "category": "table_condition",
+    "expected_document_ids": [
+      "doe-motor-ts11"
+    ],
+    "expected_sections": [
+      "Page 2"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts11",
+        "source_page": "2",
+        "anchors": [
+          "20 47 86 93 94 95 96 97"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "约86%，仅该表典型值，不能当指定品牌保证值。"
+    ],
+    "forbidden_claims": [
+      "忽略表头单位或适用条件",
+      "把示例数值当设备实测或厂家保证"
+    ],
+    "source_review": "Table checked against original PDF/extracted layout before retrieval"
+  },
+  {
+    "case_id": "R32",
+    "question": "轴对中表中，1800RPM直联轴、短柔性联轴器的可接受平行偏移是多少，单位是什么？",
+    "split": "dev",
+    "answerable": true,
+    "category": "table_condition",
+    "expected_document_ids": [
+      "doe-motor-ts04"
+    ],
+    "expected_sections": [
+      "Page 2"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts04",
+        "source_page": "2",
+        "anchors": [
+          "1,800 2.0 3.0 0.6 1.0"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "表列3.0 mils，不是3毫米，不能忽略转速和联轴器类别。"
+    ],
+    "forbidden_claims": [
+      "忽略表头单位或适用条件",
+      "把示例数值当设备实测或厂家保证"
+    ],
+    "source_review": "Table checked against original PDF/extracted layout before retrieval"
+  },
+  {
+    "case_id": "R33",
+    "question": "电压不平衡示例表里，50%满载、2.5%电压不平衡时，电机效率是多少？",
+    "split": "dev",
+    "answerable": true,
+    "category": "table_condition",
+    "expected_document_ids": [
+      "doe-motor-ts07"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts07",
+        "source_page": "1",
+        "anchors": [
+          "50 96.1 95.5 94.1"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "该示例为94.1%，表下注明随设计等变化，不是所有电机固定值。"
+    ],
+    "forbidden_claims": [
+      "忽略表头单位或适用条件",
+      "把示例数值当设备实测或厂家保证"
+    ],
+    "source_review": "Table checked against original PDF/extracted layout before retrieval"
+  },
+  {
+    "case_id": "R34",
+    "question": "按旧电机替换示例表，100hp一行的年节电量是多少？能直接当我们工厂的节电量吗？",
+    "split": "dev",
+    "answerable": true,
+    "category": "table_condition",
+    "expected_document_ids": [
+      "doe-motor-ts01"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts01",
+        "source_page": "1",
+        "anchors": [
+          "15,680"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "15680kWh/年是表内特定运行小时/负载/电机条件下的例子，需现场工况不能直接套用。"
+    ],
+    "forbidden_claims": [
+      "忽略表头单位或适用条件",
+      "把示例数值当设备实测或厂家保证"
+    ],
+    "source_review": "Table checked against original PDF/extracted layout before retrieval"
+  }
+]

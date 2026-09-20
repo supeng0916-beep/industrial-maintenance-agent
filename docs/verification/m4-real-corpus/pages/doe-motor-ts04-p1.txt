@@ -1,0 +1,60 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #4
+                                                                                    
+                                                                                    
+     The Importance    of Motor  Shaft  Alignment                                   
+                                                             Suggested Actions      
+     The objective of optimized shaft alignment is to increase the operating life span of
+     rotating machinery. To achieve this goal, components that are the most likely to fail must ■■ Check newly installed equipment
+     be made to operate within their acceptable design limits. for alignment changes due to
+                                                            foundation settling after 3 to 6
+     While misalignment has no measurable effect on motor efficiency, correct shaft 
+     alignment ensures the smooth, efficient transmission of power from the motor to the months of operation.
+     driven equipment. Incorrect alignment occurs when the centerlines of the motor and
+     the driven equipment shafts are not in line with each other. Misalignment produces ■■ Check shaft alignment of all
+     excessive vibration, noise, coupling, and bearing temperature increases, and premature production-critical equipment
+     bearing, coupling, or shaft failure.                   annually.               
+                     Types of Alignment                   ■■ Monitor for vibrations and for
+                                                            increasing vibration trends as an
+          Ideal Alignment          Parallel Misalignment                            
+                                                            indication of misalignment.
+                                                            Misalignment might be caused
+                                                            by foundation settling, 
+                                                            insufficient bolt tightening, or
+                                                            output shaft faults.    
+                     Angular Misalignment                 ■■ Apply predictive maintenance
+                                                            techniques, including vibration
+                                                            tests and frequency spectrum
+                                                            analysis, to distinguish between
+                                                            bearing wear, shaft     
+                                                            misalignment, or electrically
+     There are three types of motor misalignment:                                   
+                                                            caused vibrations.      
+      • Angular misalignment occurs when the motor is set at an angle to the driven 
+       equipment. If the centerlines of the motor and the driven equipment shafts were
+       to be extended, they would cross each other, rather than superimpose or run along
+       a common centerline. The “gap” or difference in slope of the motor shaft when
+       compared with the slope of the stationary machine shaft can have horizontal  
+       misalignment, vertical misalignment, or both. Angular misalignment, in particular
+       can cause severe damage to the driven equipment and the motor.               
+      • Parallel misalignment occurs when the two shaft centerlines are parallel, but not in
+       the same line. There are two planes of parallel misalignment as shafts may be offset
+       horizontally (displaced to the left or right), vertically (positioned at different eleva-
+       tions), or both.                                                             
+      • Combination misalignment occurs when the motor shaft suffers from angular   
+       misalignment in addition to parallel misalignment.                           
+     Couplings                                                                      
+     Larger motors are usually directly coupled to their loads with rigid or flexible couplings.
+     Rigid couplings do not compensate for any motor-to-driven-equipment misalignment,
+     while flexible couplings tolerate small amounts of misalignment. Flexible couplings
+     also can reduce vibration transmitted from one piece of equipment to another, and some
+     can insulate the driven equipment shaft against stray electrical currents. Even flexible
+     couplings have alignment requirements, defined in the instruction sheet for the coupling.
+                                                                                    
+                                                                                    

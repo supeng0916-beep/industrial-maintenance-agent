@@ -1,0 +1,63 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+     Magnetically coupled ASDs do not have to be housed in a controlled environment.
+     They allow for multiple motor starts with no “cool-off period” and are desirable when
+                                                                 Resources          
+     harmonic distortion cannot be tolerated or if poor power quality would cause excessive
+     nuisance trips. This design also inherently provides load seizure protection. Because National Electrical Manufacturers
+     magnetically coupled ASDs operate independently of motor power supply voltage, they Association (NEMA)—Visit www.
+     are often cost effective in applications with medium-voltage power supplies. These
+                                                          nema.org for information on
+     ASDs have other advantages, including compatibility with existing standard efficiency
+                                                          motor standards, application
+     motors, avoidance of additional motor heating and the need for motor de-rating, and
+                                                          guides, and technical papers.
+     accommodation of shaft thermal expansion.                                      
+     Disadvantages of magnetically coupled ASDs include space and weight constraints. U.S. Department of Energy (DOE)—
+     Some are not compatible with vertical-shaft motors or belt-driven loads. They are also For more information on motor
+     maintenance intensive and require repair by technicians with specialized training. and motor-driven system
+                                                          efficiency and to download the
+     Magnetically coupled ASDs offer some operating advantages that are desirable for niche
+     applications. They provide speed control that can be up to 30% more efficient than MotorMaster+ software tool, visit
+     fan damper control and 44% more efficient than using throttling valves for pump flow the Advanced Manufacturing
+     control. However, they capture only about 60% of potential energy savings compared Office (AMO) website at
+     to conventional VFDs. Relative to a conventional ASD, energy savings decrease as the manufacturing.energy.gov.
+     motor operating speed is reduced.4                                             
+     References                                                                     
+     1 ADM Associates, Inc., Adjustable-Speed Drive Case Studies, prepared for the Wisconsin Center
+     for Demand-Side Management, 1994.                                              
+     2 Xenergy, Inc., United States Industrial Motor Systems Market Opportunities Assessment,
+     prepared for the U.S. Department of Energy’s Office of Industrial Technologies, December 1998.
+     3 Northwest Energy Efficiency Alliance, Field Testing the MagnaDrive Coupling Speed Control
+     Technology on Northwest Industrial Applications, “Case Study: Ponderay Newsprint, Usk,
+     Washington,” 2000.                                                             
+     4 Motor Systems Resource Facility, Oregon State University, Product Testing: MagnaDrive,
+     Report No. 1, prepared for the Northwest Energy Efficiency Alliance, March 2000.
+     Additional References                                                          
+     Dan Greenberg, Platts Research and Consulting, Magnetically Coupled Adjustable-Speed Drives:
+     Going Where No VFD Has Gone Before, ER-03-18, November 2003.                   
+     Quantec, Market Progress Evaluation Report: MagnaDrive, No. 2, prepared for the Northwest
+     Energy Efficiency Alliance, Report E02-099, May 2002.                          
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3738 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

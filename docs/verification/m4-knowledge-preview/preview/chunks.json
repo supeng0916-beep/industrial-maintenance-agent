@@ -1,0 +1,862 @@
+[
+  {
+    "chunk_id": "device-points:703372588d06bf2d9837",
+    "document_id": "device-points",
+    "version": "0.1",
+    "section": "设备身份、Modbus点位与整轮保存",
+    "metadata": {
+      "document_id": "device-points",
+      "title": "设备身份、Modbus点位与整轮保存",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a"
+      ],
+      "product_model": null,
+      "sources": [
+        "points.py",
+        "docs/protocols/点位表.md",
+        "storage.py"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "device-points.md",
+    "document_sha256": "c3392e0a0f75a61458e3d8703ff1525713c38b6a536182ac6ca3500e310c04db",
+    "content_sha256": "d22ca6fe7d56338b155fced15f8c6bf48a027d6373defc7bb15fc4e7c8a8f674",
+    "source_start": 290,
+    "source_end": 313,
+    "source_line_start": 12,
+    "source_line_end": 14,
+    "original_text": "\n# 设备身份、Modbus点位与整轮保存\n\n",
+    "embedding_text": "文档：设备身份、Modbus点位与整轮保存\n文档ID：device-points\n版本：0.1\n章节：设备身份、Modbus点位与整轮保存\n适用设备：motor-a\n产品型号：未注明\n仅教学：是\n正文：\n\n# 设备身份、Modbus点位与整轮保存\n\n",
+    "token_count": 88,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "device-points:477eb716a95a39dc69bf",
+    "document_id": "device-points",
+    "version": "0.1",
+    "section": "设备编号不是产品型号",
+    "metadata": {
+      "document_id": "device-points",
+      "title": "设备身份、Modbus点位与整轮保存",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a"
+      ],
+      "product_model": null,
+      "sources": [
+        "points.py",
+        "docs/protocols/点位表.md",
+        "storage.py"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "device-points.md",
+    "document_sha256": "c3392e0a0f75a61458e3d8703ff1525713c38b6a536182ac6ca3500e310c04db",
+    "content_sha256": "6f786458b9457f602b48f37d70deb8c4661e2cf32aac019ddc41d73ec8ac82ea",
+    "source_start": 313,
+    "source_end": 414,
+    "source_line_start": 15,
+    "source_line_end": 18,
+    "original_text": "## 设备编号不是产品型号\n\n适用范围：本项目 motor-a 教学模拟设备。motor-a 是设备编号，不是厂家或产品型号；真实产品型号未录入。不能用它查找所谓“A型电机”的厂家故障码或维护周期。\n\n",
+    "embedding_text": "文档：设备身份、Modbus点位与整轮保存\n文档ID：device-points\n版本：0.1\n章节：设备编号不是产品型号\n适用设备：motor-a\n产品型号：未注明\n仅教学：是\n正文：\n## 设备编号不是产品型号\n\n适用范围：本项目 motor-a 教学模拟设备。motor-a 是设备编号，不是厂家或产品型号；真实产品型号未录入。不能用它查找所谓“A型电机”的厂家故障码或维护周期。\n\n",
+    "token_count": 158,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "device-points:6b47f93695b1150ecd7f",
+    "document_id": "device-points",
+    "version": "0.1",
+    "section": "四个保持寄存器的含义",
+    "metadata": {
+      "document_id": "device-points",
+      "title": "设备身份、Modbus点位与整轮保存",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a"
+      ],
+      "product_model": null,
+      "sources": [
+        "points.py",
+        "docs/protocols/点位表.md",
+        "storage.py"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "device-points.md",
+    "document_sha256": "c3392e0a0f75a61458e3d8703ff1525713c38b6a536182ac6ca3500e310c04db",
+    "content_sha256": "55f96191bc71f4d8147ece1eb70cfa0876fb65ee00a2e44ddfb4e7a2a83e31d6",
+    "source_start": 414,
+    "source_end": 790,
+    "source_line_start": 19,
+    "source_line_end": 31,
+    "original_text": "## 四个保持寄存器的含义\n\n本项目协议地址从0开始，保持寄存器功能码03，device ID为1。一次从地址0读取4个寄存器。\n\n| 地址 | 指标 | 解析 | 单位或含义 |\n| --- | --- | --- | --- |\n| 0 | temperature | uint16 × 0.1 | ℃ |\n| 1 | current | uint16 × 0.01 | A |\n| 2 | speed | uint16 × 1 | rpm |\n| 3 | running_state | uint16枚举 | 仅0停止、1运行 |\n\n响应[653,123,1450,1]表示65.3℃、1.23A、1450rpm、运行。这里每点占一个寄存器；不能推广为所有设备每个测点都只占一个寄存器。列表索引0是本次读取起始地址对应项，并不总是协议地址0。\n\n",
+    "embedding_text": "文档：设备身份、Modbus点位与整轮保存\n文档ID：device-points\n版本：0.1\n章节：四个保持寄存器的含义\n适用设备：motor-a\n产品型号：未注明\n仅教学：是\n正文：\n## 四个保持寄存器的含义\n\n本项目协议地址从0开始，保持寄存器功能码03，device ID为1。一次从地址0读取4个寄存器。\n\n| 地址 | 指标 | 解析 | 单位或含义 |\n| --- | --- | --- | --- |\n| 0 | temperature | uint16 × 0.1 | ℃ |\n| 1 | current | uint16 × 0.01 | A |\n| 2 | speed | uint16 × 1 | rpm |\n| 3 | running_state | uint16枚举 | 仅0停止、1运行 |\n\n响应[653,123,1450,1]表示65.3℃、1.23A、1450rpm、运行。这里每点占一个寄存器；不能推广为所有设备每个测点都只占一个寄存器。列表索引0是本次读取起始地址对应项，并不总是协议地址0。\n\n",
+    "token_count": 322,
+    "over_soft_target": true
+  },
+  {
+    "chunk_id": "device-points:929c46b2d414f88595b9",
+    "document_id": "device-points",
+    "version": "0.1",
+    "section": "有效零与无效数据",
+    "metadata": {
+      "document_id": "device-points",
+      "title": "设备身份、Modbus点位与整轮保存",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a"
+      ],
+      "product_model": null,
+      "sources": [
+        "points.py",
+        "docs/protocols/点位表.md",
+        "storage.py"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "device-points.md",
+    "document_sha256": "c3392e0a0f75a61458e3d8703ff1525713c38b6a536182ac6ca3500e310c04db",
+    "content_sha256": "8f9efbddecd85a4bc2b82ba6833015f61dbd90ff05ced8cda9f3c6b70b5e6bda",
+    "source_start": 790,
+    "source_end": 888,
+    "source_line_start": 32,
+    "source_line_end": 35,
+    "original_text": "## 有效零与无效数据\n\n完整返回的0A、0rpm、状态0都可能有效；读到零不证明传感器物理准确。读取失败不能补零。状态2或7在本项目未定义，不能解释为故障状态：这是协议有响应但业务校验失败。\n\n",
+    "embedding_text": "文档：设备身份、Modbus点位与整轮保存\n文档ID：device-points\n版本：0.1\n章节：有效零与无效数据\n适用设备：motor-a\n产品型号：未注明\n仅教学：是\n正文：\n## 有效零与无效数据\n\n完整返回的0A、0rpm、状态0都可能有效；读到零不证明传感器物理准确。读取失败不能补零。状态2或7在本项目未定义，不能解释为故障状态：这是协议有响应但业务校验失败。\n\n",
+    "token_count": 160,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "device-points:b23d77d60f12bbf3f0fc",
+    "document_id": "device-points",
+    "version": "0.1",
+    "section": "整轮保存与同步测量",
+    "metadata": {
+      "document_id": "device-points",
+      "title": "设备身份、Modbus点位与整轮保存",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a"
+      ],
+      "product_model": null,
+      "sources": [
+        "points.py",
+        "docs/protocols/点位表.md",
+        "storage.py"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "device-points.md",
+    "document_sha256": "c3392e0a0f75a61458e3d8703ff1525713c38b6a536182ac6ca3500e310c04db",
+    "content_sha256": "cd6787c005d1d7af90c98e1da9b855da87d36d3c3f7091021c99f9d38b9d4a48",
+    "source_start": 888,
+    "source_end": 1111,
+    "source_line_start": 36,
+    "source_line_end": 40,
+    "original_text": "## 整轮保存与同步测量\n\n本项目四点必须全部读取并通过校验，才在一个事务内保存四条测量和温度告警状态。任一步写入失败整轮回滚；校验失败整轮不存有效测量，记录事件，清除温度待确认但保留已有告警。查询必须限定设备和指标，避免把电流数值展示为温度。\n\n一次批量读取、相同collected_at或同一数据库事务，都不能证明四个传感器严格同步测量。设备可能分别更新寄存器；事务只保证相关数据库写入一起提交或撤销。同步需要设备时间或同步采样机制的证据。\n",
+    "embedding_text": "文档：设备身份、Modbus点位与整轮保存\n文档ID：device-points\n版本：0.1\n章节：整轮保存与同步测量\n适用设备：motor-a\n产品型号：未注明\n仅教学：是\n正文：\n## 整轮保存与同步测量\n\n本项目四点必须全部读取并通过校验，才在一个事务内保存四条测量和温度告警状态。任一步写入失败整轮回滚；校验失败整轮不存有效测量，记录事件，清除温度待确认但保留已有告警。查询必须限定设备和指标，避免把电流数值展示为温度。\n\n一次批量读取、相同collected_at或同一数据库事务，都不能证明四个传感器严格同步测量。设备可能分别更新寄存器；事务只保证相关数据库写入一起提交或撤销。同步需要设备时间或同步采样机制的证据。\n",
+    "token_count": 281,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "temperature-alarms:70389bee3d59cc00350e",
+    "document_id": "temperature-alarms",
+    "version": "0.1",
+    "section": "持续超温、恢复与证据中断",
+    "metadata": {
+      "document_id": "temperature-alarms",
+      "title": "持续超温、恢复与证据中断",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "alarms.py",
+        "opcua_storage.py",
+        "docs/protocols/点位表.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "temperature-alarms.md",
+    "document_sha256": "6dd36a54c8a700b87344da8f6b9a67be5f3bb0de8024b3bff0bbbe2acddd3681",
+    "content_sha256": "64cddc6ceae1ec33495d24103db4e5a1c15fd98ac6c78f3a81d66d53d1568968",
+    "source_start": 306,
+    "source_end": 323,
+    "source_line_start": 12,
+    "source_line_end": 14,
+    "original_text": "\n# 持续超温、恢复与证据中断\n\n",
+    "embedding_text": "文档：持续超温、恢复与证据中断\n文档ID：temperature-alarms\n版本：0.1\n章节：持续超温、恢复与证据中断\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n\n# 持续超温、恢复与证据中断\n\n",
+    "token_count": 93,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "temperature-alarms:058ff677db4a05d1db0c",
+    "document_id": "temperature-alarms",
+    "version": "0.1",
+    "section": "使用范围与默认规则",
+    "metadata": {
+      "document_id": "temperature-alarms",
+      "title": "持续超温、恢复与证据中断",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "alarms.py",
+        "opcua_storage.py",
+        "docs/protocols/点位表.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "temperature-alarms.md",
+    "document_sha256": "6dd36a54c8a700b87344da8f6b9a67be5f3bb0de8024b3bff0bbbe2acddd3681",
+    "content_sha256": "adee8b4f217d3b6614814299a5e1a498ac3bbd9f0615b10706636083d6eca491",
+    "source_start": 323,
+    "source_end": 460,
+    "source_line_start": 15,
+    "source_line_end": 18,
+    "original_text": "## 使用范围与默认规则\n\n本节仅描述本项目教学模拟器，不能当作真实设备安全阈值。2026-09-18核对代码默认值：温度严格大于80℃，合格样本持续支持至少5秒，才触发新告警；默认恢复阈值为严格低于78℃。当前实际运行规则还要核对进程及状态记录，文档不是实时配置接口。\n\n",
+    "embedding_text": "文档：持续超温、恢复与证据中断\n文档ID：temperature-alarms\n版本：0.1\n章节：使用范围与默认规则\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 使用范围与默认规则\n\n本节仅描述本项目教学模拟器，不能当作真实设备安全阈值。2026-09-18核对代码默认值：温度严格大于80℃，合格样本持续支持至少5秒，才触发新告警；默认恢复阈值为严格低于78℃。当前实际运行规则还要核对进程及状态记录，文档不是实时配置接口。\n\n",
+    "token_count": 203,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "temperature-alarms:4929f658630b01320fba",
+    "document_id": "temperature-alarms",
+    "version": "0.1",
+    "section": "触发前的待确认",
+    "metadata": {
+      "document_id": "temperature-alarms",
+      "title": "持续超温、恢复与证据中断",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "alarms.py",
+        "opcua_storage.py",
+        "docs/protocols/点位表.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "temperature-alarms.md",
+    "document_sha256": "6dd36a54c8a700b87344da8f6b9a67be5f3bb0de8024b3bff0bbbe2acddd3681",
+    "content_sha256": "7ddd53a9a561893b46d1572f4dbdabf5f5ca6a61e9389d2dba8e2507545e2322",
+    "source_start": 460,
+    "source_end": 662,
+    "source_line_start": 19,
+    "source_line_end": 24,
+    "original_text": "## 触发前的待确认\n\n前提：该设备尚无未解除温度告警，且温度样本通过协议对应的数据质量与新鲜度校验。温度大于80℃时开始或继续待确认；本地单调时间累计达到5秒，且新的合格样本到来后才触发。只有2秒时是“超温待确认”，不能说已正式报警，也不能说温度正常。\n\n相邻有效证据间隔不得超过配置的1.5倍采集interval；中断后重新累计，不能仅等待墙上时钟走过5秒就触发。温度小于或等于80℃取消待确认。\n\n",
+    "embedding_text": "文档：持续超温、恢复与证据中断\n文档ID：temperature-alarms\n版本：0.1\n章节：触发前的待确认\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 触发前的待确认\n\n前提：该设备尚无未解除温度告警，且温度样本通过协议对应的数据质量与新鲜度校验。温度大于80℃时开始或继续待确认；本地单调时间累计达到5秒，且新的合格样本到来后才触发。只有2秒时是“超温待确认”，不能说已正式报警，也不能说温度正常。\n\n相邻有效证据间隔不得超过配置的1.5倍采集interval；中断后重新累计，不能仅等待墙上时钟走过5秒就触发。温度小于或等于80℃取消待确认。\n\n",
+    "token_count": 263,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "temperature-alarms:71d836cea39edf51a310",
+    "document_id": "temperature-alarms",
+    "version": "0.1",
+    "section": "已触发告警如何恢复",
+    "metadata": {
+      "document_id": "temperature-alarms",
+      "title": "持续超温、恢复与证据中断",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "alarms.py",
+        "opcua_storage.py",
+        "docs/protocols/点位表.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "temperature-alarms.md",
+    "document_sha256": "6dd36a54c8a700b87344da8f6b9a67be5f3bb0de8024b3bff0bbbe2acddd3681",
+    "content_sha256": "6104281ef3f60734222ba9bb39b2c1b90725ad9fc16003c6dace96487a0543da",
+    "source_start": 662,
+    "source_end": 878,
+    "source_line_start": 25,
+    "source_line_end": 30,
+    "original_text": "## 已触发告警如何恢复\n\n前提：已有未解除告警，且新的温度样本有效、新鲜。程序用这条告警记录保存的recover_below判断恢复。对保存阈值78℃的告警：79℃保持、78℃保持、77.9℃恢复。不能将“低于”解释为“小于等于”。修改默认值或更新文档不意味着已有告警采用了新阈值。\n\n未解除告警记录与当前温度状态是两个维度。重启或断线不能自动解除告警。没有新鲜有效样本时，当前情况未知；不能因为记录仍未解除就断言此刻仍超温。\n\n",
+    "embedding_text": "文档：持续超温、恢复与证据中断\n文档ID：temperature-alarms\n版本：0.1\n章节：已触发告警如何恢复\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 已触发告警如何恢复\n\n前提：已有未解除告警，且新的温度样本有效、新鲜。程序用这条告警记录保存的recover_below判断恢复。对保存阈值78℃的告警：79℃保持、78℃保持、77.9℃恢复。不能将“低于”解释为“小于等于”。修改默认值或更新文档不意味着已有告警采用了新阈值。\n\n未解除告警记录与当前温度状态是两个维度。重启或断线不能自动解除告警。没有新鲜有效样本时，当前情况未知；不能因为记录仍未解除就断言此刻仍超温。\n\n",
+    "token_count": 275,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "temperature-alarms:3a9038f09a76a3e84ab0",
+    "document_id": "temperature-alarms",
+    "version": "0.1",
+    "section": "证据中断与设备隔离",
+    "metadata": {
+      "document_id": "temperature-alarms",
+      "title": "持续超温、恢复与证据中断",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "alarms.py",
+        "opcua_storage.py",
+        "docs/protocols/点位表.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "temperature-alarms.md",
+    "document_sha256": "6dd36a54c8a700b87344da8f6b9a67be5f3bb0de8024b3bff0bbbe2acddd3681",
+    "content_sha256": "eb53613a9568ab003acb413f869367eb83038d6a3181a98ff97b9caab4bb8254",
+    "source_start": 878,
+    "source_end": 1030,
+    "source_line_start": 31,
+    "source_line_end": 35,
+    "original_text": "## 证据中断与设备隔离\n\n通信失败、业务校验失败或不合格OPC UA样本会清除待确认，保留已有告警。不要补零解除告警。重复投递通知的去重与新通知携带重复源时间的处理不同，见OPC UA准入文档。\n\n状态按设备和指标隔离，B的低温或失败不能改变A的告警。待确认计时在重新启动采集时重建，已触发记录保留。\n",
+    "embedding_text": "文档：持续超温、恢复与证据中断\n文档ID：temperature-alarms\n版本：0.1\n章节：证据中断与设备隔离\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 证据中断与设备隔离\n\n通信失败、业务校验失败或不合格OPC UA样本会清除待确认，保留已有告警。不要补零解除告警。重复投递通知的去重与新通知携带重复源时间的处理不同，见OPC UA准入文档。\n\n状态按设备和指标隔离，B的低温或失败不能改变A的告警。待确认计时在重新启动采集时重建，已触发记录保留。\n",
+    "token_count": 215,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "opcua-evidence:c3f68ffbbf31f02a0a71",
+    "document_id": "opcua-evidence",
+    "version": "0.1",
+    "section": "OPC UA质量、源时间与订阅证据",
+    "metadata": {
+      "document_id": "opcua-evidence",
+      "title": "OPC UA质量、源时间与订阅证据",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "opcua_storage.py",
+        "collect_opcua.py",
+        "docs/verification/opcua-subscription/验收说明.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "opcua-evidence.md",
+    "document_sha256": "d92ccf93f0d86324b307a4935ebdb231983aa1e3f646dc25d9602d7fc0484c00",
+    "content_sha256": "367fc481a3739270e871fcf71b3fe0894ee42342075ae180eed92d4ce7047c29",
+    "source_start": 326,
+    "source_end": 348,
+    "source_line_start": 12,
+    "source_line_end": 14,
+    "original_text": "\n# OPC UA质量、源时间与订阅证据\n\n",
+    "embedding_text": "文档：OPC UA质量、源时间与订阅证据\n文档ID：opcua-evidence\n版本：0.1\n章节：OPC UA质量、源时间与订阅证据\n适用设备：motor-b\n产品型号：未注明\n仅教学：是\n正文：\n\n# OPC UA质量、源时间与订阅证据\n\n",
+    "token_count": 90,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "opcua-evidence:e834f93559c716a1203a",
+    "document_id": "opcua-evidence",
+    "version": "0.1",
+    "section": "设备身份与数据准入",
+    "metadata": {
+      "document_id": "opcua-evidence",
+      "title": "OPC UA质量、源时间与订阅证据",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "opcua_storage.py",
+        "collect_opcua.py",
+        "docs/verification/opcua-subscription/验收说明.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "opcua-evidence.md",
+    "document_sha256": "d92ccf93f0d86324b307a4935ebdb231983aa1e3f646dc25d9602d7fc0484c00",
+    "content_sha256": "05a3b488d817fe9d73251808b044657bbf1c4ada590cd05081b0aba66a7d0206",
+    "source_start": 348,
+    "source_end": 630,
+    "source_line_start": 15,
+    "source_line_end": 20,
+    "original_text": "## 设备身份与数据准入\n\n适用范围：本项目motor-b教学模拟器，真实厂家型号未录入。读取节点为NamespaceURI urn:industrial-maintenance:motor-b、String标识MotorB.Temperature，运行时解析命名空间索引，不能固定套用ns编号。标量Double表示温度，℃为教学约定。\n\n有效测量须满足Good、有限标量Double、源时间存在且新鲜、相对最后接受的源时间严格递增。默认源年龄允许0至5秒，未来时间不接受，前提是两端UTC时钟同步。Good表示质量状态，不证明电机健康，也不自动证明数据新鲜。\n\n",
+    "embedding_text": "文档：OPC UA质量、源时间与订阅证据\n文档ID：opcua-evidence\n版本：0.1\n章节：设备身份与数据准入\n适用设备：motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 设备身份与数据准入\n\n适用范围：本项目motor-b教学模拟器，真实厂家型号未录入。读取节点为NamespaceURI urn:industrial-maintenance:motor-b、String标识MotorB.Temperature，运行时解析命名空间索引，不能固定套用ns编号。标量Double表示温度，℃为教学约定。\n\n有效测量须满足Good、有限标量Double、源时间存在且新鲜、相对最后接受的源时间严格递增。默认源年龄允许0至5秒，未来时间不接受，前提是两端UTC时钟同步。Good表示质量状态，不证明电机健康，也不自动证明数据新鲜。\n\n",
+    "token_count": 274,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "opcua-evidence:f057e10cd44697b4d20c",
+    "document_id": "opcua-evidence",
+    "version": "0.1",
+    "section": "源时间和处理时间",
+    "metadata": {
+      "document_id": "opcua-evidence",
+      "title": "OPC UA质量、源时间与订阅证据",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "opcua_storage.py",
+        "collect_opcua.py",
+        "docs/verification/opcua-subscription/验收说明.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "opcua-evidence.md",
+    "document_sha256": "d92ccf93f0d86324b307a4935ebdb231983aa1e3f646dc25d9602d7fc0484c00",
+    "content_sha256": "2f3817e9b62ccd7b21c523c1c2d17319264090e3a967edc8f1f86f992fd774d5",
+    "source_start": 630,
+    "source_end": 918,
+    "source_line_start": 21,
+    "source_line_end": 26,
+    "original_text": "## 源时间和处理时间\n\nSourceTimestamp按本模拟器约定表示测量生成时间；ServerTimestamp、客户端received_at与取得数据库写锁后的decision_at分别保留。接收时间不能代替缺失源时间。判断时再次检查源年龄：接收时4.9秒、排队0.2秒后已超过5秒，不可继续用于当前告警。\n\nGood但源时间十秒前的样本在默认配置下被拒绝。Bad、Uncertain、缺源时间或过期数据保留诊断，清待确认，保留已有告警。收到响应不能说本次服务器未响应；旧源时间也不能单独证明传感器损坏。Modbus没有源时间的协议语义不同，不能机械套用本节门槛。\n\n",
+    "embedding_text": "文档：OPC UA质量、源时间与订阅证据\n文档ID：opcua-evidence\n版本：0.1\n章节：源时间和处理时间\n适用设备：motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 源时间和处理时间\n\nSourceTimestamp按本模拟器约定表示测量生成时间；ServerTimestamp、客户端received_at与取得数据库写锁后的decision_at分别保留。接收时间不能代替缺失源时间。判断时再次检查源年龄：接收时4.9秒、排队0.2秒后已超过5秒，不可继续用于当前告警。\n\nGood但源时间十秒前的样本在默认配置下被拒绝。Bad、Uncertain、缺源时间或过期数据保留诊断，清待确认，保留已有告警。收到响应不能说本次服务器未响应；旧源时间也不能单独证明传感器损坏。Modbus没有源时间的协议语义不同，不能机械套用本节门槛。\n\n",
+    "token_count": 294,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "opcua-evidence:16022736f29b004a0d24",
+    "document_id": "opcua-evidence",
+    "version": "0.1",
+    "section": "两种重复",
+    "metadata": {
+      "document_id": "opcua-evidence",
+      "title": "OPC UA质量、源时间与订阅证据",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "opcua_storage.py",
+        "collect_opcua.py",
+        "docs/verification/opcua-subscription/验收说明.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "opcua-evidence.md",
+    "document_sha256": "d92ccf93f0d86324b307a4935ebdb231983aa1e3f646dc25d9602d7fc0484c00",
+    "content_sha256": "7d6dd5a7b8bb2f7bffb1f111a026c2d7387a31de05b0d91c8caae4a5e516acea",
+    "source_start": 918,
+    "source_end": 1037,
+    "source_line_start": 27,
+    "source_line_end": 30,
+    "original_text": "## 两种重复\n\n温度相同但源时间更新，可能是新测量，不能按数值相同直接丢弃。同一通知身份重新投递会去重，不重复写入或影响待确认；新通知身份携带重复源时间按当前严格策略拒绝并清待确认。这是本项目策略，不是OPC UA所有应用统一要求。\n\n",
+    "embedding_text": "文档：OPC UA质量、源时间与订阅证据\n文档ID：opcua-evidence\n版本：0.1\n章节：两种重复\n适用设备：motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 两种重复\n\n温度相同但源时间更新，可能是新测量，不能按数值相同直接丢弃。同一通知身份重新投递会去重，不重复写入或影响待确认；新通知身份携带重复源时间按当前严格策略拒绝并清待确认。这是本项目策略，不是OPC UA所有应用统一要求。\n\n",
+    "token_count": 177,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "opcua-evidence:25dcd4a3cd9acf3ac745",
+    "document_id": "opcua-evidence",
+    "version": "0.1",
+    "section": "保活、重连和缺口",
+    "metadata": {
+      "document_id": "opcua-evidence",
+      "title": "OPC UA质量、源时间与订阅证据",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "opcua_storage.py",
+        "collect_opcua.py",
+        "docs/verification/opcua-subscription/验收说明.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "opcua-evidence.md",
+    "document_sha256": "d92ccf93f0d86324b307a4935ebdb231983aa1e3f646dc25d9602d7fc0484c00",
+    "content_sha256": "dc2be4b16895107c30409144576a7ee40aa62c7bc94a491da85636f1d35f6a61",
+    "source_start": 1037,
+    "source_end": 1215,
+    "source_line_start": 31,
+    "source_line_end": 35,
+    "original_text": "## 保活、重连和缺口\n\n保活说明订阅有响应，不是新的温度测量，不能累计超温。断线后重建订阅不意味着补齐缺失历史。旧连接代次迟到的回调不能更新当前状态。\n\n服务器监视项队列与采集器应用队列是不同层。应用队列积压、溢出等会破坏证据连续性；增加客户端队列找不回服务端已丢通知。没有溢出标志不能证明无丢失。本项目不保证识别所有静默丢样或提供端到端恰好一次交付。\n",
+    "embedding_text": "文档：OPC UA质量、源时间与订阅证据\n文档ID：opcua-evidence\n版本：0.1\n章节：保活、重连和缺口\n适用设备：motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 保活、重连和缺口\n\n保活说明订阅有响应，不是新的温度测量，不能累计超温。断线后重建订阅不意味着补齐缺失历史。旧连接代次迟到的回调不能更新当前状态。\n\n服务器监视项队列与采集器应用队列是不同层。应用队列积压、溢出等会破坏证据连续性；增加客户端队列找不回服务端已丢通知。没有溢出标志不能证明无丢失。本项目不保证识别所有静默丢样或提供端到端恰好一次交付。\n",
+    "token_count": 243,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "readonly-queries:3a9540590f18ec2a6097",
+    "document_id": "readonly-queries",
+    "version": "0.1",
+    "section": "只读工具、历史统计与错误语义",
+    "metadata": {
+      "document_id": "readonly-queries",
+      "title": "只读工具、历史统计与错误语义",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "assistant/tools.py",
+        "assistant/query_service.py",
+        "assistant/ranges.py",
+        "docs/verification/m4-readonly-tools/验收说明.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "readonly-queries.md",
+    "document_sha256": "7654c0cd5e0eaca6ba9c33cb655435838d16051ab25b137d12427e3a2114aa95",
+    "content_sha256": "c72421b9aae06f595904af19f98c18b1ebd593a8e7910f1e8d28d855321fcde2",
+    "source_start": 370,
+    "source_end": 389,
+    "source_line_start": 12,
+    "source_line_end": 14,
+    "original_text": "\n# 只读工具、历史统计与错误语义\n\n",
+    "embedding_text": "文档：只读工具、历史统计与错误语义\n文档ID：readonly-queries\n版本：0.1\n章节：只读工具、历史统计与错误语义\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n\n# 只读工具、历史统计与错误语义\n\n",
+    "token_count": 98,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "readonly-queries:115b1b58700e8124f216",
+    "document_id": "readonly-queries",
+    "version": "0.1",
+    "section": "三个事实查询工具",
+    "metadata": {
+      "document_id": "readonly-queries",
+      "title": "只读工具、历史统计与错误语义",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "assistant/tools.py",
+        "assistant/query_service.py",
+        "assistant/ranges.py",
+        "docs/verification/m4-readonly-tools/验收说明.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "readonly-queries.md",
+    "document_sha256": "7654c0cd5e0eaca6ba9c33cb655435838d16051ab25b137d12427e3a2114aa95",
+    "content_sha256": "a381844d9cb42b4b1a8fbc3e26728ea71fcc9ce6567b826c5bd989274c5dfc64",
+    "source_start": 389,
+    "source_end": 607,
+    "source_line_start": 15,
+    "source_line_end": 20,
+    "original_text": "## 三个事实查询工具\n\nget_device_status查询设备支持指标的最后有效记录、质量、时效与告警。query_metric_history查询指定时间范围的历史。list_alarms查询与范围相交的告警。只读工具不提供任意SQL、shell、写设备或解除告警的能力。\n\n工具ok=true仅表示查询成功，设备状态usable只表示记录在时效范围内，均不等于设备健康。旧的有效数值必须保留原时间，不能伪装成当前实时测量。\n\n",
+    "embedding_text": "文档：只读工具、历史统计与错误语义\n文档ID：readonly-queries\n版本：0.1\n章节：三个事实查询工具\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 三个事实查询工具\n\nget_device_status查询设备支持指标的最后有效记录、质量、时效与告警。query_metric_history查询指定时间范围的历史。list_alarms查询与范围相交的告警。只读工具不提供任意SQL、shell、写设备或解除告警的能力。\n\n工具ok=true仅表示查询成功，设备状态usable只表示记录在时效范围内，均不等于设备健康。旧的有效数值必须保留原时间，不能伪装成当前实时测量。\n\n",
+    "token_count": 247,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "readonly-queries:012816da6b3985d263d8",
+    "document_id": "readonly-queries",
+    "version": "0.1",
+    "section": "完整统计与有限明细",
+    "metadata": {
+      "document_id": "readonly-queries",
+      "title": "只读工具、历史统计与错误语义",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "assistant/tools.py",
+        "assistant/query_service.py",
+        "assistant/ranges.py",
+        "docs/verification/m4-readonly-tools/验收说明.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "readonly-queries.md",
+    "document_sha256": "7654c0cd5e0eaca6ba9c33cb655435838d16051ab25b137d12427e3a2114aa95",
+    "content_sha256": "555a4688f1e78c822d2a033d4a19b56380e27d8f183fc36bb8494dc48545df8c",
+    "source_start": 607,
+    "source_end": 912,
+    "source_line_start": 21,
+    "source_line_end": 28,
+    "original_text": "## 完整统计与有限明细\n\nquery_metric_history按collected_at闭区间查询quality=good记录，最大范围24小时，时间须带时区。motor-b的collected_at是接收时间，不是源时间。\n\ncount/min/max在全部匹配样本上计算。limit仅限制返回明细，最大1000；明细按时间及id升序。即使返回两条，也不是只用两条计算最高值。truncated表示明细截断，不代表统计截断。\n\n最大值是已记录有效样本最大值，不保证等于真实物理峰值。首末时间不能证明中间无缺口，不能用订阅假设固定每秒一条计算完整率。运行状态是枚举，统计各状态次数，不计算物理最大值。\n\n",
+    "embedding_text": "文档：只读工具、历史统计与错误语义\n文档ID：readonly-queries\n版本：0.1\n章节：完整统计与有限明细\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 完整统计与有限明细\n\nquery_metric_history按collected_at闭区间查询quality=good记录，最大范围24小时，时间须带时区。motor-b的collected_at是接收时间，不是源时间。\n\ncount/min/max在全部匹配样本上计算。limit仅限制返回明细，最大1000；明细按时间及id升序。即使返回两条，也不是只用两条计算最高值。truncated表示明细截断，不代表统计截断。\n\n最大值是已记录有效样本最大值，不保证等于真实物理峰值。首末时间不能证明中间无缺口，不能用订阅假设固定每秒一条计算完整率。运行状态是枚举，统计各状态次数，不计算物理最大值。\n\n",
+    "token_count": 320,
+    "over_soft_target": true
+  },
+  {
+    "chunk_id": "readonly-queries:8feda4e6e02103c47b00",
+    "document_id": "readonly-queries",
+    "version": "0.1",
+    "section": "空结果和失败",
+    "metadata": {
+      "document_id": "readonly-queries",
+      "title": "只读工具、历史统计与错误语义",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "assistant/tools.py",
+        "assistant/query_service.py",
+        "assistant/ranges.py",
+        "docs/verification/m4-readonly-tools/验收说明.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "readonly-queries.md",
+    "document_sha256": "7654c0cd5e0eaca6ba9c33cb655435838d16051ab25b137d12427e3a2114aa95",
+    "content_sha256": "81874ea4e877428e51addf8b0553655d7483ae3c789ffba3f1ff9e3959dbf1fd",
+    "source_start": 912,
+    "source_end": 1021,
+    "source_line_start": 29,
+    "source_line_end": 32,
+    "original_text": "## 空结果和失败\n\n查询成功但没有有效样本：count=0，min/max=null，说明无数据、无法计算，不能返回0℃。数据库不可读、超时等返回ok=false及结构化error，不能解释成没有记录或没有告警。\n\n",
+    "embedding_text": "文档：只读工具、历史统计与错误语义\n文档ID：readonly-queries\n版本：0.1\n章节：空结果和失败\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 空结果和失败\n\n查询成功但没有有效样本：count=0，min/max=null，说明无数据、无法计算，不能返回0℃。数据库不可读、超时等返回ok=false及结构化error，不能解释成没有记录或没有告警。\n\n",
+    "token_count": 159,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "readonly-queries:e9d1a0388ed6b5e40fdf",
+    "document_id": "readonly-queries",
+    "version": "0.1",
+    "section": "告警相交与记录状态",
+    "metadata": {
+      "document_id": "readonly-queries",
+      "title": "只读工具、历史统计与错误语义",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "assistant/tools.py",
+        "assistant/query_service.py",
+        "assistant/ranges.py",
+        "docs/verification/m4-readonly-tools/验收说明.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "readonly-queries.md",
+    "document_sha256": "7654c0cd5e0eaca6ba9c33cb655435838d16051ab25b137d12427e3a2114aa95",
+    "content_sha256": "fe6328541761352c0a9f33b7825fa352c0ae7b20a155150c4dfbb95fa4d851c3",
+    "source_start": 1021,
+    "source_end": 1254,
+    "source_line_start": 33,
+    "source_line_end": 37,
+    "original_text": "## 告警相交与记录状态\n\n告警started_at不晚于查询end，且recovered_at为空或不早于start，才与闭区间相交。查询范围开始前触发但范围内仍未恢复的告警也应包含。\n\nstatus筛选依据查询时记录是否恢复，不是重建过去某一刻状态。历史告警内阈值描述该次记录；当前状态返回的rule含查询进程默认值及部分数据库状态，不是所有采集进程已同步加载配置的证明。旧库history_available=false表示无告警历史表，不等于确认没有告警。\n",
+    "embedding_text": "文档：只读工具、历史统计与错误语义\n文档ID：readonly-queries\n版本：0.1\n章节：告警相交与记录状态\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 告警相交与记录状态\n\n告警started_at不晚于查询end，且recovered_at为空或不早于start，才与闭区间相交。查询范围开始前触发但范围内仍未恢复的告警也应包含。\n\nstatus筛选依据查询时记录是否恢复，不是重建过去某一刻状态。历史告警内阈值描述该次记录；当前状态返回的rule含查询进程默认值及部分数据库状态，不是所有采集进程已同步加载配置的证明。旧库history_available=false表示无告警历史表，不等于确认没有告警。\n",
+    "token_count": 265,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "evidence-boundaries:d45bb0029936b76b1b60",
+    "document_id": "evidence-boundaries",
+    "version": "0.1",
+    "section": "资料适用性、引用与无法确定的情况",
+    "metadata": {
+      "document_id": "evidence-boundaries",
+      "title": "资料适用性、引用与无法确定的情况",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "docs/project-plan-v0.2.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "evidence-boundaries.md",
+    "document_sha256": "09cd038831a29d50c46de36541b69582a2b5a4c5f217aa733a0ff49365fdfa0e",
+    "content_sha256": "d777f05f37c52941b37ddacbe22202a37a0cdc6d2a1f460123dbc746d1212963",
+    "source_start": 282,
+    "source_end": 303,
+    "source_line_start": 12,
+    "source_line_end": 14,
+    "original_text": "\n# 资料适用性、引用与无法确定的情况\n\n",
+    "embedding_text": "文档：资料适用性、引用与无法确定的情况\n文档ID：evidence-boundaries\n版本：0.1\n章节：资料适用性、引用与无法确定的情况\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n\n# 资料适用性、引用与无法确定的情况\n\n",
+    "token_count": 105,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "evidence-boundaries:7ccc1f91f4ac69d1f4c0",
+    "document_id": "evidence-boundaries",
+    "version": "0.1",
+    "section": "教学资料适用范围",
+    "metadata": {
+      "document_id": "evidence-boundaries",
+      "title": "资料适用性、引用与无法确定的情况",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "docs/project-plan-v0.2.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "evidence-boundaries.md",
+    "document_sha256": "09cd038831a29d50c46de36541b69582a2b5a4c5f217aa733a0ff49365fdfa0e",
+    "content_sha256": "080a84045816c855474571c869fa26bbf95708ba564fcadb249d0c305d66e607",
+    "source_start": 303,
+    "source_end": 425,
+    "source_line_start": 15,
+    "source_line_end": 18,
+    "original_text": "## 教学资料适用范围\n\n本知识库是项目教学说明，不是厂家手册，未提供真实产品型号、厂家故障码定义、润滑周期或维修操作规程。motor-a/motor-b是设备编号，不能推导产品型号。未注明型号不等于全部型号适用；型号、版本和工况都需核对。\n\n",
+    "embedding_text": "文档：资料适用性、引用与无法确定的情况\n文档ID：evidence-boundaries\n版本：0.1\n章节：教学资料适用范围\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 教学资料适用范围\n\n本知识库是项目教学说明，不是厂家手册，未提供真实产品型号、厂家故障码定义、润滑周期或维修操作规程。motor-a/motor-b是设备编号，不能推导产品型号。未注明型号不等于全部型号适用；型号、版本和工况都需核对。\n\n",
+    "token_count": 191,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "evidence-boundaries:489aa895829ee1d2434a",
+    "document_id": "evidence-boundaries",
+    "version": "0.1",
+    "section": "事实、可能原因与现场排查",
+    "metadata": {
+      "document_id": "evidence-boundaries",
+      "title": "资料适用性、引用与无法确定的情况",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "docs/project-plan-v0.2.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "evidence-boundaries.md",
+    "document_sha256": "09cd038831a29d50c46de36541b69582a2b5a4c5f217aa733a0ff49365fdfa0e",
+    "content_sha256": "a52ec29338170ca953b7e99b521cf6ea51a471b395b655e7f83ce64048d34b31",
+    "source_start": 425,
+    "source_end": 615,
+    "source_line_start": 19,
+    "source_line_end": 24,
+    "original_text": "## 事实、可能原因与现场排查\n\n设备查询工具提供当次记录事实，文档提供规则和解释依据。已记录85℃只支持超温现象，不能证明轴承或润滑系统损坏。即使外部手册列某项可能原因，也需适用性核对及现场证据才能确认；本项目不提供完整根因诊断。\n\n缺少适用故障码表或维护周期时，说明未找到适用依据，先核对实际型号及对应手册。不能从字面相同的故障码套用另一型号资料，也不能猜测具体维修周期。\n\n",
+    "embedding_text": "文档：资料适用性、引用与无法确定的情况\n文档ID：evidence-boundaries\n版本：0.1\n章节：事实、可能原因与现场排查\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 事实、可能原因与现场排查\n\n设备查询工具提供当次记录事实，文档提供规则和解释依据。已记录85℃只支持超温现象，不能证明轴承或润滑系统损坏。即使外部手册列某项可能原因，也需适用性核对及现场证据才能确认；本项目不提供完整根因诊断。\n\n缺少适用故障码表或维护周期时，说明未找到适用依据，先核对实际型号及对应手册。不能从字面相同的故障码套用另一型号资料，也不能猜测具体维修周期。\n\n",
+    "token_count": 266,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "evidence-boundaries:feca3f1ea56af749080b",
+    "document_id": "evidence-boundaries",
+    "version": "0.1",
+    "section": "引用与版本",
+    "metadata": {
+      "document_id": "evidence-boundaries",
+      "title": "资料适用性、引用与无法确定的情况",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "docs/project-plan-v0.2.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "evidence-boundaries.md",
+    "document_sha256": "09cd038831a29d50c46de36541b69582a2b5a4c5f217aa733a0ff49365fdfa0e",
+    "content_sha256": "1f99fe093f52986792a075de0ba36fdbcc7a5b6dec6a06963a0a9745d331670c",
+    "source_start": 615,
+    "source_end": 791,
+    "source_line_start": 25,
+    "source_line_end": 30,
+    "original_text": "## 引用与版本\n\n引用须支持实际陈述，不能引用“低于78℃”却回答“等于78℃也恢复”。引用应包含文档ID、版本、章节和真实chunk_id。文档更新时应替换或停用默认检索中的旧版片段，不能同时混用互相矛盾的版本。\n\n文档记载、当前程序配置、某次历史告警所用规则是不同证据。出现冲突须说明并核对；查不到当前配置时，不能用最新文档冒充当前生效规则。\n\n",
+    "embedding_text": "文档：资料适用性、引用与无法确定的情况\n文档ID：evidence-boundaries\n版本：0.1\n章节：引用与版本\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 引用与版本\n\n引用须支持实际陈述，不能引用“低于78℃”却回答“等于78℃也恢复”。引用应包含文档ID、版本、章节和真实chunk_id。文档更新时应替换或停用默认检索中的旧版片段，不能同时混用互相矛盾的版本。\n\n文档记载、当前程序配置、某次历史告警所用规则是不同证据。出现冲突须说明并核对；查不到当前配置时，不能用最新文档冒充当前生效规则。\n\n",
+    "token_count": 240,
+    "over_soft_target": false
+  },
+  {
+    "chunk_id": "evidence-boundaries:34190ae88f7d579d93d9",
+    "document_id": "evidence-boundaries",
+    "version": "0.1",
+    "section": "元数据与生成概述",
+    "metadata": {
+      "document_id": "evidence-boundaries",
+      "title": "资料适用性、引用与无法确定的情况",
+      "version": "0.1",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": true,
+      "device_ids": [
+        "motor-a",
+        "motor-b"
+      ],
+      "product_model": null,
+      "sources": [
+        "docs/project-plan-v0.2.md"
+      ],
+      "authoring": "AI-assisted, checked against project sources"
+    },
+    "source_path": "evidence-boundaries.md",
+    "document_sha256": "09cd038831a29d50c46de36541b69582a2b5a4c5f217aa733a0ff49365fdfa0e",
+    "content_sha256": "5a513aeaf47c51085f6ead01fddc05ba4db08102f74a1894e3dad86df6a6b125",
+    "source_start": 791,
+    "source_end": 919,
+    "source_line_start": 31,
+    "source_line_end": 33,
+    "original_text": "## 元数据与生成概述\n\n型号、版本、出处须来自明确来源；未知保留null或未注明。AI生成上下文说明不能扩大适用范围或删掉条件，不替代原文。格式正确不证明语义正确。当前这批正文由AI依据项目文件整理并核对，未运行独立的批量AI摘要增强或向量检索流水线。\n",
+    "embedding_text": "文档：资料适用性、引用与无法确定的情况\n文档ID：evidence-boundaries\n版本：0.1\n章节：元数据与生成概述\n适用设备：motor-a, motor-b\n产品型号：未注明\n仅教学：是\n正文：\n## 元数据与生成概述\n\n型号、版本、出处须来自明确来源；未知保留null或未注明。AI生成上下文说明不能扩大适用范围或删掉条件，不替代原文。格式正确不证明语义正确。当前这批正文由AI依据项目文件整理并核对，未运行独立的批量AI摘要增强或向量检索流水线。\n",
+    "token_count": 198,
+    "over_soft_target": false
+  }
+]

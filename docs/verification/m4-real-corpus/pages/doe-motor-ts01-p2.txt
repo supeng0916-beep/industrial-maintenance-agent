@@ -1,0 +1,63 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+     EISA also requires that NEMA Design B motors with power ratings between 201 and
+     500 hp “shall have a full-load efficiency that meets or exceeds the NEMA Energy
+                                                                 Resources          
+     Efficient motor standards” (see Table 12-11 of NEMA MG 1-2011). The EISA motor 
+     efficiency mandate took effect in December 2010.     National Electrical Manufacturers
+                                                          Association (NEMA)—Find   
+     Premium efficiency motors are particularly cost effective when annual operation
+     exceeds 2,000 hours, utility rates are high, motor repair costs are a significant fraction of additional information on the
+     the price of a replacement motor, or electric utility motor rebates or other conservation NEMA premium standards, visit
+     incentives are available. Annual energy savings are dependent upon operating profile, www.nema.org.
+     duty cycle, and efficiency gain. Table 1 gives examples of annual savings due to
+     installing premium efficiency motors instead of continuing to operate old standard Electrical Apparatus Service
+     efficiency motors.                                   Association (EASA)—See    
+                                                          guidelines on motor repair/rewind
+     Example                                                                        
+                                                          practices at www.easa.com 
+     An old, 75-hp standard efficiency, boiler forced-draft fan motor is to be replaced with
+     a premium efficiency motor. The existing motor operates at an average load of 75% for Motor Decisions Matter—Download
+     8,000 hrs/year with efficiency (η ) of 92%. Determine the annual energy savings if the a motor management planning kit
+                       std                                                          
+     replacement premium efficiency motor has an efficiency (η ) of 95.5% and electricity is at www.motorsmatter.org for tips
+                                      PE                                            
+     priced at $0.08/kWh.                                 on an in-plant motor inventory,
+                                                          decision rules, critical planning,
+     Energy Savings = hp x % load/100 x 0.746 kW/hp x hrs/year x (100/η – 100/η )   
+                                            std   PE                                
+               = 75 x 0.75 x 0.746 x 8,000 x (100/92 – 100/95.5) = 13,373 kWh/year and motor replacement.
+     Cost Savings = 13,373 kWh/year x $0.08/kWh = $1,070/year U.S. Department of Energy (DOE)—
+                                                          For more information on motor
+     Over a 10-year operating period for a 75-hp motor, the purchase price might represent
+     just 2% of the total motor installation and operating costs. Energy and maintenance and motor-driven system
+     costs account for the remaining 98%. Even a small improvement in motor operating efficiency and to download the
+     efficiency can produce significant energy and cost savings, and provide a rapid return on MotorMaster+ software tool, visit
+     investment.                                          the Advanced Manufacturing
+                                                          Office (AMO) website at   
+                                                          manufacturing.energy.gov. 
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3743 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

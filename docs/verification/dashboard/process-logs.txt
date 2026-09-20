@@ -1,0 +1,128 @@
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python serve_api.py --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/temperature-dashboard-UztDfQ/test.sqlite3 --port 62271
+INFO:     Started server process [1338]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:62271 (Press CTRL+C to quit)
+INFO:     127.0.0.1:64499 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64501 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64503 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A27.150Z&to=2026-09-16T08%3A38%3A27.150094%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1338]
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python simulator.py --port 62270 --raw 728
+启动模拟器：127.0.0.1:62270，设备 ID=1，保持寄存器协议地址=0，原始值=728；按 Ctrl+C 停止。
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python collect_temperature.py --port 62270 --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/temperature-dashboard-UztDfQ/test.sqlite3
+2026-09-16T08:38:01.183178+00:00 第1次 已保存：原始值=653 温度=65.3℃
+2026-09-16T08:38:02.184287+00:00 第2次 已保存：原始值=653 温度=65.3℃
+2026-09-16T08:38:03.186169+00:00 第3次 已保存：原始值=653 温度=65.3℃
+2026-09-16T08:38:04.188702+00:00 第4次 已保存：原始值=653 温度=65.3℃
+2026-09-16T08:38:05.189860+00:00 第5次 已保存：原始值=653 温度=65.3℃
+2026-09-16T08:38:06.190029+00:00 第6次 已保存：原始值=653 温度=65.3℃
+2026-09-16T08:38:07.193120+00:00 第7次 已保存：原始值=653 温度=65.3℃
+2026-09-16T08:38:08.193283+00:00 第8次 已保存：原始值=653 温度=65.3℃
+2026-09-16T08:38:09.198452+00:00 第9次 已保存：原始值=653 温度=65.3℃
+2026-09-16T08:38:10.203339+00:00 第10次 已保存：原始值=653 温度=65.3℃
+2026-09-16T08:38:11.208351+00:00 第11次 已保存：原始值=653 温度=65.3℃
+Connection to (127.0.0.1, 62270) failed: [Errno 61] Connection refused
+2026-09-16T08:38:12.209907+00:00 第12次 通信失败：127.0.0.1:62270：无法连接，请检查模拟器是否启动、端口是否一致
+Repeating....
+2026-09-16T08:38:13.210413+00:00 第13次 通信失败：127.0.0.1:62270：无法连接，请检查模拟器是否启动、端口是否一致
+Connection to (127.0.0.1, 62270) failed: [Errno 61] Connection refused
+2026-09-16T08:38:14.213869+00:00 第14次 通信失败：127.0.0.1:62270：无法连接，请检查模拟器是否启动、端口是否一致
+Connection to (127.0.0.1, 62270) failed: [Errno 61] Connection refused
+2026-09-16T08:38:15.215213+00:00 第15次 通信失败：127.0.0.1:62270：无法连接，请检查模拟器是否启动、端口是否一致
+Connection to (127.0.0.1, 62270) failed: [Errno 61] Connection refused
+2026-09-16T08:38:16.218580+00:00 第16次 通信失败：127.0.0.1:62270：无法连接，请检查模拟器是否启动、端口是否一致
+Connection to (127.0.0.1, 62270) failed: [Errno 61] Connection refused
+2026-09-16T08:38:17.223337+00:00 第17次 通信失败：127.0.0.1:62270：无法连接，请检查模拟器是否启动、端口是否一致
+Connection to (127.0.0.1, 62270) failed: [Errno 61] Connection refused
+2026-09-16T08:38:18.226001+00:00 第18次 通信失败：127.0.0.1:62270：无法连接，请检查模拟器是否启动、端口是否一致
+Connection to (127.0.0.1, 62270) failed: [Errno 61] Connection refused
+2026-09-16T08:38:19.227391+00:00 第19次 通信失败：127.0.0.1:62270：无法连接，请检查模拟器是否启动、端口是否一致
+2026-09-16T08:38:20.232860+00:00 第20次 已保存：原始值=728 温度=72.8℃
+2026-09-16T08:38:21.234164+00:00 第21次 已保存：原始值=728 温度=72.8℃
+2026-09-16T08:38:22.238928+00:00 第22次 已保存：原始值=728 温度=72.8℃
+2026-09-16T08:38:23.241839+00:00 第23次 已保存：原始值=728 温度=72.8℃
+2026-09-16T08:38:24.246851+00:00 第24次 已保存：原始值=728 温度=72.8℃
+2026-09-16T08:38:25.251554+00:00 第25次 已保存：原始值=728 温度=72.8℃
+2026-09-16T08:38:26.251610+00:00 第26次 已保存：原始值=728 温度=72.8℃
+2026-09-16T08:38:27.255477+00:00 第27次 已保存：原始值=728 温度=72.8℃
+采集已停止，已提交的历史保留。
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python simulator.py --port 62270
+启动模拟器：127.0.0.1:62270，设备 ID=1，保持寄存器协议地址=0，原始值=653；按 Ctrl+C 停止。
+
+
+/Users/yuanqi/.local/node-current/bin/node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 62272
+
+  VITE v8.3.0  ready in 93 ms
+
+  ➜  Local:   http://127.0.0.1:62272/
+4:38:23 PM [vite] http proxy error: /api/devices
+Error: connect ECONNREFUSED 127.0.0.1:62271
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1938:16)
+4:38:25 PM [vite] http proxy error: /api/devices
+Error: connect ECONNREFUSED 127.0.0.1:62271
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1938:16)
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python serve_api.py --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/temperature-dashboard-UztDfQ/test.sqlite3 --port 62271
+INFO:     Started server process [1181]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:62271 (Press CTRL+C to quit)
+INFO:     127.0.0.1:62459 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62461 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62463 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A00.976Z&to=2026-09-16T08%3A38%3A00.976863%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62549 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62551 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62553 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A02.991Z&to=2026-09-16T08%3A38%3A02.991352%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62610 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62612 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62614 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A05.004Z&to=2026-09-16T08%3A38%3A05.004103%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62714 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62716 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62718 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A07.014Z&to=2026-09-16T08%3A38%3A07.014978%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62726 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62727 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62729 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A07.486Z&to=2026-09-16T08%3A38%3A07.486614%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62735 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62736 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62739 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A07.603Z&to=2026-09-16T08%3A38%3A07.603385%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62814 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62816 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62818 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A09.028Z&to=2026-09-16T08%3A38%3A09.028355%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62877 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62879 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62881 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A09.615Z&to=2026-09-16T08%3A38%3A09.615537%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63080 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63082 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63086 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A11.055Z&to=2026-09-16T08%3A38%3A11.055452%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63154 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63156 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63158 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A11.625Z&to=2026-09-16T08%3A38%3A11.625653%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63268 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63270 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63272 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A13.064Z&to=2026-09-16T08%3A38%3A13.064467%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63618 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63620 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63622 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A15.073Z&to=2026-09-16T08%3A38%3A15.073311%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63717 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63719 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63721 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A17.083Z&to=2026-09-16T08%3A38%3A17.083591%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63754 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63756 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63758 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A19.095Z&to=2026-09-16T08%3A38%3A19.095146%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63903 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63905 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63907 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-16T08%3A28%3A21.108Z&to=2026-09-16T08%3A38%3A21.108537%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1181]

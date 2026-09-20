@@ -1,0 +1,3795 @@
+{
+ "experiment": "query-language-dev-v1",
+ "finished_at": "2026-09-18T09:19:14.031982+00:00",
+ "fixed_inputs": {
+  "cases_file": "docs/evaluation/real-rag-v0.1.json",
+  "cases_sha256": "de7004d03d8857024a2f8b4c67c709166a12961f9ec7a2213ec56754465c7a3d",
+  "index_chunk_count": 113,
+  "index_chunks_sha256": "daaacb8de8fccddfa4298ddb6096861cf1f12fd12f4291bc0961efa405175a6a",
+  "index_config_sha256": "27e35a53a38d21163166d1959aeb12c2492b927d5f722aaae3488433cc12d2ab",
+  "index_path": "/Users/yuanqi/项目/工业设备智能运维agent/docs/verification/m4-real-rag/doe-e5-final",
+  "model_signature": {
+   "device": "cpu",
+   "dimension": 384,
+   "dtype": "float32",
+   "libraries": {
+    "safetensors": "0.8.0",
+    "tokenizers": "0.22.2",
+    "torch": "2.10.0",
+    "transformers": "4.57.6"
+   },
+   "max_length": 512,
+   "model": "intfloat/multilingual-e5-small",
+   "normalize": "l2",
+   "passage_prefix": "passage: ",
+   "pooling": "attention_mask_mean",
+   "query_prefix": "query: ",
+   "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+   "special_tokens": true
+  },
+  "rewrites_file": "docs/evaluation/query-language-dev-v1.json",
+  "rewrites_sha256": "1c47429982a55f0e85495f2210fefabf7de210c35b8a6a36daf153bfceaba28b",
+  "scoring": "assistant.rag_evaluation.score_evidence (NFKC + casefold + whitespace, document/page/anchor)"
+ },
+ "gate": {
+  "baseline_reproduced": true,
+  "pass": true,
+  "status": "pass",
+  "thresholds": {
+   "hit_at_10": ">= 19/24",
+   "hit_at_5": "> 15/24"
+  }
+ },
+ "limitations": [
+  "Rewrites were prepared by an agent that had read the failure records; this is a diagnostic reframe, not a blind translation.",
+  "Manual rewrites are not an automatically deployable query translator.",
+  "Unanswerable dev cases keep candidates with null hits and never enter the hit denominators.",
+  "Anchor presence is not answer correctness; distances are not confidence."
+ ],
+ "ok": true,
+ "results": [
+  {
+   "answerable": false,
+   "case_id": "N01",
+   "category": "requires_live_tool",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.565815124893561,
+    "first_anchor_rank": null,
+    "hit_at_10": null,
+    "hit_at_5": null,
+    "query": "motor-b现在温度是多少？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.19573670625686646,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.20215773582458496,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.20817530155181885,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts09:3ff88e5bc8bb6008d1a1",
+      "distance": 0.2161967158317566,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts13:b653f9ba03f5605fe706",
+      "distance": 0.216711163520813,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.21847295761108398,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts02:a4c2996a03e13caab297",
+      "distance": 0.21923118829727173,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts10:5ed6d30ffa744a67ac74",
+      "distance": 0.21999502182006836,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts12:b95ec2e60def61e30725",
+      "distance": 0.22033822536468506,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts01:8e39b63809dcec5f9706",
+      "distance": 0.22079998254776,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.018330167047679424,
+    "first_anchor_rank": null,
+    "hit_at_10": null,
+    "hit_at_5": null,
+    "query": "What is the temperature of motor-b right now?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.16444402933120728,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.17487621307373047,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts13:b653f9ba03f5605fe706",
+      "distance": 0.18169116973876953,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts12:b95ec2e60def61e30725",
+      "distance": 0.18271243572235107,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.18278086185455322,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.18301892280578613,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.18629562854766846,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts09:3ff88e5bc8bb6008d1a1",
+      "distance": 0.18863320350646973,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts13:f3d1f8c0065896561dfb",
+      "distance": 0.18940037488937378,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.1894834041595459,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": false,
+   "case_id": "N02",
+   "category": "missing_model_manual",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.01775250001810491,
+    "first_anchor_rank": null,
+    "hit_at_10": null,
+    "hit_at_5": null,
+    "query": "我这台电机报E104，具体故障含义是什么？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:8d434b3e1837f09603f8",
+      "distance": 0.2035859227180481,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts08:fbd5a029bf51d73c2db6",
+      "distance": 0.20379430055618286,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts07:2ba394c448fe2ff98404",
+      "distance": 0.2112845778465271,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts01:f69c71b58290637678bc",
+      "distance": 0.2115231156349182,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.21206629276275635,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b2844af851f73b0fb430",
+      "distance": 0.2127208709716797,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.21426361799240112,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.21466726064682007,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts08:c26c2bb6363ffc2677fa",
+      "distance": 0.21487510204315186,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.21587210893630981,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.019058791920542717,
+    "first_anchor_rank": null,
+    "hit_at_10": null,
+    "hit_at_5": null,
+    "query": "My motor reports fault code E104: what exactly does that fault code mean?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:8d434b3e1837f09603f8",
+      "distance": 0.14677780866622925,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.1507415771484375,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b2844af851f73b0fb430",
+      "distance": 0.15179961919784546,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.15731865167617798,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.15846067667007446,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.1610437035560608,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts06:c34132f1d6a1532b4d43",
+      "distance": 0.16163063049316406,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts06:ac1bcec2ab7a01762a0e",
+      "distance": 0.16305756568908691,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts03:28b6bfc01379b3db25c9",
+      "distance": 0.16311144828796387,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts06:e7dc2ff649351f47d708",
+      "distance": 0.16424930095672607,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": false,
+   "case_id": "N03",
+   "category": "missing_model_manual",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.023024334106594324,
+    "first_anchor_rank": null,
+    "hit_at_10": null,
+    "hit_at_5": null,
+    "query": "ABB M3BP 160的轴承指定润滑脂牌号和每次加脂克数是多少？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.2126637101173401,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.21326851844787598,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.21533262729644775,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.21556437015533447,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.21607357263565063,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.21775668859481812,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts01:f247a91d75b19ac6ec14",
+      "distance": 0.21790814399719238,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts11:018ec3bf53376b588fb6",
+      "distance": 0.21954315900802612,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts06:57e0cd5a89b76e38a263",
+      "distance": 0.22065657377243042,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.2208484411239624,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.022957791108638048,
+    "first_anchor_rank": null,
+    "hit_at_10": null,
+    "hit_at_5": null,
+    "query": "For the ABB M3BP 160, what is the specified bearing grease brand and how many grams of grease should be added each time?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:8d434b3e1837f09603f8",
+      "distance": 0.1884862780570984,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.18859457969665527,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.18871402740478516,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.19529765844345093,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.19628220796585083,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts06:57e0cd5a89b76e38a263",
+      "distance": 0.1983877420425415,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts07:e79eed8511371690c76d",
+      "distance": 0.1984969973564148,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts01:f247a91d75b19ac6ec14",
+      "distance": 0.19888538122177124,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.20095396041870117,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.20172780752182007,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": false,
+   "case_id": "N04",
+   "category": "missing_model_manual",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.019870500080287457,
+    "first_anchor_rank": null,
+    "hit_at_10": null,
+    "hit_at_5": null,
+    "query": "西门子某台电机运行了500小时，现在必须补油了吗？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.1911168098449707,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.19229108095169067,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.1923794150352478,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts12:96dec15bd94ac2b05928",
+      "distance": 0.1970270872116089,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.1981990933418274,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:e895823ccd9b18768de3",
+      "distance": 0.20023471117019653,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts08:8695cd7f2395877949e0",
+      "distance": 0.2015368938446045,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts09:ffc0df215e226d584939",
+      "distance": 0.20226073265075684,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.20279008150100708,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.20296013355255127,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.018811832880601287,
+    "first_anchor_rank": null,
+    "hit_at_10": null,
+    "hit_at_5": null,
+    "query": "A certain Siemens motor has run for 500 hours: must it be relubricated now?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:1d8ed335ca3de8d27abc",
+      "distance": 0.15967023372650146,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.16105306148529053,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.16253238916397095,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.16257327795028687,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b2844af851f73b0fb430",
+      "distance": 0.16423845291137695,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts09:ffc0df215e226d584939",
+      "distance": 0.16498613357543945,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.16544616222381592,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts01:8e39b63809dcec5f9706",
+      "distance": 0.16643327474594116,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.16648614406585693,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts07:7c1062883931f884e645",
+      "distance": 0.16692018508911133,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": false,
+   "case_id": "N05",
+   "category": "requires_history_tool",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.017443625023588538,
+    "first_anchor_rank": null,
+    "hit_at_10": null,
+    "hit_at_5": null,
+    "query": "motor-a昨天12点到13点的最高温度是多少？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.1870301365852356,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.19500112533569336,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.19595879316329956,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts02:a4c2996a03e13caab297",
+      "distance": 0.1977173089981079,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts06:dcf4f1e4436a1ce8a480",
+      "distance": 0.19789355993270874,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.1981096863746643,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.1982395052909851,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts09:3ff88e5bc8bb6008d1a1",
+      "distance": 0.1990397572517395,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.20089828968048096,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts13:b653f9ba03f5605fe706",
+      "distance": 0.2027685046195984,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.01721408381126821,
+    "first_anchor_rank": null,
+    "hit_at_10": null,
+    "hit_at_5": null,
+    "query": "What was the highest temperature of motor-a between 12:00 and 13:00 yesterday?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.15639609098434448,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.17098605632781982,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.1755208969116211,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.17732346057891846,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.17848128080368042,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts06:ac1bcec2ab7a01762a0e",
+      "distance": 0.18302494287490845,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.1837891936302185,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.18388527631759644,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts13:b653f9ba03f5605fe706",
+      "distance": 0.1844416856765747,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts01:8e39b63809dcec5f9706",
+      "distance": 0.1853840947151184,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R01",
+   "category": "direct",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.019601082894951105,
+    "first_anchor_rank": 2,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "哪些采购或维修时机会适合评估采用高效率电机？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts01:f69c71b58290637678bc",
+      "distance": 0.16830575466156006,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts01:8e39b63809dcec5f9706",
+      "distance": 0.17467767000198364,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts01:f247a91d75b19ac6ec14",
+      "distance": 0.1774228811264038,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts01:74642260e359d35ecd3c",
+      "distance": 0.18432366847991943,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts01:87041a88a41c08418cab",
+      "distance": 0.18493562936782837,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.1861475706100464,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts06:57e0cd5a89b76e38a263",
+      "distance": 0.1863393783569336,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.1872854232788086,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.18849503993988037,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts11:018ec3bf53376b588fb6",
+      "distance": 0.18877387046813965,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.017979708034545183,
+    "first_anchor_rank": 3,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "In which purchasing or repair situations is it worthwhile to evaluate using a higher-efficiency motor?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts01:f69c71b58290637678bc",
+      "distance": 0.13782590627670288,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b2844af851f73b0fb430",
+      "distance": 0.14705955982208252,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts01:8e39b63809dcec5f9706",
+      "distance": 0.15232861042022705,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts01:f247a91d75b19ac6ec14",
+      "distance": 0.1541980504989624,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts02:e7c1cda3c6714506d120",
+      "distance": 0.15437090396881104,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.15707284212112427,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts02:5a0f804faf41af41211e",
+      "distance": 0.15770119428634644,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.15779149532318115,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts02:2021b58e41578fef4552",
+      "distance": 0.15838569402694702,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts06:57e0cd5a89b76e38a263",
+      "distance": 0.16044777631759644,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R02",
+   "category": "numeric_condition",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.017514040926471353,
+    "first_anchor_rank": 5,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "这份DOE指南建议优先清查什么功率范围、年运行多久的旧电机？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.1652299165725708,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.17089325189590454,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts01:f247a91d75b19ac6ec14",
+      "distance": 0.17235428094863892,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts01:87041a88a41c08418cab",
+      "distance": 0.1745341420173645,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts01:f69c71b58290637678bc",
+      "distance": 0.17576730251312256,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts06:57e0cd5a89b76e38a263",
+      "distance": 0.17613422870635986,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts08:8695cd7f2395877949e0",
+      "distance": 0.1773964762687683,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts07:626f27030281965abd8c",
+      "distance": 0.17794650793075562,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts09:b752385f29b9f505f33f",
+      "distance": 0.17943251132965088,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts01:8e39b63809dcec5f9706",
+      "distance": 0.1798003911972046,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.017459874972701073,
+    "first_anchor_rank": null,
+    "hit_at_10": false,
+    "hit_at_5": false,
+    "query": "According to this DOE guide, which power range and how many annual operating hours of old motors should be surveyed first?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts14:1c5bc863963a186cb7d1",
+      "distance": 0.1485142707824707,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.1492166519165039,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts01:87041a88a41c08418cab",
+      "distance": 0.1500304937362671,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts09:37fb99d0263570cc7a78",
+      "distance": 0.1533048152923584,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.15510523319244385,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.15539968013763428,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts02:59773b33fc8bc90b112c",
+      "distance": 0.1557864546775818,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.15776097774505615,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts10:5ed6d30ffa744a67ac74",
+      "distance": 0.15977013111114502,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts10:3f0472381a767d03690d",
+      "distance": 0.1600741147994995,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R05",
+   "category": "paraphrase",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.017673958791419864,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "电机越来越烫，除润滑外，资料还提示排查哪些可能导致过热的条件？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.18704217672348022,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.19136327505111694,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.19189608097076416,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts08:c26c2bb6363ffc2677fa",
+      "distance": 0.1957518458366394,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.19690793752670288,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:e895823ccd9b18768de3",
+      "distance": 0.1979081630706787,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts02:4a9a456031c8053922a3",
+      "distance": 0.19855624437332153,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts10:ec1961d6aedfcdd5fd3a",
+      "distance": 0.20015817880630493,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.2005353569984436,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.20113253593444824,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.018044084077700973,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "Besides lubrication, which possible overheating conditions does the material suggest checking when a motor keeps getting hotter?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.13257884979248047,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.14863508939743042,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.15135079622268677,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.15715599060058594,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b2844af851f73b0fb430",
+      "distance": 0.15762263536453247,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts02:e7c1cda3c6714506d120",
+      "distance": 0.1591494083404541,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts03:8d434b3e1837f09603f8",
+      "distance": 0.15955126285552979,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.1598736047744751,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts04:bad44673bb08c09540db",
+      "distance": 0.16065800189971924,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts10:ec1961d6aedfcdd5fd3a",
+      "distance": 0.1618395447731018,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R06",
+   "category": "definition",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.01688454090617597,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "轴承的L10寿命是不是指每个轴承到这个小时数必然坏？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:8d434b3e1837f09603f8",
+      "distance": 0.15975332260131836,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.1951161026954651,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.20118767023086548,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts12:9bb108442172ec5d2cdb",
+      "distance": 0.20175355672836304,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.20255035161972046,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.20331084728240967,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1d8ed335ca3de8d27abc",
+      "distance": 0.20359796285629272,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts11:018ec3bf53376b588fb6",
+      "distance": 0.20413494110107422,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts11:e14f4d7f5567c8ac968e",
+      "distance": 0.20437222719192505,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts02:4a9a456031c8053922a3",
+      "distance": 0.20448487997055054,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.017097624950110912,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "Does a bearing's L10 life mean that every bearing is certain to fail once it reaches that number of hours?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts03:8d434b3e1837f09603f8",
+      "distance": 0.10097295045852661,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts03:28b6bfc01379b3db25c9",
+      "distance": 0.14377671480178833,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1d8ed335ca3de8d27abc",
+      "distance": 0.15145331621170044,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.15907084941864014,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b2844af851f73b0fb430",
+      "distance": 0.16073065996170044,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.16153818368911743,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.16295361518859863,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.16412019729614258,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts02:e7c1cda3c6714506d120",
+      "distance": 0.16496485471725464,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts02:4a9a456031c8053922a3",
+      "distance": 0.1654488444328308,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R07",
+   "category": "misconception",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.015835124999284744,
+    "first_anchor_rank": 2,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "用了柔性联轴器，是不是就不用做轴对中了？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.20885717868804932,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts04:01a0ba13ababff10e1fd",
+      "distance": 0.20956236124038696,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts04:b230528bcf2c8a797931",
+      "distance": 0.20997107028961182,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts04:260bbd6c3d8644c23dd0",
+      "distance": 0.21563935279846191,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts12:9bb108442172ec5d2cdb",
+      "distance": 0.21582680940628052,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts04:4863f44b5c64ff94a12c",
+      "distance": 0.21615636348724365,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.21727293729782104,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts05:2a2e6760346e312d5a72",
+      "distance": 0.21738702058792114,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts04:becb4b70f7ed9945d92a",
+      "distance": 0.21859604120254517,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.21876084804534912,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.01740549993701279,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "If a flexible coupling is used, does that remove the need for shaft alignment?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts04:01a0ba13ababff10e1fd",
+      "distance": 0.09110832214355469,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts04:4863f44b5c64ff94a12c",
+      "distance": 0.11963146924972534,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts04:260bbd6c3d8644c23dd0",
+      "distance": 0.13373786211013794,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts04:bad44673bb08c09540db",
+      "distance": 0.13581883907318115,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts04:92b07484201e91e89f81",
+      "distance": 0.14575988054275513,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts04:b230528bcf2c8a797931",
+      "distance": 0.1514812707901001,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts04:a63550514dfb7d01acf6",
+      "distance": 0.1568576693534851,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts04:becb4b70f7ed9945d92a",
+      "distance": 0.1569308638572693,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.1570395827293396,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.15823817253112793,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R08",
+   "category": "condition",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.016903084004297853,
+    "first_anchor_rank": 6,
+    "hit_at_10": true,
+    "hit_at_5": false,
+    "query": "为什么冷态对中后，设备温度稳定了还要复核？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.19665616750717163,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.19944500923156738,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.20741283893585205,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts12:e895823ccd9b18768de3",
+      "distance": 0.2113107442855835,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.21393471956253052,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts04:bad44673bb08c09540db",
+      "distance": 0.21398037672042847,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.2146424651145935,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts10:ec1961d6aedfcdd5fd3a",
+      "distance": 0.21498656272888184,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.2162032127380371,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.21798759698867798,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.01879258407279849,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "After aligning the equipment cold, why is a realignment check still needed once its temperature stabilizes?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts04:bad44673bb08c09540db",
+      "distance": 0.11946284770965576,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts04:becb4b70f7ed9945d92a",
+      "distance": 0.1457810401916504,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.1548914909362793,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts04:b230528bcf2c8a797931",
+      "distance": 0.15569311380386353,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.15580666065216064,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.1563664674758911,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts04:260bbd6c3d8644c23dd0",
+      "distance": 0.15948086977005005,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts04:01a0ba13ababff10e1fd",
+      "distance": 0.16316884756088257,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts04:92b07484201e91e89f81",
+      "distance": 0.16325175762176514,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts04:4863f44b5c64ff94a12c",
+      "distance": 0.16351354122161865,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R09",
+   "category": "misconception",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.0158889580052346,
+    "first_anchor_rank": 2,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "三角皮带拉得越紧越好吗？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.23208391666412354,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts05:dd04242deb660f33e7e0",
+      "distance": 0.23336315155029297,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts05:2a2e6760346e312d5a72",
+      "distance": 0.23596042394638062,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts04:260bbd6c3d8644c23dd0",
+      "distance": 0.2412469983100891,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts15:8e474722700cadb59136",
+      "distance": 0.24314332008361816,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.24462050199508667,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts14:a78b4b4b293cffcff3ce",
+      "distance": 0.24566978216171265,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.24573171138763428,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts05:3a06de67bd0fa242ff92",
+      "distance": 0.24689680337905884,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.24778932332992554,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.0162090000230819,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "Is a V-belt better the tighter it is tensioned?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts05:dd04242deb660f33e7e0",
+      "distance": 0.13344532251358032,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts05:3a06de67bd0fa242ff92",
+      "distance": 0.147230863571167,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts05:dce391a99498413ce12f",
+      "distance": 0.15038931369781494,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts05:2a2e6760346e312d5a72",
+      "distance": 0.15346169471740723,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts05:13b67f0388d11d0edcf4",
+      "distance": 0.15885084867477417,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.18010765314102173,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.18335974216461182,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts04:260bbd6c3d8644c23dd0",
+      "distance": 0.18540948629379272,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.18655085563659668,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.18746334314346313,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R10",
+   "category": "tradeoff",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.01707379100844264,
+    "first_anchor_rank": 9,
+    "hit_at_10": true,
+    "hit_at_5": false,
+    "query": "同步带效率较高，为什么并非所有冲击负载都适合换成它？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts05:2a2e6760346e312d5a72",
+      "distance": 0.21130526065826416,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.21341967582702637,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts05:dd04242deb660f33e7e0",
+      "distance": 0.21397775411605835,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts09:3ff88e5bc8bb6008d1a1",
+      "distance": 0.21521949768066406,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.21595340967178345,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.2161744236946106,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts05:3a06de67bd0fa242ff92",
+      "distance": 0.2193448543548584,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts08:8695cd7f2395877949e0",
+      "distance": 0.2198272943496704,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts05:dce391a99498413ce12f",
+      "distance": 0.22087150812149048,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts13:951276bf3e94bd278f40",
+      "distance": 0.22383499145507812,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.01683854218572378,
+    "first_anchor_rank": 4,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "Synchronous belts are more efficient, so why are they not a suitable swap for every shock-load application?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts05:2a2e6760346e312d5a72",
+      "distance": 0.12386417388916016,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts05:dd04242deb660f33e7e0",
+      "distance": 0.1306767463684082,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts05:3a06de67bd0fa242ff92",
+      "distance": 0.13281899690628052,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts05:dce391a99498413ce12f",
+      "distance": 0.13289940357208252,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts05:13b67f0388d11d0edcf4",
+      "distance": 0.14339476823806763,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.1563541293144226,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.15662795305252075,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.16009974479675293,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts13:951276bf3e94bd278f40",
+      "distance": 0.16277003288269043,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts12:45aa62593ac2dae28ef6",
+      "distance": 0.16650521755218506,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R13",
+   "category": "numeric",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.020001959055662155,
+    "first_anchor_rank": 2,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "三相电压为462、463和455伏，这份资料的电压不平衡计算示例是多少？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.1902887225151062,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts07:0f51e3f86281dc8aab13",
+      "distance": 0.1938471794128418,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts07:e79eed8511371690c76d",
+      "distance": 0.20033836364746094,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts06:dcf4f1e4436a1ce8a480",
+      "distance": 0.2016574740409851,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts08:8695cd7f2395877949e0",
+      "distance": 0.20295941829681396,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.2035435438156128,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts07:5a7adb8f5fedd1443778",
+      "distance": 0.205241858959198,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.20653671026229858,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts07:7c1062883931f884e645",
+      "distance": 0.20713388919830322,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts07:626f27030281965abd8c",
+      "distance": 0.2073468565940857,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.021975541952997446,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "With three-phase voltages of 462, 463 and 455 volts, what value does the document's voltage imbalance calculation example give?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:0f51e3f86281dc8aab13",
+      "distance": 0.1345863938331604,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts07:e79eed8511371690c76d",
+      "distance": 0.15129292011260986,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.15803325176239014,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts07:626f27030281965abd8c",
+      "distance": 0.1595349907875061,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts07:2ba394c448fe2ff98404",
+      "distance": 0.1605430245399475,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts08:27cf73ac9d9f4c4dd690",
+      "distance": 0.16821646690368652,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts08:7e322916b50441ebf9e8",
+      "distance": 0.16871660947799683,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts08:fa1c49dbfca2f1e25918",
+      "distance": 0.1687566637992859,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.16894102096557617,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts07:5a7adb8f5fedd1443778",
+      "distance": 0.169561505317688,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R14",
+   "category": "relationship",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.017225415911525488,
+    "first_anchor_rank": 4,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "电压不平衡不大，为什么电流不平衡仍可能很大？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.20275616645812988,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts07:e79eed8511371690c76d",
+      "distance": 0.20857787132263184,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.21040105819702148,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts07:5a7adb8f5fedd1443778",
+      "distance": 0.21187835931777954,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts07:626f27030281965abd8c",
+      "distance": 0.21253299713134766,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:e895823ccd9b18768de3",
+      "distance": 0.21367889642715454,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts07:2ba394c448fe2ff98404",
+      "distance": 0.21569210290908813,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.216225266456604,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.21631276607513428,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.21642738580703735,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.0176427501719445,
+    "first_anchor_rank": 3,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "When the voltage imbalance is small, why can the current imbalance still be large?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.1348172426223755,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.1420997977256775,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts07:5a7adb8f5fedd1443778",
+      "distance": 0.1460222601890564,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts07:2ba394c448fe2ff98404",
+      "distance": 0.14611107110977173,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts07:0f51e3f86281dc8aab13",
+      "distance": 0.14774882793426514,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts07:626f27030281965abd8c",
+      "distance": 0.1483364701271057,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.14995861053466797,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts07:e79eed8511371690c76d",
+      "distance": 0.15015184879302979,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts07:246e7be60511c16b346b",
+      "distance": 0.15243160724639893,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts08:c26c2bb6363ffc2677fa",
+      "distance": 0.15962356328964233,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R17",
+   "category": "cause_explanation",
+   "method": "reused verbatim from frozen probe report docs/verification/m4-real-rag/2026-09-18-e5-query-language-probe.md",
+   "original": {
+    "elapsed_seconds": 0.019705208018422127,
+    "first_anchor_rank": null,
+    "hit_at_10": false,
+    "hit_at_5": false,
+    "query": "电压低一点为什么可能启动更困难、加速时间变长？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.18779844045639038,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts10:5ed6d30ffa744a67ac74",
+      "distance": 0.18953430652618408,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.19182485342025757,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.19431078433990479,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts15:8e474722700cadb59136",
+      "distance": 0.19667744636535645,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts15:9956838bf6a9b80fc5e8",
+      "distance": 0.20006412267684937,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.20024192333221436,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.2003156542778015,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.20122390985488892,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts10:3f0472381a767d03690d",
+      "distance": 0.2023213505744934,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.019365750020369887,
+    "first_anchor_rank": 10,
+    "hit_at_10": true,
+    "hit_at_5": false,
+    "query": "Why can a slightly lower voltage make a motor harder to start and take longer to accelerate?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.1339782476425171,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.13485383987426758,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.14273393154144287,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.14754927158355713,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.15200263261795044,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.1526716947555542,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.15411460399627686,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts10:5ed6d30ffa744a67ac74",
+      "distance": 0.15551316738128662,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts13:a8567b28e7230c4b18cf",
+      "distance": 0.15641850233078003,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts09:3ff88e5bc8bb6008d1a1",
+      "distance": 0.1578773856163025,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R18",
+   "category": "identity",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.018123332876712084,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "写着208-230/460V的电机在208V运行，是否一定与230V时一样凉？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts09:f7ca550f3a0cc2a55dd1",
+      "distance": 0.1712133288383484,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts14:1157508644374f025ce4",
+      "distance": 0.18267792463302612,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts14:a78b4b4b293cffcff3ce",
+      "distance": 0.20102089643478394,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts13:951276bf3e94bd278f40",
+      "distance": 0.2015838623046875,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.20237892866134644,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.2029997706413269,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.2037646770477295,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts09:ffc0df215e226d584939",
+      "distance": 0.20380592346191406,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.20464301109313965,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts08:8695cd7f2395877949e0",
+      "distance": 0.20510685443878174,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.01777866599150002,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "Will a motor nameplated 208-230/460 V running at 208 V necessarily run as cool as it would at 230 V?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts09:f7ca550f3a0cc2a55dd1",
+      "distance": 0.12449568510055542,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts14:1157508644374f025ce4",
+      "distance": 0.14161372184753418,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.14935165643692017,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b0827adeba5b98a95a54",
+      "distance": 0.15416240692138672,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts13:f3d1f8c0065896561dfb",
+      "distance": 0.15651005506515503,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts13:b653f9ba03f5605fe706",
+      "distance": 0.15692025423049927,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.1575530767440796,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.15769171714782715,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts14:a78b4b4b293cffcff3ce",
+      "distance": 0.15849274396896362,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.1591477394104004,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R19",
+   "category": "misconception",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.019262999994680285,
+    "first_anchor_rank": 3,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "开机电流是满载的几倍，就说明启动一次比多转一分钟更费电吗？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts08:8695cd7f2395877949e0",
+      "distance": 0.18250912427902222,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.18257641792297363,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts10:5ed6d30ffa744a67ac74",
+      "distance": 0.18427282571792603,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.18783801794052124,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts12:96dec15bd94ac2b05928",
+      "distance": 0.18863844871520996,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.18874728679656982,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts01:87041a88a41c08418cab",
+      "distance": 0.18882709741592407,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts11:e14f4d7f5567c8ac968e",
+      "distance": 0.18942177295684814,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.18965661525726318,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts02:a4c2996a03e13caab297",
+      "distance": 0.19009530544281006,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.019332624971866608,
+    "first_anchor_rank": 2,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "If the starting current is several times the full-load current, does that prove one start uses more energy than letting the motor run another minute?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.11926144361495972,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts10:5ed6d30ffa744a67ac74",
+      "distance": 0.12078094482421875,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.12708914279937744,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts09:3ff88e5bc8bb6008d1a1",
+      "distance": 0.14022082090377808,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.1433861255645752,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts02:e7c1cda3c6714506d120",
+      "distance": 0.14469224214553833,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts10:3f0472381a767d03690d",
+      "distance": 0.14478135108947754,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts01:87041a88a41c08418cab",
+      "distance": 0.14701902866363525,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts10:71f2bdb214c5aad9fad7",
+      "distance": 0.1478666067123413,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.14833253622055054,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R20",
+   "category": "condition",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.01877629105001688,
+    "first_anchor_rank": null,
+    "hit_at_10": false,
+    "hit_at_5": false,
+    "query": "为了省电频繁启停时，为什么还要看允许启动次数和两次启动间隔？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.18815284967422485,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.1900033950805664,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts10:71f2bdb214c5aad9fad7",
+      "distance": 0.19079256057739258,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts10:5ed6d30ffa744a67ac74",
+      "distance": 0.19202864170074463,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts10:3f0472381a767d03690d",
+      "distance": 0.19420933723449707,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2b7b49e15413d54da490",
+      "distance": 0.19666236639022827,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.20111095905303955,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts14:a78b4b4b293cffcff3ce",
+      "distance": 0.20265835523605347,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts14:09c5aa007ba8b3905e00",
+      "distance": 0.20407629013061523,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.2063302993774414,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.019623707979917526,
+    "first_anchor_rank": 8,
+    "hit_at_10": true,
+    "hit_at_5": false,
+    "query": "When starting and stopping frequently to save energy, why is it still necessary to check the allowed number of starts and the interval between two consecutive starts?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.12610572576522827,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts10:5ed6d30ffa744a67ac74",
+      "distance": 0.14113909006118774,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2b7b49e15413d54da490",
+      "distance": 0.1422804594039917,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.14251619577407837,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts10:71f2bdb214c5aad9fad7",
+      "distance": 0.1440332531929016,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts10:3f0472381a767d03690d",
+      "distance": 0.147924542427063,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts09:37fb99d0263570cc7a78",
+      "distance": 0.1516258716583252,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts10:ec1961d6aedfcdd5fd3a",
+      "distance": 0.15303701162338257,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.15505224466323853,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts07:e79eed8511371690c76d",
+      "distance": 0.15776044130325317,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R21",
+   "category": "numeric_condition",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.01994266710244119,
+    "first_anchor_rank": null,
+    "hit_at_10": false,
+    "hit_at_5": false,
+    "query": "离心风机或无静扬程泵转速降低20%，文档为什么说功率约能降一半？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.16725021600723267,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.17165213823318481,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.1734257936477661,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.1738452911376953,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts09:3ff88e5bc8bb6008d1a1",
+      "distance": 0.17419910430908203,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts11:e14f4d7f5567c8ac968e",
+      "distance": 0.17497652769088745,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.17560797929763794,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts09:b752385f29b9f505f33f",
+      "distance": 0.17625176906585693,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f7ca550f3a0cc2a55dd1",
+      "distance": 0.17658108472824097,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.17717891931533813,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.021107458043843508,
+    "first_anchor_rank": 9,
+    "hit_at_10": true,
+    "hit_at_5": false,
+    "query": "For a centrifugal fan or a pump with no static head, why does the document say that a 20% speed reduction reduces power by about half?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.1256961226463318,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts11:e14f4d7f5567c8ac968e",
+      "distance": 0.12822175025939941,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.1298046112060547,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.13703638315200806,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.13923758268356323,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts09:ffc0df215e226d584939",
+      "distance": 0.14038610458374023,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.14670050144195557,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts11:c55d832e9219c4dff511",
+      "distance": 0.14696037769317627,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts11:fe00714c0fe126cf8ba2",
+      "distance": 0.14699310064315796,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts11:018ec3bf53376b588fb6",
+      "distance": 0.1489679217338562,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R22",
+   "category": "contrast",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.017769791884347796,
+    "first_anchor_rank": 10,
+    "hit_at_10": true,
+    "hit_at_5": false,
+    "query": "输送机这种恒转矩负载，功率也一定随转速三次方变化吗？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.1987769603729248,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.20114237070083618,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.20144647359848022,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.20213663578033447,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts11:c5cecd791ecc71df503b",
+      "distance": 0.20232868194580078,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts09:b752385f29b9f505f33f",
+      "distance": 0.20243757963180542,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f7ca550f3a0cc2a55dd1",
+      "distance": 0.20286887884140015,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts11:e14f4d7f5567c8ac968e",
+      "distance": 0.2033463716506958,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.20357513427734375,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts11:f0918d01ea2f95ee6109",
+      "distance": 0.20375007390975952,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.019699957920238376,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "For a constant-torque load such as a conveyor belt, does power necessarily vary with the cube of speed as well?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts11:f0918d01ea2f95ee6109",
+      "distance": 0.1505368947982788,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.15124106407165527,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.15164697170257568,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts05:2a2e6760346e312d5a72",
+      "distance": 0.1561967134475708,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts11:c5cecd791ecc71df503b",
+      "distance": 0.1617065668106079,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts05:dd04242deb660f33e7e0",
+      "distance": 0.16232389211654663,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.16314208507537842,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.16331684589385986,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts12:45aa62593ac2dae28ef6",
+      "distance": 0.16370946168899536,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts05:3a06de67bd0fa242ff92",
+      "distance": 0.16637980937957764,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R27",
+   "category": "paraphrase",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.020307542057707906,
+    "first_anchor_rank": 3,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "变频器输出PWM时，电机到驱动器的电缆长短为何重要？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.18686646223068237,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.19005435705184937,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts14:4de5a9231c9316920f36",
+      "distance": 0.1901189684867859,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts15:9956838bf6a9b80fc5e8",
+      "distance": 0.19223392009735107,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2a06be93494fc22683e0",
+      "distance": 0.19290906190872192,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts15:8e474722700cadb59136",
+      "distance": 0.19654011726379395,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts13:a8567b28e7230c4b18cf",
+      "distance": 0.19814306497573853,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.1994602084159851,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts11:fe00714c0fe126cf8ba2",
+      "distance": 0.20118921995162964,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.2016502022743225,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.01830716710537672,
+    "first_anchor_rank": 3,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "When a drive outputs PWM, why does the cable length between the motor and the drive matter?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.13630163669586182,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.1366565227508545,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts14:4de5a9231c9316920f36",
+      "distance": 0.13908857107162476,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts14:b03a28b28a9ea96e4a51",
+      "distance": 0.1419527530670166,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts15:9956838bf6a9b80fc5e8",
+      "distance": 0.14524418115615845,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.14571839570999146,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.14741641283035278,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts14:902ca7527a3bd47c589e",
+      "distance": 0.15205848217010498,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.15588515996932983,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2a06be93494fc22683e0",
+      "distance": 0.15685021877288818,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R28",
+   "category": "multi_factor",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.01906491699628532,
+    "first_anchor_rank": 3,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "普通电机配PWM驱动低速运行，除了电压尖峰还可能遇到什么问题？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.17820054292678833,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.18198025226593018,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts14:4de5a9231c9316920f36",
+      "distance": 0.18740153312683105,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.1907510757446289,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.1908361315727234,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.19120889902114868,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.19598621129989624,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts06:aa6c4ff50451179f4072",
+      "distance": 0.19648128747940063,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts13:951276bf3e94bd278f40",
+      "distance": 0.1972540020942688,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts12:96dec15bd94ac2b05928",
+      "distance": 0.1974658966064453,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.019399916986003518,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "When a standard motor runs at low speed on a PWM drive, what problems can arise besides voltage spikes?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts14:4de5a9231c9316920f36",
+      "distance": 0.1272527575492859,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.12844079732894897,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts14:902ca7527a3bd47c589e",
+      "distance": 0.1303589940071106,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.13367468118667603,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.14459228515625,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.14512532949447632,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2a06be93494fc22683e0",
+      "distance": 0.14540433883666992,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts15:8e474722700cadb59136",
+      "distance": 0.14650946855545044,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts13:a8567b28e7230c4b18cf",
+      "distance": 0.14841008186340332,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts11:fe00714c0fe126cf8ba2",
+      "distance": 0.14896011352539062,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R29",
+   "category": "mitigation",
+   "method": "reused verbatim from frozen probe report docs/verification/m4-real-rag/2026-09-18-e5-query-language-probe.md",
+   "original": {
+    "elapsed_seconds": 0.018568333005532622,
+    "first_anchor_rank": null,
+    "hit_at_10": false,
+    "hit_at_5": false,
+    "query": "变频驱动造成轴承电流时，资料列出了哪些设计上的缓解办法？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.1661522388458252,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.18374431133270264,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.1907021403312683,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts09:b752385f29b9f505f33f",
+      "distance": 0.1912791132926941,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts12:391e8ba2205be6a6e342",
+      "distance": 0.19197309017181396,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts02:e7c1cda3c6714506d120",
+      "distance": 0.19256991147994995,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts10:6c9039055d004580842e",
+      "distance": 0.19386500120162964,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts13:a8567b28e7230c4b18cf",
+      "distance": 0.19437122344970703,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts07:e79eed8511371690c76d",
+      "distance": 0.1950802206993103,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts03:b2844af851f73b0fb430",
+      "distance": 0.1955358386039734,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.01831845799461007,
+    "first_anchor_rank": 5,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "When a variable-frequency drive causes bearing currents, what design measures does the guide list to mitigate them?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.12714344263076782,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.1315646767616272,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts13:a8567b28e7230c4b18cf",
+      "distance": 0.14821547269821167,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2a06be93494fc22683e0",
+      "distance": 0.15015989542007446,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts15:c6befde2d690739f9eb4",
+      "distance": 0.15380847454071045,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts14:4de5a9231c9316920f36",
+      "distance": 0.15938055515289307,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts03:8d434b3e1837f09603f8",
+      "distance": 0.16297101974487305,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.16432636976242065,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts02:e7c1cda3c6714506d120",
+      "distance": 0.16447675228118896,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts15:8e474722700cadb59136",
+      "distance": 0.16498738527297974,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R30",
+   "category": "equipment",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.017078874865546823,
+    "first_anchor_rank": null,
+    "hit_at_10": false,
+    "hit_at_5": false,
+    "query": "驱动器不能靠近电机安装时，可以查哪些抑制电压过冲的设备？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.20347338914871216,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.20396733283996582,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts12:e895823ccd9b18768de3",
+      "distance": 0.2053934931755066,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts11:018ec3bf53376b588fb6",
+      "distance": 0.20720446109771729,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.2079727053642273,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts03:1fc558eb2432d33e72c7",
+      "distance": 0.20808953046798706,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts04:b230528bcf2c8a797931",
+      "distance": 0.20852899551391602,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts13:b653f9ba03f5605fe706",
+      "distance": 0.20920062065124512,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts07:626f27030281965abd8c",
+      "distance": 0.20953387022018433,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.20992118120193481,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.019691542023792863,
+    "first_anchor_rank": 3,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "If the drive cannot be mounted close to the motor, which devices for suppressing voltage overshoot can be consulted?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts09:946e74355e7d5eb023e5",
+      "distance": 0.15747499465942383,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts15:0d868e9402636d7f1c15",
+      "distance": 0.1628088355064392,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts15:c6befde2d690739f9eb4",
+      "distance": 0.1629677414894104,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts13:a8567b28e7230c4b18cf",
+      "distance": 0.1644025444984436,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts14:902ca7527a3bd47c589e",
+      "distance": 0.1654258370399475,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts15:f90bd9fff0a3640b4575",
+      "distance": 0.16548514366149902,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.16584181785583496,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.16721206903457642,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts08:3e6da19ee8c270756594",
+      "distance": 0.16735690832138062,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts13:de84a8b3bacaf8bf0233",
+      "distance": 0.16736453771591187,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R31",
+   "category": "table_condition",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.01945291692391038,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "按该指南典型PWM变频器效率表，20hp驱动器输出负载为额定值12.5%时，效率约为多少？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.1411139965057373,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts11:c5cecd791ecc71df503b",
+      "distance": 0.15072643756866455,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts11:fe00714c0fe126cf8ba2",
+      "distance": 0.15331369638442993,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts12:f65c846cda9a127ba8fa",
+      "distance": 0.15460574626922607,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.15467309951782227,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.15816569328308105,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts12:b95ec2e60def61e30725",
+      "distance": 0.16319626569747925,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts11:e14f4d7f5567c8ac968e",
+      "distance": 0.1638363003730774,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts11:c55d832e9219c4dff511",
+      "distance": 0.16420477628707886,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts11:018ec3bf53376b588fb6",
+      "distance": 0.16475534439086914,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.020396916894242167,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "According to the guide's typical PWM drive efficiency table, what is the approximate efficiency of a 20 hp drive at 12.5% of its rated output load?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.1159830093383789,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts11:c5cecd791ecc71df503b",
+      "distance": 0.1376100778579712,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts11:e14f4d7f5567c8ac968e",
+      "distance": 0.13993793725967407,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.14173030853271484,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts11:018ec3bf53376b588fb6",
+      "distance": 0.14423763751983643,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts11:c55d832e9219c4dff511",
+      "distance": 0.1444791555404663,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts11:f0918d01ea2f95ee6109",
+      "distance": 0.14571928977966309,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts02:efa51553aea5629e95bc",
+      "distance": 0.14586687088012695,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.1484583616256714,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.14904600381851196,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R32",
+   "category": "table_condition",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.01944045815616846,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "轴对中表中，1800RPM直联轴、短柔性联轴器的可接受平行偏移是多少，单位是什么？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts04:260bbd6c3d8644c23dd0",
+      "distance": 0.19999533891677856,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts07:7c1062883931f884e645",
+      "distance": 0.20233631134033203,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.20436793565750122,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts10:2a4468197c2163acedc2",
+      "distance": 0.20764124393463135,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts11:e14f4d7f5567c8ac968e",
+      "distance": 0.20920330286026,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts15:2e3f4199644897abc24a",
+      "distance": 0.21064144372940063,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts02:4a9a456031c8053922a3",
+      "distance": 0.21096158027648926,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts11:018ec3bf53376b588fb6",
+      "distance": 0.2123362421989441,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts02:5a0f804faf41af41211e",
+      "distance": 0.21245527267456055,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts02:e7c1cda3c6714506d120",
+      "distance": 0.21303105354309082,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.02127999998629093,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "In the shaft alignment table, what is the acceptable parallel offset for a 1800 RPM direct-coupled drive with a short flexible coupling, and what are the units?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts04:260bbd6c3d8644c23dd0",
+      "distance": 0.12758612632751465,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts04:01a0ba13ababff10e1fd",
+      "distance": 0.1296902894973755,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts04:bad44673bb08c09540db",
+      "distance": 0.1393713355064392,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts04:a63550514dfb7d01acf6",
+      "distance": 0.15154296159744263,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts13:d851d16460d25487321c",
+      "distance": 0.15238326787948608,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts11:e14f4d7f5567c8ac968e",
+      "distance": 0.1534774899482727,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts04:4863f44b5c64ff94a12c",
+      "distance": 0.1536816954612732,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.15709173679351807,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts13:951276bf3e94bd278f40",
+      "distance": 0.16175907850265503,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.16303354501724243,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R33",
+   "category": "table_condition",
+   "method": "manual equivalence translation zh->en from the question text only; no answers, document ids, or page hints added",
+   "original": {
+    "elapsed_seconds": 0.018401958979666233,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "电压不平衡示例表里，50%满载、2.5%电压不平衡时，电机效率是多少？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.16887754201889038,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.18995535373687744,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts02:a4c2996a03e13caab297",
+      "distance": 0.1912914514541626,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts07:7c1062883931f884e645",
+      "distance": 0.19341474771499634,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts01:87041a88a41c08418cab",
+      "distance": 0.19493138790130615,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts07:5a7adb8f5fedd1443778",
+      "distance": 0.1949383020401001,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.19535666704177856,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts02:e7c1cda3c6714506d120",
+      "distance": 0.19650310277938843,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.1976243257522583,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts01:74642260e359d35ecd3c",
+      "distance": 0.1988120675086975,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.0169899167958647,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "In the voltage imbalance example table, what is the motor efficiency at 50% of full load with 2.5% voltage imbalance?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.10233891010284424,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts09:f8b9f44a71e6b108e44e",
+      "distance": 0.1144832968711853,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts02:fa89248f4a4e3a1cfe1d",
+      "distance": 0.130243718624115,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts07:7c1062883931f884e645",
+      "distance": 0.13064301013946533,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts11:ea0cd22b1f9504cbaa83",
+      "distance": 0.13744449615478516,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts09:ffc0df215e226d584939",
+      "distance": 0.13946545124053955,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts07:626f27030281965abd8c",
+      "distance": 0.14168286323547363,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts09:3ff88e5bc8bb6008d1a1",
+      "distance": 0.14263582229614258,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts02:e7c1cda3c6714506d120",
+      "distance": 0.14548927545547485,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts07:2ba394c448fe2ff98404",
+      "distance": 0.1463291049003601,
+      "rank": 10
+     }
+    ]
+   }
+  },
+  {
+   "answerable": true,
+   "case_id": "R34",
+   "category": "table_condition",
+   "method": "reused verbatim from frozen probe report docs/verification/m4-real-rag/2026-09-18-e5-query-language-probe.md",
+   "original": {
+    "elapsed_seconds": 0.018774708034470677,
+    "first_anchor_rank": 8,
+    "hit_at_10": true,
+    "hit_at_5": false,
+    "query": "按旧电机替换示例表，100hp一行的年节电量是多少？能直接当我们工厂的节电量吗？",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.17483395338058472,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts06:dcf4f1e4436a1ce8a480",
+      "distance": 0.17621290683746338,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.18017441034317017,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts07:7c1062883931f884e645",
+      "distance": 0.18049746751785278,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts11:e14f4d7f5567c8ac968e",
+      "distance": 0.18326419591903687,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:585159f6c762c33d46c8",
+      "distance": 0.1835496425628662,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts12:ccea38895bb2791ad184",
+      "distance": 0.18404340744018555,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts01:87041a88a41c08418cab",
+      "distance": 0.18423348665237427,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts07:5a7adb8f5fedd1443778",
+      "distance": 0.1854182481765747,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts09:ffc0df215e226d584939",
+      "distance": 0.18607014417648315,
+      "rank": 10
+     }
+    ]
+   },
+   "original_matches_frozen_top10": true,
+   "rewritten": {
+    "elapsed_seconds": 0.018545833881944418,
+    "first_anchor_rank": 1,
+    "hit_at_10": true,
+    "hit_at_5": true,
+    "query": "In the example table for replacing old motors, what is the annual energy saving for the 100 hp row? Can it be used directly as the energy saving for our factory?",
+    "top10": [
+     {
+      "chunk_id": "doe-motor-ts01:87041a88a41c08418cab",
+      "distance": 0.1185295581817627,
+      "rank": 1
+     },
+     {
+      "chunk_id": "doe-motor-ts07:048401756ea8ddf9cef5",
+      "distance": 0.11938446760177612,
+      "rank": 2
+     },
+     {
+      "chunk_id": "doe-motor-ts07:5a7adb8f5fedd1443778",
+      "distance": 0.13368260860443115,
+      "rank": 3
+     },
+     {
+      "chunk_id": "doe-motor-ts01:74642260e359d35ecd3c",
+      "distance": 0.13443207740783691,
+      "rank": 4
+     },
+     {
+      "chunk_id": "doe-motor-ts07:7c1062883931f884e645",
+      "distance": 0.13582497835159302,
+      "rank": 5
+     },
+     {
+      "chunk_id": "doe-motor-ts12:96dec15bd94ac2b05928",
+      "distance": 0.1372784972190857,
+      "rank": 6
+     },
+     {
+      "chunk_id": "doe-motor-ts01:f69c71b58290637678bc",
+      "distance": 0.13827157020568848,
+      "rank": 7
+     },
+     {
+      "chunk_id": "doe-motor-ts12:d062486e6d37c5fed65b",
+      "distance": 0.14006668329238892,
+      "rank": 8
+     },
+     {
+      "chunk_id": "doe-motor-ts02:a4c2996a03e13caab297",
+      "distance": 0.14057648181915283,
+      "rank": 9
+     },
+     {
+      "chunk_id": "doe-motor-ts02:e7c1cda3c6714506d120",
+      "distance": 0.14163130521774292,
+      "rank": 10
+     }
+    ]
+   }
+  }
+ ],
+ "started_at": "2026-09-18T09:19:12.399370+00:00",
+ "summary": {
+  "answerable": 24,
+  "cases": 29,
+  "improved_at_10": [
+   "R17",
+   "R20",
+   "R21",
+   "R29",
+   "R30"
+  ],
+  "improved_at_5": [
+   "R08",
+   "R10",
+   "R22",
+   "R29",
+   "R30",
+   "R34"
+  ],
+  "original_hit_at_10": 19,
+  "original_hit_at_5": 15,
+  "rank_changes": [
+   {
+    "case_id": "R01",
+    "original": 2,
+    "rewritten": 3
+   },
+   {
+    "case_id": "R02",
+    "original": 5,
+    "rewritten": null
+   },
+   {
+    "case_id": "R07",
+    "original": 2,
+    "rewritten": 1
+   },
+   {
+    "case_id": "R08",
+    "original": 6,
+    "rewritten": 1
+   },
+   {
+    "case_id": "R09",
+    "original": 2,
+    "rewritten": 1
+   },
+   {
+    "case_id": "R10",
+    "original": 9,
+    "rewritten": 4
+   },
+   {
+    "case_id": "R13",
+    "original": 2,
+    "rewritten": 1
+   },
+   {
+    "case_id": "R14",
+    "original": 4,
+    "rewritten": 3
+   },
+   {
+    "case_id": "R17",
+    "original": null,
+    "rewritten": 10
+   },
+   {
+    "case_id": "R19",
+    "original": 3,
+    "rewritten": 2
+   },
+   {
+    "case_id": "R20",
+    "original": null,
+    "rewritten": 8
+   },
+   {
+    "case_id": "R21",
+    "original": null,
+    "rewritten": 9
+   },
+   {
+    "case_id": "R22",
+    "original": 10,
+    "rewritten": 1
+   },
+   {
+    "case_id": "R28",
+    "original": 3,
+    "rewritten": 1
+   },
+   {
+    "case_id": "R29",
+    "original": null,
+    "rewritten": 5
+   },
+   {
+    "case_id": "R30",
+    "original": null,
+    "rewritten": 3
+   },
+   {
+    "case_id": "R34",
+    "original": 8,
+    "rewritten": 1
+   }
+  ],
+  "regressed_at_10": [
+   "R02"
+  ],
+  "regressed_at_5": [
+   "R02"
+  ],
+  "rewritten_hit_at_10": 23,
+  "rewritten_hit_at_5": 20,
+  "unanswerable": 5
+ }
+}

@@ -1,0 +1,989 @@
+{
+  "sources": [
+    {
+      "document_id": "doe-motor-ts01",
+      "title": "When to Purchase Premium Efficiency Motors",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/whentopurchase_nema_motor_systemts1.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/whentopurchase_nema_motor_systemts1.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3743",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "af4b552b4603a30efec4c72a3af23d53af48e130a0322a338bfa14385e2f4a91",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-01.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts01.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 1
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 0
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts02",
+      "title": "Estimating Motor Efficiency in the Field",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/estimate_motor_efficiency_motor_systemts2.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/estimate_motor_efficiency_motor_systemts2.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3734",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "ae69737fc301d2dce437c98b803c857b70a48134be886b884d09d2122e5a4533",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-02.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts02.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 1
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 0
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts03",
+      "title": "Extend the Operating Life of Your Motor",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/extend_motor_operlife_motor_systemts3.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/extend_motor_operlife_motor_systemts3.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3735",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "ce0dfe769c0be9b511bb9f5f6ceeead1e8f6e56c1bdf40e0752756394fdc6ed4",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-03.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts03.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 0
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 0
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts04",
+      "title": "The Importance of Motor Shaft Alignment",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/importance_motor_shaft_motor_systemts4.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/importance_motor_shaft_motor_systemts4.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3741",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "9edf460a75652b000c3f53d8ac5fa13735168be967dc44862c6cb0bde169635b",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-04.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts04.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 0
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 1
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts05",
+      "title": "Replace V-Belts with Notched or Synchronous Belt Drives",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/replace_vbelts_motor_systemts5.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/replace_vbelts_motor_systemts5.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3740",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "bd8b09a5d1be8e83dbdd70a5a29235536d91cab47f3dba67068955bd6b3bae59",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-05.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts05.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 0
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 0
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts06",
+      "title": "Avoid Nuisance Tripping with Premium Efficiency Motors",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/avoid_nuisance_motorsys_ts6.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/avoid_nuisance_motorsys_ts6.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3731",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "03f9eeef5f3b1446134636c8f6be601d651706fe1e8bc33f50fbdc50496b56bb",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-06.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts06.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 1
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 0
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts07",
+      "title": "Eliminate Voltage Unbalance",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/eliminate_voltage_unbalanced_motor_systemts7.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/eliminate_voltage_unbalanced_motor_systemts7.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3733",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "e39afc0a4f4a5e6e7d57baf219abd23eebce7a0b21f240337d0d6e70c232530a",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-07.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts07.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 1
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 0
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts08",
+      "title": "Eliminate Excessive In-Plant Distribution System Voltage Drops",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet8.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3732",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "9119468e2237aae542d8d2fe2905c1de6fd0788fe42af59609792f6995b8f448",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-08.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts08.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 0
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 1
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts09",
+      "title": "Improve Motor Operation at Off-Design Voltages",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet9.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet9.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3736",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "c295cb8aa4b27ff6612c01577aafb4a5370cb4eee67d01c586ad1dfe2e9a7900",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-09.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts09.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 1
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 1
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts10",
+      "title": "Turn Motors Off When Not in Use",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet10.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet10.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3742",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "c25530d8daf61b12e91af44dc100931aaf55deab1e3d986489d6fa7127e18d47",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-10.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts10.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 0
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 0
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts11",
+      "title": "Adjustable Speed Drive Part-Load Efficiency",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3730",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "2614ca8b880e4f8962b45e9a832e0800e73db3300cbe892111d6b6aa9d7c3c0d",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-11.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts11.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 0
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 1
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts12",
+      "title": "Is it Cost-Effective to Replace Old Eddy-Current Drives?",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet12.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3737",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "4ea1d416b8823d44318b5c740516588b7e7e310760155e01f6ed3db427604fc2",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-12.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts12.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 1
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 2
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts13",
+      "title": "Magnetically Coupled Adjustable Speed Motor Drives",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet13.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet13.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3738",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "90ad807f98599a3298fbc55dc19f3734fd653ca47c231e8e4d9e584a7a886a92",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-13.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts13.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 0
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 0
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts14",
+      "title": "When Should Inverter-Duty Motors Be Specified?",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet14.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet14.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3744",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "46029534abfbb5be5da1d54fecbd737c41bedd611d5e99dd09f1cd51faa51b58",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-14.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts14.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 0
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 1
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    },
+    {
+      "document_id": "doe-motor-ts15",
+      "title": "Minimize Adverse Motor and Adjustable Speed Drive Interactions",
+      "version": "November 2012",
+      "reviewed_on": "2026-09-18",
+      "teaching_only": false,
+      "device_ids": [],
+      "product_model": null,
+      "sources": [
+        "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet15.pdf"
+      ],
+      "authoring": "Extracted original English, geometric column separation, whitespace normalization; no AI summary or translation",
+      "language": "en",
+      "source_url": "https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet15.pdf",
+      "publisher": "U.S. Department of Energy, Advanced Manufacturing Office",
+      "source_document_id": "DOE/GO-102012-3739",
+      "source_pages": [
+        "1",
+        "2"
+      ],
+      "applicability": "General industrial motor-system guidance; verify motor design, operating conditions and manufacturer instructions. No mapped project device. Historical publication; not a statement of current standards.",
+      "license": "DOE government information public-domain policy; third-party material may be protected. Local study corpus, no assertion of blanket open license.",
+      "source_sha256": "d76af015ec57e5ef868834103297534a8d64a77418a0995de248d7af3e7a5285",
+      "downloaded_on": "2026-09-18",
+      "raw_path": "docs/verification/m4-real-corpus/raw/doe-motor-tip-15.pdf",
+      "markdown_path": "docs/knowledge-real/doe-motor-ts15.md",
+      "page_count": 2,
+      "extraction_pages": [
+        {
+          "pdf_page": 1,
+          "main_bbox": [
+            30,
+            116,
+            402,
+            740
+          ],
+          "sidebar_bbox": [
+            415,
+            116,
+            584,
+            740
+          ],
+          "table_count": 0
+        },
+        {
+          "pdf_page": 2,
+          "main_bbox": [
+            30,
+            50,
+            402,
+            660
+          ],
+          "sidebar_bbox": [
+            415,
+            50,
+            584,
+            660
+          ],
+          "table_count": 0
+        }
+      ],
+      "rights_policy_url": "https://www.energy.gov/web-policies",
+      "redistribution": "Not packaged for external redistribution; retain attribution and review third-party figures separately",
+      "omissions": "Running banners, footer/marketing contact panels; figures remain in original PDF and are not interpreted from extracted labels. Main text and source references retained within extraction regions."
+    }
+  ],
+  "excluded": [
+    {
+      "source": "ABB 3GZF500730-85 Rev H Chinese manual",
+      "reason": "Full-file provenance/usage terms not confirmed in this step; not added or counted"
+    },
+    {
+      "source": "HF Parssky industrial-instruction",
+      "reason": "Sample predominantly electronics components; source-page mapping insufficient; not added or counted"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                  Motor Systems Tip Sheet #1
+                                                                                    
+                                                                                    
+     When   to Purchase                                                             
+                                                             Suggested Actions      
+     Premium   Efficiency  Motors                                                   
+                                                          ■■ Inventory all in-service and spare
+     Consider premium efficiency motors for new motor procurements when specifying motors in your plant. Focus on
+     motor-driven equipment, repairing or rewinding failed standard efficiency motors, or as
+                                                            general-purpose, low-voltage
+     replacements for older, operable lower efficiency motors. This is particularly important
+                                                            standard efficiency motors
+     when the existing motor has been rewound or is oversized and underloaded.      
+                                                            between 10 and 500 hp that are
+     In August 2001, the National Electrical Manufacturers Association (NEMA) introduced
+                                                            in operation 2,000 or more
+     a premium energy-efficiency motor standard. Under this program, a motor may be 
+                                                            hrs/year. Collect nameplate and
+     marketed as a premium efficiency motor only if it meets or exceeds a set of NEMA
+     minimum full-load efficiency levels.                   application data, then measure
+                                                            the supply voltage and  
+     The premium efficiency motor standards apply to NEMA Design A and B, three-phase,
+                                                            amperage on all three phases
+     low-voltage induction motors rated between 1-and 500-horsepower (hp) and 250- to
+     500-hp, medium-voltage motors designed for service at 5,000 volts or less. Covered for in-service motors.
+     products include foot-mounted motors with speeds of 1,200, 1,800, and 3,600    
+     revolutions per minute (RPM) with open drip-proof, explosion-proof, or totally enclosed ■■ Establish a motor repair/replace
+     fan-cooled (TEFC) enclosures. The standard also covers severe-duty, wash down, policy to achieve cost-effective
+     International Electrotechnical Commission (IEC) metric frame motors, and       
+                                                            energy efficiency results. Identify
+     brake motors.                                                                  
+                                                            and tag motors for appropriate
+     Under the Energy Independence and Security Act of 2007 (EISA), the mandatory mini- action. For example: “Replace
+     mum nominal full-load efficiency for general-purpose motors rated below 1,000 volts
+                                                            upon failure with a premium
+     with a power rating up to 200 hp was raised to the premium level. The premium  
+                                                            efficiency motor” or “Repair at
+     efficiency requirement applies to motors purchased alone, imported into the United
+     States, or purchased as a component of another piece of equipment. failure following model repair
+                                                            specifications.”        
+     Table 1. Annual Savings for Premium versus Old Standard Efficiency Motors      
+                                                          ■■ Adopt model repair “best
+                                   Annual Savings from Using a practices,” such as American
+                Motor Efficiency at 75% Load                                        
+                                    Premium Efficiency Motor National Standards Institute/
+                                                            Electrical Apparatus Service
+      Horsepower                                                                    
+                Old Standard Premium Annual Energy          Association (ANSI/EASA AR100-
+                                             Dollar Savings                         
+                 Efficiency Efficiency Savings,             2010), for all motors rated below
+                                               $/year                               
+                  Motor     Motor     kWh                                           
+                                                            1,000 volts.            
+         10       86.7      92.2      3,105     250                                 
+         25       89.9      93.8      5,160     410                                 
+         50       91.6      95.0      8,630     690                                 
+         100      92.2      95.3     15,680    1,255                                
+         200      93.3      96.2     29,350    2,350                                
+     Note: Based on purchase of a 1,800 RPM TEFC motor in operation 8,000 hours per year (hrs/year) at
+     75% load at an electrical rate of $0.08/kilowatt-hour (kWh).                   

@@ -1,0 +1,70 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #5
+                                                                                    
+                                                                                    
+     Replace  V-Belts  with  Notched                                                
+                                                             Suggested Actions      
+     or Synchronous    Belt Drives                                                  
+                                                          ■■ Conduct a survey of belt-driven
+     Approximately one-third of the electric motors in the industrial and commercial sectors equipment. Gather application
+     use belt drives.1 Belt drives provide flexibility in the positioning of the motor relative to
+                                                            and operating-hour data. Then
+     the load. Pulleys (sheaves) of varying diameters allow the speed of the driven equipment
+                                                            determine the cost effectiveness
+     to be increased or decreased relative to the motor speed. A properly designed belt
+                                                            of replacing existing V-belts with
+     power-transmission system offers high efficiency and low noise, requires no lubrication,
+     and presents low maintenance requirements. However, certain types of belts are more notched belts or synchronous
+     efficient than others, offering potential energy cost savings. belts and sprockets.
+     The majority of belt drives use V-belts, which use a trapezoidal cross section to create a
+                                                          ■■ Consider synchronous belts for
+     wedging action on the pulleys to increase friction and improve the belt’s power transfer
+     capability. Joined or multiple belts are specified for heavy loads. V-belt drives can have all new installations; the price
+     a peak efficiency of 95% or more at the time of installation. Efficiency is dependent on premium is minimal due to the
+     pulley size, pulley wear, V-belt alignment, transmitted torque, under or oversizing belts avoidance of conventional
+     for load requirements. Efficiency can deteriorate by as much as 5% over time if slippage
+                                                            pulley costs.           
+     occurs because the belt is not periodically retensioned.                       
+     The most important operational and maintenance issue in a V-belt drive is its tension. If ■■ Consider having a power
+     belts are too loose, they tend to vibrate, wear rapidly, and waste energy through slippage. transmission specialist determine
+     If belts are overtightened, they will show excessive wear. An increased belt load may the energy and cost savings
+     shorten bearing life through excessive lateral loading and could possibly result in shaft
+                                                            potential from retrofitting all
+     failure. The proper tension of a V-belt is the lowest tension at which the belt will not slip
+                                                            V-belt drives with synchronous
+     at peak-load conditions. After the break-in period, belt tension should be checked every
+     3 to 6 months.                                         belts. Synchronous belts rely on
+                                                            tooth grip instead of friction to
+     A notched belt has grooves or notches that run perpendicular to the belt’s length, which
+                                                            efficiently transfer power and
+     reduces the bending resistance of the belt. Notched belts can use the same pulleys as
+     cross-section standard V-belts. They run cooler, last longer, and are about 2% more provide a constant speed ratio.
+     efficient than standard V-belts.                                               
+                                                          ■■ Install notched belts where the
+     Synchronous belts (also called cogged, timing, positive-drive, or high-torque drive
+                                                            retrofit of a synchronous belt is
+     belts) are toothed and require the installation of mating grooved sprockets. These belts
+                                                            not cost effective.     
+     operate with a consistent efficiency of 98% and maintain their efficiency over a wide
+     load range.2 In contrast, V-belts have a sharp reduction in efficiency at high torque due
+     to increased slippage. Synchronous belts require minimal maintenance and retensioning,
+     operate in wet and oily environments, and run slip-free. However, synchronous belts are
+     noisier than V-belts, less suited for use on shock-loaded applications, and transfer more
+     vibration due to their stiffness.                                              
+     Example Energy Savings Calculations                                            
+     A continuously operating, 100-horsepower (hp), supply-air fan operates at an average
+     motor load of 75% while consuming 527,000 kilowatt-hours (kWh) of electrical energy
+     annually. What are the annual energy and dollar savings if a 95% efficient (η) V-belt is
+                                               1                                    
+     replaced with a 98% efficient (η) synchronous belt? Electricity is priced at $0.08/kWh.
+                      2                                                             
+     Energy Savings = Annual Energy Use x (1 – η/η )                                
+                                 1 2                                                
+                 = 527,000 kWh/year x (1 – 95/98) = 16,130 kWh/year                 
+     Annual Cost Savings = 16,130 kWh x $0.08/kWh = $1,290                          

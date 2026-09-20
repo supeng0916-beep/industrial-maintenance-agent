@@ -1,0 +1,60 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #14
+                                                                                    
+                                                                                    
+     When   Should  Inverter-Duty                                                   
+                                                             Suggested Actions      
+     Motors  Be  Specified?                                                         
+                                                          ■■ Obtain information from motor
+     Electronic adjustable speed drives, known as variable frequency drives (VFD), used to and drive manufacturers about
+     be marketed as “usable with any standard motor.” However, premature failures of motor inverter rise times and effects of
+     insulation systems began to occur as fast-switching, pulse-width-modulated (PWM) VFDs
+                                                            cable length. Use this informa-
+     were introduced. The switching rates of modern power semiconductors can lead to voltage
+                                                            tion to evaluate the capacity of
+     overshoots. These voltage spikes can rapidly damage a motor’s insulation system, resulting in
+     premature motor failure.                               existing motors to withstand
+                                                            drive-induced voltage stresses.
+     Effects of VFDs on Induction Motors                                            
+                                                          ■■ Damaging reflected waves are
+     The nonsinusoidal variable frequency output of PWM drives has several effects, including
+                                                            generally not a problem when
+     increased motor losses, inadequate ventilation at lower speeds, increased dielectric stresses
+                                                            the distance between the motor
+     on motor windings, magnetic noise, and shaft currents. These effects can combine to damage
+     a motor’s insulation and severely shorten its useful operating life. and the drive is less than 15 feet.
+     High switching rates of modern power semiconductors lead to rapid changes in voltage in ■■ Voltage overshoots are more
+     relatively short periods of time, (dV/dt, quantified in units of volts per microsecond). Steep-
+                                                            likely to occur with smaller
+     fronted waves with large dV/dt or very fast rise times lead to voltage overshoots and other
+                                                            motors and drives with faster
+     power supply problems.                                                         
+                                                            rise times.             
+     When the motor impedance is greater than the impedance of the conductor cable between the
+     motor and the drive, the voltage waveform will reflect at the motor terminals. This creates a ■■ The potential for damaging
+     standing wave (see Figure 1). Longer motor cables favor higher amplitude standing waves.
+                                                            reflected waves is especially high
+     Voltage spikes have occurred with peak values as high as 2,150 volts (V) in a 480-V system
+                                                            when multiple motors are run
+     operating at 10% overvoltage. These high spikes can lead to insulation breakdown, which
+     results in phase-to-phase or turn-to-turn short circuits, and subsequently overcurrent drive from a single VFD.
+     sensor trips.                                                                  
+              Figure 1. PWM pulse with reflected voltage or ringing                 
+     Preventive measures can be taken to avoid motor failures caused by voltage spikes. These
+     include using power conditioning equipment (such as dV/dt filters or load reactors) and
+     restricting the distance or cable length between the drive and the motor. Some drive installers
+     also specify oversized motors or use of high-temperature resistance Class H insulation.
+     Inverter-Duty Motor Designs                                                    
+     Most motor manufacturers offer general-purpose, three-phase premium efficiency motors that
+     feature “inverter-friendly” insulation systems. These “inverter-ready” motors are suitable for
+     use with variable torque loads over a wide speed range.                        
+     In contrast, inverter-duty motors are wound with voltage spike-resistant insulation systems.
+     Some use inverter-grade magnet wire to minimize the adverse effects of waveforms produced
+                                                                                    
+                                                                                    

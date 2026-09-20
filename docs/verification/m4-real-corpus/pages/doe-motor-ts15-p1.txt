@@ -1,0 +1,82 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #15
+                                                                                    
+                                                                                    
+     Minimize  Adverse   Motor   and                                                
+                                                             Suggested Actions      
+     Adjustable  Speed   Drive  Interactions                                        
+                                                          ■■ To best avoid or mitigate voltage
+     Electronic adjustable speed drives (ASDs) are extremely efficient and valuable assets to overshoots, consider locating the
+     motor systems. They allow precise process control and provide energy savings within drive close to the motor. Where
+     systems that do not need to operate continuously at full output. this is not possible, consider
+     The most common ASD design sold today is the pulse-width-modulated (PWM) variable installing filtering devices such as:
+     frequency drive (VFD) with a fast-rise-time insulated gate bipolar transistor (IGBT)
+                                                            – Line inductors or load reactors
+     to reduce switching losses and noise levels. However, higher carrier frequencies and
+     faster rise-time transistors on PWM VFDs can produce voltage spikes or overshoots that at the drive end of the cable
+     can stress motor windings and bearings. Fortunately, these problems can be eliminated
+                                                            – dV/dt filters.        
+     through proper design and equipment selection.                                 
+                                                          ■■ Consider purchase of an inverter-
+     VFD Characteristics                                                            
+                                                            duty motor. See Motor Systems
+     All VFDs rectify the 60-hertz (Hz) fixed-voltage alternating current (AC) to direct
+                                                            Tip Sheet #14 When Should
+     current (DC) and use an inverter to simulate an adjustable frequency and variable-
+                                                            Inverter-Duty Motors Be 
+     voltage AC output. Transistors, or electronic “switches,” create the AC voltage output
+                                                            Specified? for inverter-duty
+     but have very high losses when they create wave shapes other than square waves.
+                                                            motor performance standards.
+                                                          ■■ Minimize or eliminate problems
+                                                            of current flow across the rolling
+                                                            elements of the motor’s bearings
+                                                            by isolating both bearings
+                                                            and/or using a shaft-grounding
+                                                            brush. Install the insulated
+                                                            bearing arrangement and shaft
+                                                            grounding brush on the  
+                                                            in-service motor and any
+                Figure 1. Sine wave overlaid on square carrier waves designated spare.
+     To minimize switching losses and approximate sine waves, VFDs operate these switches ■■ VFDs with oscillating carrier
+     full-on or full-off, creating square waves of much higher frequency than the fundamental
+                                                            frequencies may contribute to
+     frequency, usually between 2 kilocycles per second (kHz) and 20 kHz. This is called a
+                                                            bearing current flows. Correct
+     carrier wave, as shown in Figure 1. Each on-portion of the carrier wave is called a pulse,
+     and the duration of on-time of each pulse is called the pulse width. The pulses do not setup of the drive and proper
+     turn on instantaneously; there is a brief rise time.   cabling and grounding practices
+                                                            may help reduce bearing 
+     Different types of transistors used in drives have different rise times. Voltage spikes
+     originate with fast rise time, and carrier frequencies above 5 kHz are likely to cause damage, called fluting, which
+     bearing damage unless protective measures are taken.   occurs as a result of VFD-
+                                                            induced shaft currents. 
+     Design Considerations                                                          
+     Several design considerations should be taken into account when purchasing a VFD or
+     fixing problems with an existing one. On new installations, ensure that no harm comes
+     to motors by minimizing the cable length from the VFD to the motor. VFDs can produce
+     voltage overshoots or spikes with the increase over the normal peak voltage dependent
+     upon both cable length and rise time.                                          
+               lamroN                                                               
+               revO                                                                 
+               esaercnI                                                             
+                reilpitluM                                                          
+                egatloV                                                             
+                kaeP                                                                
+                 2.00                                                               
+                  1.80               500’ Cable                                     
+                  1.60                                                              
+                               200’ Cable                                           
+                  1.40                                                              
+                            100’ Cable                                              
+                  1.20    5500’’ CCaabbllee                                         
+                  1.00                                                              
+                           Rise Time (µs)                                           
+                      TTBBGGII                                                      
+                        1.0 2.0 3.0 4.0 5.0                                         

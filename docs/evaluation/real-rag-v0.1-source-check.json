@@ -1,0 +1,10 @@
+{
+  "manifest_sha256": "2a1da80dca7f618e0b39c19ed77417bc4dc45f1f5655083d10bdbef9b02e15a3",
+  "documents": 15,
+  "pdf_pages": 30,
+  "source_and_markdown_hashes_verified": true,
+  "cases": 44,
+  "answerable_evidence_anchors_verified": 34,
+  "evaluation_sha256": "de7004d03d8857024a2f8b4c67c709166a12961f9ec7a2213ec56754465c7a3d",
+  "note": "Structure and evidence-location checks, not retrieval score."
+}

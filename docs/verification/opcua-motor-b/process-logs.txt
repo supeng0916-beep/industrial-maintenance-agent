@@ -1,0 +1,248 @@
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 56467 --value 77.9
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:56467/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 56467 --value 85 --source-mode frozen
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:56467/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 56467 --value 70 --source-mode future
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:56467/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 56467 --value 70 --source-mode stale
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:56467/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 56467 --value 70 --source-mode missing
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:56467/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 56467 --value 70 --quality uncertain
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:56467/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 56467 --value 70 --quality bad
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:56467/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=2;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/.local/node-current/bin/node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 56469
+
+  VITE v8.3.0  ready in 125 ms
+
+  ➜  Local:   http://127.0.0.1:56469/
+3:31:12 PM [vite] http proxy error: /api/devices
+Error: connect ECONNREFUSED 127.0.0.1:56468
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1938:16)
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python serve_api.py --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/opcua-motor-b-r3aFYY/test.sqlite3 --port 56468
+INFO:     Started server process [87261]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:56468 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56577 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56595 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56596 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A20%3A37.725Z&to=2026-09-17T07%3A30%3A37.725654%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56600 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56598 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56599 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56605 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A20%3A37.731Z&to=2026-09-17T07%3A30%3A37.731952%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56604 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A20%3A37.731Z&to=2026-09-17T07%3A30%3A37.731904%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56606 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A20%3A37.732Z&to=2026-09-17T07%3A30%3A37.732004%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56614 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56616 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56618 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A37.810Z&to=2026-09-17T07%3A30%3A37.810600%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56650 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56656 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56658 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A39.833Z&to=2026-09-17T07%3A30%3A39.833251%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56686 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56691 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56695 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A41.858Z&to=2026-09-17T07%3A30%3A41.858873%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56696 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56696 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56727 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56731 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56736 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A43.879Z&to=2026-09-17T07%3A30%3A43.879605%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56758 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56762 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56765 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A45.915Z&to=2026-09-17T07%3A30%3A45.915845%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56696 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56768 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56808 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56812 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56816 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A47.939Z&to=2026-09-17T07%3A30%3A47.939684%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56843 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56847 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56851 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A49.963Z&to=2026-09-17T07%3A30%3A49.963160%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56889 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56895 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56899 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A51.991Z&to=2026-09-17T07%3A30%3A51.991868%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56937 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56941 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56945 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A54.011Z&to=2026-09-17T07%3A30%3A54.011465%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56979 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56983 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A56.035Z&to=2026-09-17T07%3A30%3A56.035302%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56986 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57014 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57018 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57021 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A20%3A58.057Z&to=2026-09-17T07%3A30%3A58.057934%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56986 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57070 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57074 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57078 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A21%3A00.079Z&to=2026-09-17T07%3A31%3A00.079583%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57108 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57115 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A21%3A02.114Z&to=2026-09-17T07%3A31%3A02.114641%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57148 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57153 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57157 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A21%3A04.147Z&to=2026-09-17T07%3A31%3A04.147946%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57188 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57193 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57198 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A21%3A06.180Z&to=2026-09-17T07%3A31%3A06.180031%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57201 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57203 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57205 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A21%3A06.233Z&to=2026-09-17T07%3A31%3A06.233709%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57209 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57210 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57211 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57217 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A21%3A06.241Z&to=2026-09-17T07%3A31%3A06.241025%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57215 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A21%3A06.240Z&to=2026-09-17T07%3A31%3A06.240904%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57216 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A21%3A06.240Z&to=2026-09-17T07%3A31%3A06.240934%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57219 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57224 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57226 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57228 - "GET /api/devices/motor-a/history?metric=temperature&from=2026-09-17T07%3A21%3A06.502Z&to=2026-09-17T07%3A31%3A06.502969%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57232 - "GET /api/devices/motor-a/latest?metric=current HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57234 - "GET /api/devices/motor-a/latest?metric=running_state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57233 - "GET /api/devices/motor-a/latest?metric=speed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57240 - "GET /api/devices/motor-a/history?metric=speed&from=2026-09-17T07%3A21%3A06.510Z&to=2026-09-17T07%3A31%3A06.510242%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57239 - "GET /api/devices/motor-a/history?metric=running_state&from=2026-09-17T07%3A21%3A06.510Z&to=2026-09-17T07%3A31%3A06.510296%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57238 - "GET /api/devices/motor-a/history?metric=current&from=2026-09-17T07%3A21%3A06.510Z&to=2026-09-17T07%3A31%3A06.510201%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57257 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57259 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57261 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A21%3A08.057Z&to=2026-09-17T07%3A31%3A08.057595%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57290 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57292 - "GET /api/devices/motor-b/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57294 - "GET /api/devices/motor-b/history?metric=temperature&from=2026-09-17T07%3A21%3A10.086Z&to=2026-09-17T07%3A31%3A10.086691%2B00%3A00&limit=1000 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [87261]
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python collect_opcua.py --port 56467 --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/opcua-motor-b-r3aFYY/test.sqlite3
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:36.110126+00:00 第1次 accepted value=85.0 source=2026-09-17T07:30:35.853136+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:37.109353+00:00 第2次 accepted value=85.0 source=2026-09-17T07:30:36.855146+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:38.107323+00:00 第3次 accepted value=85.0 source=2026-09-17T07:30:37.855519+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:39.115111+00:00 第4次 accepted value=85.0 source=2026-09-17T07:30:38.856837+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:40.117067+00:00 第5次 accepted value=85.0 source=2026-09-17T07:30:39.857216+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:41.118745+00:00 第6次 accepted value=85.0 source=2026-09-17T07:30:40.858556+00:00
+2026-09-17T07:30:42.114826+00:00 第7次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+2026-09-17T07:30:43.116286+00:00 第8次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:44.131522+00:00 第9次 bad value=null source=2026-09-17T07:30:44.061275+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:45.127930+00:00 第10次 bad value=null source=2026-09-17T07:30:45.061919+00:00
+2026-09-17T07:30:46.123468+00:00 第11次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+2026-09-17T07:30:47.124771+00:00 第12次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:48.130520+00:00 第13次 uncertain value=70.0 source=2026-09-17T07:30:47.676008+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:49.130582+00:00 第14次 uncertain value=70.0 source=2026-09-17T07:30:48.677536+00:00
+2026-09-17T07:30:50.129044+00:00 第15次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:51.143774+00:00 第16次 missing value=70.0 source=None
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:52.161601+00:00 第17次 missing value=70.0 source=None
+2026-09-17T07:30:53.136710+00:00 第18次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:54.146173+00:00 第19次 stale value=70.0 source=2026-09-17T07:29:53.964309+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:55.169073+00:00 第20次 stale value=70.0 source=2026-09-17T07:29:54.965797+00:00
+2026-09-17T07:30:56.143507+00:00 第21次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:57.148947+00:00 第22次 future value=70.0 source=2026-09-17T07:31:57.121149+00:00
+2026-09-17T07:30:58.147181+00:00 第23次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:30:59.153088+00:00 第24次 accepted value=85.0 source=2026-09-17T07:30:58.843526+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:31:00.153900+00:00 第25次 duplicate value=85.0 source=2026-09-17T07:30:58.843526+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:31:01.159927+00:00 第26次 duplicate value=85.0 source=2026-09-17T07:30:58.843526+00:00
+2026-09-17T07:31:02.155599+00:00 第27次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+2026-09-17T07:31:03.155673+00:00 第28次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:31:04.165746+00:00 第29次 accepted value=77.9 source=2026-09-17T07:31:04.005578+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:31:05.167433+00:00 第30次 accepted value=77.9 source=2026-09-17T07:31:05.006825+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:31:06.177089+00:00 第31次 accepted value=77.9 source=2026-09-17T07:31:06.007771+00:00
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-17T07:31:07.170612+00:00 第32次 accepted value=77.9 source=2026-09-17T07:31:07.009313+00:00
+2026-09-17T07:31:08.167735+00:00 第33次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+2026-09-17T07:31:09.171195+00:00 第34次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+2026-09-17T07:31:10.172527+00:00 第35次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+2026-09-17T07:31:11.173842+00:00 第36次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+2026-09-17T07:31:12.174537+00:00 第37次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 56467)
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python opcua_simulator.py --port 56467 --value 85 --extra-namespace
+{"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:56467/motor-b/", "namespace_uri": "urn:industrial-maintenance:motor-b", "NodeId": "ns=3;s=MotorB.Temperature"}
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python collect_temperature.py --port 56463 --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/opcua-motor-b-r3aFYY/test.sqlite3
+2026-09-17T07:30:35.299931+00:00 第1次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:36.301118+00:00 第2次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:37.306151+00:00 第3次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:38.305383+00:00 第4次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:39.307680+00:00 第5次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:40.310709+00:00 第6次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:41.313103+00:00 第7次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:42.316520+00:00 第8次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:43.317929+00:00 第9次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:44.320719+00:00 第10次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:45.324787+00:00 第11次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:46.327556+00:00 第12次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:47.330081+00:00 第13次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:48.334860+00:00 第14次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:49.340995+00:00 第15次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:50.342554+00:00 第16次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:51.345038+00:00 第17次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:52.347120+00:00 第18次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:53.352205+00:00 第19次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:54.354175+00:00 第20次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:55.361492+00:00 第21次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:56.362732+00:00 第22次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:57.367393+00:00 第23次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:58.369123+00:00 第24次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:30:59.371283+00:00 第25次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:00.374016+00:00 第26次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:01.377799+00:00 第27次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:02.378454+00:00 第28次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:03.382675+00:00 第29次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:04.387632+00:00 第30次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:05.394778+00:00 第31次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:06.398039+00:00 第32次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:07.401328+00:00 第33次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:08.404343+00:00 第34次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:09.406441+00:00 第35次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:10.407396+00:00 第36次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+2026-09-17T07:31:11.411694+00:00 第37次 已保存：温度=65.3℃ 电流=1.23A 转速=1450rpm 运行状态=1
+采集已停止，已提交的历史保留。
+
+
+/Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python simulator.py --port 56463 --raw 653
+启动模拟器：127.0.0.1:56463，设备 ID=1，保持寄存器协议地址=0，温度原始值=653，地址1电流原始值=123，地址2转速原始值=1450，地址3运行状态原始值=1；按 Ctrl+C 停止。

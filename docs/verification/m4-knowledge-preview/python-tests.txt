@@ -1,0 +1,342 @@
+test_boundaries_continuous_high_restart_recovery_and_retrigger (test_alarms.AlarmTests.test_boundaries_continuous_high_restart_recovery_and_retrigger) ... ok
+test_failure_stale_and_unassessed_sample_never_clear_active (test_alarms.AlarmTests.test_failure_stale_and_unassessed_sample_never_clear_active) ... ok
+test_invalid_temperature_or_missing_rule_cannot_commit (test_alarms.AlarmTests.test_invalid_temperature_or_missing_rule_cannot_commit) ... ok
+test_legacy_database_unknown_and_no_get_migration_or_replay (test_alarms.AlarmTests.test_legacy_database_unknown_and_no_get_migration_or_replay) ... ok
+test_parallel_collectors_create_one_active_alarm (test_alarms.AlarmTests.test_parallel_collectors_create_one_active_alarm) ... ok
+test_readonly_latest_consistency_history_limit_and_invalid_device (test_alarms.AlarmTests.test_readonly_latest_consistency_history_limit_and_invalid_device) ... ok
+test_recovery_write_failure_rolls_back_measurement_and_state (test_alarms.AlarmTests.test_recovery_write_failure_rolls_back_measurement_and_state) ... ok
+test_bad_device_metric_dates_range_and_limit_have_consistent_errors (test_api.ApiTests.test_bad_device_metric_dates_range_and_limit_have_consistent_errors) ... ok
+test_exact_stale_boundary_and_last_success_stays_historical (test_api.ApiTests.test_exact_stale_boundary_and_last_success_stays_historical) ... ok
+test_failure_then_recovery_compares_record_times_not_insert_order (test_api.ApiTests.test_failure_then_recovery_compares_record_times_not_insert_order) ... ok
+test_history_utc_range_limit_order_and_empty_result (test_api.ApiTests.test_history_utc_range_limit_order_and_empty_result) ... ok
+test_missing_database_recovers_without_restart_and_empty_data (test_api.ApiTests.test_missing_database_recovers_without_restart_and_empty_data) ... ok
+test_readonly_concurrent_requests_and_locked_database (test_api.ApiTests.test_readonly_concurrent_requests_and_locked_database) ... ok
+test_live_http_missing_database_recovery_and_readonly_concurrency (test_api_http.RealHttpTests.test_live_http_missing_database_recovery_and_readonly_concurrency) ... 
+HTTP验收启动： /Users/yuanqi/项目/工业设备智能运维agent/.venv/bin/python serve_api.py --db /var/folders/cv/cyyvwmh10w5g65rrlnpk33rm0000gn/T/tmpzgl3xwr9/http.sqlite3 --port 64994
+缺库： 503 {'error': {'code': 'database_unavailable', 'message': '数据库不可读或繁忙，请检查采集器及服务日志'}}
+建库后无需重启： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': None, 'status': {'has_data': False, 'last_attempt_status': 'unknown', 'last_attempt_at': None, 'last_success_at': None, 'last_failure_type': None, 'last_failure_message': None, 'last_failure_at': None, 'data_age_seconds': None, 'is_stale': None, 'checked_at': '2026-09-18T04:33:31.570475+00:00', 'stale_after_seconds': 5}, 'alarm': {'enabled': False, 'current': 'not_enabled', 'active': None, 'history': [], 'total': 0, 'limit': 20, 'evaluated_measurement_id': None, 'pending': None, 'rule': {'trigger_above': 80.0, 'recover_below': 78.0, 'unit': '℃', 'teaching_only': True}}}
+旧值仍保留原时间，已过期： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': {'id': 1, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 65.3, 'unit': '℃', 'collected_at': '2026-09-18T04:33:21.571080+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}, 'status': {'has_data': True, 'last_attempt_status': 'success', 'last_attempt_at': '2026-09-18T04:33:21.571080+00:00', 'last_success_at': '2026-09-18T04:33:21.571080+00:00', 'last_failure_type': None, 'last_failure_message': None, 'last_failure_at': None, 'data_age_seconds': 10.001283, 'is_stale': True, 'checked_at': '2026-09-18T04:33:31.572363+00:00', 'stale_after_seconds': 5}, 'alarm': {'enabled': False, 'current': 'not_enabled', 'active': None, 'history': [], 'total': 0, 'limit': 20, 'evaluated_measurement_id': None, 'pending': None, 'rule': {'trigger_above': 80.0, 'recover_below': 78.0, 'unit': '℃', 'teaching_only': True}}}
+最近失败： 200 {'has_data': True, 'last_attempt_status': 'failure', 'last_attempt_at': '2026-09-18T04:33:31.572893+00:00', 'last_success_at': '2026-09-18T04:33:21.571080+00:00', 'last_failure_type': 'communication_error', 'last_failure_message': 'HTTP验收注入通信失败事件', 'last_failure_at': '2026-09-18T04:33:31.572893+00:00', 'data_age_seconds': 10.0026, 'is_stale': True, 'checked_at': '2026-09-18T04:33:31.573680+00:00', 'stale_after_seconds': 5}
+后来成功覆盖最近尝试结论： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'measurement': {'id': 2, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 72.8, 'unit': '℃', 'collected_at': '2026-09-18T04:33:31.574181+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}, 'status': {'has_data': True, 'last_attempt_status': 'success', 'last_attempt_at': '2026-09-18T04:33:31.574181+00:00', 'last_success_at': '2026-09-18T04:33:31.574181+00:00', 'last_failure_type': 'communication_error', 'last_failure_message': 'HTTP验收注入通信失败事件', 'last_failure_at': '2026-09-18T04:33:31.572893+00:00', 'data_age_seconds': 0.000761, 'is_stale': False, 'checked_at': '2026-09-18T04:33:31.574942+00:00', 'stale_after_seconds': 5}, 'alarm': {'enabled': False, 'current': 'not_enabled', 'active': None, 'history': [], 'total': 0, 'limit': 20, 'evaluated_measurement_id': None, 'pending': None, 'rule': {'trigger_above': 80.0, 'recover_below': 78.0, 'unit': '℃', 'teaching_only': True}}}
+并发12次HTTP读取：全部200，数据库文件逐字节不变
+限量历史： 200 {'device_id': 'motor-a', 'metric': 'temperature', 'from': '2026-09-18T04:33:21.571080+00:00', 'to': '2026-09-18T04:34:31.571080+00:00', 'limit': 1, 'order': 'collected_at ASC, id ASC', 'points': [{'id': 1, 'device_id': 'motor-a', 'metric': 'temperature', 'value': 65.3, 'unit': '℃', 'collected_at': '2026-09-18T04:33:21.571080+00:00', 'source_time': None, 'quality': 'good', 'protocol': 'modbus_tcp'}]}
+/api/devices/unknown/latest 404 {'error': {'code': 'device_not_found', 'message': '未知设备'}}
+/api/devices/motor-a/history?limit=1001 422 {'error': {'code': 'invalid_parameters', 'message': '参数缺失或不符合约束：query.from, query.to, query.limit'}}
+独占锁： 503 {'error': {'code': 'database_unavailable', 'message': '数据库不可读或繁忙，请检查采集器及服务日志'}}
+服务日志：
+INFO:     Started server process [98618]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:64994 (Press CTRL+C to quit)
+INFO:     127.0.0.1:64998 - "GET /api/devices HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:64999 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65000 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65001 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65002 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65003 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65006 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65005 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65004 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65008 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65009 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65010 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65007 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65011 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65013 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65012 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65014 - "GET /api/devices/motor-a/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65015 - "GET /api/devices/motor-a/history?from=2026-09-18T04%3A33%3A21.571080%2B00%3A00&to=2026-09-18T04%3A34%3A31.571080%2B00%3A00&limit=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65016 - "GET /api/devices/unknown/latest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65017 - "GET /api/devices/motor-a/history?limit=1001 HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:65018 - "GET /api/devices HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:65021 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [98618]
+
+ok
+test_actual_schema_errors_propagate_instead_of_becoming_empty (test_assistant_ranges.RangeTests.test_actual_schema_errors_propagate_instead_of_becoming_empty) ... ok
+test_alarms_overlap_closed_interval_counts_and_full_evidence (test_assistant_ranges.RangeTests.test_alarms_overlap_closed_interval_counts_and_full_evidence) ... ok
+test_closed_endpoints_device_metric_quality_isolation (test_assistant_ranges.RangeTests.test_closed_endpoints_device_metric_quality_isolation) ... ok
+test_empty_has_null_statistics (test_assistant_ranges.RangeTests.test_empty_has_null_statistics) ... ok
+test_enum_counts_full_range_and_preserves_unknown_state (test_assistant_ranges.RangeTests.test_enum_counts_full_range_and_preserves_unknown_state) ... ok
+test_legacy_alarm_evidence_stays_legacy (test_assistant_ranges.RangeTests.test_legacy_alarm_evidence_stays_legacy) ... ok
+test_missing_alarm_table_is_unavailable_without_migration (test_assistant_ranges.RangeTests.test_missing_alarm_table_is_unavailable_without_migration) ... ok
+test_statistics_include_extremes_beyond_truncated_points (test_assistant_ranges.RangeTests.test_statistics_include_extremes_beyond_truncated_points) ... ok
+test_actual_sql_progress_timeout_and_connection_closed (test_assistant_snapshot.SnapshotTests.test_actual_sql_progress_timeout_and_connection_closed) ... ok
+test_history_count_and_details_share_snapshot_during_writer_commit (test_assistant_snapshot.SnapshotTests.test_history_count_and_details_share_snapshot_during_writer_commit) ... ok
+test_lock_wait_is_bounded_and_not_empty (test_assistant_snapshot.SnapshotTests.test_lock_wait_is_bounded_and_not_empty) ... ok
+test_readonly_connection_rejects_write_and_budget_covers_multiple_queries (test_assistant_snapshot.SnapshotTests.test_readonly_connection_rejects_write_and_budget_covers_multiple_queries) ... ok
+test_status_all_metrics_share_snapshot_during_writer_commit (test_assistant_snapshot.SnapshotTests.test_status_all_metrics_share_snapshot_during_writer_commit) ... ok
+test_b_source_age_quality_runtime_do_not_infect_a (test_assistant_tools.ToolTests.test_b_source_age_quality_runtime_do_not_infect_a) ... ok
+test_empty_and_legacy_reads_never_migrate (test_assistant_tools.ToolTests.test_empty_and_legacy_reads_never_migrate) ... ok
+test_invalid_nonfinite_database_value_is_structured_error (test_assistant_tools.ToolTests.test_invalid_nonfinite_database_value_is_structured_error) ... ok
+test_invalid_stored_source_time_returns_json_error (test_assistant_tools.ToolTests.test_invalid_stored_source_time_returns_json_error) ... ok
+test_latest_bad_stored_row_keeps_good_value_but_marks_unknown (test_assistant_tools.ToolTests.test_latest_bad_stored_row_keeps_good_value_but_marks_unknown) ... ok
+test_missing_database_is_not_created (test_assistant_tools.ToolTests.test_missing_database_is_not_created) ... ok
+test_real_cli_returns_json_and_exit_status (test_assistant_tools.ToolTests.test_real_cli_returns_json_and_exit_status) ... ok
+test_status_all_points_reuses_http_facts (test_assistant_tools.ToolTests.test_status_all_points_reuses_http_facts) ... ok
+test_tool_history_empty_json_and_timezone_boundary (test_assistant_tools.ToolTests.test_tool_history_empty_json_and_timezone_boundary) ... ok
+test_unknown_and_invalid_inputs_are_errors_not_empty (test_assistant_tools.ToolTests.test_unknown_and_invalid_inputs_are_errors_not_empty) ... ok
+test_database_errors_and_query_bounds (test_collection.CollectionTests.test_database_errors_and_query_bounds) ... ok
+test_failed_attempts_are_counted_and_never_make_measurements (test_collection.CollectionTests.test_failed_attempts_are_counted_and_never_make_measurements) ... ok
+test_finite_samples_have_utc_metadata_and_survive_restart (test_collection.CollectionTests.test_finite_samples_have_utc_metadata_and_survive_restart) ... ok
+test_insert_failure_and_lock_timeout_stop_without_fake_success (test_collection.CollectionTests.test_insert_failure_and_lock_timeout_stop_without_fake_success) ... ok
+test_running_collector_records_failures_then_recovers_to_728 (test_collection.CollectionTests.test_running_collector_records_failures_then_recovers_to_728) ... ok
+test_actual_batch_address_zero_and_scaling (test_current.BatchProtocolTests.test_actual_batch_address_zero_and_scaling) ... ok
+test_real_legacy_one_register_cli_works_batch_collector_fails_whole_round (test_current.BatchProtocolTests.test_real_legacy_one_register_cli_works_batch_collector_fails_whole_round) ... ok
+test_short_or_exception_response_never_returns_partial_values (test_current.BatchProtocolTests.test_short_or_exception_response_never_returns_partial_values) ... ok
+test_failure_both_metrics_reset_pending_and_recovery (test_current.CurrentStorageTests.test_failure_both_metrics_reset_pending_and_recovery) ... ok
+test_old_temperature_database_readonly_current_empty (test_current.CurrentStorageTests.test_old_temperature_database_readonly_current_empty) ... ok
+test_pending_reset_failure_rolls_back_both_events (test_current.CurrentStorageTests.test_pending_reset_failure_rolls_back_both_events) ... ok
+test_same_round_timestamp_metric_isolation_and_old_temperature_default (test_current.CurrentStorageTests.test_same_round_timestamp_metric_isolation_and_old_temperature_default) ... ok
+test_second_failure_event_rolls_back_first_and_pending_reset (test_current.CurrentStorageTests.test_second_failure_event_rolls_back_first_and_pending_reset) ... ok
+test_second_insert_rolls_back_temperature_alarm_and_pending (test_current.CurrentStorageTests.test_second_insert_rolls_back_temperature_alarm_and_pending) ... ok
+test_occupied_port_is_reported_without_stopping_owner (test_dashboard_launcher.LauncherTests.test_occupied_port_is_reported_without_stopping_owner) ... ok
+test_real_stack_serves_measurement_and_shutdown_frees_ports (test_dashboard_launcher.LauncherTests.test_real_stack_serves_measurement_and_shutdown_frees_ports) ... ok
+test_configured_speed_and_stopped_state (test_four_points.FourProtocolTests.test_configured_speed_and_stopped_state) ... ok
+test_invalid_enum_protocol_succeeds_but_collector_saves_only_failures (test_four_points.FourProtocolTests.test_invalid_enum_protocol_succeeds_but_collector_saves_only_failures) ... 2026-09-18T04:33:37.357271+00:00 第1次 数据校验失败：127.0.0.1:65144：running_state raw=2，允许值=(0, 1)；本轮四点均不保存
+采集结束：尝试=1 成功=0 失败=1
+2026-09-18T04:33:37.425082+00:00 第1次 数据校验失败：127.0.0.1:65151：running_state raw=7，允许值=(0, 1)；本轮四点均不保存
+采集结束：尝试=1 成功=0 失败=1
+ok
+test_fourth_insert_rolls_back_whole_round_and_alarm (test_four_points.FourStorageTests.test_fourth_insert_rolls_back_whole_round_and_alarm) ... ok
+test_new_point_history_and_independent_freshness (test_four_points.FourStorageTests.test_new_point_history_and_independent_freshness) ... ok
+test_no_samples_validation_failure_is_visible (test_four_points.FourStorageTests.test_no_samples_validation_failure_is_visible) ... ok
+test_old_two_point_database_does_not_invent_new_point_timestamps (test_four_points.FourStorageTests.test_old_two_point_database_does_not_invent_new_point_timestamps) ... ok
+test_storage_rejects_invalid_enum_before_any_write (test_four_points.FourStorageTests.test_storage_rejects_invalid_enum_before_any_write) ... ok
+test_validation_failure_clears_pending_and_later_success_recovers (test_four_points.FourStorageTests.test_validation_failure_clears_pending_and_later_success_recovers) ... ok
+test_validation_failure_resets_pending_retains_old_samples_and_active_alarm (test_four_points.FourStorageTests.test_validation_failure_resets_pending_retains_old_samples_and_active_alarm) ... ok
+test_validation_fourth_event_failure_rolls_back_events_and_pending (test_four_points.FourStorageTests.test_validation_fourth_event_failure_rolls_back_events_and_pending) ... ok
+test_chunk_ids_are_stable_and_depend_on_content_and_version (test_knowledge_chunks.KnowledgeChunkTests.test_chunk_ids_are_stable_and_depend_on_content_and_version) ... ok
+test_chunks_expose_source_and_content_hashes (test_knowledge_chunks.KnowledgeChunkTests.test_chunks_expose_source_and_content_hashes) ... ok
+test_chunks_preserve_sections_tables_code_and_exact_body_coverage (test_knowledge_chunks.KnowledgeChunkTests.test_chunks_preserve_sections_tables_code_and_exact_body_coverage) ... ok
+test_embedding_input_marks_teaching_only_scope (test_knowledge_chunks.KnowledgeChunkTests.test_embedding_input_marks_teaching_only_scope) ... ok
+test_identical_repeated_sections_have_distinct_ids (test_knowledge_chunks.KnowledgeChunkTests.test_identical_repeated_sections_have_distinct_ids) ... ok
+test_long_fence_is_not_closed_by_short_or_trailed_fence (test_knowledge_chunks.KnowledgeChunkTests.test_long_fence_is_not_closed_by_short_or_trailed_fence) ... ok
+test_marks_atomic_section_above_soft_target (test_knowledge_chunks.KnowledgeChunkTests.test_marks_atomic_section_above_soft_target) ... ok
+test_rejects_complete_embedding_input_over_hard_limit_without_truncating (test_knowledge_chunks.KnowledgeChunkTests.test_rejects_complete_embedding_input_over_hard_limit_without_truncating) ... ok
+test_loads_only_manifest_entries_and_preserves_null_model (test_knowledge_chunks.KnowledgeDocumentTests.test_loads_only_manifest_entries_and_preserves_null_model) ... ok
+test_rejects_non_markdown_path_and_unhashable_yaml_key (test_knowledge_chunks.KnowledgeDocumentTests.test_rejects_non_markdown_path_and_unhashable_yaml_key) ... ok
+test_rejects_unsafe_duplicate_or_nested_frontmatter (test_knowledge_chunks.KnowledgeDocumentTests.test_rejects_unsafe_duplicate_or_nested_frontmatter) ... ok
+test_rejects_untrusted_manifest_entries (test_knowledge_chunks.KnowledgeDocumentTests.test_rejects_untrusted_manifest_entries) ... ok
+test_cli_missing_resources_fails_without_output (test_knowledge_preview.PreviewTests.test_cli_missing_resources_fails_without_output) ... ok
+test_corrupt_cached_tokenizer_is_not_used (test_knowledge_preview.PreviewTests.test_corrupt_cached_tokenizer_is_not_used) ... ok
+test_coverage_rejects_gap_and_changed_original (test_knowledge_preview.PreviewTests.test_coverage_rejects_gap_and_changed_original) ... ok
+test_missing_tokenizer_is_error_without_fake_counts (test_knowledge_preview.PreviewTests.test_missing_tokenizer_is_error_without_fake_counts) ... ok
+test_publish_is_complete_and_refuses_existing_output (test_knowledge_preview.PreviewTests.test_publish_is_complete_and_refuses_existing_output) ... ok
+test_write_failure_cleans_partial_new_output (test_knowledge_preview.PreviewTests.test_write_failure_cleans_partial_new_output) ... ok
+test_official_special_tokens_and_no_truncation (test_knowledge_preview.RealTokenizerTests.test_official_special_tokens_and_no_truncation) ... ok
+test_oversized_real_section_fails_without_output_or_source_changes (test_knowledge_preview.RealTokenizerTests.test_oversized_real_section_fails_without_output_or_source_changes) ... ok
+test_real_corpus_full_coverage_stable_ids_and_exact_input_counts (test_knowledge_preview.RealTokenizerTests.test_real_corpus_full_coverage_stable_ids_and_exact_input_counts) ... ok
+test_configured_728 (test_modbus.ModbusAcceptanceTests.test_configured_728) ... ok
+test_default_653_at_protocol_address_zero (test_modbus.ModbusAcceptanceTests.test_default_653_at_protocol_address_zero) ... ok
+test_stopped_simulator_has_no_sample_and_nonzero_exit (test_modbus.ModbusAcceptanceTests.test_stopped_simulator_has_no_sample_and_nonzero_exit) ... ok
+test_nonfinite_temperature_is_rejected_before_connect (test_opcua.OpcuaLabTests.test_nonfinite_temperature_is_rejected_before_connect) ... ok
+test_uri_resolution_double_and_actual_subscription (test_opcua.OpcuaLabTests.test_uri_resolution_double_and_actual_subscription) ... {"event": "server_ready", "endpoint": "opc.tcp://127.0.0.1:65177/opcua-lab/", "namespace_uri": "urn:industrial-maintenance:opcua-lab", "NodeId": "ns=3;s=MotorA.Temperature", "initial_value": 65.3}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 65.3, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": "2026-09-18T04:33:38.708503+00:00", "ServerTimestamp": "2026-09-18T04:33:38.708506+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+{"event": "subscribed", "NodeId": "ns=3;s=MotorA.Temperature", "monitored_items": 1, "requested_publishing_ms": 250, "requested_sampling_ms": 100, "requested_queue_size": 10, "trigger": "StatusValue"}
+{"event": "notification", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 65.3, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": "2026-09-18T04:33:38.708503+00:00", "ServerTimestamp": "2026-09-18T04:33:38.708506+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）", "ReceivedAt": "2026-09-18T04:33:38.986924+00:00"}
+{"event": "local_lab_write", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double"}
+{"event": "notification", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-18T04:33:39.113010+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）", "ReceivedAt": "2026-09-18T04:33:39.237284+00:00"}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-18T04:33:39.113010+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+{"event": "local_lab_write", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double"}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 72.8, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-18T04:33:39.526881+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+同值写入后1.2秒：新增数据变化通知0；主动读取仍成功。
+{"event": "local_lab_write", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 73.0, "DataType": "Double"}
+{"event": "read", "NodeId": "ns=3;s=MotorA.Temperature", "Value": 73.0, "DataType": "Double", "StatusCode": "Good", "StatusCodeValue": 0, "SourceTimestamp": null, "ServerTimestamp": "2026-09-18T04:33:41.047730+00:00", "UnitConvention": "℃（文档约定，无EngineeringUnits属性）"}
+{"event": "subscription_deleted"}
+OPC UA stderr: Requested session timeout to be 3600000ms, got 600000ms instead
+
+ok
+test_dual_collectors_same_database_alarm_sessions (test_opcua_collectors.DualCollectorTests.test_dual_collectors_same_database_alarm_sessions) ... ok
+test_invalid_metric_error_describes_device_capabilities (test_opcua_invalid_arrays.InvalidArrayTests.test_invalid_metric_error_describes_device_capabilities) ... ok
+test_nonfinite_arrays_are_diagnosed_and_reset_pending_but_preserve_active (test_opcua_invalid_arrays.InvalidArrayTests.test_nonfinite_arrays_are_diagnosed_and_reset_pending_but_preserve_active) ... ok
+test_readonly_legacy_and_recheck_source_age (test_opcua_pipeline.ApiBTests.test_readonly_legacy_and_recheck_source_age) ... ok
+test_latest_bad_and_communication_failure_not_hidden_by_previous_good (test_opcua_pipeline.ApiQualityTests.test_latest_bad_and_communication_failure_not_hidden_by_previous_good) ... ok
+test_device_sessions_are_independent (test_opcua_pipeline.PipelineTests.test_device_sessions_are_independent) ... ok
+test_gate_pending_active_and_watermark_restart (test_opcua_pipeline.PipelineTests.test_gate_pending_active_and_watermark_restart) ... ok
+test_missing_invalid_and_failure_clear_pending (test_opcua_pipeline.PipelineTests.test_missing_invalid_and_failure_clear_pending) ... ok
+test_transaction_failure_rolls_back (test_opcua_pipeline.PipelineTests.test_transaction_failure_rolls_back) ... ok
+test_device_sessions_are_independent (test_opcua_pipeline.RecoveryTests.test_device_sessions_are_independent) ... ok
+test_every_rejection_clears_pending_without_resetting_other_device (test_opcua_pipeline.RecoveryTests.test_every_rejection_clears_pending_without_resetting_other_device) ... ok
+test_future_does_not_poison_watermark_and_failure_recovers (test_opcua_pipeline.RecoveryTests.test_future_does_not_poison_watermark_and_failure_recovers) ... ok
+test_gate_pending_active_and_watermark_restart (test_opcua_pipeline.RecoveryTests.test_gate_pending_active_and_watermark_restart) ... ok
+test_missing_invalid_and_failure_clear_pending (test_opcua_pipeline.RecoveryTests.test_missing_invalid_and_failure_clear_pending) ... ok
+test_rejection_event_failure_rolls_back_diagnostic_and_pending (test_opcua_pipeline.RecoveryTests.test_rejection_event_failure_rolls_back_diagnostic_and_pending) ... ok
+test_transaction_failure_rolls_back (test_opcua_pipeline.RecoveryTests.test_transaction_failure_rolls_back) ... ok
+test_communication_failure_then_real_read_recovers (test_opcua_pipeline.WireRecoveryTests.test_communication_failure_then_real_read_recovers) ... 2026-09-18T04:33:48.660902+00:00 第1次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 65289)
+采集结束：尝试=1 成功=0 失败=1
+Executing <Task pending name='Task-374' coro=<WireRecoveryTests.test_communication_failure_then_real_read_recovers() running at /Users/yuanqi/项目/工业设备智能运维agent/tests/test_opcua_pipeline.py:191> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.428 seconds
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:33:49.103281+00:00 第1次 accepted value=65.3 source=2026-09-18T04:33:49.091874+00:00
+采集结束：尝试=1 成功=1 失败=0
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:33:49.108765+00:00 第1次 uncertain value=65.3 source=2026-09-18T04:33:49.103539+00:00
+采集结束：尝试=1 成功=0 失败=1
+ok
+test_real_namespace_and_bad_value_preserved (test_opcua_pipeline.WireTests.test_real_namespace_and_bad_value_preserved) ... Executing <Task pending name='Task-405' coro=<WireTests.test_real_namespace_and_bad_value_preserved() running at /Users/yuanqi/项目/工业设备智能运维agent/tests/test_opcua_pipeline.py:98> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.179 seconds
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+Requested session timeout to be 3600000ms, got 600000ms instead
+ok
+test_decision_age_rejection_exposes_both_times_and_preserves_active (test_opcua_runtime_api.RuntimeApiTests.test_decision_age_rejection_exposes_both_times_and_preserves_active) ... ok
+test_legacy_runtime_absent_is_readonly_and_keeps_read_semantics (test_opcua_runtime_api.RuntimeApiTests.test_legacy_runtime_absent_is_readonly_and_keeps_read_semantics) ... ok
+test_lifecycle_does_not_restore_old_alarm_or_clear_active (test_opcua_runtime_api.RuntimeApiTests.test_lifecycle_does_not_restore_old_alarm_or_clear_active) ... ok
+test_missing_source_evidence_is_not_a_communication_failure (test_opcua_runtime_api.RuntimeApiTests.test_missing_source_evidence_is_not_a_communication_failure) ... ok
+test_new_generation_needs_its_own_diagnostic (test_opcua_runtime_api.RuntimeApiTests.test_new_generation_needs_its_own_diagnostic) ... ok
+test_old_runtime_cannot_claim_ownership_after_new_alarm_session (test_opcua_runtime_api.RuntimeApiTests.test_old_runtime_cannot_claim_ownership_after_new_alarm_session) ... ok
+test_runtime_expiration_and_keepalive_do_not_refresh_source (test_opcua_runtime_api.RuntimeApiTests.test_runtime_expiration_and_keepalive_do_not_refresh_source) ... ok
+test_callback_capture_identity_ignores_old_generation_and_detects_gap (test_opcua_subscription.CallbackTests.test_callback_capture_identity_ignores_old_generation_and_detects_gap) ... ok
+test_duplicate_publish_and_keepalive_are_not_gaps (test_opcua_subscription.CallbackTests.test_duplicate_publish_and_keepalive_are_not_gaps) ... ok
+test_duplicate_storm_cannot_overflow_queue_or_interrupt_evidence (test_opcua_subscription.CallbackTests.test_duplicate_storm_cannot_overflow_queue_or_interrupt_evidence) ... ok
+test_queue_overflow_invalidates_accumulated_evidence (test_opcua_subscription.CallbackTests.test_queue_overflow_invalidates_accumulated_evidence) ... ok
+test_server_overflow_and_statuschange_interrupt (test_opcua_subscription.CallbackTests.test_server_overflow_and_statuschange_interrupt) ... ok
+test_application_overflow_is_visible_and_reconnects_without_blocking_event_loop (test_opcua_subscription.SubscriptionIntegrationTests.test_application_overflow_is_visible_and_reconnects_without_blocking_event_loop) ... Executing <Task pending name='Task-564' coro=<SubscriptionIntegrationTests.asyncSetUp() running at /Users/yuanqi/项目/工业设备智能运维agent/tests/test_opcua_subscription.py:88> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.291 seconds
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:33:52.283922+00:00 订阅通知1 accepted value=65.3 generation=1
+订阅中断，准备重连：application_queue_overflow
+ok
+test_continuous_bad_quality_does_not_reconnect_or_report_communication_failure (test_opcua_subscription.SubscriptionIntegrationTests.test_continuous_bad_quality_does_not_reconnect_or_report_communication_failure) ... Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:33:53.835847+00:00 订阅通知1 bad value=null generation=1
+2026-09-18T04:33:54.086588+00:00 订阅通知2 bad value=null generation=1
+2026-09-18T04:33:54.335678+00:00 订阅通知3 bad value=null generation=1
+2026-09-18T04:33:54.586486+00:00 订阅通知4 bad value=null generation=1
+2026-09-18T04:33:54.835432+00:00 订阅通知5 bad value=null generation=1
+2026-09-18T04:33:55.339788+00:00 订阅通知6 bad value=null generation=1
+2026-09-18T04:33:55.586854+00:00 订阅通知7 bad value=null generation=1
+2026-09-18T04:33:55.835788+00:00 订阅通知8 bad value=null generation=1
+2026-09-18T04:33:56.336691+00:00 订阅通知9 bad value=null generation=1
+2026-09-18T04:33:56.586516+00:00 订阅通知10 bad value=null generation=1
+2026-09-18T04:33:56.836552+00:00 订阅通知11 bad value=null generation=1
+ok
+test_database_failure_stops_and_rolls_back_notification (test_opcua_subscription.SubscriptionIntegrationTests.test_database_failure_stops_and_rolls_back_notification) ... Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:33:58.452462+00:00 订阅通知1 accepted value=65.3 generation=1
+订阅采集停止：forced disk failure
+ok
+test_delayed_notification_persists_rejection_and_counts_one_drop (test_opcua_subscription.SubscriptionIntegrationTests.test_delayed_notification_persists_rejection_and_counts_one_drop) ... Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:34:00.021205+00:00 订阅通知1 accepted value=65.3 generation=1
+2026-09-18T04:34:00.272222+00:00 订阅通知2 notification_processing_delay value=77.0 generation=1
+订阅中断，准备重连：notification_processing_delay
+ok
+test_incompatible_revised_interval_fails_without_hiding_server_parameters (test_opcua_subscription.SubscriptionIntegrationTests.test_incompatible_revised_interval_fails_without_hiding_server_parameters) ... Executing <Task pending name='Task-734' coro=<SubscriptionIntegrationTests.asyncSetUp() running at /Users/yuanqi/项目/工业设备智能运维agent/tests/test_opcua_subscription.py:88> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.204 seconds
+Requested session timeout to be 3600000ms, got 600000ms instead
+订阅采集停止：revised parameters cannot preserve continuous evidence: {'publishing_interval_ms': 250.0, 'sampling_interval_ms': 250.0, 'queue_size': 16, 'keepalive_count': 4, 'lifetime_count': 120}
+ok
+test_initial_server_unavailable_retries_and_then_subscribes (test_opcua_subscription.SubscriptionIntegrationTests.test_initial_server_unavailable_retries_and_then_subscribes) ... Executing <Task pending name='Task-760' coro=<SubscriptionIntegrationTests.asyncSetUp() running at /Users/yuanqi/项目/工业设备智能运维agent/tests/test_opcua_subscription.py:88> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.210 seconds
+订阅中断，准备重连：[Errno 61] Connect call failed ('127.0.0.1', 65452)
+close_secure_channel was called but connection is closed
+Executing <Task pending name='Task-764' coro=<SubscriptionIntegrationTests.test_initial_server_unavailable_retries_and_then_subscribes() running at /Users/yuanqi/项目/工业设备智能运维agent/tests/test_opcua_subscription.py:225> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.173 seconds
+Executing <Task pending name='Task-765' coro=<collect_subscription() running at /Users/yuanqi/项目/工业设备智能运维agent/opcua_subscription.py:279> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/tasks.py:384> took 0.184 seconds
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:34:06.306326+00:00 订阅通知1 accepted value=65.3 generation=2
+ok
+test_keepalive_without_source_evidence_clears_pending_without_reconnect (test_opcua_subscription.SubscriptionIntegrationTests.test_keepalive_without_source_evidence_clears_pending_without_reconnect) ... Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:34:07.683774+00:00 订阅通知1 accepted value=85.0 generation=1
+ok
+test_new_session_supersedes_subscriber_without_touching_new_pending (test_opcua_subscription.SubscriptionIntegrationTests.test_new_session_supersedes_subscriber_without_touching_new_pending) ... Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:34:10.155082+00:00 订阅通知1 accepted value=65.3 generation=1
+采集会话已失效，旧采集器不能修改新会话状态
+ok
+test_real_bad_uncertain_missing_future_stale_backward_and_duplicate_source_are_rejected (test_opcua_subscription.SubscriptionIntegrationTests.test_real_bad_uncertain_missing_future_stale_backward_and_duplicate_source_are_rejected) ... Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:34:11.667646+00:00 订阅通知1 accepted value=85.0 generation=1
+2026-09-18T04:34:11.919894+00:00 订阅通知2 bad value=null generation=1
+2026-09-18T04:34:12.167790+00:00 订阅通知3 uncertain value=86.0 generation=1
+2026-09-18T04:34:12.419589+00:00 订阅通知4 missing value=86.0 generation=1
+2026-09-18T04:34:12.667989+00:00 订阅通知5 future value=86.0 generation=1
+2026-09-18T04:34:12.918442+00:00 订阅通知6 stale value=86.0 generation=1
+2026-09-18T04:34:13.168085+00:00 订阅通知7 backward value=86.0 generation=1
+2026-09-18T04:34:13.418021+00:00 订阅通知8 duplicate value=86.0 generation=1
+ok
+test_real_constant_high_for_five_seconds_triggers_then_low_recovers (test_opcua_subscription.SubscriptionIntegrationTests.test_real_constant_high_for_five_seconds_triggers_then_low_recovers) ... Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:34:14.129048+00:00 订阅通知1 accepted value=85.0 generation=1
+2026-09-18T04:34:14.879549+00:00 订阅通知2 accepted value=85.0 generation=1
+2026-09-18T04:34:15.380492+00:00 订阅通知3 accepted value=85.0 generation=1
+2026-09-18T04:34:15.881075+00:00 订阅通知4 accepted value=85.0 generation=1
+2026-09-18T04:34:16.381267+00:00 订阅通知5 accepted value=85.0 generation=1
+2026-09-18T04:34:16.881438+00:00 订阅通知6 accepted value=85.0 generation=1
+2026-09-18T04:34:17.379792+00:00 订阅通知7 accepted value=85.0 generation=1
+2026-09-18T04:34:17.881116+00:00 订阅通知8 accepted value=85.0 generation=1
+2026-09-18T04:34:18.379802+00:00 订阅通知9 accepted value=85.0 generation=1
+2026-09-18T04:34:18.879425+00:00 订阅通知10 accepted value=85.0 generation=1
+2026-09-18T04:34:19.379198+00:00 订阅通知11 accepted value=85.0 generation=1
+2026-09-18T04:34:19.879383+00:00 订阅通知12 accepted value=85.0 generation=1
+2026-09-18T04:34:20.379471+00:00 订阅通知13 accepted value=85.0 generation=1
+2026-09-18T04:34:20.629615+00:00 订阅通知14 accepted value=77.0 generation=1
+ok
+test_real_constant_value_new_source_and_revised_parameters (test_opcua_subscription.SubscriptionIntegrationTests.test_real_constant_value_new_source_and_revised_parameters) ... Executing <Task pending name='Task-1039' coro=<SubscriptionIntegrationTests.asyncSetUp() running at /Users/yuanqi/项目/工业设备智能运维agent/tests/test_opcua_subscription.py:88> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.160 seconds
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:34:21.822436+00:00 订阅通知1 accepted value=85.0 generation=1
+2026-09-18T04:34:22.070508+00:00 订阅通知2 accepted value=85.0 generation=1
+2026-09-18T04:34:22.320006+00:00 订阅通知3 accepted value=85.0 generation=1
+2026-09-18T04:34:22.570460+00:00 订阅通知4 accepted value=85.0 generation=1
+ok
+test_server_restart_same_port_creates_new_generation (test_opcua_subscription.SubscriptionIntegrationTests.test_server_restart_same_port_creates_new_generation) ... Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:34:23.537751+00:00 订阅通知1 accepted value=65.3 generation=1
+Publish iteration crashed; retrying in 1s
+Traceback (most recent call last):
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 439, in _publish_loop
+    response = await self.publish(pending_acks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 424, in publish
+    data = await self._send_request(request, timeout=0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_session.py", line 95, in _send_request
+    return await self._client._send_request(request, timeout, message_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_client.py", line 590, in _send_request
+    return await self.protocol.send_request(request, timeout, message_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/client/ua_client.py", line 220, in send_request
+    raise ConnectionError("Connection is closed") from None
+ConnectionError: Connection is closed
+订阅中断，准备重连：connection_lost:transport lost
+close_session was called but connection is closed
+close_secure_channel was called but connection is closed
+Executing <TimerHandle when=1387462.653875292 _set_result_unless_cancelled(<Future finis...events.py:428>, None) at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:311 created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/tasks.py:645> took 0.100 seconds
+Executing <Task pending name='Task-1094' coro=<InternalSubscription._subscription_loop() running at /Users/yuanqi/项目/工业设备智能运维agent/.venv/lib/python3.11/site-packages/asyncua/server/internal_subscription.py:117> wait_for=<Future pending cb=[Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/tasks.py:384> took 0.168 seconds
+Executing <Task pending name='Task-1082' coro=<collect_subscription() running at /Users/yuanqi/项目/工业设备智能运维agent/opcua_subscription.py:210> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> created at /Users/yuanqi/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/tasks.py:384> took 0.157 seconds
+订阅中断，准备重连：[Errno 61] Connect call failed ('127.0.0.1', 49250)
+close_secure_channel was called but connection is closed
+Requested session timeout to be 3600000ms, got 600000ms instead
+2026-09-18T04:34:27.056346+00:00 订阅通知2 accepted value=65.3 generation=3
+ok
+test_modbus_a_and_subscribed_b_share_database_and_each_trigger (test_opcua_subscription_processes.SubscriptionProcessTests.test_modbus_a_and_subscribed_b_share_database_and_each_trigger) ... ok
+test_new_read_process_fences_old_subscription_process (test_opcua_subscription_processes.SubscriptionProcessTests.test_new_read_process_fences_old_subscription_process) ... ok
+test_sigint_stops_subscription_and_leaves_server_alive (test_opcua_subscription_processes.SubscriptionProcessTests.test_sigint_stops_subscription_and_leaves_server_alive) ... ok
+test_read_failure_and_completion_are_visible_in_runtime (test_opcua_subscription_storage.ActiveReadRuntimeTests.test_read_failure_and_completion_are_visible_in_runtime) ... 2026-09-18T04:34:41.211167+00:00 第1次 通信失败：[Errno 61] Connect call failed ('127.0.0.1', 49454)
+采集结束：尝试=1 成功=0 失败=1
+ok
+test_lock_wait_over_admission_deadline_cannot_recover_active_alarm (test_opcua_subscription_storage.LockedWriterTests.test_lock_wait_over_admission_deadline_cannot_recover_active_alarm) ... ok
+test_database_lock_delay_cannot_turn_old_callback_time_into_continuous_evidence (test_opcua_subscription_storage.SubscriptionStorageTests.test_database_lock_delay_cannot_turn_old_callback_time_into_continuous_evidence) ... ok
+test_diagnostic_migration_preserves_old_rows_without_fabricating_decision_time (test_opcua_subscription_storage.SubscriptionStorageTests.test_diagnostic_migration_preserves_old_rows_without_fabricating_decision_time) ... ok
+test_future_at_receive_cannot_become_acceptable_while_waiting (test_opcua_subscription_storage.SubscriptionStorageTests.test_future_at_receive_cannot_become_acceptable_while_waiting) ... ok
+test_identity_rollback_does_not_lose_retry_after_database_failure (test_opcua_subscription_storage.SubscriptionStorageTests.test_identity_rollback_does_not_lose_retry_after_database_failure) ... ok
+test_new_alarm_session_makes_old_runtime_unknown_before_new_runtime_initialization (test_opcua_subscription_storage.SubscriptionStorageTests.test_new_alarm_session_makes_old_runtime_unknown_before_new_runtime_initialization) ... ok
+test_new_identity_same_source_rejects_and_clears_pending (test_opcua_subscription_storage.SubscriptionStorageTests.test_new_identity_same_source_rejects_and_clears_pending) ... ok
+test_old_generation_and_session_cannot_write_or_clear_new_pending (test_opcua_subscription_storage.SubscriptionStorageTests.test_old_generation_and_session_cannot_write_or_clear_new_pending) ... ok
+test_runtime_read_is_readonly_and_ages_live_state (test_opcua_subscription_storage.SubscriptionStorageTests.test_runtime_read_is_readonly_and_ages_live_state) ... ok
+test_source_expiring_at_decision_clears_pending_without_overwriting_receive_time (test_opcua_subscription_storage.SubscriptionStorageTests.test_source_expiring_at_decision_clears_pending_without_overwriting_receive_time) ... ok
+test_source_expiring_at_decision_does_not_recover_active_alarm (test_opcua_subscription_storage.SubscriptionStorageTests.test_source_expiring_at_decision_does_not_recover_active_alarm) ... ok
+test_source_gap_breaks_pending_even_if_received_quickly (test_opcua_subscription_storage.SubscriptionStorageTests.test_source_gap_breaks_pending_even_if_received_quickly) ... ok
+test_transport_duplicate_preserves_pending_and_has_no_second_diagnostic (test_opcua_subscription_storage.SubscriptionStorageTests.test_transport_duplicate_preserves_pending_and_has_no_second_diagnostic) ... ok
+test_duration_boundary_not_sample_count (test_sustained_alarms.SustainedAlarmTests.test_duration_boundary_not_sample_count) ... ok
+test_interval_incompatibility_rejected_before_schema_changes (test_sustained_alarms.SustainedAlarmTests.test_interval_incompatibility_rejected_before_schema_changes) ... ok
+test_monotonic_not_wall_clock_and_pending_api_expiry (test_sustained_alarms.SustainedAlarmTests.test_monotonic_not_wall_clock_and_pending_api_expiry) ... ok
+test_obsolete_collector_failure_cannot_clear_new_session_pending (test_sustained_alarms.SustainedAlarmTests.test_obsolete_collector_failure_cannot_clear_new_session_pending) ... ok
+test_obsolete_session_cannot_commit_or_join_new_pending (test_sustained_alarms.SustainedAlarmTests.test_obsolete_session_cannot_commit_or_join_new_pending) ... ok
+test_old_immediate_schema_readonly_then_writer_migration_preserves_evidence (test_sustained_alarms.SustainedAlarmTests.test_old_immediate_schema_readonly_then_writer_migration_preserves_evidence) ... ok
+test_pending_and_measurement_rollback_and_failure_reset_rollback (test_sustained_alarms.SustainedAlarmTests.test_pending_and_measurement_rollback_and_failure_reset_rollback) ... ok
+test_reset_at_80_failure_and_gap_without_failure_event (test_sustained_alarms.SustainedAlarmTests.test_reset_at_80_failure_and_gap_without_failure_event) ... ok
+test_restart_clears_pending_but_preserves_active (test_sustained_alarms.SustainedAlarmTests.test_restart_clears_pending_but_preserves_active) ... ok
+
+----------------------------------------------------------------------
+Ran 157 tests in 71.999s
+
+OK

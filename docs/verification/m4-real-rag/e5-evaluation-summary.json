@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "output": "docs/verification/m4-real-rag/e5-evaluation.json",
+  "summaries": {
+    "dev": {
+      "cases": 29,
+      "answerable": 24,
+      "unanswerable": 5,
+      "hit_at_5": 0.625,
+      "all_annotated_evidence_at_5": 0.625,
+      "hit_at_10": 0.7916666666666666,
+      "all_annotated_evidence_at_10": 0.7916666666666666
+    },
+    "holdout": {
+      "cases": 15,
+      "answerable": 10,
+      "unanswerable": 5,
+      "hit_at_5": 0.3,
+      "all_annotated_evidence_at_5": 0.3,
+      "hit_at_10": 0.5,
+      "all_annotated_evidence_at_10": 0.5
+    }
+  }
+}

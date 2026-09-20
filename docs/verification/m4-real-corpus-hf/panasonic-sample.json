@@ -1,0 +1,45 @@
+{
+  "url": "https://datasets-server.huggingface.co/first-rows?dataset=Parssky%2Findustrial-instruction-dataset&config=corpus_panasonic_md_v0_1&split=train",
+  "checked_on": "2026-09-18",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "md_content",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "md_content_no_img_tbl",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows_returned": 10,
+  "sample": [
+    {
+      "md_content": "ERTJ1VR683J R-T Characteristics\n\n(for reference)\n\n$$R_{25} = 68 \\text{ kohm} \\quad \\text{+/-5\\%}$$\n\n$$B_{25/50} = 4250 \\text{ K} \\quad \\text{+/-2\\%}$$",
+      "md_content_no_img_tbl": "ERTJ1VR683J R-T Characteristics\n\n(for reference)\n\n$$R_{25} = 68 \\text{ kohm} \\quad \\text{+/-5\\%}$$\n\n$$B_{25/50} = 4250 \\text{ K} \\quad \\text{+/-2\\%}$$"
+    },
+    {
+      "md_content": "\"Panasonic\\n\\n![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA7sAAAGPCAIAAAASjFAzAAEAAElEQVR4nOz9",
+      "md_content_no_img_tbl": "\"Panasonic\\n\\nna.industrial.panasonic.com\\n\\nindustrial@us.panasonic.com\\n\\n1-800-344-2112\\n\\n## New"
+    },
+    {
+      "md_content": "\"Panasonic\\n\\n![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA7wAAAGLCAIAAABrwQlcAAEAAElEQVR4nOz9",
+      "md_content_no_img_tbl": "\"Panasonic\\n\\nna.industrial.panasonic.com\\n\\nindustrial@us.panasonic.com\\n\\n1-800-344-2112\\n\\n## Lin"
+    },
+    {
+      "md_content": "\"Panasonic\\n\\nNew Product Introduction\\n\\n# New ERJ-U, ERJ-C1 and EXB-U Series\\n\\n## Anti Sulfur Res",
+      "md_content_no_img_tbl": "\"Panasonic\\n\\nNew Product Introduction\\n\\n# New ERJ-U, ERJ-C1 and EXB-U Series\\n\\n## Anti Sulfur Res"
+    },
+    {
+      "md_content": "\"ERTJ0EA220J R-T Characteristics\\n\\n(for reference)\\n\\n$$R_{25} = 22 \\\\text{ ohm} \\\\quad \\\\pm 5\\\\%$$",
+      "md_content_no_img_tbl": "\"ERTJ0EA220J R-T Characteristics\\n\\n(for reference)\\n\\n$$R_{25} = 22 \\\\text{ ohm} \\\\quad \\\\pm 5\\\\%$$"
+    }
+  ]
+}

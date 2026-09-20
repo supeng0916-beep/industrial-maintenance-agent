@@ -1,0 +1,67 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #7
+                                                                                    
+                                                                                    
+     Eliminate  Voltage  Unbalance                                                  
+                                                             Suggested Actions      
+     Voltage unbalance degrades the performance and shortens the life of a three-phase
+     motor. Voltage unbalance at the motor terminals can cause current unbalance that is ■■ Periodically monitor voltages at
+     far out of proportion to the voltage unbalance. Unbalanced currents lead to torque motor terminals to verify that
+     pulsations, increased vibrations and mechanical stresses, increased losses resulting in voltage unbalance is maintained
+     lower efficiency, and motor overheating, which reduces winding insulation life.
+                                                            below 1%. Consider installing
+     Percent voltage unbalance is defined by the National Electrical Manufacturers sensors that send alarms for
+     Association (NEMA) as 100 times the absolute value of the maximum deviation of the
+                                                            unacceptable values or rates of
+     line voltage from the average voltage on a three-phase system, divided by the average
+                                                            change of values. ISA100
+     voltage. For example, if the measured line voltages are 462, 463, and 455 volts, the
+                                                            wireless sensor networks may be
+     average is 460 volts. The voltage unbalance is:                                
+                                                            of interest.            
+                         (460 – 455)                                                
+                                x 100 = 1.1%                                        
+                           460                                                      
+                                                          ■■ Check your electrical system
+     It is recommended that voltage unbalances at the motor terminals do not exceed 1%. single-line diagrams to verify
+     Unbalances that exceed 1% require derating of the motor, per Figure 20-2 of NEMA that single-phase loads are
+     MG-1-2011, and will void most manufacturers’ warranties. Common causes of voltage uniformly distributed.
+     unbalance include:                                                             
+                                                          ■■ Install ground fault indicators as
+      • Faulty operation of power factor correction equipment                       
+                                                            required and perform annual
+      • Unbalanced or unstable utility supply                                       
+                                                            thermographic inspections.
+      • Unbalanced transformer bank supplying a three-phase load that is too large for
+                                                            Another indicator that voltage
+       the bank                                                                     
+                                                            unbalance may be a problem is
+      • Unevenly distributed single-phase loads on the same power system            
+                                                            120-hertz (Hz) vibration. A
+      • Unidentified single-phase to ground faults                                  
+                                                            finding of 120-Hz vibration
+      • An open circuit on the distribution system primary.                         
+                                                            should prompt an immediate
+     The efficiency of an 1,800 revolutions per minute (RPM), 100-horsepower (hp) motor is check of voltage balance.
+     given as a function of voltage unbalance and motor load in Table 1 below. The general
+     trend of efficiency reduction with increased voltage unbalance is observed for motors at
+     all load conditions.                                                           
+     Table 1. Example Motor Efficiency* Under Conditions of Voltage Unbalance       
+                              Motor Efficiency, %                                   
+        Motor Load                                                                  
+                              Voltage Unbalance                                     
+         % Full                                                                     
+                     Nominal       1%         2.5%                                  
+          100         94.4        94.4        93.0                                  
+          75          95.2        95.1        93.9                                  
+          50          96.1        95.5        94.1                                  
+     Source: Washington State University Energy Program                             
+     *Results vary depending on motor design, speed, full-load efficiency, and hp rating. Typically, electric
+     motors have peak efficiency near 75% load, but this particular motor tested in the lab showed
+     otherwise.                                                                     

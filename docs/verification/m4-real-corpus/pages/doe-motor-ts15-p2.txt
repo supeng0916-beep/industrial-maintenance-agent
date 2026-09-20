@@ -1,0 +1,88 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                 Resources          
+                                                                                    
+                                                          National Electrical Manufacturers
+                                                          Association (NEMA)—Visit www.
+                                                          nema.org for information on
+                                                          motor standards, application
+                                                          guides, and technical papers.
+                                                                                    
+                                                          U.S. Department of Energy (DOE)—
+                                                          For more information on motor
+           Figure 2. Effect of cable length on voltage increase and motor-driven system
+           Source: John Fluke Manufacturing Company       efficiency and to download the
+                                                          MotorMaster+ software tool, visit
+     In Figure 2, the voltage increase is plotted against rise time in microseconds. Rise
+     time is the time required for the voltage to increase from 10% to 90% of its steady- the Advanced Manufacturing
+     state value. The rise time is a characteristic of the power transistor switches and can be Office (AMO) website at
+     provided by the drive supplier. Modern IGBT switches operate well down toward the manufacturing.energy.gov.
+     left side of the graph, so cable lengths of 50 feet or more almost always need mitigation.
+     Longer cables reflect the voltage rise so that the reflections reinforce the original pulse
+     rise. This produces electrical resonance or “ringing” characterized by an oscillating
+     voltage overshoot. With shorter cables, rapid rise time is not a problem. Review Figure
+     2 to determine voltage increase for a given rise time and cable length, and compare the
+     result with the maximum values described below.                                
+     Existing general-purpose low-voltage motors may work fine with PWM VFDs if peak
+     voltages due to ringing are held below 1,000 volts. If high-frequency voltage overshoots
+     exceed 1,000 volts, electrical stresses can cause a turn-to-turn short within a motor coil
+     group, usually within the first couple of turns.                               
+     Voltage overshoot is best avoided by locating the drive close to the motor. If a short cable
+     run is not possible, a filtering device must be used. Sometimes VFD manufacturers provide
+     a filter device with the drive or even in the drive cabinet. There are two common filter
+     arrangements: the first uses line inductors (sometimes called load reactors), which should
+     be placed at the drive end of the cable; and the second uses dV/dt filters. A tuned resistor-
+     inductor filter increases the voltage rise time and effectively reduces dV/dt. There are some
+     losses associated with the filters, so keeping cables short remains the best option.
+     The fast rise time pulses from a PWM VFD can also create a potentially harmful current
+     flow in bearings even when overvoltage is not significant. Causes include common
+     mode voltage problems and/or phase voltage unbalance on the VFD input. Capacitive
+     coupling, resulting from irregular current waveforms and ground-mode currents, can
+     damage bearings due to formation of a high-frequency voltage potential on the motor
+     shaft that results in current flow across the bearing rolling elements. Problems also can
+     occur in driven-load bearings if insulated couplings are not used. Reduce these problems by:
+      • Reducing the carrier frequency of the VFD to between 2 kHz and 5 kHz        
+      • Using a dedicated, low-impedance ground wire from the motor frame to the case drives
+      • Selecting a suitable cable (i.e., symmetrical with all three phases equally spaced
+       around the ground conductor)                                                 
+      • Selecting and matching cable impedance for the VFD.                         
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.
+          lamroN                                                                    
+          revO                                                                      
+          esaercnI                                                                  
+            reilpitluM                                                              
+            egatloV                                                                 
+            kaeP                                                                    
+              2.00                                                                  
+              1.80                                                                  
+                                        500’ Cable                                  
+              1.60                                                                  
+                                200’ Cable                                          
+              1.40           100’ Cable                                             
+              1.20        5500’’ CCaabbllee                                         
+              1.00                                                                  
+                            Rise Time (µs)                                          
+                    TTBBGGII                                                        
+                      1.0   2.0   3.0   4.0  5.0                                    
+                       MMaannuuffaaccttuurriinngg ccoonnvveerrttss aa wwiiddee rraannggee ooff rraaww mmaatteerriaialsls, , Advanced Manufacturing Office
+                       ccoommppoonneennttss,, aanndd ppaarrttss iinnttoo fifinniisshheedd ggooooddss tthhaatt m meeeett m maarrkkeett
+                                                        Energy Efficiency and Renewable Energy
+                       eexxppeeccttaattiioonnss.. TThhee AAddvvaanncceedd MMaannuuffaaccttuurriinngg OOffifficcee ( (AAMMOO))
+                                                        U.S. Department of Energy   
+                       ppaarrttnneerrss wwiitthh iinndduussttrryy,, ssmmaallll bbuussiinneessss,, uunniviveerrssititieiess, ,a anndd o oththeer r
+                                                        Washington, DC 20585-0121   
+                       ssttaakkeehhoollddeerrss ttoo iiddeennttiiffyy aanndd iinnvveesstt inin e emmeerrgginingg t teecchhnnoolologgieiess w witihth
+                       tthhee ppootteennttiiaall ttoo ccrreeaattee hhiigghh--qquuaallitityy ddoommeesstticic m maannuuffaaccttuurirningg j ojobbss manufacturing.energy.gov
+                       aanndd eennhhaannccee tthhee gglloobbaall ccoommppeettiittiivveenneessss ooff tthhee U Unnititeedd S Sttaatetess..
+                                                        DOE/GO-102012-3739 • November 2012

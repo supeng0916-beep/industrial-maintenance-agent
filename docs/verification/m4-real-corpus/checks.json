@@ -1,0 +1,9 @@
+{
+  "document_count": 15,
+  "pdf_pages": 30,
+  "unique_pdf_hashes": 15,
+  "pdf_bytes": 7167867,
+  "markdown_bytes": 116050,
+  "reproducible": true,
+  "manifest_sha256": "2a1da80dca7f618e0b39c19ed77417bc4dc45f1f5655083d10bdbef9b02e15a3"
+}

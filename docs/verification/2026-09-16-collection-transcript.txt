@@ -1,0 +1,202 @@
+$ uv run --locked python simulator.py
+$ uv run --locked python collect_temperature.py --db data/acceptance-20260916T033353Z.sqlite3 --count 8
+停止653模拟器，保持采集器继续运行。
+stdout:
+启动模拟器：127.0.0.1:15020，设备 ID=1，保持寄存器协议地址=0，原始值=653；按 Ctrl+C 停止。
+
+stderr:
+(empty)
+exit=0
+断线期间测量保持2条，失败事件已达2条。
+$ uv run --locked python simulator.py --raw 728
+stdout:
+2026-09-16T03:33:53.436742+00:00 第1次 已保存：原始值=653 温度=65.3℃
+2026-09-16T03:33:54.440551+00:00 第2次 已保存：原始值=653 温度=65.3℃
+2026-09-16T03:33:57.452023+00:00 第5次 已保存：原始值=728 温度=72.8℃
+2026-09-16T03:33:58.455079+00:00 第6次 已保存：原始值=728 温度=72.8℃
+2026-09-16T03:33:59.459295+00:00 第7次 已保存：原始值=728 温度=72.8℃
+2026-09-16T03:34:00.463954+00:00 第8次 已保存：原始值=728 温度=72.8℃
+采集结束：尝试=8 成功=6 失败=2
+
+stderr:
+Connection to (127.0.0.1, 15020) failed: [Errno 61] Connection refused
+2026-09-16T03:33:55.443151+00:00 第3次 通信失败：127.0.0.1:15020：无法连接，请检查模拟器是否启动、端口是否一致
+Repeating....
+2026-09-16T03:33:56.448625+00:00 第4次 通信失败：127.0.0.1:15020：无法连接，请检查模拟器是否启动、端口是否一致
+
+exit=1
+同一采集进程恢复后：测量6条，失败事件2条。
+$ uv run --locked python collect_temperature.py --db data/acceptance-20260916T033353Z.sqlite3 --count 2
+stdout:
+2026-09-16T03:34:00.557025+00:00 第1次 已保存：原始值=728 温度=72.8℃
+2026-09-16T03:34:01.558303+00:00 第2次 已保存：原始值=728 温度=72.8℃
+采集结束：尝试=2 成功=2 失败=0
+
+stderr:
+(empty)
+exit=0
+重启采集后：旧6条完全保留，新增2条，总计8条。
+$ uv run --locked python query_history.py --db data/acceptance-20260916T033353Z.sqlite3 --limit 3
+stdout:
+[
+  {
+    "id": 8,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 72.8,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:34:01.558303+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  },
+  {
+    "id": 7,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 72.8,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:34:00.557025+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  },
+  {
+    "id": 6,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 72.8,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:34:00.463954+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  }
+]
+
+stderr:
+(empty)
+exit=0
+$ uv run --locked python query_history.py --db data/acceptance-20260916T033353Z.sqlite3 --events --limit 3
+stdout:
+[
+  {
+    "id": 2,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "occurred_at": "2026-09-16T03:33:56.448625+00:00",
+    "event_type": "communication_error",
+    "message": "127.0.0.1:15020：无法连接，请检查模拟器是否启动、端口是否一致",
+    "protocol": "modbus_tcp"
+  },
+  {
+    "id": 1,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "occurred_at": "2026-09-16T03:33:55.443151+00:00",
+    "event_type": "communication_error",
+    "message": "127.0.0.1:15020：无法连接，请检查模拟器是否启动、端口是否一致",
+    "protocol": "modbus_tcp"
+  }
+]
+
+stderr:
+(empty)
+exit=0
+全部测量记录：
+[
+  {
+    "id": 1,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 65.3,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:33:53.436742+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  },
+  {
+    "id": 2,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 65.3,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:33:54.440551+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  },
+  {
+    "id": 3,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 72.8,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:33:57.452023+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  },
+  {
+    "id": 4,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 72.8,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:33:58.455079+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  },
+  {
+    "id": 5,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 72.8,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:33:59.459295+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  },
+  {
+    "id": 6,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 72.8,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:34:00.463954+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  },
+  {
+    "id": 7,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 72.8,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:34:00.557025+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  },
+  {
+    "id": 8,
+    "device_id": "motor-a",
+    "metric": "temperature",
+    "value": 72.8,
+    "unit": "℃",
+    "collected_at": "2026-09-16T03:34:01.558303+00:00",
+    "source_time": null,
+    "quality": "good",
+    "protocol": "modbus_tcp"
+  }
+]
+stdout:
+启动模拟器：127.0.0.1:15020，设备 ID=1，保持寄存器协议地址=0，原始值=728；按 Ctrl+C 停止。
+
+stderr:
+(empty)
+exit=0

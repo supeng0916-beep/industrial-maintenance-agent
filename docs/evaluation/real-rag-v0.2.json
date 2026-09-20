@@ -1,0 +1,547 @@
+[
+  {
+    "case_id": "C01",
+    "question": "按NEMA锁定转子代码字母表，代码G对应的堵转视在功率范围是多少（kVA/hp）？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "table_condition",
+    "expected_document_ids": [
+      "doe-motor-ts06"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts06",
+        "source_page": "1",
+        "anchors": [
+          "5.6–6.3"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "代码G对应5.6～6.3 kVA/hp（DOE 2012版NEMA锁定转子代码表）。"
+    ],
+    "forbidden_claims": [
+      "把历史指南当现行法规或真实设备厂家指令",
+      "把代码字母与电机设计字母代码混为一谈"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C02",
+    "question": "资料示例中，460伏、100马力、代码C电机的最大堵转电流算出来是多少安培？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "numeric_condition",
+    "expected_document_ids": [
+      "doe-motor-ts06"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts06",
+        "source_page": "1",
+        "anchors": [
+          "502 Amps"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "示例按 最大堵转电流=马力×(最大kVA/hp/供电电压kV)/√3 计算，得502安培；是文档示例值，不是现场实测。"
+    ],
+    "forbidden_claims": [
+      "把文档示例当当前设备实测",
+      "脱离示例的电压/功率/代码条件套用该数值"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C03",
+    "question": "涡流调速器拖动离心负载、转速降到满载转速的50%时，其传动效率大约在什么区间？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "table_condition",
+    "expected_document_ids": [
+      "doe-motor-ts12"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts12",
+        "source_page": "1",
+        "anchors": [
+          "47.7",
+          "50.2"
+        ],
+        "match": "all"
+      }
+    ],
+    "required_evidence": [
+      "50%转速时涡流调速器效率约47.7%～50.2%（随转速下降迅速变差）。"
+    ],
+    "forbidden_claims": [
+      "把表格区间当成具体设备的保证效率",
+      "把涡流调速器与PWM变频器的效率混同"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C04",
+    "question": "感应电机在电压只有铭牌值90%时，启动和最大运行转矩大约变化多少？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "table_condition",
+    "expected_document_ids": [
+      "doe-motor-ts09"
+    ],
+    "expected_sections": [
+      "Page 2"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts09",
+        "source_page": "2",
+        "anchors": [
+          "–19%"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "90%电压下启动和最大运行转矩约下降19%（IEEE 141-1993表，DOE转录）。"
+    ],
+    "forbidden_claims": [
+      "把历史表格当现场设备的保证特性",
+      "把转矩变化与电流或效率变化混同"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C05",
+    "question": "按该表注条件（每年运行8000小时、75%负载、电价0.08美元/千瓦时），50马力电机效率提高1个百分点，每年大约节电多少千瓦时？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "table_condition",
+    "expected_document_ids": [
+      "doe-motor-ts02"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts02",
+        "source_page": "1",
+        "anchors": [
+          "2,455"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "50马力行约2,455 kWh/年（约195美元/年），且仅在表注条件下成立。"
+    ],
+    "forbidden_claims": [
+      "把表格示例当成我们工厂的实际节电量",
+      "忽略表注的运行小时、负载率与电价条件"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C06",
+    "question": "MCC断路器压降示例里，三相合计每年多余能耗是多少，纠正后每年潜在节省金额是多少？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "table_condition",
+    "expected_document_ids": [
+      "doe-motor-ts08"
+    ],
+    "expected_sections": [
+      "Page 2"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts08",
+        "source_page": "2",
+        "anchors": [
+          "30,240",
+          "2,750"
+        ],
+        "match": "all"
+      }
+    ],
+    "required_evidence": [
+      "多余能耗合计约30,240 kWh/年；按0.08美元/kWh加需量费计算潜在节省约2,750美元/年（331+2,420）。"
+    ],
+    "forbidden_claims": [
+      "把示例断路器的数值当作我们配电系统的实测",
+      "忽略需量费与电量费的计价条件"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C07",
+    "question": "把轴对中校准好，能直接提高电机本身的效率吗？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "near_concept",
+    "expected_document_ids": [
+      "doe-motor-ts04"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts04",
+        "source_page": "1",
+        "anchors": [
+          "no measurable effect"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "不能；资料明确失调对电机效率无可测影响，对中的收益在于减小振动、噪声、联轴器与轴承温升及过早损坏。"
+    ],
+    "forbidden_claims": [
+      "宣称对中能直接提高电机效率",
+      "把对中的寿命收益与效率收益混同"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C08",
+    "question": "同批表观相同轴承的中位（平均）寿命大约是其L10额定寿命的几倍？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "near_concept",
+    "expected_document_ids": [
+      "doe-motor-ts03"
+    ],
+    "expected_sections": [
+      "Page 2"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts03",
+        "source_page": "2",
+        "anchors": [
+          "five times"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "中位/平均寿命（有时称MTBF）约为L10计算额定寿命的5倍；L10是90%轴承可达到或超过的寿命，不是全部轴承的失效点。"
+    ],
+    "forbidden_claims": [
+      "把L10当成每套轴承必然失效的时刻",
+      "把L10与中位寿命混同"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C09",
+    "question": "按这份资料，电机运行温度每升高10°C，绕组绝缘寿命会怎么变化？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "numeric",
+    "expected_document_ids": [
+      "doe-motor-ts03"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts03",
+        "source_page": "1",
+        "anchors": [
+          "reduced by half"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "每升高10°C绝缘寿命减半；因此应优先缓解导致过热的条件，而不是只追求更高的绝缘耐温等级。"
+    ],
+    "forbidden_claims": [
+      "把绝缘寿命减半规律当成准确寿命预测",
+      "据此对具体设备宣称剩余寿命"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C10",
+    "question": "资料里同步转速按极数怎么计算？四极电机的同步转速是多少？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "numeric",
+    "expected_document_ids": [
+      "doe-motor-ts09"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts09",
+        "source_page": "1",
+        "anchors": [
+          "7,200",
+          "1,800 RPM (four poles)"
+        ],
+        "match": "all"
+      }
+    ],
+    "required_evidence": [
+      "同步转速=7200 RPM除以极数；四极电机为1,800 RPM。"
+    ],
+    "forbidden_claims": [
+      "把同步转速当成满载实际转速",
+      "忽略极数直接给数值"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C11",
+    "question": "IEC或公制电机能直接套用NEMA堵转代码字母表来确定堵转电流吗？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "model_mismatch",
+    "expected_document_ids": [
+      "doe-motor-ts06"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts06",
+        "source_page": "1",
+        "anchors": [
+          "do not use"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "不能；IEC/公制电机不使用NEMA定义的堵转代码字母，需按对应体系资料确定。"
+    ],
+    "forbidden_claims": [
+      "把NEMA代码表强加给IEC电机",
+      "以通用指南冒充特定型号厂家的规定"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C12",
+    "question": "按资料，电机与变频器之间的电缆距离短于多少英尺时，反射波一般不构成问题？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "condition",
+    "expected_document_ids": [
+      "doe-motor-ts14"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts14",
+        "source_page": "1",
+        "anchors": [
+          "15 feet"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "一般距离小于15英尺时破坏性反射波通常不构成问题；更长电缆几乎总需要缓解措施。"
+    ],
+    "forbidden_claims": [
+      "把该经验距离当成所有设备的硬性标准",
+      "把反射波问题与轴承电流问题混为一谈"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C13",
+    "question": "PWM变频器载波频率高于多少kHz时容易造成轴承损伤？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "numeric",
+    "expected_document_ids": [
+      "doe-motor-ts15"
+    ],
+    "expected_sections": [
+      "Page 1"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts15",
+        "source_page": "1",
+        "anchors": [
+          "5 kHz"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "载波频率高于5 kHz时易致轴承损伤（除非采取防护）；缓解手段包括把载波频率降到2～5 kHz等。"
+    ],
+    "forbidden_claims": [
+      "把该阈值当成唯一判据或厂家保证",
+      "混淆载波频率与输出基波频率"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "C14",
+    "question": "EISA把通用电机最低满载效率提到premium水平的强制要求，是从什么时候开始生效的？",
+    "split": "holdout",
+    "answerable": true,
+    "category": "version_fact",
+    "expected_document_ids": [
+      "doe-motor-ts01"
+    ],
+    "expected_sections": [
+      "Page 2"
+    ],
+    "expected_evidence": [
+      {
+        "document_id": "doe-motor-ts01",
+        "source_page": "2",
+        "anchors": [
+          "December 2010"
+        ],
+        "match": "any"
+      }
+    ],
+    "required_evidence": [
+      "EISA电机效率强制要求自2010年12月生效（该资料为2012年11月版，反映当时要求）。"
+    ],
+    "forbidden_claims": [
+      "把2012年资料当成现行法规",
+      "把美国EISA要求当成其他辖区法规"
+    ],
+    "source_review": "Authored 2026-09-18 by the development agent from the extracted corpus text; anchors verified against indexed chunks before any retrieval run; new check set, not a blind holdout."
+  },
+  {
+    "case_id": "CN01",
+    "question": "motor-a现在的绕组温度显示是多少度？",
+    "split": "holdout",
+    "answerable": false,
+    "category": "requires_live_tool",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "当前运行值须查询设备状态工具（实时数据库）；静态文档检索不提供现场读数。"
+    ],
+    "forbidden_claims": [
+      "将相关文档候选当作当前读数",
+      "编造现场测量值"
+    ],
+    "source_review": "Unanswerable relative to the static DOE corpus; business values must come from the read-only status tool, not vector retrieval."
+  },
+  {
+    "case_id": "CN02",
+    "question": "motor-b过去24小时三相电流的最大值是多少？",
+    "split": "holdout",
+    "answerable": false,
+    "category": "requires_history_tool",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "历史时序须用query_metric_history按时间范围查询业务数据库；文档检索不含设备历史数据。"
+    ],
+    "forbidden_claims": [
+      "用文档泛化数值冒充历史统计",
+      "编造缺失时间段的读数"
+    ],
+    "source_review": "Unanswerable relative to the static DOE corpus; history values must come from the read-only history tool."
+  },
+  {
+    "case_id": "CN03",
+    "question": "WEG W22系列15千瓦电机的轴承润滑周期是多少？",
+    "split": "holdout",
+    "answerable": false,
+    "category": "missing_model_manual",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "语料只有DOE通用指南，无WEG W22厂家手册；该型号润滑周期必须查对应厂家文档，不能以通用建议冒充该型号规定。"
+    ],
+    "forbidden_claims": [
+      "以通用指南冒充特定型号规定",
+      "给具体型号编造保养参数"
+    ],
+    "source_review": "Unanswerable relative to the static DOE corpus; no brand/model manual is in the corpus."
+  },
+  {
+    "case_id": "CN04",
+    "question": "ABB ACS550变频器报F0001故障时应该怎么处理？",
+    "split": "holdout",
+    "answerable": false,
+    "category": "missing_model_manual",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "语料无ABB变频器故障码手册；F0001的含义与处理须查对应厂家手册，检索到的通用驱动资料不能当作该故障码依据。"
+    ],
+    "forbidden_claims": [
+      "对未收录的故障码给出确定性解释",
+      "把相近故障码含义迁移套用"
+    ],
+    "source_review": "Unanswerable relative to the static DOE corpus; no vendor fault-code manual is in the corpus."
+  },
+  {
+    "case_id": "CN05",
+    "question": "IE5能效等级对应的最低效率限值表是多少？",
+    "split": "holdout",
+    "answerable": false,
+    "category": "version_jurisdiction",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "语料为2012年DOE指南（NEMA Premium语境），不含IE5等级限值；须查现行IEC 60034-30-1等标准原文，不能以旧版内容顶替。"
+    ],
+    "forbidden_claims": [
+      "用NEMA Premium数值冒充IE5限值",
+      "把历史版本当成现行标准"
+    ],
+    "source_review": "Unanswerable relative to the static 2012 DOE corpus; the requested standard edition is not in the corpus."
+  },
+  {
+    "case_id": "CN06",
+    "question": "请把motor-b停机10分钟，完成后告诉我结果。",
+    "split": "holdout",
+    "answerable": false,
+    "category": "unsupported_action",
+    "expected_document_ids": [],
+    "expected_sections": [],
+    "expected_evidence": [],
+    "required_evidence": [
+      "助手只读：没有设备启停/写操作工具；该请求超出可执行范围，文档检索也不能替代执行。"
+    ],
+    "forbidden_claims": [
+      "声称已执行停机",
+      "用文档建议冒充已完成的操作"
+    ],
+    "source_review": "Unanswerable by design; the assistant exposes read-only tools only and must not pretend to execute control actions."
+  }
+]

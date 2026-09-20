@@ -1,0 +1,69 @@
+                                                                                    
+                                                                                    
+                                                                                    
+                               ADVANCED    MANUFACTURING      OFFICE                
+                                                                                    
+                                                                                    
+                                                                                    
+     Energy Tips: MOTOR SYSTEMS                                 Motor Systems Tip Sheet #3
+                                                                                    
+                                                                                    
+     Extend  the  Operating   Life of Your Motor                                    
+                                                             Suggested Actions      
+     Why Do Motors Fail?                                                            
+                                                          ■■ Evaluate and select a motor
+     Certain components of motors degrade with time and operating stress. Electrical
+                                                            repair service center. Ask the
+     insulation weakens over time with exposure to voltage unbalance, over and      
+     undervoltage, voltage disturbances, and temperature. Contact between moving surfaces service center to conduct a root
+     causes wear. Wear is affected by dirt, moisture, and corrosive fumes and is greatly cause failure analysis and
+     accelerated when lubricant is misapplied, becomes overheated or contaminated, or is not
+                                                            confirm proper repair. A
+     replaced at regular intervals. When any components are degraded beyond the point of
+                                                            competent motor service center
+     economical repair or replacement, the motor’s economic life ends.              
+                                                            can often pinpoint failure modes
+     For the smallest and least expensive standard efficiency motors, the motor should be put
+                                                            and indicate optional features or
+     out of service and replaced when a key component, such as a bearing, fails. Depending
+                                                            rebuild methods to strengthen
+     on type and replacement cost, larger standard motors—up to 20 or 50 horsepower 
+     (hp) —may be refurbished and get new bearings but are often scrapped after a wind- new and rewound motors
+     ing failure. Still larger and more expensive motors may be refurbished and rewound to against critical stresses.
+     extend life indefinitely. An economic analysis should always be completed before motor
+     failure to ensure that the appropriate repair/replacement decision is made. ■■ Follow motor manufacturers’
+                                                            recommendations and user
+     How Long Do Motors Last?                                                       
+                                                            guides to protect out-of-service
+     The answer to how long motors last will vary and is dependent upon many factors. Some
+                                                            motors from humidity, vibration,
+     manufacturers estimate 30,000 hours, while others state 40,000 hours. Some will say
+                                                            and corrosion exposure. 
+     “it depends.” One thing is clear—a motor should last much longer with a conscientious
+     motor systems maintenance plan than without one.                               
+                                                          ■■ Establish and follow a good
+     Motor life can range from less than two years to several decades under particular predictive and preventive
+     circumstances. In the best circumstances, degradation still proceeds and a failure
+                                                            maintenance program.    
+     eventually will occur. Much of this progressive deterioration can be detected by modern
+     predictive maintenance techniques to enable life-extending intervention.       
+     Even with excellent selection and care, motors may suffer short lifetimes in unavoidably
+     severe environments. In some industries, motors are exposed to contaminants that are
+     severely corrosive, abrasive, and/or electrically conductive. In such cases, motor life can
+     be extended by purchasing special motors, such as those conforming to the Institute of
+     Electrical and Electronics Engineers (IEEE) 841 specifications, or other severe-duty or
+     corrosion-resistant models. Alternatively, stock motors can be modified by a competent
+     service center.                                                                
+     The operating environment, conditions of use (or misuse), and quality of preventive
+     maintenance will determine how quickly motor parts degrade. Higher temperatures
+     shorten motor life. For every 10°C rise in operating temperature, the insulation life is
+     reduced by half. This can mislead one to think that purchasing new motors with higher
+     insulation temperature ratings will significantly increase motor life. This is not always
+     true, because new motors designed with higher insulation thermal ratings may actually
+     operate at higher internal temperatures (as permitted by the higher thermal rating).
+     Increasing the thermal rating during rewinding, for example, from Class B (130°C) to
+     Class H (180°C), does increase the winding life.                               
+     The best safeguard against thermal damage is to mitigate conditions that contribute to
+     overheating. These include dirt, under and overvoltage, voltage unbalance, harmonics,
+     high ambient temperature, poor ventilation, and overload operation (even within the
+     service factor).                                                               

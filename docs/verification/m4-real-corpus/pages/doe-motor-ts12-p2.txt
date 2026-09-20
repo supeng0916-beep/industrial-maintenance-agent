@@ -1,0 +1,72 @@
+                                                                                    
+  ADVANCED MANUFACTURING OFFICE                                                     
+                                                                                    
+                                                                                    
+      Table 2. Average Power Requirements for a Centrifugal Fan with Eddy-Current   
+      Drive Speed Control                                        Resources          
+                                                                                    
+                % of            Motor   Eddy-  Weighted   National Electrical Manufacturers
+      % of Rated      Load, Shaft                                                   
+               Operating       Efficiency, Current Drive Input Power Association (NEMA)—Visit
+      Fan Speed          hp                                                         
+                Time             %    Efficiency, % kW    www.nema.org for information on
+                                                          motor standards, application
+        90       20     36.4     91.6   90.0     6.59                               
+        80       50     25.6    90.9    80.0     13.13    guides, and technical papers.
+        70       30     17.2    86.6    70.0     6.33                               
+                                                          U.S. Department of Energy (DOE)—
+                                        Total:  26.05                               
+                                                          For more information on motor
+     Note that the input power (in kW) is equal to 0.746 kW/hp times the shaft horsepower divided by the and motor-driven system
+     product of the motor and drive efficiency values. The weighted input power value is the input power
+                                                          efficiency and to download the
+     times the load duty cycle percentage divided by 100. In Table 3, when the VFD is installed, the fan
+     power requirements decrease.                         MotorMaster+ software tool, visit
+                                                          the Advanced Manufacturing
+      Table 3. Average Power Requirements for a Centrifugal Fan with VFD            
+                                                          Office (AMO) website at   
+      Speed Control                                                                 
+                                                          manufacturing.energy.gov. 
+                % of            Motor    VFD   Weighted                             
+      % of Rated      Load, Shaft                                                   
+               Operating       Efficiency, Efficiency, Input Power                  
+      Fan Speed          hp                                                         
+                Time             %       %       kW                                 
+        90       20     36.45    91.6    96      6.18                               
+        80       50     25.6    90.9     95      11.05                              
+        70       30     17.2    86.6     93      4.76                               
+                                        Total:  21.99                               
+     Additional energy savings could be obtained by replacing the old standard efficiency motor
+     with a premium efficiency model. See Motor Systems Tip Sheet #1, When to Purchase
+     Premium Efficiency Motors.                                                     
+     Although early replacement of an older eddy-current drive with a VFD might not meet the
+     two-year simple payback often required by industry, the cost effectiveness of this replacement
+     can be significantly improved if a utility efficiency incentive is available. Other factors that
+     could favor replacement include predictive maintenance tests that indicate an impending
+     failure, lack of availability of replacement parts, or eddy-current failure that requires repair.
+     Load Considerations                                                            
+     Eddy-current drives are not directly coupled to the load shaft, so they do not transmit
+     vibrations from the driven-equipment to the motor and provide inherent protection against
+     load seizures. However, installers must always ensure that operational problems are not
+     created through installation of a VFD. For some installations, these potential issues outweigh
+     the potential cost savings from replacing old eddy-current drives.             
+     Before replacing existing eddy-currents drives, consider whether the selected VFDs meet
+     criteria inherent to eddy-current drives, such as:                             
+      • Can be used with standard efficiency motors                                 
+      • Produce no harmonic distortion                                              
+      • Avoid nuisance trips when power disturbances occur                          
+      • Operate independently of the motor power supply voltage.                    
+     For more information, please refer to Motor Systems Tip Sheet #15, Minimize Adverse Motor
+     and Adjustable Speed Drive Interactions.                                       
+                       Manufacturing converts a wide range of raw materials, Advanced Manufacturing Office
+                       components, and parts into finished goods that meet market   
+                                                        Energy Efficiency and Renewable Energy
+                       expectations. The Advanced Manufacturing Office (AMO)        
+                                                        U.S. Department of Energy   
+                       partners with industry, small business, universities, and other
+                                                        Washington, DC 20585-0121   
+                       stakeholders to identify and invest in emerging technologies with
+                       the potential to create high-quality domestic manufacturing jobs manufacturing.energy.gov
+                       and enhance the global competitiveness of the United States. 
+                                                        DOE/GO-102012-3737 • November 2012
+                                Printed with a renewable-source ink on paper containing at least 50% wastepaper, including 10% post consumer waste.

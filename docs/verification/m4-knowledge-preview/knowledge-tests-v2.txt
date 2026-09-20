@@ -1,0 +1,29 @@
+test_chunk_ids_are_stable_and_depend_on_content_and_version (tests.test_knowledge_chunks.KnowledgeChunkTests.test_chunk_ids_are_stable_and_depend_on_content_and_version) ... ok
+test_chunks_expose_source_and_content_hashes (tests.test_knowledge_chunks.KnowledgeChunkTests.test_chunks_expose_source_and_content_hashes) ... ok
+test_chunks_preserve_sections_tables_code_and_exact_body_coverage (tests.test_knowledge_chunks.KnowledgeChunkTests.test_chunks_preserve_sections_tables_code_and_exact_body_coverage) ... ok
+test_embedding_input_marks_teaching_only_scope (tests.test_knowledge_chunks.KnowledgeChunkTests.test_embedding_input_marks_teaching_only_scope) ... ok
+test_identical_repeated_sections_have_distinct_ids (tests.test_knowledge_chunks.KnowledgeChunkTests.test_identical_repeated_sections_have_distinct_ids) ... ok
+test_long_fence_is_not_closed_by_short_or_trailed_fence (tests.test_knowledge_chunks.KnowledgeChunkTests.test_long_fence_is_not_closed_by_short_or_trailed_fence) ... ok
+test_marks_atomic_section_above_soft_target (tests.test_knowledge_chunks.KnowledgeChunkTests.test_marks_atomic_section_above_soft_target) ... ok
+test_merged_title_counts_towards_hard_limit (tests.test_knowledge_chunks.KnowledgeChunkTests.test_merged_title_counts_towards_hard_limit) ... ok
+test_rejects_complete_embedding_input_over_hard_limit_without_truncating (tests.test_knowledge_chunks.KnowledgeChunkTests.test_rejects_complete_embedding_input_over_hard_limit_without_truncating) ... ok
+test_title_only_document_without_body_is_explicit_error (tests.test_knowledge_chunks.KnowledgeChunkTests.test_title_only_document_without_body_is_explicit_error) ... ok
+test_title_only_preamble_merges_into_first_substantive_section (tests.test_knowledge_chunks.KnowledgeChunkTests.test_title_only_preamble_merges_into_first_substantive_section) ... ok
+test_loads_only_manifest_entries_and_preserves_null_model (tests.test_knowledge_chunks.KnowledgeDocumentTests.test_loads_only_manifest_entries_and_preserves_null_model) ... ok
+test_rejects_non_markdown_path_and_unhashable_yaml_key (tests.test_knowledge_chunks.KnowledgeDocumentTests.test_rejects_non_markdown_path_and_unhashable_yaml_key) ... ok
+test_rejects_unsafe_duplicate_or_nested_frontmatter (tests.test_knowledge_chunks.KnowledgeDocumentTests.test_rejects_unsafe_duplicate_or_nested_frontmatter) ... ok
+test_rejects_untrusted_manifest_entries (tests.test_knowledge_chunks.KnowledgeDocumentTests.test_rejects_untrusted_manifest_entries) ... ok
+test_cli_missing_resources_fails_without_output (tests.test_knowledge_preview.PreviewTests.test_cli_missing_resources_fails_without_output) ... ok
+test_corrupt_cached_tokenizer_is_not_used (tests.test_knowledge_preview.PreviewTests.test_corrupt_cached_tokenizer_is_not_used) ... ok
+test_coverage_rejects_gap_and_changed_original (tests.test_knowledge_preview.PreviewTests.test_coverage_rejects_gap_and_changed_original) ... ok
+test_missing_tokenizer_is_error_without_fake_counts (tests.test_knowledge_preview.PreviewTests.test_missing_tokenizer_is_error_without_fake_counts) ... ok
+test_publish_is_complete_and_refuses_existing_output (tests.test_knowledge_preview.PreviewTests.test_publish_is_complete_and_refuses_existing_output) ... ok
+test_write_failure_cleans_partial_new_output (tests.test_knowledge_preview.PreviewTests.test_write_failure_cleans_partial_new_output) ... ok
+test_official_special_tokens_and_no_truncation (tests.test_knowledge_preview.RealTokenizerTests.test_official_special_tokens_and_no_truncation) ... ok
+test_oversized_real_section_fails_without_output_or_source_changes (tests.test_knowledge_preview.RealTokenizerTests.test_oversized_real_section_fails_without_output_or_source_changes) ... ok
+test_real_corpus_full_coverage_stable_ids_and_exact_input_counts (tests.test_knowledge_preview.RealTokenizerTests.test_real_corpus_full_coverage_stable_ids_and_exact_input_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.101s
+
+OK
