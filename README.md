@@ -60,9 +60,11 @@ uv run --locked python run_dashboard.py          # 一键启动看板 http://127
 
 ## 线上部署（Vercel）
 
-前端是纯静态构建，可部署到 Vercel：**项目设置的 Root Directory 必须选 `frontend`**（仓库根目录没有 package.json，不设置会构建失败），Framework 自动识别 Vite，Build Command 用默认 `npm run build`，输出目录 `dist`。
+**在线演示：https://industrial-maintenance-agent-eksw.vercel.app** —— 仅部署了前端界面，**未连接真实后端**：页面会如实显示"接口请求失败，当前状态未能核实"与空数据状态。这不是故障，而是本项目诚实性设计的一部分——连不上数据源就明说，不用假数据冒充。完整数据演示（含回放设备与 AI 值班终端）请按上文快速开始在本地运行。
 
-后端（FastAPI + SQLite + 模拟器/回放器）需要常驻进程，**无法运行在 Vercel**。线上前端在连不到后端时会如实显示"接口请求失败，当前状态未能核实"——这也是本项目诚实性设计的一部分。完整演示请本地运行；若要让线上前端连真实后端，可把后端部署到任意常驻主机后，在 `frontend/vercel.json` 添加：
+部署配置要点：**项目设置的 Root Directory 必须选 `frontend`**（仓库根目录没有 package.json，不设置会构建失败），Framework 自动识别 Vite，Build Command 用默认 `npm run build`，输出目录 `dist`。
+
+后端（FastAPI + SQLite + 模拟器/回放器）需要常驻进程，**无法运行在 Vercel**。若要让线上前端连真实后端，可把后端部署到任意常驻主机后，在 `frontend/vercel.json` 添加：
 
 ```json
 { "rewrites": [{ "source": "/api/:path*", "destination": "https://你的后端地址/api/:path*" }] }
